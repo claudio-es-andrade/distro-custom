@@ -20,5 +20,7 @@ IMAGENS DO GNU/LINUX DEBIAN e semelhantes com modificações.
 - FileZilla;
 - VLC;
 - Gdebi.
-Google Drive:
-https://drive.google.com/file/d/147mEaWzW8Du9xK2jYhOU8dt3bE5hFaLQ/view?usp=drivesdk
+
+  
+# Google Drive:
+## https://drive.google.com/file/d/147mEaWzW8Du9xK2jYhOU8dt3bE5hFaLQ/view?usp=drivesdk
