@@ -10,7 +10,7 @@ IMAGENS DO GNU/LINUX DEBIAN e semelhantes com modificações.
 - Inclusão do idioma português do Brasil por completo (ou outros);
 - Inclusão do driver para placas de vídeo NVIDIA (placas GeForce da série 600 e mais recentes);
 - Compactadores e extratores diversos (arc arj cabextract lhasa p7zip p7zip-full p7zip-rar rar unrar unace unzip xz-utils zip);
-- Multimdedia codecs (faad ffmpeg gstreamer1.0-fdkaac gstreamer1.0-libav gstreamer1.0-vaapi gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly lame libavcodec-extra libavcodec-extra59 libavdevice59 libgstreamer1.0-0 sox twolame vorbis-tools);
+- Multimedia codecs (faad ffmpeg gstreamer1.0-fdkaac gstreamer1.0-libav gstreamer1.0-vaapi gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly lame libavcodec-extra libavcodec-extra59 libavdevice59 libgstreamer1.0-0 sox twolame vorbis-tools);
 - OBS Studio (Edição de vídeos);
 - Libreoffice (Planilhas, Documentos, Banco de Dados, Apresentações);
 - Firewall UFW (Modo texto e Gráfico);
