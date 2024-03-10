@@ -1,9 +1,9 @@
-# Distro-Custom
+ Distro-Custom
 IMAGENS DO GNU/LINUX DEBIAN e semelhantes com modificações.
 ## README
 ### Modificações Realizadas:
 - ISO DEBIAN GNOME BOOKWORM última versão;
-- Atualizações até o momento (Janeiro/30/2024);
+- Atualizações até o momento (Março/10/2024);
 - Modificação no Repositório com a inclusão de contrib, non-free, non-free-firmware e backport;
 - Inclusão de arquivos FLATPAK (padrão unificado para a maioria das distribuições) com o FLATHUB no Gnome-software (corrigido);
 - Inclusão de arquivos SNAP (pacote unificado criado pelo UBUNTU) via modo texto;
@@ -20,7 +20,7 @@ IMAGENS DO GNU/LINUX DEBIAN e semelhantes com modificações.
 - OBS Studio (Edição de vídeos);
 - Libreoffice (Planilhas, Documentos, Banco de Dados, Apresentações);
 - Firewall UFW (Modo texto e Gráfico);
-- JAVA para desenvolvedores na versão 17LTS (openjdk);
+- JAVA para desenvolvedores na versão 21.0.2 LTS (openjdk);
 - Aplicativo de configuração para o HUION PEN DISPLAY (
     Família 16" - instrução para instalação e retirada na pasta /root/huion - modo superusuário: apt install pacote.deb - apt remove pacote.deb);
 - Gparted (Aplicativo em modo gráfico para realizar partições em HDs e SSDs);
@@ -30,6 +30,9 @@ IMAGENS DO GNU/LINUX DEBIAN e semelhantes com modificações.
 
   
 # Google Drive:
-## https://drive.google.com/file/d/115ZrHBDwdh3hfdepMdgRzVKE7Sy3w_1W/view?usp=drive_link
+
+##https://drive.google.com/file/d/1ltEQwQsyWHPmNlXRtSuoP5Q7f89SqiRb/view?usp=drivesdk
+
 ## MD5-CHECKSUM
-## https://drive.google.com/file/d/1paFE8Y9QrbWj8_RMzBLb8gpxO8ZFrn1_/view?usp=drive_link
+
+##https://drive.google.com/file/d/1Nf4yABEvK8c78Butzc5hZ5bfXaENqxcL/view?usp=drivesdk
