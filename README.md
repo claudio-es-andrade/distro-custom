@@ -3,10 +3,11 @@ IMAGENS DO GNU/LINUX DEBIAN e semelhantes com modificações.
 ## README
 ### Modificações Realizadas:
 - ISO DEBIAN GNOME BOOKWORM última versão;
-- Atualizações até o momento (Março/10/2024);
+- Atualizações até o momento (Março/23/2024);
 - Modificação no Repositório com a inclusão de contrib, non-free, non-free-firmware e backport;
 - Inclusão de arquivos FLATPAK (padrão unificado para a maioria das distribuições) com o FLATHUB no Gnome-software (corrigido);
 - Inclusão de arquivos SNAP (pacote unificado criado pelo UBUNTU) via modo texto;
+- Inclusão do appImageHub (outro tipo de arquivo universal de fácil instalação);
 - Inclusão do Repositório para o navegador do Google, basta digitar (sudo) apt install google-chrome-stable caso queira instalar;
 - Inclusão do Repositório do Virtualbox (criação e gerenciamento de máquinas virtuais);
 - Inclusão do idioma português do Brasil por completo (ou outros);
@@ -31,8 +32,7 @@ IMAGENS DO GNU/LINUX DEBIAN e semelhantes com modificações.
   
 # Google Drive:
 
-##https://drive.google.com/file/d/1ltEQwQsyWHPmNlXRtSuoP5Q7f89SqiRb/view?usp=drivesdk
-
+## https://drive.google.com/file/d/190qmvixVRPmc86LsVeosyvIe0U7iEgUl/view?usp=drivesdk
 ## MD5-CHECKSUM
 
-##https://drive.google.com/file/d/1Nf4yABEvK8c78Butzc5hZ5bfXaENqxcL/view?usp=drivesdk
+## https://drive.google.com/file/d/1F9kfxv4VnXey1lTs4yfKSISAeq4XJ9Ek/view?usp=drivesdk
