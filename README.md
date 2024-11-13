@@ -3,7 +3,7 @@ IMAGENS DO GNU/LINUX DEBIAN e semelhantes com modificações.
 ## README
 ### Modificações Realizadas:
 - ISO DEBIAN GNOME BOOKWORM última versão;
-- Atualizações até o momento (Outubro/25/2024);
+- Atualizações até o momento (Novembro/12/2024);
 - Modificação no Repositório com a inclusão de contrib, non-free, non-free-firmware e backport;
 - Inclusão do formato de arquivos FLATPAK (padrão unificado para a maioria das distribuições) com o Repositório Central FLATHUB no aplicativo do Gnome-Software;
 - Inclusão do formato de arquivos SNAP (pacote unificado criado pelo UBUNTU) via modo texto;
