@@ -49,8 +49,8 @@ IMAGENS DO GNU/LINUX DEBIAN e semelhantes com modificações.
   
 # Google Drive:
 
-## https://drive.google.com/file/d/1w_LwdO_8z32IL6F0b-BKdyIhCG6fRcWh/view?usp=drivesdk
+## https://drive.google.com/file/d/1MR8P6UDtN0MKHAKng4iGepxCAp4My_G2/view?usp=drivesdk
 
 # MD5-CHECKSUM
 
-## https://drive.google.com/file/d/1EHO0DgkM7sEHkVA06AxbsXfO9WZ6m1UK/view?usp=drivesdk
+## https://drive.google.com/file/d/1d58ufNXoI8NLJRuFPTnxt1reY5UoKRKl/view?usp=drivesdk
