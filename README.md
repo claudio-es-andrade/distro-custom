@@ -30,7 +30,7 @@ IMAGENS DO GNU/LINUX DEBIAN e semelhantes com modificações.
 - Virtualbox mais recente;
 - Docker - Gerenciamento de Containers;
 - Distrobox - Para Containers de várias distribuições incluindo esta;
-- Gdebi (Instalação e Desinstalação de aplicativos debian em modo gráfico);
+- Captain (Instalação e Desinstalação de aplicativos debian APT em modo gráfico);
 - Java 21 (LTS);
 
 Removidos:
