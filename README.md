@@ -2,8 +2,8 @@
 IMAGENS DO GNU/LINUX DEBIAN e semelhantes com modificações. 
 ## README
 ### Modificações Realizadas:
-- ISO DEBIAN CINNAMON BOOKWORM última versão (ANO 1) Versão 12.8 -> 12.9 Atualizações de segurança, kernel;
-- Atualizações até o momento (Janeiro/12/2025);
+- ISO MINT CINNAMON XIA última versão;
+- Atualizações até o momento (Janeiro/22/2025);
 - Modificação no Repositório com a inclusão de contrib, non-free, non-free-firmware e backport;
 - Inclusão do formato de arquivos FLATPAK (padrão unificado para a maioria das distribuições) com o Repositório Central FLATHUB no aplicativo do Gnome-Software;
 - Inclusão do appImageHub (Repositório Central de arquivos appImage - outro tipo de arquivo universal de fácil instalação);
@@ -31,19 +31,19 @@ IMAGENS DO GNU/LINUX DEBIAN e semelhantes com modificações.
 - Docker - Gerenciamento de Containers;
 - Distrobox - Para Containers de várias distribuições incluindo esta;
 - Gdebi (Instalação e Desinstalação de aplicativos debian em modo gráfico);
+- Java 21 (LTS);
 
 Removidos:
 - Gnome Desktop;
 - OBS Studio;
-- Java 21;
 - GSConnect;
 - Gerenciador de Extensões do Gnome;
 - Arquivos SNAP;
   
 # Google Drive:
 
-## https://drive.google.com/file/d/1aQDqpcXwyUbSn3MI_oz6togrDXtptn5H/view?usp=drivesdk
+## https://drive.google.com/file/d/1NFfO5glWnlixxOaWYBZxyIixhYnTPxNS/view?usp=drivesdk
 
 # MD5-CHECKSUM
 
-## https://drive.google.com/file/d/16EP9K5k-JCMH6Kq60ZFJltIYFrQH1ocO/view?usp=drivesdk
+## https://drive.google.com/file/d/1jRpy3HOrRwRfDCGkwkNKGiam4uNzZ2xp/view?usp=drivesdk
