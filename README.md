@@ -3,7 +3,7 @@ IMAGENS DO GNU/LINUX DEBIAN e semelhantes com modificações.
 ## README
 ### Modificações Realizadas:
 - ISO MINT CINNAMON XIA;
-- Atualizações até o momento (Fevereiro/12/2025);
+- Atualizações até o momento (MARÇO/06/2025);
 - Modificação no Repositório com a inclusão de contrib, non-free, non-free-firmware e backport;
 - Inclusão do formato de arquivos FLATPAK (padrão unificado para a maioria das distribuições) com o Repositório Central FLATHUB no aplicativo do Gnome-Software;
 - Inclusão do appImageHub (Repositório Central de arquivos appImage - outro tipo de arquivo universal de fácil instalação);
@@ -27,6 +27,9 @@ IMAGENS DO GNU/LINUX DEBIAN e semelhantes com modificações.
 - Putty (SSH e transferência de arquivos) (formato FLATPAK)
 - Firewall UFW (Modo texto e Gráfico);
 - Virtual Manager - Criação e Gerenciamento de máquinas virtuais (formato FLATPAK);
+
+- LibreWolf Navegador para substituir o Firefox (fork) (formato FLATPAK);
+
 - Virtualbox mais recente;
 - Docker - Gerenciamento de Containers;
 - Distrobox - Para Containers de várias distribuições incluindo esta;
@@ -34,6 +37,8 @@ IMAGENS DO GNU/LINUX DEBIAN e semelhantes com modificações.
 - Java 21 (LTS);
 
 Removidos:
+- Kernels 6.8.49 - 6.8.51;
+- Firefox;
 - Gnome Desktop;
 - OBS Studio;
 - GSConnect;
@@ -42,8 +47,8 @@ Removidos:
   
 # Google Drive:
 
-## https://drive.google.com/file/d/1xO0PbHvXLFYOO94yf2FjAuXOx46H0S22/view?usp=drivesdk
+## https://drive.google.com/file/d/19xwp1a4tidZRtphQIhV_wUeHf7UZVgEP/view?usp=drivesdk
 
 # MD5-CHECKSUM
 
-## https://drive.google.com/file/d/1-5kogEKx4RSOUx7K5WG5rcCEZYV8yLRQ/view?usp=drivesdk
+## https://drive.google.com/file/d/1Wcp4jB7_CWrEeJS5q5qUjbUO3AofjDKl/view?usp=drivesdk
