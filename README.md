@@ -3,7 +3,7 @@ IMAGENS DO GNU/LINUX DEBIAN e semelhantes com modificações.
 ## README
 ### Modificações Realizadas:
 - ISO MINT CINNAMON XIA;
-- Atualizações até o momento (MARÇO/06/2025);
+- Atualizações até o momento (MARÇO/11/2025);
 - Modificação no Repositório com a inclusão de contrib, non-free, non-free-firmware e backport;
 - Inclusão do formato de arquivos FLATPAK (padrão unificado para a maioria das distribuições) com o Repositório Central FLATHUB no aplicativo do Gnome-Software;
 - Inclusão do appImageHub (Repositório Central de arquivos appImage - outro tipo de arquivo universal de fácil instalação);
@@ -47,8 +47,8 @@ Removidos:
   
 # Google Drive:
 
-## https://drive.google.com/file/d/19xwp1a4tidZRtphQIhV_wUeHf7UZVgEP/view?usp=drivesdk
+## https://drive.google.com/file/d/1pmNqBjnoiEI3vsnXCA1vgGKD2cj_JLxs/view?usp=drivesdk
 
 # MD5-CHECKSUM
 
-## https://drive.google.com/file/d/1Wcp4jB7_CWrEeJS5q5qUjbUO3AofjDKl/view?usp=drivesdk
+## https://drive.google.com/file/d/18-u00HaQBe4Jqm2GeUp7xDLComHdMNnr/view?usp=drivesdk
