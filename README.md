@@ -1,8 +1,8 @@
  Distro-Custom
 IMAGENS DO GNU/LINUX
 ## README
-### Modificações Realizadas:
-- ISO Gnome Arch Linux Live-CD e instalador Calamares
+### Modificações Realizadas:Março/15/2025
+- ISO Gnome/KDE Arch Linux Live-CD e instalador Calamares
   
 # Google Drive:
 
