@@ -18,7 +18,7 @@ Rolling Release Rhino Linux - Ubuntu Based
 Rhino Linux:
 ## https://drive.google.com/file/d/1rEW7LV_1QHmAKTSccSNHc2jN-G0ZCOFG/view?usp=drivesdk
 
-Ubuntu 24.04 LTS (Debullshit Script):
+Ubuntu 24.04 LTS (Debullshit Script: Gnome Vanilla sem Snap):
 ## https://drive.google.com/file/d/1OX1YNgM12MX7VT0qMx-azckY0Epi1DXh/view?usp=drivesdk
 
 
