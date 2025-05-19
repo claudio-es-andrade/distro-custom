@@ -831,5 +831,5 @@ rebooting_system
 main
 
 
-# Fonte: https://www.blogopcaolinux.com.br/
+# Fonte de referência: https://www.blogopcaolinux.com.br/
 # Blog Opção Linux
