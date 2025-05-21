@@ -38,7 +38,7 @@ deb http://deb.debian.org/debian bookworm-backports main contrib non-free non-fr
 EOF
 echo "Fim da modificação no arquivo /etc/apt/sources.list"
 echo "Recarregando a lista de repositórios e verificando pacotes a serem atualizados"
-#apt update && apt upgrade
+apt update && apt upgrade
 echo "Modifying sources.list"
 cat /etc/apt/sources.list
 # FIM de sources_list_modified()
@@ -59,11 +59,14 @@ adding_user_to_sudo(){
 #echo "Instalando o comando SUDO"
 #apt install sudo
 
-#echo "Verifica o usuário no sistema"
-#cut -d: -f1 /etc/passwd | grep nome_do_usuario
+echo "Verifica o usuario no sistema"
+#echo "cut -d: -f1 /etc/passwd | grep nome_do_usuario"
+#echo "Verifica se o usuário está no Grupo SUDO"
+#sudo -i -u nome_do_usuario
 
 #echo "Adicionando usuário ao grupo sudo do sistema:"
 #adduser nome_do_usuario sudo
+
 # FIM DE adding_user_to_sudo()
 }
 
@@ -92,12 +95,11 @@ echo "verificando o estado do firewall"
 systemctl status firewalld
 firewall-cmd --state
 
-echo "Mostrando a zona padrão atual do firewall"
+echo "Mostrando a zona padrão atual do firewall (Publica)"
 firewall-cmd --get-default-zone
 
-echo "Alterando a zona padrão atual para DROP"
+echo "Alterando a zona padrão atual para DROP "
 firewall-cmd --set-default-zone=drop
-firewall-cmd --reload
 
 echo "Mostrando as alterações no Firewall"
 systemctl status firewalld
@@ -123,7 +125,7 @@ ufw status verbose
 }
 
 installing_yad_tasksel(){
-echo "Instalando YAD e TASKSEL ao sistema"
+echo "Instalando YAD e TASKSEL (Instala os Desktops)"
 apt install yad tasksel
 
 echo "Caso queira instalar outro Desktop Environment, por exemplo o MATE, tecle apt install task-mate-desktop"
@@ -135,6 +137,48 @@ echo "Caso queira instala o GNOME Desktop Environment, por exemplo, tecle apt in
 echo "Caso queira instala outro Desktop Environment, , tecle apt install tasksel"
 
 # FIM DE installing_yad_tasksel()
+}
+
+installing_gnome(){
+echo "Instalando o GNOME DESKTOP"
+apt install task-gnome-desktop
+
+# FIM DE installing_gnome()
+}
+
+installing_kde(){
+echo "Instalando o KDE PLASMA"
+apt install task-kde-desktop
+
+# FIM DE installing_kde()
+}
+
+installing_xfce(){
+echo "Instalando o XFCE DESKTOP"
+apt install task-xfce-desktop
+
+# FIM DE installing_xfce()
+}
+
+installing_lxqt(){
+echo "Instalando o LXQT DESKTOP"
+apt install task-lxqt-desktop
+
+# FIM DE installing_lxqt()
+}
+
+installing_lxde(){
+echo "Instalando o LXDE DESKTOP"
+apt install task-lxde-desktop
+
+# FIM DE installing_lxde()
+}
+
+installing_mate(){
+echo "Instalando o MATE DESKTOP"
+apt install task-mate-desktop
+
+# FIM DE installing_mate()
 }
 
 installing_flatpak(){
@@ -392,6 +436,315 @@ echo "Navegador instalado e pronto para o uso"
 # FIM DE installing_chromium_repo()
 }
 
+installing_rust(){
+echo "Instalando o RUST através do script do site"
+echo "Para maiores informações, visite https://www.rust-lang.org/learn/get-started "
+echo "Não é necessário ser o administrador para executar este script"
+echo " curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh  "
+echo "Caso queira instalar como o administrador do sistema, desbloqueie o comando na função do script"
+# curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
+
+# FIM DE installing_rust()
+}
+
+installing_python(){
+echo "Instalando o através do próprio repositório do DEBIAN. Versão: 3.11.2-1+bi"
+echo "Instalando a IDE THONNY"
+apt install python3 python3-dev python3-pip python3-venv libpython3-dev thonny
+# FIM DE installing_python()
+}
+
+installing_java(){
+echo "Instalando através do script do site SDKMAN: (https://sdkman.io) "
+echo "Não é necessário ser administrador para instalar através do SDKMAN"
+echo "Copie o comando abaixo e execute como usuário normalmente"
+echo " curl -s "https://get.sdkman.io" | bash "
+echo "Execute no final da instalação o seguinte comando:"
+echo ' source "$HOME/.sdkman/bin/sdkman-init.sh" '
+echo "Descomente as linhas na função para instalar através do próprio repositório do Debian"
+#echo "Instalando o através do próprio repositório do DEBIAN. Versão: 17 LTS"
+#apt install openjdk-17-jdk
+# FIM DE installing_java()
+}
+
+installing_php(){
+echo "Instalando o PHP com o APACHE 2"
+apt install php-common libapache2-mod-php php-cli php-fpm php-mysql php-curl php-gd apache2
+echo "Caso queira instalar os pacotes adicionais vá para o site https://www.php.net"
+# FIM DE PHP
+}
+
+installing_build_essential(){
+echo "Instalando o pacote Build Essential (C, C++), Bibliotecas adicionais, Autotools e CMake"
+apt install build-essential ccache
+
+echo "Instalando Bibliotecas Adicionais"
+apt install libssl-dev zlib1g-dev libncurses*-dev libncursesw*-dev libreadline-dev libsqlite*-dev libgdbm-dev libdb*-dev libbz*-dev
+
+echo "Instalando o Autotools"
+apt install autoconf automake libtool
+
+echo "Instalando o CMake"
+apt install cmake
+
+# FIM DE installing_build_essential()
+}
+
+installing_nodejs_npm(){
+apt install nodejs npm
+
+# FIM DE installing_nodejs_npm()
+}
+
+installing_mariadb_postgresql(){
+echo "Instalando o MARIADB pelo repositório Debian"
+apt install mariadb-server
+
+echo "Instalando o Postgresql pelo repositório Debian"
+apt install postgresql postgresql-contrib
+
+# FIM DE installing_mariadb_postgresql()
+}
+
+installing_git_subversion_mercurial(){
+echo "Instalando o GIT"
+apt install git
+echo "Instalando o Subversion"
+apt install subversion
+echo "Instalando o Mercurial"
+apt install mercurial
+
+echo "Verificando as Instalações:"
+echo "GIT"
+git --version
+echo "SUBVERSION"
+svn --version
+echo "MERCURIAL"
+hg --version
+
+# FIM DE installing_git_subversion_mercurial()
+}
+
+installing_docker(){
+echo "Instalando pacotes necessários paa instalar o Docker"
+apt install apt-transport-https ca-certificates curl gnupg lsb-release
+
+echo "Instalando a Chave GPG"
+curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+
+echo "Instalando o repositório"
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+
+echo "Atualizando a lista de repositórios"
+apt update
+echo "Instalando de fato o Docker"
+apt install docker-ce docker-ce-cli containerd.io
+
+echo "Instalando o Docker-Compose"
+apt install docker-compose-plugin
+
+echo "Verificando a instalação"
+docker --version
+docker compose version
+
+# FIM DE installing_docker()
+}
+
+installing_code(){
+echo "Antes de instalar o VSCode é necessário instalar apt-transport-https"
+apt install apt-transport-https
+
+echo "Importando a chave GPG"
+wget -qO- https://packages.microsoft.com/keys/microsoft.asc | gpg --dearmor > microsoft.gpg
+sudo install -o root -g root -m 644 microsoft.gpg /etc/apt/trusted.gpg.d/
+
+echo "Adicionando o repositório"
+sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/vscode stable main" > /etc/apt/sources.list.d/vscode.list'
+apt update
+apt install code
+
+# FIM DE installing_code()
+}
+
+installing_sublime(){
+echo "Antes de instalar o Sublime é necessário instalar apt-transport-https"
+apt install apt-transport-https
+
+echo "Importando a chave GPG"
+wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+
+echo "Adicionando o repositório"
+echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+
+echo "Atualizando a lista de repositórios"
+sudo apt update
+
+echo "Instalando o Sublime"
+sudo apt install sublime-text
+
+# FIM DE installing_sublime()
+}
+
+installing_atom(){
+echo "Antes de instalar o Atom é necessário instalar apt-transport-https"
+apt install apt-transport-https
+
+echo "Importando a chave GPG"
+wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
+
+echo "Adicionando o repositório"
+sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
+
+echo "Atualizando a lista de repositórios"
+sudo apt update
+
+echo "Instalando o Atom"
+sudo apt install atom
+
+# FIM DE installing_atom()
+}
+
+installing_vim(){
+echo "Instalando do VIM"
+apt install vim
+
+echo "Confirmando a sua versão"
+vim --version
+
+# FIM DE installing_vim()
+}
+
+installing_neo_vim(){
+echo "Instalando o NEOVIM"
+apt install neovim
+
+# FIM DE installing_vim()
+}
+
+installing_virtualbox(){
+echo "Importando a Chave GPG"
+wget -O- -q https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo gpg --dearmour -o /usr/share/keyrings/oracle_vbox_2016.gpg
+
+echo "Adicionando o repositório:"
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/oracle_vbox_2016.gpg] http://download.virtualbox.org/virtualbox/debian bookworm contrib" | sudo tee /etc/apt/sources.list.d/virtualbox.list
+
+echo "Atualizando a lista de repositórios"
+apt update
+echo "Instalando o pacote"
+apt install virtualbox-7.1
+
+echo "Para instalar o Extension Pack verifique a versão com este comando: vboxmanage -v | cut -dr -f1"
+echo "Substitua os valores X e Y abaixo e faça o download do pacote com este comando:"
+echo "wget https://download.virtualbox.org/virtualbox/7.X.Y/Oracle_VirtualBox_Extension_Pack-7.X.Y.vbox-extpack"
+echo "Substitua os valores X e Y abaixo também e Instale o Extension Pack com este comando:"
+echo "(sudo) vboxmanage extpack install Oracle_VirtualBox_Extension_Pack-7.X.Y.vbox-extpack"
+
+echo "Verifique se a instalação está correta:"
+echo "vboxmanage list extpacks"
+
+echo "Adicione o Usuário ao vboxusers Group com o comando:"
+echo "sudo usermod -a -G vboxusers $USER"
+echo "Verifique se o usuário foi aceito:"
+echo "groups $USER"
+
+# FIM DE installing_virtualbox()
+}
+
+installing_virtualmanager(){
+echo "Instalando o Virtual Manager a partir do repositório Debian"
+apt install virt-manager qemu-system libvirt-clients libvirt-daemon-system
+
+echo "Habilitando o serviço no início do sistema:"
+systemctl enable libvirtd
+
+echo "Executando o serviço:"
+systemctl start libvirtd
+
+# FIM DE installing_virtualmanager()
+}
+
+installing_steam(){
+echo "Habilitar o suporte a 32 bits"
+dpkg --add-architecture i386
+
+echo "Atualiza a lista dos repositórios"
+apt update
+
+echo "Instalando as dependências"
+apt install mesa-vulkan-drivers libglx-mesa0:i386 mesa-vulkan-drivers:i386 libgl1-mesa-dri:i386
+
+echo "Caso tenha uma placa de vídeo Nvidia descomente na função o seguinte comando"
+echo "apt install nvidia-driver-libs:i386"
+# apt install nvidia-driver-libs:i386
+
+echo "A instalação de fato da Steam"
+apt install steam
+
+# FIM DE installing_steam()
+}
+
+installing_dolphin_emulator(){
+echo "Instalando o Emulador de Nintendo GameCube e Nintendo Wii - Dolphin (Flatpak) "
+flatpak install flathub org.DolphinEmu.dolphin-emu
+
+# FIM DE installing_dolphin_emulator()
+}
+
+installing_citra(){
+echo "Instalando o Emulador de Nintendo 3DS - CITRA (Flatpak) "
+flatpak install flathub org.citra_emu.citra
+
+# FIM DE installing_citra()
+}
+
+installing_flycast(){
+echo "Instalando o Emulador de Sega Dreamcast - FLYCAST (Flatpak) "
+flatpak install flathub org.flycast.Flycast
+
+# FIM DE installing_flycast()
+}
+
+installing_pcsx2(){
+echo "Instalando o Emulador de Playstation 2 - PCSX2 (Flatpak)"
+flatpak install flathub net.pcsx2.PCSX2
+
+# FIM DE installing_pcsx2()
+}
+
+installing_rpcs3(){
+echo "Instalando o Emulador de Playstation 3 - RPCS3 (Flatpak)"
+flatpak install flathub net.rpcs3.RPCS3
+
+# FIM DE installing_rpcs3()
+}
+
+installing_snes9x(){
+echo "Instalando o Emulador de Super Nintendo - SNES9X (Flatpak)"
+flatpak install flathub com.snes9x.Snes9x
+
+# FIM DE installing_snes9x()
+}
+
+installing_mgba(){
+echo "Instalando o Emulador de Nintendo Game Boy Advance - MGBA (Flatpak)"
+flatpak install flathub io.mgba.mGBA
+
+# FIM DE installing_mgba()
+}
+
+installing_xemu(){
+echo "Instalando o Emulador de Microsoft Xbox - XEMU (Flatpak)"
+flatpak install flathub app.xemu.xemu
+
+# FIM DE installing_xemu()
+}
+
+installing_yuzu(){
+echo "Instalando o Emulador de Nintendo Switch - YUZU (Flatpak)"
+flatpak install flathub org.yuzu_emu.yuzu
+
+# FIM DE installing_yuzu()
+}
 
 modifying_sysctl_conf(){
 sysctl -w vm.swappiness=10
@@ -454,16 +807,20 @@ echo "6  - Instala o Firmware da Intel"
 echo "7  - SubMenu para a escolha do firewall: (FirewallD ou UFW) "
 echo "8  - Submenu para a escolha do web-browser: (Chrome, Opera, Vivaldi, Edge, Chromium)"
 echo "9  - Instala o YAD e o Tasksel"
-echo "10 - Instala o Flatpak"
-echo "11 - Instala Codecs Multimedia, o player VLC, Compactadores, Extratores e Fontes"
-echo "12 - Instala os instaladores de pacotes Gdebi Synaptic e o particionador Gparted"
-echo "13 - SubMenu para a escolha do player: (Audacius, VLC, SMPlayer, Kodi, Spotify)"
-echo "14 - Submenu para a escolha dos pacotes: (Audacity, Blender, Gimp, Handbrake, Inkscape, Kdenlive, Krita, OBS studio, OpenShot)"
-echo "15 - SubMenu para a escolha dos pacotes: (Discord, Telegram, Thunderbird) "
-echo "16 - Modifica o arquivo sysctl.conf adicionando swappiness"
-echo "17 - Otimizando a vida útil da bateria do Laptop"
-echo "18 - Instala o driver da Nvidia para placas mais recentes"
-echo "19 - Atualiza o sistema"
+echo "10 - SubMenu para a escolha de outros Desktops (GNOME, XFCE, KDE, CINNAMON, MATE, LXDE, LXQT)"
+echo "11 - Instala o Flatpak"
+echo "12 - Instala Codecs Multimedia, o player VLC, Compactadores, Extratores e Fontes"
+echo "13 - Instala os instaladores de pacotes Gdebi Synaptic e o particionador Gparted"
+echo "14 - SubMenu para a escolha do player: (Audacius, VLC, SMPlayer, Kodi, Spotify)"
+echo "15 - Submenu para a escolha dos pacotes: (Audacity, Blender, Gimp, Handbrake, Inkscape, Kdenlive, Krita, OBS studio, OpenShot)"
+echo "16 - SubMenu para a escolha dos pacotes: (Discord, Telegram, Thunderbird) "
+echo "17 - SubMenu para a escolha: (RUST, JAVA, PYTHON, PHP, GIT, VSCODE, SUBLIME, ATOM  e demais)"
+echo "18 - SubMenu para a escolha das Máquinas Virtuais: Virtualbox, Virtual Manager"
+echo "19 - SubMenu para a escolha dos emuladores (diversos) e STEAM"
+echo "20 - Modifica o arquivo sysctl.conf adicionando swappiness"
+echo "21 - Otimizando a vida útil da bateria do Laptop"
+echo "22 - Instala o driver da Nvidia para placas mais recentes"
+echo "23 - Atualiza o sistema"
 echo "r  - Reinicia o sistema"
 echo "x  - Fim do Programa"
 echo
@@ -488,8 +845,9 @@ while true; do
   echo "Procedimento Realizado"
   ;;
  4)
+  echo "Modifique o script para acrescentar o nome do usuário"
   adding_user_to_sudo
-  echo "Procedimento Realizado"
+  # echo "Procedimento Realizado"
   ;;
  5)
   installing_gnome_tweaks_and_extension_manager
@@ -512,42 +870,58 @@ while true; do
   echo "Procedimento Realizado"
   ;;
  10)
-  installing_flatpak
+  sub_desktops
   echo "Procedimento Realizado"
   ;;
  11)
-  installing_codecs_extractors_fonts
+  installing_flatpak
   echo "Procedimento Realizado"
   ;;
  12)
-  installing_gdebi_gparted_synaptic
+  installing_codecs_extractors_fonts
   echo "Procedimento Realizado"
   ;;
  13)
+  installing_gdebi_gparted_synaptic
+  echo "Procedimento Realizado"
+  ;;
+ 14)
   sub_players
   echo "Digite o valor entre as opções listadas"
   ;;
- 14)
+ 15)
   sub_graphicals
   echo "Digite o valor entre as opções listadas"
   ;;
- 15)
+ 16)
   sub_comunication
   echo "Digite o valor entre as opções listadas"
   ;;
- 16)
+ 17)
+  sub_developers
+  echo "Digite o valor entre as opções listadas"
+  ;;
+ 18)
+  sub_vmachines
+  echo "Digite o valor entre as opções listadas"
+  ;;
+ 19)
+  sub_games
+  echo "Digite o valor entre as opções listadas"
+  ;;
+ 20)
   modifying_sysctl_conf
   echo "Procedimento Realizado"
   ;;
- 17)
+ 21)
   improving_battery_life
   echo "Procedimento Realizado"
   ;;
- 18)
+ 22)
   installing_nvidia
   echo "Procedimento Realizado"
   ;;
- 19)
+ 23)
   updating_system
   echo "Procedimento Realizado"
   ;;
@@ -807,6 +1181,272 @@ while true; do
  
 # FIM DE sub_players()
 }
+
+# DESKTOPS
+show_subMenu_desktops(){
+echo "Escolha a opção pela numeração abaixo: "
+echo "1  - Instala o GNOME"
+echo "2  - Instala o XFCE"
+echo "3  - Instala o KDE PLASMA"
+echo "4  - Instala o CINNAMON"
+echo "5  - Instala o MATE"
+echo "6  - Instala o LXDE"
+echo "7  - Instala o LXQT"
+echo "q  - Volta para o menu principal" 
+
+# FIM DE show_subMenu_desktops()
+}
+
+sub_desktops(){
+while true; do
+ show_subMenu_desktops
+ read -p "Escolha uma opção: " fire
+ case $fire in
+ 1)
+  installing_gnome
+  echo "Procedimento Realizado"
+  ;;
+ 2)
+  installing_xfce
+  echo "Procedimento Realizado"
+  ;;
+ 3)
+  installing_kde
+  echo "Procedimento Realizado"
+  ;;
+ 4)
+  installing_cinnamon
+  echo "Procedimento Realizado"
+  ;; 
+ 5)
+  installing_mate
+  echo "Procedimento Realizado"
+  ;; 
+ 6)
+  installing_lxde
+  echo "Procedimento Realizado"
+  ;;
+ 7)
+  installing_lxqt
+  echo "Procedimento Realizado"
+  ;;
+ q)
+  break
+  ;;
+ *)
+  echo "O valor escolhido deve estar entre os valores apresentados nas opções."
+  ;;
+  esac
+ done
+ 
+# FIM DE sub_desktops()
+}
+
+# JAVA && DEVELOPERS
+
+show_subMenu_developers(){
+echo "Escolha a opção pela numeração abaixo: "
+echo "1  - Instala o RUST"
+echo "2  - Instala o PYTHON"
+echo "3  - Instala o JAVA"
+echo "4  - Instala o PHP e o APACHE 2"
+echo "5  - Instala instala o CCache, Bibliotecas adicionais, Autotools e CMake "
+echo "6  - Instala o NodeJS e NPM"
+echo "7  - Instala MariaDB e PostgreSQL"
+echo "8  - Instala o GIT, o Subversion e o Mercurial"
+echo "9  - Instala o Docker e Docker-Compose"
+echo "10 - Instala o Visual Studio Code"
+echo "11 - Instala o Sublime Text"
+echo "12 - Instala o Atom"
+echo "13 - Instala o VIM"
+echo "14 - Instala o NEOVIM"
+echo "q  - Volta para o menu principal" 
+
+# FIM DE show_subMenu_developers()
+}
+
+sub_developers(){
+while true; do
+ show_subMenu_developers
+ read -p "Escolha uma opção: " fire
+ case $fire in
+ 1)
+  installing_rust
+  
+  ;;
+ 2)
+  installing_python
+  
+  ;;
+ 3)
+  installing_java
+  
+  ;;
+ 4)
+  installing_php
+  
+  ;; 
+ 5)
+  installing_build_essential
+  echo "Procedimento Realizado"
+  ;;
+ 6)
+  installing_nodejs_npm
+  echo "Procedimento Realizado"
+  ;;
+ 7)
+  installing_mariadb_postgresql
+  echo "Procedimento Realizado"
+  ;;
+ 8)
+  installing_git_subversion_mercurial
+  echo "Procedimento Realizado"
+  ;;
+ 9)
+  installing_docker
+  echo "Procedimento Realizado"
+  ;;
+ 10)
+  installing_code
+  echo "Procedimento Realizado"
+  ;;
+ 11)
+  installing_sublime
+  echo "Procedimento Realizado"
+  ;;
+ 12)
+  installing_atom
+  echo "Procedimento Realizado"
+  ;;
+ 13)
+  installing_vim
+  echo "Procedimento Realizado"
+  ;;
+ 14)
+  installing_neo_vim
+  echo "Procedimento Realizado"
+  ;; 
+ q)
+  break
+  ;;
+ *)
+  echo "O valor escolhido deve estar entre os valores apresentados nas opções."
+  ;;
+  esac
+ done
+ 
+# FIM DE sub_developers()
+}
+
+# VIRTUAL MACHINES
+show_subMenu_vmachines(){
+echo "Escolha a opção pela numeração abaixo: "
+echo "1  - Instala o VirtualBox"
+echo "2  - Instala o Virtual Manager"
+echo "q  - Volta para o menu principal" 
+
+# FIM DE show_subMenu_vmachines()
+}
+
+sub_vmachines(){
+while true; do
+ show_subMenu_vmachines
+ read -p "Escolha uma opção: " fire
+ case $fire in
+ 1)
+  installing_virtualbox
+  echo "Procedimento Realizado"
+  ;;
+ 2)
+  installing_virtualmanager
+  echo "Procedimento Realizado"
+  ;;
+ q)
+  break
+  ;;
+ *)
+  echo "O valor escolhido deve estar entre os valores apresentados nas opções."
+  ;;
+  esac
+ done
+ 
+# FIM DE sub_vmachines()
+}
+
+show_subMenu_games(){
+echo "Escolha a opção pela numeração abaixo: "
+echo "1  - Instala o STEAM"
+echo "2  - Instala o Dolpin Emulator"
+echo "3  - Instala o Emulador de Nintendo 3DS - CITRA"
+echo "4  - Instala o Emulador de SEGA DREAMCAST - Flycast"
+echo "5  - Instala o Emulador de PlayStation 2 - PCSX2"
+echo "6  - Instala o Emulador de PlayStation3 - RPCS3"
+echo "7  - Instala o Emulador de Super Nintendo - Snes9x"
+echo "8  - Instala o Emulador de Nintendo Game Boy Advance - mGBA"
+echo "9  - Instala o Emulador de Microsoft Xbox - xemu"
+echo "10 - Instala o Emulador de Nintendo Switch - Yuzu"
+echo "q  - Volta para o menu principal" 
+
+# FIM DE show_subMenu_games()
+}
+
+sub_games(){
+while true; do
+ show_subMenu_games
+ read -p "Escolha uma opção: " fire
+ case $fire in
+ 1)
+  installing_steam
+  echo "Procedimento Realizado"
+  ;;
+ 2)
+  installing_dolphin_emulator
+  echo "Procedimento Realizado"
+  ;;
+ 3)
+  installing_citra
+  echo "Procedimento Realizado"
+  ;;
+ 4)
+  installing_flycast
+  echo "Procedimento Realizado"
+  ;; 
+ 5)
+  installing_pcsx2
+  echo "Procedimento Realizado"
+  ;; 
+ 6)
+  installing_rpcs3
+  echo "Procedimento Realizado"
+  ;;
+ 7)
+  installing_snes9x
+  echo "Procedimento Realizado"
+  ;;
+ 8)
+  installing_mgba
+  echo "Procedimento Realizado"
+  ;;
+ 9)
+  installing_xemu
+  echo "Procedimento Realizado"
+  ;;
+ 10)
+  installing_yuzu
+  echo "Procedimento Realizado"
+  ;;
+ q)
+  break
+  ;;
+ *)
+  echo "O valor escolhido deve estar entre os valores apresentados nas opções."
+  ;;
+  esac
+ done
+ 
+# FIM DE sub_games()
+}
+
 
 execute_everything(){
 
