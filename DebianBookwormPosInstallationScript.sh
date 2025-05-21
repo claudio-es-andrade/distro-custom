@@ -97,6 +97,7 @@ firewall-cmd --get-default-zone
 
 echo "Alterando a zona padrão atual para DROP"
 firewall-cmd --set-default-zone=drop
+firewall-cmd --reload
 
 echo "Mostrando as alterações no Firewall"
 systemctl status firewalld
