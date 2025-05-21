@@ -56,10 +56,14 @@ dpkg-reconfigure locales
 }
 
 adding_user_to_sudo(){
-echo "Instalando o comando SUDO"
-apt install sudo
-echo "Adicionando usuário ao grupo sudo do sistema:"
-adduser $USER sudo
+#echo "Instalando o comando SUDO"
+#apt install sudo
+
+#echo "Verifica o usuário no sistema"
+#cut -d: -f1 /etc/passwd | grep nome_do_usuario
+
+#echo "Adicionando usuário ao grupo sudo do sistema:"
+#adduser nome_do_usuario sudo
 # FIM DE adding_user_to_sudo()
 }
 
