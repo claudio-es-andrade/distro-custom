@@ -914,7 +914,7 @@ while true; do
   echo "Procedimento Realizado"
   ;;
  21)
-  improving_battery_life
+  improving_laptop_battery_life
   echo "Procedimento Realizado"
   ;;
  22)
