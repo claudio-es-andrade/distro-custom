@@ -1469,7 +1469,7 @@ preparing_to_install_web_browsers
 installing_vivaldi_repo
 installing_gimp
 modifying_sysctl_conf
-improving_battery_life
+improving_laptop_battery_life
 installing_nvidia
 updating_system
 rebooting_system
