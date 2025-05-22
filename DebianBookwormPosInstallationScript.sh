@@ -329,6 +329,28 @@ apt install thunderbird thunderbird-l10n-pt-br
 # FIM DE installing_telegram()
 }
 
+installing_zoom(){
+echo "Instalando o Zoom (Flatpak)"
+flatpak install flathub us.zoom.Zoom
+# FIM DE installing_zoom()
+}
+
+installing_teams(){
+echo "Importando a chave GPG"
+curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+
+echo "Adicionando o Repositório"
+sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/ms-teams stable main" > /etc/apt/sources.list.d/teams.list'
+
+echo "Atualizando a lista dos repositórios"
+apt update
+
+echo "Instalando o Microsoft Teams"
+apt install teams
+
+# FIM DE installing_teams()
+}
+
 installing_gdebi_gparted_synaptic(){
 echo "Instalando GDebi e Synaptic"
 apt install gdebi synaptic
@@ -340,7 +362,7 @@ apt install gparted
 
 preparing_to_install_web_browsers(){
 echo "Adicionando pacotes necessários para a instalação"
-apt install software-properties-common apt-transport-https ca-certificates curl wget git -y
+apt install software-properties-common apt-transport-https ca-certificates curl wget 
 echo "Agora, vamos adicionar os repositórios dos WebBrowsers Chrome, Opera e Vivaldi SEM a instalação dos mesmos"
 # FIM DE preparing_to_install_web_browsers()
 }
@@ -354,14 +376,14 @@ echo deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome.gpg] http://dl.
 echo "Atualizando o repositório"
 apt update
 
-echo "Segue o arquivo repositório para conferir"
-cat /etc/apt/sources.list.d/google-chrome.list
+#echo "Segue o arquivo repositório para conferir"
+#cat /etc/apt/sources.list.d/google-chrome.list
 
-echo "Para instalar o Chrome basta digitar apt install google-chrome-stable -y"
-echo "Navegador pronto para ser instalado"
-echo "Instalador o navegador CHROME"
-apt install ggogle-chrome-stable -y
-echo "Navegador instalado e pronto para o uso"
+#echo "Para instalar o Chrome basta digitar apt install google-chrome-stable -y"
+#echo "Navegador pronto para ser instalado"
+echo "Instalando o navegador CHROME"
+apt install google-chrome-stable
+#echo "Navegador instalado e pronto para o uso"
 # FIM DE installing_chrome_repo()
 }
 
@@ -377,11 +399,11 @@ apt update
 echo "Segue o arquivo repositório para conferir "
 cat /etc/apt/sources.list.d/opera.list
 
-echo "Para instalar o Opera basta digitar apt install opera-stable -y"
-echo "Navegador pronto para ser instalado"
+#echo "Para instalar o Opera basta digitar apt install opera-stable -y"
+#echo "Navegador pronto para ser instalado"
 echo "Instalando o navegador OPERA"
-apt install opera-stable -y
-echo "Navegador instalado e pronto para o uso"
+apt install opera-stable 
+#echo "Navegador instalado e pronto para o uso"
 # FIM DE installing_opera_repo()
 }
 
@@ -396,14 +418,14 @@ echo "deb [signed-by=/usr/share/keyrings/vivaldi-browser.gpg arch=$(dpkg --print
 echo "Atualizando o repositório"
 apt update
 
-echo "Segue o arquivo repositório para conferir "
-cat /etc/apt/sources.list.d/vivaldi.list
+#echo "Segue o arquivo repositório para conferir "
+#cat /etc/apt/sources.list.d/vivaldi.list
 
-echo "Para instalar o Opera basta digitar apt install vivaldi-stable -y "
-echo "Navegador pronto para ser instalado"
+#echo "Para instalar o Opera basta digitar apt install vivaldi-stable -y "
+#echo "Navegador pronto para ser instalado"
 echo "Instalando o Navegador VIVALDI... "
-apt install vivaldi-stable -y
-echo "Navegador instalado e pronto para o uso"
+apt install vivaldi-stable
+#echo "Navegador instalado e pronto para o uso"
 # FIM DE installing_vivaldi_repo
 }
 
@@ -424,7 +446,7 @@ cat /etc/apt/sources.list.d/microsoft-edge.list
 echo "Para instalar o Opera basta digitar apt install microsoft-edge-stable -y "
 echo "Navegador pronto para ser instalado"
 echo "Instalando o Navegador MICROSOFT EDGE... "
-apt update && apt install microsoft-edge-stable -y
+apt update && apt install microsoft-edge-stable
 echo "Navegador instalado e pronto para o uso"
 # FIM DE installing_edge_repo
 }
@@ -475,7 +497,7 @@ echo "Caso queira instalar os pacotes adicionais vá para o site https://www.php
 }
 
 installing_build_essential(){
-echo "Instalando o pacote Build Essential (C, C++), Bibliotecas adicionais, Autotools e CMake"
+echo "Instalando o pacote Build Essential (Verificando) (C, C++), Bibliotecas adicionais, Autotools e CMake"
 apt install build-essential ccache
 
 echo "Instalando Bibliotecas Adicionais"
@@ -496,14 +518,54 @@ apt install nodejs npm
 # FIM DE installing_nodejs_npm()
 }
 
-installing_mariadb_postgresql(){
-echo "Instalando o MARIADB pelo repositório Debian"
+installing_mariadb(){
+echo "Importando as chaves PGP"
+
+apt-get install apt-transport-https curl
+mkdir -p /etc/apt/keyrings
+curl -o /etc/apt/keyrings/mariadb-keyring.pgp 'https://mariadb.org/mariadb_release_signing_key.pgp'
+
+cat <<FIM >> /etc/apt/sources.list.d/mariadb.sources
+# MariaDB 11.8 repository list - created 2025-05-22 22:10 UTC
+# https://mariadb.org/download/
+X-Repolib-Name: MariaDB
+Types: deb
+# deb.mariadb.org is a dynamic mirror if your preferred mirror goes offline. See https://mariadb.org/mirrorbits/ for details.
+# URIs: https://deb.mariadb.org/11.rc/debian
+URIs: https://espejito.fder.edu.uy/mariadb/repo/11.8/debian
+Suites: bookworm
+Components: main
+Signed-By: /etc/apt/keyrings/mariadb-keyring.pgp
+FIM
+
+echo "Atualizando a lista de repositórios e instalando o pacote"
+apt update
 apt install mariadb-server
 
-echo "Instalando o Postgresql pelo repositório Debian"
-apt install postgresql postgresql-contrib
+#echo "Instalando o MARIADB pelo repositório Debian"
+#apt install mariadb-server
 
-# FIM DE installing_mariadb_postgresql()
+# FIM DE installing_mariadb()
+}
+
+installing_postgresql(){
+#echo "Instalando o Postgresql pelo repositório Debian"
+#apt install postgresql postgresql-contrib
+
+echo "Instalando dependências e Importando a chave ASC"
+apt install curl ca-certificates
+install -d /usr/share/postgresql-common/pgdg
+curl -o /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc --fail https://www.postgresql.org/media/keys/ACCC4CF8.asc
+
+echo "Adicionando o repositório"
+sh -c "echo 'deb [signed-by=/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc] https://apt.postgresql.org/pub/repos/apt $VERSION_CODENAME-pgdg main' > /etc/apt/sources.list.d/pgdg.list"
+
+echo "Atualizando a lista de repositórios e instalando o pacote"
+apt update
+apt install postgresql
+
+
+# FIM DE installing_postgresql()
 }
 
 installing_git_subversion_mercurial(){
@@ -618,7 +680,14 @@ installing_neo_vim(){
 echo "Instalando o NEOVIM"
 apt install neovim
 
-# FIM DE installing_vim()
+# FIM DE installing_neo_vim()
+}
+
+installing_dbeaver(){
+echo "Intslando o DBeaver Community (Flatpak)"
+flatpak install flathub io.dbeaver.DBeaverCommunity
+
+# FIM DE installing_dbeaver()
 }
 
 installing_virtualbox(){
@@ -746,6 +815,59 @@ flatpak install flathub org.yuzu_emu.yuzu
 # FIM DE installing_yuzu()
 }
 
+installing_dropbox(){
+
+#echo "Importando o pacote .DEB do site oficial: https://linux.dropboxstatic.com/packages/debian/"
+#wget -O dropbox.deb "https://linux.dropboxstatic.com/packages/debian/dropbox_2024.04.17_i386.deb"
+#echo "Instalando o pacote"
+#apt install ./dropbox.deb
+#echo "Para iniciar o aplicativo pelo terminal basta digitar: dropbox start -i "
+
+echo "Instalando o aplicativo (Flatpak)"
+flatpak install flathub com.dropbox.Client
+
+# FIM DE installing_dropbox()
+}
+
+installing_mega(){
+echo "Importando a chave GPG"
+cd /tmp && curl https://mega.nz/linux/repo/Debian_12/Release.key | gpg --dearmor > /usr/share/keyrings/meganz-archive-keyring.gpg && cd $HOME
+
+echo "Adicionando o repositório ao sistema"
+echo "deb [signed-by=/usr/share/keyrings/meganz-archive-keyring.gpg] https://mega.nz/linux/repo/Debian_12/ ./" | tee /etc/apt/sources.list.d/megasync.list
+
+echo "Atualizando a lista de repositórios e instalando o pacote"
+apt update && apt install megasync
+
+echo "Descomente a linha abaixo para realizar a integração com o Gerenciador de Arquivos do seu DESKTOP"
+# Nautilus Gnome
+#apt install nautilus-megasync
+
+# Dolphin KDE
+#apt install dolphin-megasync
+
+#Nemo Cinnamon:
+#apt install nemo-megasync
+
+#Thunar XFCE:
+#apt install thunar-megasync
+
+# FIM DE installing_mega()
+}
+
+installing_anydesk(){
+echo "Importando a chave GPG"
+cd /tmp && wget -qO- https://keys.anydesk.com/repos/DEB-GPG-KEY | sudo gpg --dearmour -o /etc/apt/trusted.gpg.d/anydesk.gpg && cd $HOME
+
+echo "Adicionando o repositório"
+echo "deb http://deb.anydesk.com/ all main" | sudo tee /etc/apt/sources.list.d/anydesk-stable.list
+
+echo "Atualizando a lista de repositórios e Instalando o AnyDesk"
+apt update && apt install anydesk
+
+# FIM DE installing_anydesk()
+}
+
 modifying_sysctl_conf(){
 sysctl -w vm.swappiness=10
 sysctl -w vm.vfs_cache_pressure=50
@@ -786,7 +908,7 @@ echo "Reinicie o sistema para carregar o driver instalado"
 
 updating_system(){
 echo "Atualizando a lista de repositórios e atualizando o sistema"
-apt update && apt upgrade -y
+apt update && apt upgrade 
 # FIM DE updating_system()
 }
 
@@ -809,18 +931,19 @@ echo "8  - Submenu para a escolha do web-browser: (Chrome, Opera, Vivaldi, Edge,
 echo "9  - Instala o YAD e o Tasksel"
 echo "10 - SubMenu para a escolha de outros Desktops (GNOME, XFCE, KDE, CINNAMON, MATE, LXDE, LXQT)"
 echo "11 - Instala o Flatpak"
-echo "12 - Instala Codecs Multimedia, o player VLC, Compactadores, Extratores e Fontes"
+echo "12 - Instala Codecs Multimedia, Compactadores, Extratores e Fontes"
 echo "13 - Instala os instaladores de pacotes Gdebi Synaptic e o particionador Gparted"
 echo "14 - SubMenu para a escolha do player: (Audacius, VLC, SMPlayer, Kodi, Spotify)"
-echo "15 - Submenu para a escolha dos pacotes: (Audacity, Blender, Gimp, Handbrake, Inkscape, Kdenlive, Krita, OBS studio, OpenShot)"
-echo "16 - SubMenu para a escolha dos pacotes: (Discord, Telegram, Thunderbird) "
-echo "17 - SubMenu para a escolha: (RUST, JAVA, PYTHON, PHP, GIT, VSCODE, SUBLIME, ATOM  e demais)"
+echo "15 - Submenu para a escolha dos pacotes: (Audacity, Blender, Gimp, e demais)"
+echo "16 - SubMenu para a escolha dos pacotes: (Discord, Telegram, Thunderbird, Zoom, Microsoft Teams) "
+echo "17 - SubMenu para a escolha: (RUST, JAVA, PYTHON, PHP, POSTGRESQL, VSCODE, SUBLIME, ATOM  e demais)"
 echo "18 - SubMenu para a escolha das Máquinas Virtuais: Virtualbox, Virtual Manager"
 echo "19 - SubMenu para a escolha dos emuladores (diversos) e STEAM"
-echo "20 - Modifica o arquivo sysctl.conf adicionando swappiness"
-echo "21 - Otimizando a vida útil da bateria do Laptop"
-echo "22 - Instala o driver da Nvidia para placas mais recentes"
-echo "23 - Atualiza o sistema"
+echo "20 - SubMenu para a escolha do Dropbox, Mega e AnyDesk"
+echo "21 - Modifica o arquivo sysctl.conf adicionando swappiness"
+echo "22 - Otimizando a vida útil da bateria do Laptop"
+echo "23 - Instala o driver da Nvidia para placas mais recentes"
+echo "a  - Atualiza o sistema"
 echo "r  - Reinicia o sistema"
 echo "x  - Fim do Programa"
 echo
@@ -910,26 +1033,30 @@ while true; do
   echo "Digite o valor entre as opções listadas"
   ;;
  20)
+  sub_cloud
+  echo "Digite o valor entre as opções listadas"
+  ;;
+ 21)
   modifying_sysctl_conf
   echo "Procedimento Realizado"
   ;;
- 21)
+ 22)
   improving_laptop_battery_life
   echo "Procedimento Realizado"
   ;;
- 22)
+ 23)
   installing_nvidia
   echo "Procedimento Realizado"
   ;;
- 23)
+  a|A)
   updating_system
   echo "Procedimento Realizado"
   ;;
- r)
+ r|R)
   rebooting_system
   echo "Procedimento Realizado"
   ;;
- x)
+ x|X)
   exit 0
   ;;
  *)
@@ -962,7 +1089,7 @@ while true; do
   installing_ufw
   echo "Procedimento Realizado"
   ;;
- q)
+ q|Q)
   break
   ;;
  *)
@@ -1031,7 +1158,7 @@ while true; do
   installing_openshot
   echo "Procedimento Realizado"
   ;;
- q)
+ q|Q)
   break
   ;;
  *)
@@ -1048,6 +1175,8 @@ echo "Escolha a opção pela numeração abaixo: "
 echo "1  - Instala o Discord"
 echo "2  - Instala o Telegram"
 echo "3  - Instala o Thunderbird"
+echo "4  - Instala o Zoom (Flatpak)"
+echo "5  - Instala o Microsoft Teams"
 echo "q  - Volta para o menu principal" 
 
 # FIM DE show_subMenu_comunication()
@@ -1070,7 +1199,15 @@ while true; do
   installing_thunderbird
   echo "Procedimento Realizado"
   ;;
- q)
+ 4)
+  installing_zoom
+  echo "Procedimento Realizado"
+  ;;
+ 5)
+  installing_teams
+  echo "Procedimento Realizado"
+  ;;
+ q|Q)
   break
   ;;
  *)
@@ -1119,7 +1256,7 @@ while true; do
   installing_chromium_repo
   echo "Procedimento Realizado"
   ;; 
- q)
+ q|Q)
   break
   ;;
  *)
@@ -1170,7 +1307,7 @@ while true; do
   installing_spotify
   echo "Procedimento Realizado"
   ;; 
- q)
+ q|Q)
   break
   ;;
  *)
@@ -1230,7 +1367,7 @@ while true; do
   installing_lxqt
   echo "Procedimento Realizado"
   ;;
- q)
+ q|Q)
   break
   ;;
  *)
@@ -1252,14 +1389,16 @@ echo "3  - Instala o JAVA"
 echo "4  - Instala o PHP e o APACHE 2"
 echo "5  - Instala instala o CCache, Bibliotecas adicionais, Autotools e CMake "
 echo "6  - Instala o NodeJS e NPM"
-echo "7  - Instala MariaDB e PostgreSQL"
-echo "8  - Instala o GIT, o Subversion e o Mercurial"
-echo "9  - Instala o Docker e Docker-Compose"
-echo "10 - Instala o Visual Studio Code"
-echo "11 - Instala o Sublime Text"
-echo "12 - Instala o Atom"
-echo "13 - Instala o VIM"
-echo "14 - Instala o NEOVIM"
+echo "7  - Instala MariaDB"
+echo "8  - Instala Postgresql"
+echo "9  - Instala o GIT, o Subversion e o Mercurial"
+echo "10 - Instala o Docker e Docker-Compose"
+echo "11 - Instala o Visual Studio Code"
+echo "12 - Instala o Sublime Text"
+echo "13 - Instala o Atom"
+echo "14 - Instala o VIM"
+echo "15 - Instala o NEOVIM"
+echo "16 - Instala o DBeaver Community (Flatpak)"
 echo "q  - Volta para o menu principal" 
 
 # FIM DE show_subMenu_developers()
@@ -1295,38 +1434,46 @@ while true; do
   echo "Procedimento Realizado"
   ;;
  7)
-  installing_mariadb_postgresql
+  installing_mariadb
   echo "Procedimento Realizado"
   ;;
  8)
-  installing_git_subversion_mercurial
+  installing_postgresql
   echo "Procedimento Realizado"
   ;;
  9)
-  installing_docker
+  installing_git_subversion_mercurial
   echo "Procedimento Realizado"
   ;;
  10)
-  installing_code
+  installing_docker
   echo "Procedimento Realizado"
   ;;
  11)
-  installing_sublime
+  installing_code
   echo "Procedimento Realizado"
   ;;
  12)
-  installing_atom
+  installing_sublime
   echo "Procedimento Realizado"
   ;;
  13)
-  installing_vim
+  installing_atom
   echo "Procedimento Realizado"
   ;;
  14)
+  installing_vim
+  echo "Procedimento Realizado"
+  ;;
+ 15)
   installing_neo_vim
   echo "Procedimento Realizado"
-  ;; 
- q)
+  ;;
+ 16)
+  installing_dbeaver
+  echo "Procedimento Realizado"
+  ;;
+ q|Q)
   break
   ;;
  *)
@@ -1361,7 +1508,7 @@ while true; do
   installing_virtualmanager
   echo "Procedimento Realizado"
   ;;
- q)
+ q|Q)
   break
   ;;
  *)
@@ -1435,7 +1582,7 @@ while true; do
   installing_yuzu
   echo "Procedimento Realizado"
   ;;
- q)
+ q|Q)
   break
   ;;
  *)
@@ -1445,6 +1592,46 @@ while true; do
  done
  
 # FIM DE sub_games()
+}
+
+# CLOUD STORAGE
+
+show_subMenu_cloud(){
+echo "Escolha a opção pela numeração abaixo: "
+echo "1  - Instala o Dropbox (Flatpak)"
+echo "2  - Instala o Mega"
+echo "3  - Instala o AnyDesk"
+echo "q  - Volta para o menu principal" 
+
+# FIM DE show_subMenu_cloud()
+}
+
+sub_cloud(){
+while true; do
+ show_subMenu_cloud
+ read -p "Escolha uma opção: " fire
+ case $fire in
+ 1)
+  installing_dropbox
+  echo "Procedimento Realizado"
+  ;;
+ 2)
+  installing_mega
+  echo "Procedimento Realizado"
+  ;;
+ 3)
+  installing_anydesk
+  ;;
+ q|Q)
+  break
+  ;;
+ *)
+  echo "O valor escolhido deve estar entre os valores apresentados nas opções."
+  ;;
+  esac
+ done
+ 
+# FIM DE sub_cloud()
 }
 
 
@@ -1481,3 +1668,5 @@ main
 
 # Fonte de referência: https://www.blogopcaolinux.com.br/
 # Blog Opção Linux
+# Site dos demais aplicativos.
+
