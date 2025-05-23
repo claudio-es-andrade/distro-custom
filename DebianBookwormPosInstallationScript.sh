@@ -735,7 +735,7 @@ flatpak install flathub org.bluej.BlueJ
 
 #echo "Baixando o arquivo do site oficial"
 #wget https://github.com/k-pet-group/BlueJ-Greenfoot/releases/download/BLUEJ-RELEASE-5.4.2/BlueJ-linux-x64-5.4.2.deb
-# apt install BLUEJ-RELEASE-5.4.2/BlueJ-linux-x64-5.4.2.deb 
+# apt install ./BLUEJ-RELEASE-5.4.2/BlueJ-linux-x64-5.4.2.deb 
 
 # FIM DE installing_bluej()
 }
