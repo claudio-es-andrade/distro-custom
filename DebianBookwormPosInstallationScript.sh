@@ -56,8 +56,8 @@ dpkg-reconfigure locales
 }
 
 adding_user_to_sudo(){
-#echo "Instalando o comando SUDO"
-#apt install sudo
+echo "Instalando o comando SUDO"
+apt install sudo
 
 echo "Verifica o usuario no sistema"
 #echo "cut -d: -f1 /etc/passwd | grep nome_do_usuario"
@@ -79,7 +79,9 @@ apt install gnome-tweaks gnome-shell-extension-manager
 installing_intel_firmware(){
 echo "Adicionando Firmware Intel"
 apt install intel-microcode
-echo "Para adicionar Firmware AMD execute no terminal o comando apt install amd64-microcode"
+echo "Para adicionar Firmware AMD"
+apt install amd64-microcode
+
 # FIM DE installing_intel_firmware()
 }
 
@@ -193,7 +195,7 @@ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flat
 # FIM DE installing_flatpak()
 }
 
-installing_codecs_extractors_fonts(){
+installing_codecs(){
 echo "Instalando Codecs diversos"
 apt install faad ffmpeg gstreamer1.0-fdkaac gstreamer1.0-libav gstreamer1.0-vaapi gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly lame libavcodec-extra libavcodec-extra* libavdevice* libgstreamer1.0-0 sox twolame vorbis-tools
 
@@ -205,13 +207,23 @@ apt install libdvd-pkg
 echo "Comando para continuar a instalação configuração do Codec de DVD"
 dpkg-reconfigure libdvd-pkg
 
+
+# FIM DE installing_codecs()
+}
+
+installing_extractors(){
 echo "Extração e Compactação de arquivos"
 apt install arc arj cabextract lhasa p7zip p7zip-full p7zip-rar rar unrar unace unzip xz-utils zip
 
+# FIM DE installing_extractors()
+}
+
+installing_fonts(){
 echo "Instalando fontes da Microsoft"
 apt install cabextract curl fontconfig xfonts-utils
 apt install ttf-mscorefonts-installer
-# FIM DE installing_codecs_extractors_fonts()
+
+# FIM DE installing_fonts()
 }
 
 installing_audacious(){
@@ -351,13 +363,18 @@ apt install teams
 # FIM DE installing_teams()
 }
 
-installing_gdebi_gparted_synaptic(){
+installing_gdebi_synaptic(){
 echo "Instalando GDebi e Synaptic"
 apt install gdebi synaptic
 
+# FIM DE installing_gdebi_synaptic()
+}
+
+installing_gparted(){
 echo "Instalando Gparted"
 apt install gparted
-# FIM DE installing_gdebi_gparted_synaptic()
+
+# FIM DE installing_gparted()
 }
 
 preparing_to_install_web_browsers(){
@@ -440,14 +457,14 @@ echo "deb [arch=amd64] https://packages.microsoft.com/repos/edge/ stable main" |
 echo "Atualizando o repositório"
 apt update
 
-echo "Segue o arquivo repositório para conferir "
-cat /etc/apt/sources.list.d/microsoft-edge.list
+#echo "Segue o arquivo repositório para conferir "
+#cat /etc/apt/sources.list.d/microsoft-edge.list
 
-echo "Para instalar o Opera basta digitar apt install microsoft-edge-stable -y "
-echo "Navegador pronto para ser instalado"
+#echo "Para instalar o Opera basta digitar apt install microsoft-edge-stable -y "
+#echo "Navegador pronto para ser instalado"
 echo "Instalando o Navegador MICROSOFT EDGE... "
 apt update && apt install microsoft-edge-stable
-echo "Navegador instalado e pronto para o uso"
+#echo "Navegador instalado e pronto para o uso"
 # FIM DE installing_edge_repo
 }
 
@@ -457,6 +474,21 @@ apt install chromium
 echo "Navegador instalado e pronto para o uso"
 # FIM DE installing_chromium_repo()
 }
+
+installing_librewolf(){
+echo "Instalando o LibreWolf (Flatpak)"
+flatpak install flathub io.gitlab.librewolf-community
+
+# FIM DE installing_librewolf()
+}
+
+installing_zen(){
+echo "Instalando o Zen Browser (Flatpak)"
+flatpak install flathub app.zen_browser.zen
+
+# FIM DE installing_zen()
+}
+
 
 installing_rust(){
 echo "Instalando o RUST através do script do site"
@@ -689,6 +721,50 @@ flatpak install flathub io.dbeaver.DBeaverCommunity
 
 # FIM DE installing_dbeaver()
 }
+
+installing_netbeans(){
+echo "Instalando o Apache Netbeans (Flatpak)"
+flatpak install flathub org.apache.netbeans
+
+# FIM DE installing_netbeans()
+}
+
+installing_bluej(){
+echo "Instalando a IDE BlueJ (Flatpak)"
+flatpak install flathub org.bluej.BlueJ
+
+#echo "Baixando o arquivo do site oficial"
+#wget https://github.com/k-pet-group/BlueJ-Greenfoot/releases/download/BLUEJ-RELEASE-5.4.2/BlueJ-linux-x64-5.4.2.deb
+# apt install BLUEJ-RELEASE-5.4.2/BlueJ-linux-x64-5.4.2.deb 
+
+# FIM DE installing_bluej()
+}
+
+installing_eclipse(){
+echo "Instalando Eclipse (Flatpak)"
+flatpak install flathub org.eclipse.Java
+
+#echo "Baixando o arquivo pelo site oficial"
+#wget https://www.eclipse.org/downloads/download.php?file=/technology/epp/downloads/release/2025-03/R/eclipse-jee-2025-03-R-linux-gtk-x86_64.tar.gz  
+
+#tar -xvf eclipse-jee-2025-03-R-linux-gtk-x86_64.tar.gz; cd eclipse-jee-2025-03-R-linux-gtk-x86_64/eclipse/ ; bash eclipse
+
+# FIM DE installing_eclipse()
+}
+
+installing_intellij(){
+echo "Instalando o Jet Brains IntelliJ Idea Community Edition (Flatpak)"
+flatpak install flathub com.jetbrains.IntelliJ-IDEA-Community
+
+#echo "Baixando o arquivo pelo site oficial"
+#wget https://download.jetbrains.com/idea/ideaIC-2025.1.1.1-aarch64.tar.gz?_gl=1*1smgpym*_gcl_au*NDYwOTE3NTE3LjE3NDgwMDM5NzY.*FPAU*NDYwOTE3NTE3LjE3NDgwMDM5NzY.*_ga*MTY4MTI3Mjg5My4xNzQ4MDAzOTgw*_ga_9J976DJZ68*czE3NDgwMDM5NzYkbzEkZzEkdDE3NDgwMDQyMTgkajU4JGwwJGgwJGRzVFExTzhZbmR1UlJUb1VRb2tIWTJqRHFwdUJ6ZHhyZDdR
+
+#tar -xvf ideaIC-2025.1.1.1-aarch64.tar.gz; cd /home/claudio/Downloads/ideaIC-2025.1.1.1/idea-IC-251.25410.129/bin/ ; bash idea
+
+
+# FIM DE installing_intellij()
+}
+
 
 installing_virtualbox(){
 echo "Importando a Chave GPG"
@@ -925,24 +1001,27 @@ echo "2  - Modifica o arquivo Sources.List "
 echo "3  - Modifica o idioma do sistema"
 echo "4  - Adiciona usuário ao grupo SUDO"
 echo "5  - Instala Gnome-tweaks e Gnome-Extension_Manager"
-echo "6  - Instala o Firmware da Intel"
+echo "6  - Instala o Firmware da Intel/AMD "
 echo "7  - SubMenu para a escolha do firewall: (FirewallD ou UFW) "
-echo "8  - Submenu para a escolha do web-browser: (Chrome, Opera, Vivaldi, Edge, Chromium)"
+echo "8  - Submenu para a escolha do web-browser"
 echo "9  - Instala o YAD e o Tasksel"
-echo "10 - SubMenu para a escolha de outros Desktops (GNOME, XFCE, KDE, CINNAMON, MATE, LXDE, LXQT)"
+echo "10 - SubMenu para a escolha de outros Desktops"
 echo "11 - Instala o Flatpak"
-echo "12 - Instala Codecs Multimedia, Compactadores, Extratores e Fontes"
-echo "13 - Instala os instaladores de pacotes Gdebi Synaptic e o particionador Gparted"
-echo "14 - SubMenu para a escolha do player: (Audacius, VLC, SMPlayer, Kodi, Spotify)"
-echo "15 - Submenu para a escolha dos pacotes: (Audacity, Blender, Gimp, e demais)"
-echo "16 - SubMenu para a escolha dos pacotes: (Discord, Telegram, Thunderbird, Zoom, Microsoft Teams) "
-echo "17 - SubMenu para a escolha: (RUST, JAVA, PYTHON, PHP, POSTGRESQL, VSCODE, SUBLIME, ATOM  e demais)"
-echo "18 - SubMenu para a escolha das Máquinas Virtuais: Virtualbox, Virtual Manager"
-echo "19 - SubMenu para a escolha dos emuladores (diversos) e STEAM"
-echo "20 - SubMenu para a escolha do Dropbox, Mega e AnyDesk"
-echo "21 - Modifica o arquivo sysctl.conf adicionando swappiness"
-echo "22 - Otimizando a vida útil da bateria do Laptop"
-echo "23 - Instala o driver da Nvidia para placas mais recentes"
+echo "12 - Instala Codecs Multimedia"
+echo "13 - Instala Extratores"
+echo "14 - Instala Fontes"
+echo "15 - Instala o particionador Gparted"
+echo "16 - Instala os facilitadores de instalação Gdebi e Synaptic"
+echo "17 - SubMenu para a escolha do player: (Audacius, VLC, SMPlayer, Kodi, Spotify)"
+echo "18 - Submenu para a escolha dos pacotes: (Audacity, Blender, Gimp, e demais)"
+echo "19 - SubMenu para a escolha dos pacotes: (Discord, Telegram, Thunderbird, Zoom, Teams)"
+echo "20 - SubMenu para a escolha de Linguagens e IDEs"
+echo "21 - SubMenu para a escolha das Máquinas Virtuais: Virtualbox, Virtual Manager"
+echo "22 - SubMenu para a escolha dos emuladores (diversos) e STEAM"
+echo "23 - SubMenu para a escolha do Dropbox, Mega e AnyDesk"
+echo "24 - Modifica o arquivo sysctl.conf adicionando swappiness"
+echo "25 - Otimizando a vida útil da bateria do Laptop"
+echo "26 - Instala o driver da Nvidia para placas mais recentes"
 echo "a  - Atualiza o sistema"
 echo "r  - Reinicia o sistema"
 echo "x  - Fim do Programa"
@@ -1001,50 +1080,62 @@ while true; do
   echo "Procedimento Realizado"
   ;;
  12)
-  installing_codecs_extractors_fonts
+  installing_codecs
   echo "Procedimento Realizado"
   ;;
  13)
-  installing_gdebi_gparted_synaptic
+  installing_extractors
   echo "Procedimento Realizado"
   ;;
  14)
+  installing_fonts
+  echo "Procedimento Realizado"
+  ;;
+ 15)
+  installing_gparted
+  echo "Procedimento Realizado"
+  ;;
+ 16)
+  installing_gdebi_synaptic
+  echo "Procedimento Realizado"
+  ;;
+ 17)
   sub_players
   echo "Digite o valor entre as opções listadas"
   ;;
- 15)
+ 18)
   sub_graphicals
   echo "Digite o valor entre as opções listadas"
   ;;
- 16)
+ 19)
   sub_comunication
   echo "Digite o valor entre as opções listadas"
   ;;
- 17)
+ 20)
   sub_developers
   echo "Digite o valor entre as opções listadas"
   ;;
- 18)
+ 21)
   sub_vmachines
   echo "Digite o valor entre as opções listadas"
   ;;
- 19)
+ 22)
   sub_games
   echo "Digite o valor entre as opções listadas"
   ;;
- 20)
+ 23)
   sub_cloud
   echo "Digite o valor entre as opções listadas"
   ;;
- 21)
+ 24)
   modifying_sysctl_conf
   echo "Procedimento Realizado"
   ;;
- 22)
+ 25)
   improving_laptop_battery_life
   echo "Procedimento Realizado"
   ;;
- 23)
+ 26)
   installing_nvidia
   echo "Procedimento Realizado"
   ;;
@@ -1225,7 +1316,9 @@ echo "1  - Instala o Google Chrome"
 echo "2  - Instala o Opera"
 echo "3  - Instala o Vivaldi"
 echo "4  - Instala o Microsoft Edge"
-echo "5  - Instala o Chromium"
+echo "5  - Instala o Chromium"  
+echo "6  - Instala o LibreWolf"
+echo "7  - Instala o Zen Browser"
 echo "q  - Volta para o menu principal" 
 
 # FIM DE show_subMenu_browsers()
@@ -1256,6 +1349,14 @@ while true; do
   installing_chromium_repo
   echo "Procedimento Realizado"
   ;; 
+ 6)
+  installing_librewolf
+  echo "Procedimento Realizado"
+  ;;
+ 7)
+  installing_zen
+  echo "Procedimento Realizado"
+  ;;
  q|Q)
   break
   ;;
@@ -1387,7 +1488,7 @@ echo "1  - Instala o RUST"
 echo "2  - Instala o PYTHON"
 echo "3  - Instala o JAVA"
 echo "4  - Instala o PHP e o APACHE 2"
-echo "5  - Instala instala o CCache, Bibliotecas adicionais, Autotools e CMake "
+echo "5  - Instala o CCache (C C++), Bibliotecas adicionais, Autotools e CMake "
 echo "6  - Instala o NodeJS e NPM"
 echo "7  - Instala MariaDB"
 echo "8  - Instala Postgresql"
@@ -1399,6 +1500,7 @@ echo "13 - Instala o Atom"
 echo "14 - Instala o VIM"
 echo "15 - Instala o NEOVIM"
 echo "16 - Instala o DBeaver Community (Flatpak)"
+echo "17 - SubMenu para IDEs JAVA"
 echo "q  - Volta para o menu principal" 
 
 # FIM DE show_subMenu_developers()
@@ -1472,6 +1574,10 @@ while true; do
  16)
   installing_dbeaver
   echo "Procedimento Realizado"
+  ;;
+ 17)
+  echo "IDEs Java"
+  sub_IDE_java
   ;;
  q|Q)
   break
@@ -1634,6 +1740,51 @@ while true; do
 # FIM DE sub_cloud()
 }
 
+# IDEs JAVA
+
+show_subMenu_IDE_java(){
+echo "Escolha a opção pela numeração abaixo: "
+echo "1  - Instala o APACHE NETBEANS"
+echo "2  - Instala o BLUEJ"
+echo "3  - Instala o ECLIPSE"
+echo "4  - Instala o INTELLIJ IDEA"
+echo "q  - Volta para o menu principal" 
+
+# FIM DE show_subMenu_IDE_java()
+}
+
+sub_IDE_java(){
+while true; do
+ show_subMenu_IDE_java
+ read -p "Escolha uma opção: " fire
+ case $fire in
+ 1)
+  installing_netbeans 
+  echo "Procedimento Realizado"
+  ;;
+ 2)
+  installing_bluej
+  echo "Procedimento Realizado"
+  ;;
+ 3)
+  installing_eclipse
+  echo "Procedimento Realizado"
+  ;;
+ 4)
+  installing_intellij
+  echo "Procedimento Realizado"
+  ;; 
+ q|Q)
+  break
+  ;;
+ *)
+  echo "O valor escolhido deve estar entre os valores apresentados nas opções."
+  ;;
+  esac
+ done
+ 
+# FIM DE sub_IDE_java()
+}
 
 execute_everything(){
 
