@@ -503,8 +503,8 @@ echo "Caso queira instalar como o administrador do sistema, desbloqueie o comand
 
 installing_python(){
 echo "Instalando o através do próprio repositório do DEBIAN. Versão: 3.11.2-1+bi"
-echo "Instalando a IDE THONNY"
-apt install python3 python3-dev python3-pip python3-venv libpython3-dev thonny
+apt install python3 python3-dev python3-pip python3-venv libpython3-dev
+
 # FIM DE installing_python()
 }
 
@@ -759,12 +759,75 @@ flatpak install flathub com.jetbrains.IntelliJ-IDEA-Community
 #echo "Baixando o arquivo pelo site oficial"
 #wget https://download.jetbrains.com/idea/ideaIC-2025.1.1.1-aarch64.tar.gz?_gl=1*1smgpym*_gcl_au*NDYwOTE3NTE3LjE3NDgwMDM5NzY.*FPAU*NDYwOTE3NTE3LjE3NDgwMDM5NzY.*_ga*MTY4MTI3Mjg5My4xNzQ4MDAzOTgw*_ga_9J976DJZ68*czE3NDgwMDM5NzYkbzEkZzEkdDE3NDgwMDQyMTgkajU4JGwwJGgwJGRzVFExTzhZbmR1UlJUb1VRb2tIWTJqRHFwdUJ6ZHhyZDdR
 
-#tar -xvf ideaIC-2025.1.1.1-aarch64.tar.gz; cd /home/claudio/Downloads/ideaIC-2025.1.1.1/idea-IC-251.25410.129/bin/ ; bash idea
+#tar -xvf ideaIC-2025.1.1.1-aarch64.tar.gz; cd /home/nome_do_usuario/Downloads/ideaIC-2025.1.1.1/idea-IC-251.25410.129/bin/ ; bash idea
 
 
 # FIM DE installing_intellij()
 }
 
+installing_pycharm(){
+echo "Instalando o Pycharm Community Edition (Flatpak)"
+flatpak install flathub com.jetbrains.PyCharm-Community
+
+# echo "Baixando o link do site oficial"
+# wget https://download.jetbrains.com/python/pycharm-community-2025.1.1.1.tar.gz?_gl=1*1aehtmc*_gcl_au*NDYwOTE3NTE3LjE3NDgwMDM5NzY.*FPAU*NDYwOTE3NTE3LjE3NDgwMDM5NzY.*_ga*MTY4MTI3Mjg5My4xNzQ4MDAzOTgw*_ga_9J976DJZ68*czE3NDgwMzE0MDMkbzMkZzEkdDE3NDgwMzE1NTMkajYwJGwwJGgwJGRzVFExTzhZbmR1UlJUb1VRb2tIWTJqRHFwdUJ6ZHhyZDdR
+
+# tar -xvf pycharm-community-2025.1.1.1.tar.gz; cd /home/nome_do_usuario/Downloads/pycharm-community-2025.1.1.1/bin/pycharm
+# FIM DE installing_pycharm()
+}
+
+installing_jupiter(){
+echo "Instalando o JupyterLab Desktop (Flatpak)"
+flatpak install flathub org.jupyter.JupyterLab
+
+# echo "Instalando o JupyterLab com o Python PIP"
+# pip install jupyterlab
+# echo "Iniciando o programa pelo terminal"
+# jupyter lab
+
+# echo "Instalando o Jupyter Notebook com o Python PIP"
+# pip install notebook
+# echo "Iniciando o programa pelo terminal"
+# jupyter notebook
+
+# echo "Instalando o Voilà com o Python PIP"
+# pip install voila
+# echo "Iniciando o programa pelo terminal"
+# voila
+
+# FIM DE installing_jupiter()
+}
+
+installing_spyder(){
+echo "Instalando o Spyder (Flatpak)"
+flatpak install flathub org.spyder_ide.spyder
+
+# echo "Instalando com o Spyder do repositório Debian"
+# apt install spyder
+
+# echo "Instalando o Spyder pelo script baixado do site oficial"
+# bash Spyder-Linux-x86_64.sh
+
+# echo "Instalando com o Conda (completa)"
+# conda create -c conda-forge -n spyder-env spyder numpy scipy pandas matplotlib sympy cython
+
+# echo "Instalação com o Conda (minima)"
+# conda create -c conda-forge -n spyder-env spyder
+
+# Maiores Informações em https://docs.spyder-ide.org/current/installation.html
+
+# FIM DE installing_spyder()
+}
+
+installing_thonny(){
+echo "Instalando o Thonny (Flatpak)"
+flatpak install flathub org.thonny.Thonny
+
+# echo "Instalando o Thonny pelo repositório Debian"
+# apt install thonny
+
+# FIM DE installing_thonny()
+}
 
 installing_virtualbox(){
 echo "Importando a Chave GPG"
@@ -1001,24 +1064,24 @@ echo "2  - Modifica o arquivo Sources.List "
 echo "3  - Modifica o idioma do sistema"
 echo "4  - Adiciona usuário ao grupo SUDO"
 echo "5  - Instala Gnome-tweaks e Gnome-Extension_Manager"
-echo "6  - Instala o Firmware da Intel/AMD "
-echo "7  - SubMenu para a escolha do firewall: (FirewallD ou UFW) "
-echo "8  - Submenu para a escolha do web-browser"
+echo "6  - Instala o Firmware da Intel e AMD "
+echo "7  - Menu para a escolha do firewall"
+echo "8  - Menu para a escolha do web-browser"
 echo "9  - Instala o YAD e o Tasksel"
-echo "10 - SubMenu para a escolha de outros Desktops"
+echo "10 - Menu para a escolha de outros Desktops"
 echo "11 - Instala o Flatpak"
 echo "12 - Instala Codecs Multimedia"
 echo "13 - Instala Extratores"
 echo "14 - Instala Fontes"
 echo "15 - Instala o particionador Gparted"
 echo "16 - Instala os facilitadores de instalação Gdebi e Synaptic"
-echo "17 - SubMenu para a escolha do player: (Audacius, VLC, SMPlayer, Kodi, Spotify)"
-echo "18 - Submenu para a escolha dos pacotes: (Audacity, Blender, Gimp, e demais)"
-echo "19 - SubMenu para a escolha dos pacotes: (Discord, Telegram, Thunderbird, Zoom, Teams)"
-echo "20 - SubMenu para a escolha de Linguagens e IDEs"
-echo "21 - SubMenu para a escolha das Máquinas Virtuais: Virtualbox, Virtual Manager"
-echo "22 - SubMenu para a escolha dos emuladores (diversos) e STEAM"
-echo "23 - SubMenu para a escolha do Dropbox, Mega e AnyDesk"
+echo "17 - Menu para a escolha do players multimidia "
+echo "18 - Menu para a escolha dos editores de foto e imagens e criação de objetos"
+echo "19 - Menu para a escolha dos aplicativos para comunicação "
+echo "20 - Menu para a escolha de Linguagens e IDEs"
+echo "21 - Menu para a escolha das Máquinas Virtuais "
+echo "22 - Menu para a escolha dos emuladores (diversos) e STEAM"
+echo "23 - Menu para a escolha dos serviçoe de armazenamento e ou edição em nuvem "
 echo "24 - Modifica o arquivo sysctl.conf adicionando swappiness"
 echo "25 - Otimizando a vida útil da bateria do Laptop"
 echo "26 - Instala o driver da Nvidia para placas mais recentes"
@@ -1500,7 +1563,8 @@ echo "13 - Instala o Atom"
 echo "14 - Instala o VIM"
 echo "15 - Instala o NEOVIM"
 echo "16 - Instala o DBeaver Community (Flatpak)"
-echo "17 - SubMenu para IDEs JAVA"
+echo "17 - Menu para IDEs Java"
+echo "18 - Menu para IDEs Python"
 echo "q  - Volta para o menu principal" 
 
 # FIM DE show_subMenu_developers()
@@ -1578,6 +1642,10 @@ while true; do
  17)
   echo "IDEs Java"
   sub_IDE_java
+  ;;
+ 18)
+  echo "IDEs Python"
+  sub_IDE_python
   ;;
  q|Q)
   break
@@ -1784,6 +1852,52 @@ while true; do
  done
  
 # FIM DE sub_IDE_java()
+}
+
+# PYTHON
+
+show_subMenu_IDE_python(){
+echo "Escolha a opção pela numeração abaixo: "
+echo "1  - Instala o PYCharm"
+echo "2  - Instala o Spyder"
+echo "3  - Instala o Thonny"
+echo "4  - Instala o Jupiter"
+echo "q  - Volta para o menu principal" 
+
+# FIM DE show_subMenu_IDE_python()
+}
+
+sub_IDE_python(){
+while true; do
+ show_subMenu_IDE_python
+ read -p "Escolha uma opção: " fire
+ case $fire in
+ 1)
+  installing_pycharm 
+  echo "Procedimento Realizado"
+  ;;
+ 2)
+  installing_spyder
+  echo "Procedimento Realizado"
+  ;;
+ 3)
+  installing_thonny
+  echo "Procedimento Realizado"
+  ;;
+ 4)
+  installing_jupiter
+  echo "Procedimento Realizado"
+  ;; 
+ q|Q)
+  break
+  ;;
+ *)
+  echo "O valor escolhido deve estar entre os valores apresentados nas opções."
+  ;;
+  esac
+ done
+ 
+# FIM DE sub_IDE_python()
 }
 
 execute_everything(){
