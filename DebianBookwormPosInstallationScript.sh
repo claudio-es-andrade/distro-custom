@@ -425,15 +425,15 @@ apt install opera-stable
 }
 
 installing_vivaldi_repo(){
-echo "Adicionando o repositório do Vivaldi"
-echo "Adicionando a chave do repositório"
-cd /tmp && wget -qO- https://repo.vivaldi.com/archive/linux_signing_key.pub | gpg --dearmor | sudo dd of=/usr/share/keyrings/vivaldi-browser.gpg && cd $HOME
+#echo "Adicionando o repositório do Vivaldi"
+#echo "Adicionando a chave do repositório"
+#curl -fsSL https://repo.vivaldi.com/archive/linux_signing_key.pub | gpg --dearmor | sudo tee /usr/share/keyrings/vivaldi.gpg > /dev/null
 
-echo "Adicionando o repositório"
-echo "deb [signed-by=/usr/share/keyrings/vivaldi-browser.gpg arch=$(dpkg --print-architecture)] https://repo.vivaldi.com/archive/deb/ stable main" | sudo dd of=/etc/apt/sources.list.d/vivaldi.list
+#echo "Adicionando o repositório"
+#echo "deb [arch=amd64 signed-by=/usr/share/keyrings/vivaldi-browser.gpg ] https://repo.vivaldi.com/archive/deb/ stable main" | sudo tee /etc/apt/sources.list.d/vivaldi.list
 
-echo "Atualizando o repositório"
-apt update
+#echo "Atualizando o repositório"
+#apt update
 
 #echo "Segue o arquivo repositório para conferir "
 #cat /etc/apt/sources.list.d/vivaldi.list
@@ -441,7 +441,8 @@ apt update
 #echo "Para instalar o Opera basta digitar apt install vivaldi-stable -y "
 #echo "Navegador pronto para ser instalado"
 echo "Instalando o Navegador VIVALDI... "
-apt install vivaldi-stable
+#apt install vivaldi-stable
+flatpak install flathub com.vivaldi.Vivaldi
 #echo "Navegador instalado e pronto para o uso"
 # FIM DE installing_vivaldi_repo
 }
@@ -551,50 +552,50 @@ apt install nodejs npm
 }
 
 installing_mariadb(){
-echo "Importando as chaves PGP"
+#echo "Importando as chaves PGP"
 
-apt-get install apt-transport-https curl
-mkdir -p /etc/apt/keyrings
-curl -o /etc/apt/keyrings/mariadb-keyring.pgp 'https://mariadb.org/mariadb_release_signing_key.pgp'
+#apt-get install apt-transport-https curl
+#mkdir -p /etc/apt/keyrings
+#curl -o /etc/apt/keyrings/mariadb-keyring.pgp 'https://mariadb.org/mariadb_release_signing_key.pgp'
 
-cat <<FIM >> /etc/apt/sources.list.d/mariadb.sources
+#cat <<FIM >> /etc/apt/sources.list.d/mariadb.sources
 # MariaDB 11.8 repository list - created 2025-05-22 22:10 UTC
 # https://mariadb.org/download/
-X-Repolib-Name: MariaDB
-Types: deb
+#X-Repolib-Name: MariaDB
+#Types: deb
 # deb.mariadb.org is a dynamic mirror if your preferred mirror goes offline. See https://mariadb.org/mirrorbits/ for details.
 # URIs: https://deb.mariadb.org/11.rc/debian
-URIs: https://espejito.fder.edu.uy/mariadb/repo/11.8/debian
-Suites: bookworm
-Components: main
-Signed-By: /etc/apt/keyrings/mariadb-keyring.pgp
-FIM
+#URIs: https://espejito.fder.edu.uy/mariadb/repo/11.8/debian
+#Suites: bookworm
+#Components: main
+#Signed-By: /etc/apt/keyrings/mariadb-keyring.pgp
+#FIM
 
-echo "Atualizando a lista de repositórios e instalando o pacote"
-apt update
-apt install mariadb-server
-
-#echo "Instalando o MARIADB pelo repositório Debian"
+#echo "Atualizando a lista de repositórios e instalando o pacote"
+#apt update
 #apt install mariadb-server
+
+echo "Instalando o MARIADB pelo repositório Debian"
+apt install mariadb-server
 
 # FIM DE installing_mariadb()
 }
 
 installing_postgresql(){
-#echo "Instalando o Postgresql pelo repositório Debian"
-#apt install postgresql postgresql-contrib
+echo "Instalando o Postgresql pelo repositório Debian"
+apt install postgresql postgresql-contrib
 
-echo "Instalando dependências e Importando a chave ASC"
-apt install curl ca-certificates
-install -d /usr/share/postgresql-common/pgdg
-curl -o /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc --fail https://www.postgresql.org/media/keys/ACCC4CF8.asc
+#echo "Instalando dependências e Importando a chave ASC"
+#apt install curl ca-certificates
+#sudo install -d /usr/share/postgresql-common/pgdg
+#curl -o /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc --fail https://www.postgresql.org/media/keys/ACCC4CF8.asc
 
-echo "Adicionando o repositório"
-sh -c "echo 'deb [signed-by=/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc] https://apt.postgresql.org/pub/repos/apt $VERSION_CODENAME-pgdg main' > /etc/apt/sources.list.d/pgdg.list"
+#echo "Adicionando o repositório"
+#sh -c "echo 'deb [signed-by=/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc] https://apt.postgresql.org/pub/repos/apt $VERSION_CODENAME-pgdg main' > /etc/apt/sources.list.d/pgdg.list"
 
-echo "Atualizando a lista de repositórios e instalando o pacote"
-apt update
-apt install postgresql
+#echo "Atualizando a lista de repositórios e instalando o pacote"
+#apt update
+#apt install postgresql
 
 
 # FIM DE installing_postgresql()
@@ -661,39 +662,47 @@ apt install code
 }
 
 installing_sublime(){
-echo "Antes de instalar o Sublime é necessário instalar apt-transport-https"
-apt install apt-transport-https
+#echo "Antes de instalar o Sublime é necessário instalar apt-transport-https"
+#apt install apt-transport-https
 
-echo "Importando a chave GPG"
-wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
+#echo "Importando a chave GPG"
+#wget -qO - https://download.sublimetext.com/sublimehq-pub.gpg | sudo apt-key add -
 
-echo "Adicionando o repositório"
-echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
+#echo "Adicionando o repositório"
+#echo "deb https://download.sublimetext.com/ apt/stable/" | sudo tee /etc/apt/sources.list.d/sublime-text.list
 
-echo "Atualizando a lista de repositórios"
-sudo apt update
+#echo "Atualizando a lista de repositórios"
+#sudo apt update
 
 echo "Instalando o Sublime"
-sudo apt install sublime-text
+#sudo apt install sublime-text
+flatpak install flathub com.sublimetext.three
 
 # FIM DE installing_sublime()
 }
 
 installing_atom(){
-echo "Antes de instalar o Atom é necessário instalar apt-transport-https"
-apt install apt-transport-https
+#echo "Antes de instalar o Atom é necessário instalar apt-transport-https"
+#apt install apt-transport-https
 
-echo "Importando a chave GPG"
-wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
+#echo "Importando a chave GPG"
+#wget -qO - https://packagecloud.io/AtomEditor/atom/gpgkey | sudo apt-key add -
 
-echo "Adicionando o repositório"
-sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
+#echo "Adicionando o repositório"
+#sudo sh -c 'echo "deb [arch=amd64] https://packagecloud.io/AtomEditor/atom/any/ any main" > /etc/apt/sources.list.d/atom.list'
 
-echo "Atualizando a lista de repositórios"
-sudo apt update
+#echo "Atualizando a lista de repositórios"
+#sudo apt update
 
 echo "Instalando o Atom"
-sudo apt install atom
+flatpak install flathub io.atom.Atom
+
+#sudo apt install atom
+
+# echo "Baixando o pacote do github"
+# wget https://github.com/atom/atom/releases/download/v1.60.0/atom-amd64.deb
+# echo "Instalando o pacote baixado"
+# apt install ./atom-amd64.deb
 
 # FIM DE installing_atom()
 }
@@ -1934,4 +1943,5 @@ main
 # Fonte de referência: https://www.blogopcaolinux.com.br/
 # Blog Opção Linux
 # Site dos demais aplicativos.
+
 
