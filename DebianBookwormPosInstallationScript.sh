@@ -1240,7 +1240,7 @@ while true; do
   echo "Procedimento Realizado"
   ;;
  2)
-  installing_ufw
+  installing_firewall_ufw
   echo "Procedimento Realizado"
   ;;
  q|Q)
