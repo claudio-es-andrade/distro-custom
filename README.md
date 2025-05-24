@@ -16,6 +16,15 @@ Debullshit Script - Penguins-Eggs root/user: evolution
 
 ##  https://drive.google.com/file/d/1LoIhSjuf2fcdj5EBAvzo5Zf06oysMpay/view?usp=drivesdk
 
+
+### Modificações Realizadas: Maio/24/2025
+AnduinOS-1.3.1-pt-br -> Ubuntu 25.04
+Distro Nova que utiliza o Ubuntu como base, mas sem o pacote Snap e com um Design diferente.
+Penguins-Eggs root/user: evolution 
+
+
+## https://drive.google.com/file/d/1pjhiGeN3hNNTFzJwgW7mMuUGtezFfzZu/view?usp=drivesdk
+
 # MD5-CHECKSUM
 
 Maiores Informações:
