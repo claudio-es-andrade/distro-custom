@@ -80,11 +80,22 @@ installing_gnome_tweaks_and_extension_manager(){
 installing_intel_firmware(){
  echo "Adicionando Firmware Intel"
  apt install intel-microcode
- echo "Para adicionar Firmware AMD"
- apt install amd64-microcode
+ echo "PRemovendo o Firmware AMD"
+ apt remove amd64-microcode
 
 # FIM DE installing_intel_firmware()
 }
+
+installing_amd_firmware(){
+ echo "Adicionando Firmware AMD"
+ apt install amd64-microcode
+ echo "Removendo o Firmware Intel"
+ apt remove intel-microcode
+
+# FIM DE installing_amd_firmware()
+}
+
+
 
 installing_firewalld(){
  echo "Adicionando Firewall FIREWAALLD"
@@ -852,14 +863,29 @@ installing_spyder(){
 # FIM DE installing_spyder()
 }
 
-installing_thonny(){
- echo "Instalando o Thonny (Flatpak)"
- flatpak install flathub org.thonny.Thonny
+installing_conda(){
+ echo "Importando a chave GPG"
+ curl https://repo.anaconda.com/pkgs/misc/gpgkeys/anaconda.asc | gpg --dearmor > conda.gpg
+ install -o root -g root -m 644 conda.gpg /usr/share/keyrings/conda-archive-keyring.gpg
+ 
+ echo "Checando a impressão digital"
+ gpg --keyring /usr/share/keyrings/conda-archive-keyring.gpg --no-default-keyring --fingerprint 34161F5BF5EB1D4BFBBB8F0A8AEB4F8B29D82806
 
- # echo "Instalando o Thonny pelo repositório Debian"
- # apt install thonny
+ echo "Adicionando o repositório"
+ echo "deb [arch=amd64 signed-by=/usr/share/keyrings/conda-archive-keyring.gpg] https://repo.anaconda.com/pkgs/misc/debrepo/conda stable main" | sudo tee -a /etc/apt/sources.list.d/conda.list
 
-# FIM DE installing_thonny()
+ echo "Atualizando a lista de repositórios"
+ apt update
+ 
+ echo "Instalando o Conda"
+ apt install conda
+ 
+ echo "Checando o sucesso da instalação"
+ source /opt/conda/etc/profile.d/conda.sh
+ conda -V
+
+
+# FIM DE installing_conda()
 }
 
 installing_virtualbox(){
@@ -1101,7 +1127,7 @@ show_menu(){
  echo "3  - Modifica o idioma do sistema"
  echo "4  - Adiciona usuário ao grupo SUDO"
  echo "5  - Instala Gnome-tweaks e Gnome-Extension_Manager"
- echo "6  - Instala o Firmware da Intel e AMD "
+ echo "6  - Menu para a instalação do Firmware da Intel ou AMD "
  echo "7  - Menu para a escolha do firewall"
  echo "8  - Menu para a escolha do web-browser"
  echo "9  - Instala o YAD e o Tasksel"
@@ -1158,7 +1184,7 @@ main() {
    echo "Procedimento Realizado"
   ;;
   6)
-   installing_intel_firmware
+   sub_cpu_firmware
    echo "Procedimento Realizado"
   ;;
   7)
@@ -1900,7 +1926,7 @@ show_subMenu_IDE_python(){
  echo "Escolha a opção pela numeração abaixo: "
  echo "1  - Instala o PYCharm"
  echo "2  - Instala o Spyder"
- echo "3  - Instala o Thonny"
+ echo "3  - Instala o Conda"
  echo "4  - Instala o Jupiter"
  echo "q  - Volta para o menu principal" 
 
@@ -1921,7 +1947,7 @@ sub_IDE_python(){
    echo "Procedimento Realizado"
   ;;
   3)
-   installing_thonny
+   installing_conda
    echo "Procedimento Realizado"
   ;;
   4)
@@ -1939,6 +1965,43 @@ sub_IDE_python(){
  
 # FIM DE sub_IDE_python()
 }
+
+# FIRMWARE
+
+show_subMenu_firmware(){
+ echo "Escolha a opção pela numeração abaixo: "
+ echo "1  - Instala o firmware INTEL"
+ echo "2  - Instala o firmware AMD"
+ echo "q  - Volta para o menu principal" 
+
+# FIM DE show_subMenu_firmware()
+}
+
+sub_cpu_firmware(){
+ while true; do
+  show_subMenu_firmware
+  read -p "Escolha uma opção: " fire
+  case $fire in
+  1)
+   installing_intel_firmware
+   echo "Procedimento Realizado"
+  ;;
+  2)
+   installing_amd_firmware
+   echo "Procedimento Realizado"
+  ;;
+  q|Q)
+   break
+  ;;
+  *)
+   echo "O valor escolhido deve estar entre os valores apresentados nas opções."
+  ;;
+  esac
+ done
+ 
+# FIM DE sub_cpu_firmware()
+}
+
 
 execute_everything(){
  check_if_root_is_logged
@@ -1974,5 +2037,6 @@ main
 # Fonte de referência: https://www.blogopcaolinux.com.br/
 # Blog Opção Linux
 # Site dos demais aplicativos.
+
 
 
