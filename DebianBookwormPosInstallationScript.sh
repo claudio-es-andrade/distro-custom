@@ -80,7 +80,7 @@ installing_gnome_tweaks_and_extension_manager(){
 installing_intel_firmware(){
  echo "Adicionando Firmware Intel"
  apt install intel-microcode
- echo "PRemovendo o Firmware AMD"
+ echo "Removendo o Firmware AMD"
  apt remove amd64-microcode
 
 # FIM DE installing_intel_firmware()
