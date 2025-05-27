@@ -617,6 +617,47 @@ installing_mariadb(){
 # FIM DE installing_mariadb()
 }
 
+installing_mysql(){
+ echo "Importando o arquivo .DEB contendo as informações do repositório"
+ wget https://dev.mysql.com/get/mysql-apt-config_0.8.34-1_all.deb
+ 
+ echo "Instalando o arquivo importado"
+ # sudo dpkg -i mysql-apt-config_0.8.34-1_all.deb
+ apt install ./mysql-apt-config_0.8.34-1_all.deb
+ 
+ echo "Selecione a opção desejada"
+ cat <<FIM
+# ┌────────────────┤ Configuring mysql-apt-config ├─────────────────┐
+# │ Which MySQL product do you wish to configure?                   │ 
+# │                                                                 │ 
+# │     MySQL Server & Cluster (Currently selected: mysql-8.0)      │ 
+# │     MySQL Tools & Connectors (Currently selected: Enabled)      │ 
+# │     MySQL Preview Packages (Currently selected: Disabled)       │ 
+# │     Ok                                                          │ 
+# │                                                                 │ 
+# │                                                                 │ 
+# │                             <Ok>                                │ 
+# │                                                                 │ 
+# └─────────────────────────────────────────────────────────────────┘
+FIM
+
+ echo "Atualiza a lista de repositórios"
+ sudo apt update
+ echo "Instala o servidor de banco de dados"
+ apt install mysql-server
+ 
+ echo "Verifica a versão instalada"
+ mysql --version
+ 
+ echo "Adicionando o serviço no início do sistema"
+ systemctl start mysql
+ 
+ echo "Verificando o Status do serviço"
+ systemctl status mysql
+
+# FIM DE installing_mysql()
+}
+
 installing_postgresql(){
  echo "Instalando o Postgresql pelo repositório Debian"
  apt install postgresql postgresql-contrib
@@ -1620,17 +1661,18 @@ show_subMenu_developers(){
  echo "5  - Instala o CCache (C C++), Bibliotecas adicionais, Autotools e CMake "
  echo "6  - Instala o NodeJS e NPM"
  echo "7  - Instala MariaDB"
- echo "8  - Instala Postgresql"
- echo "9  - Instala o GIT, o Subversion e o Mercurial"
- echo "10 - Instala o Docker e Docker-Compose"
- echo "11 - Instala o Visual Studio Code"
- echo "12 - Instala o Sublime Text"
- echo "13 - Instala o Atom"
- echo "14 - Instala o VIM"
- echo "15 - Instala o NEOVIM"
- echo "16 - Instala o DBeaver Community (Flatpak)"
- echo "17 - Menu para IDEs Java"
- echo "18 - Menu para IDEs Python"
+ echo "8  - Instala MySQL"
+ echo "9  - Instala Postgresql"
+ echo "10 - Instala o GIT, o Subversion e o Mercurial"
+ echo "11 - Instala o Docker e Docker-Compose"
+ echo "12 - Instala o Visual Studio Code"
+ echo "13 - Instala o Sublime Text"
+ echo "14 - Instala o Atom"
+ echo "15 - Instala o VIM"
+ echo "16 - Instala o NEOVIM"
+ echo "17 - Instala o DBeaver Community (Flatpak)"
+ echo "18 - Menu para IDEs Java"
+ echo "19 - Menu para IDEs Python"
  echo "q  - Volta para o menu principal" 
 
 # FIM DE show_subMenu_developers()
@@ -1670,46 +1712,50 @@ sub_developers(){
    echo "Procedimento Realizado"
   ;;
   8)
-   installing_postgresql
+   installing_mysql
    echo "Procedimento Realizado"
   ;;
   9)
-   installing_git_subversion_mercurial
+   installing_postgresql
    echo "Procedimento Realizado"
   ;;
   10)
-   installing_docker
+   installing_git_subversion_mercurial
    echo "Procedimento Realizado"
   ;;
   11)
-   installing_code
+   installing_docker
    echo "Procedimento Realizado"
   ;;
   12)
-   installing_sublime
+   installing_code
    echo "Procedimento Realizado"
   ;;
   13)
-   installing_atom
+   installing_sublime
    echo "Procedimento Realizado"
   ;;
   14)
-   installing_vim
+   installing_atom
    echo "Procedimento Realizado"
   ;;
   15)
-   installing_neo_vim
+   installing_vim
    echo "Procedimento Realizado"
   ;;
   16)
-   installing_dbeaver
+   installing_neo_vim
    echo "Procedimento Realizado"
   ;;
   17)
+   installing_dbeaver
+   echo "Procedimento Realizado"
+  ;;
+  18)
    echo "IDEs Java"
    sub_IDE_java
   ;;
-  18)
+  19)
    echo "IDEs Python"
    sub_IDE_python
   ;;
@@ -2037,6 +2083,7 @@ main
 # Fonte de referência: https://www.blogopcaolinux.com.br/
 # Blog Opção Linux
 # Site dos demais aplicativos.
+
 
 
 
