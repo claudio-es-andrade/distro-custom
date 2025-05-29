@@ -60,13 +60,16 @@ adding_user_to_sudo(){
  apt install sudo
 
  echo "Verifica o usuario no sistema"
- #echo "cut -d: -f1 /etc/passwd | grep nome_do_usuario"
- #echo "Verifica se o usuário está no Grupo SUDO"
- #sudo -i -u nome_do_usuario
-
- #echo "Adicionando usuário ao grupo sudo do sistema:"
- #adduser nome_do_usuario sudo
-
+ read -p "Digite o nome do usuario:" nome_do_usuario
+ usuario_id=$(id -u "$nome_do_usuario")
+ 
+ if [[ "$usuario_id" -ge 1000 ]] && [[ "$usuario_id" -le 60000 ]]
+  then echo "O nome $nome_do_usuario faz parte da lista de Usuarios do Sistema"
+  echo "Adicionando usuário ao grupo sudo do sistema:"; adduser $nome_do_usuario sudo;
+ else
+  echo "Não faz parte do grupo de Usuários"
+ fi
+ 
 # FIM DE adding_user_to_sudo()
 }
 
@@ -2083,6 +2086,7 @@ main
 # Fonte de referência: https://www.blogopcaolinux.com.br/
 # Blog Opção Linux
 # Site dos demais aplicativos.
+
 
 
 
