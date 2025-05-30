@@ -1151,6 +1151,9 @@ installing_nvidia(){
 }
 
 updating_system(){
+ 
+ echo "Atualizando os pacotes Flatpak"
+ flatpak update
  echo "Atualizando a lista de repositórios e atualizando o sistema"
  apt update && apt upgrade 
 
@@ -1173,12 +1176,12 @@ show_menu(){
  echo "5  - Instala Gnome-tweaks e Gnome-Extension_Manager"
  echo "6  - Menu para a instalação do Firmware da Intel ou AMD "
  echo "7  - Menu para a escolha do firewall"
- echo "8  - Menu para a escolha do web-browser"
+ echo "8  - Instala o Flatpak"
  echo "9  - Instala o YAD e o Tasksel"
  echo "10 - Menu para a escolha de outros Desktops"
- echo "11 - Instala o Flatpak"
+ echo "11 - Menu para a escolha do web-browser"
  echo "12 - Instala Codecs Multimedia"
- echo "13 - Instala Extratores"
+ echo "13 - Instala Extratores/Compactadores"
  echo "14 - Instala Fontes"
  echo "15 - Instala o particionador Gparted"
  echo "16 - Instala os facilitadores de instalação Gdebi e Synaptic"
@@ -1236,7 +1239,7 @@ main() {
    echo "Digite o valor entre as opções listadas"
   ;;
   8)
-   sub_browsers
+   installing_flatpak
    echo "Digite o valor entre as opções listadas"
   ;;
   9)
@@ -1248,7 +1251,7 @@ main() {
    echo "Procedimento Realizado"
   ;;
  11)
-   installing_flatpak
+   sub_browsers
    echo "Procedimento Realizado"
   ;;
  12)
@@ -2086,6 +2089,7 @@ main
 # Fonte de referência: https://www.blogopcaolinux.com.br/
 # Blog Opção Linux
 # Site dos demais aplicativos.
+
 
 
 
