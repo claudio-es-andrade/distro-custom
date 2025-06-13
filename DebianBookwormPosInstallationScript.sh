@@ -1057,6 +1057,56 @@ installing_yuzu(){
 # FIM DE installing_yuzu()
 }
 
+installing_bottles(){
+ echo "Instalando o crossover Bottles (Flatpak)"
+ flatpak install flathub com.usebottles.bottles
+ 
+# FIM de installing_bottle() 
+}
+
+installing_playonlinux(){
+ echo "Importando a chave GPG"
+ wget -q "http://deb.playonlinux.com/public.gpg" -O- | apt-key add -
+ 
+ echo "Adicionando o repositório ao sistema"
+ wget http://deb.playonlinux.com/playonlinux_jessie.list -O /etc/apt/sources.list.d/playonlinux.list
+ 
+ echo "Atualizando a lista de repositórios"
+ apt update
+ 
+ echo "Instalando o playonlinux"
+ apt install playonlinux
+ 
+# FIM DE installing_playonlinux()
+}
+
+installing_wine(){
+ echo "Habilitando a arquitetura 32 Bit"
+ dpkg --add-architecture i386
+ 
+ echo "Criando diretório /etc/apt/keyrings"
+ mkdir -pm755 /etc/apt/keyrings
+ 
+ echo "Importando a chave GPG"
+ wget -O - https://dl.winehq.org/wine-builds/winehq.key | sudo gpg --dearmor -o /etc/apt/keyrings/winehq-archive.key -
+ 
+ echo "Adicionando o repositório ao sistema"
+ wget -NP /etc/apt/sources.list.d/ https://dl.winehq.org/wine-builds/debian/dists/bookworm/winehq-bookworm.sources
+
+ echo "Atualizando a lista de repositórios"
+ apt update
+ 
+ echo "Instalando o pacote"
+ apt install --install-recommends winehq-stable
+ 
+ #echo "Instalando o pacote de desenvolvimento"
+ # apt install --install-recommends winehq-devel
+ #echo "Instalando o pacote de preparação para lançamento"
+ #apt install --install-recommends winehq-staging
+ 
+# FIM DE installing_wine()
+}
+
 installing_dropbox(){
 
  #echo "Importando o pacote .DEB do site oficial: https://linux.dropboxstatic.com/packages/debian/"
@@ -1540,10 +1590,11 @@ show_menu(){
  echo "20 - Menu para a escolha de Linguagens e IDEs"
  echo "21 - Menu para a escolha das Máquinas Virtuais "
  echo "22 - Menu para a escolha dos emuladores (diversos) e STEAM"
- echo "23 - Menu para a escolha dos serviços de armazenamento e ou edição em nuvem "
- echo "24 - Modifica o arquivo sysctl.conf adicionando swappiness"
- echo "25 - Otimizando a vida útil da bateria do Laptop"
- echo "26 - Menu para drivers Nvidia"
+ echo "23 - Menu para a escolha dos Crossovers (Wine)"
+ echo "24 - Menu para a escolha dos serviços de armazenamento e ou edição em nuvem "
+ echo "25 - Modifica o arquivo sysctl.conf adicionando swappiness"
+ echo "26 - Otimizando a vida útil da bateria do Laptop"
+ echo "27 - Menu para drivers Nvidia"
  echo "a  - Atualiza o sistema"
  echo "r  - Reinicia o sistema"
  echo "x  - Fim do Programa"
@@ -1648,18 +1699,22 @@ main() {
    echo "Digite o valor entre as opções listadas"
   ;;
  23)
+   sub_crossovers
+   echo "Digite o valor entre as opções listadas"
+  ;; 
+ 24)
    sub_cloud
    echo "Digite o valor entre as opções listadas"
   ;;
- 24)
+ 25)
    modifying_sysctl_conf
    echo "Procedimento Realizado"
   ;;
- 25)
+ 26)
    improving_laptop_battery_life
    echo "Procedimento Realizado"
   ;;
- 26)
+ 27)
    sub_nvidia
    echo "Procedimento Realizado"
   ;;
@@ -2234,6 +2289,46 @@ sub_games(){
  
 # FIM DE sub_games()
 }
+# CROSSOVERS
+
+show_subMenu_crossovers(){
+ echo "Escolha a opção pela numeração abaixo: "
+ echo "1  - Instala o Bottles (Flatpak)"
+ echo "2  - Instala o PlayonLinux"
+ echo "3  - Instala o Wine"
+ echo "q  - Volta para o menu principal" 
+
+# FIM DE show_subMenu_crossovers()
+}
+
+sub_crossovers(){
+ while true; do
+  show_subMenu_crossovers
+  read -p "Escolha uma opção: " fire
+  case $fire in
+  1)
+   installing_bottles
+   echo "Procedimento Realizado"
+  ;;
+  2)
+   installing_playonlinux
+   echo "Procedimento Realizado"
+  ;;
+  3)
+   installing_wine
+  ;;
+  q|Q)
+   break
+  ;;
+  *)
+   echo "O valor escolhido deve estar entre os valores apresentados nas opções."
+  ;;
+  esac
+ done
+ 
+# FIM DE sub_crossovers()
+}
+
 
 # CLOUD STORAGE
 
