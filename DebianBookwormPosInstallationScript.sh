@@ -204,9 +204,12 @@ installing_flatpak(){
  echo "Habilitando pacotes FLATPAK do Flathub ao sistema"
 
  apt install flatpak
+ echo "Instalando o plugin no Gnome"
  apt install gnome-software-plugin-flatpak
- echo "Caso esteja no KDE-PLASMA utilize o comando apt install discover ; apt install plasma-discover-backend-flatpak"
-
+ 
+ #echo "Instalando o plugin no KDE"
+ #apt install plasma-discover-backend-flatpak
+ 
  echo "Adicionando o FlatHub.org ao sistema"
  flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
  
@@ -1057,6 +1060,13 @@ installing_yuzu(){
 # FIM DE installing_yuzu()
 }
 
+installing_faugus(){
+ echo "Instalando o Faugus (Flatpak)"
+ flatpak install flathub io.github.Faugus.faugus-launcher 
+ 
+# FIM DE installing_faugus()
+}
+
 installing_bottles(){
  echo "Instalando o crossover Bottles (Flatpak)"
  flatpak install flathub com.usebottles.bottles
@@ -1181,6 +1191,22 @@ improving_laptop_battery_life(){
  systemctl enable tlp && tlp start
 
 # FIM DE improving_battery_life()
+}
+
+checking_video_driver(){
+ echo "Obtendo informações da placa de vídeo:"
+ lspci -nn | grep "VGA\|DISPLAY"
+ 
+ echo "Obtendo o DMIDECODE"
+ dmidecode -t BIOS | grep Version
+ 
+ echo "Nome do sistema"
+ lsb_release -sd
+ 
+ echo "Informações sobre o kernel"
+ uname -a
+
+# FIM DE checking_video_driver()
 }
 
 installing_nvidia(){
@@ -2228,6 +2254,7 @@ show_subMenu_games(){
  echo "8  - Instala o Emulador de Nintendo Game Boy Advance - mGBA"
  echo "9  - Instala o Emulador de Microsoft Xbox - xemu"
  echo "10 - Instala o Emulador de Nintendo Switch - Yuzu"
+ echo "11 - Instala o UMU - Windows Steam Runtime Tools e Steam Linux Runtime - Faugus"
  echo "q  - Volta para o menu principal" 
 
 # FIM DE show_subMenu_games()
@@ -2276,6 +2303,10 @@ sub_games(){
   ;;
   10)
    installing_yuzu
+   echo "Procedimento Realizado"
+  ;;
+  11)
+   installing_faugus
    echo "Procedimento Realizado"
   ;;
   q|Q)
@@ -2500,14 +2531,15 @@ sub_cpu_firmware(){
 
 show_subMenu_nvidia(){
  echo "Escolha a opção pela numeração abaixo: "
- echo "1  - Instala o driver para placas mais recentes"
- echo "2  - Instala o driver para placas antigas ( a partir de 470.x.x)"
- echo "3  - Instala o driver para placas antigas ( a partir de 390.x.x)"
- echo "4  - Instala o driver para placas antigas ( a partir de 340.x.x)"
- echo "5  - Instala o driver para placas antigas ( a partir de 304.x.x)"
- echo "6  - Instala o driver para placas antigas ( a partir de 173.14.x.x)"
- echo "7  - Instala o driver para placas antigas ( a partir de 96.43.x.x)"
- echo "8  - Instala o driver para placas antigas ( a partir de 71.86.x.x)"
+ echo "1  - Verifica se há identificação do driver"
+ echo "2  - Instala o driver para placas mais recentes"
+ echo "3  - Instala o driver para placas antigas ( a partir de 470.x.x)"
+ echo "4  - Instala o driver para placas antigas ( a partir de 390.x.x)"
+ echo "5  - Instala o driver para placas antigas ( a partir de 340.x.x)"
+ echo "6  - Instala o driver para placas antigas ( a partir de 304.x.x)"
+ echo "7  - Instala o driver para placas antigas ( a partir de 173.14.x.x)"
+ echo "8  - Instala o driver para placas antigas ( a partir de 96.43.x.x)"
+ echo "9  - Instala o driver para placas antigas ( a partir de 71.86.x.x)"
  echo "q  - Volta para o menu principal" 
 
 # FIM DE show_subMenu_nvidia()
@@ -2519,34 +2551,38 @@ sub_nvidia(){
   read -p "Escolha uma opção: " fire
   case $fire in
   1)
-   installing_nvidia
+   checking_video_driver
    echo "Procedimento Realizado"
   ;;
   2)
-   installing_nvidia_legacy_470
+   installing_nvidia
    echo "Procedimento Realizado"
   ;;
   3)
-   installing_nvidia_legacy_390
+   installing_nvidia_legacy_470
    echo "Procedimento Realizado"
   ;;
   4)
-   installing_nvidia_legacy_340
+   installing_nvidia_legacy_390
    echo "Procedimento Realizado"
   ;;
   5)
-   installing_nvidia_legacy_304
+   installing_nvidia_legacy_340
    echo "Procedimento Realizado"
   ;;
   6)
-   installing_nvidia_legacy_173
+   installing_nvidia_legacy_304
    echo "Procedimento Realizado"
   ;;
   7)
-   installing_nvidia_legacy_96
+   installing_nvidia_legacy_173
    echo "Procedimento Realizado"
   ;;
   8)
+   installing_nvidia_legacy_96
+   echo "Procedimento Realizado"
+  ;;
+  9)
    installing_nvidia_legacy_71
    echo "Procedimento Realizado"
   ;;
