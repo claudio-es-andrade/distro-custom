@@ -2,16 +2,16 @@
 IMAGENS DO GNU/LINUX
 # README
 
-### Modificações Realizadas: Junho/09/2025
-Ubuntu LTS 24.04 Debullshit Script
-Penguin-Eggs root/user: evolution
+### Modificações Realizadas: Julho/03/2025
+Ubuntu LTS Unity 24.04 
+Flatpak, Codecs Multimídia
 
-## https://drive.google.com/file/d/1-_CMIjWfG5ZIgP2-gOMm_O6cNrn3qFyq/view?usp=drivesdk
+## https://drive.google.com/file/d/1KvL2X5bh-keqHFHSYHAEo4L_RAowcJAA/view?usp=drivesdk
 
-Ubuntu 25.04 Debullshit Script 
-Penguin-Eggs root/user: evolution
+Fedora Live Python Classroom: 43 (Não utilizar em máquina de produção)
+Kernel: 6.15
 
-## https://drive.google.com/file/d/1KpdDc7UC0JRCB5a8NpVAS4xgZbLlRBfw/view?usp=drivesdk
+## https://drive.google.com/file/d/1sDzwHMx4od529gk1iYskvxEgrVs70q1_/view?usp=drivesdk
 
 ### Modificações Realizadas:Junho/02/2025
 TigerOS: Distro Brasileira baseada no Ubuntu LTS 24.04 Noble. Design moderno e simples. Feito para aqueles que pretendem migrar do Windows 10. Possui um menu de boas vindas com instalação de codecs, office, mudança de cores noturnas e mais.
@@ -25,7 +25,13 @@ Penguins-Eggs root/live: evolution
 
 # MD5-CHECKSUM
 
-Maiores Informações:
+Ubuntu Unity
+##  https://drive.google.com/file/d/16nkAxYqJnGxl2aBLP6Os_4MqAAPnM3YE/view?usp=drivesdk
+
+# Maiores Informações:
+
+Cubic:
+## https://github.com/PJ-Singh-001/Cubic
 
 Penguins-Eggs:
 ## https://penguins-eggs.net/
