@@ -200,20 +200,30 @@ installing_mate(){
 # FIM DE installing_mate()
 }
 
-installing_flatpak(){
+installing_flatpak_gnome(){
  echo "Habilitando pacotes FLATPAK do Flathub ao sistema"
 
  apt install flatpak
- echo "Instalando o plugin no Gnome"
+ echo "Instalando o plugin no Gnome-Software"
  apt install gnome-software-plugin-flatpak
- 
- #echo "Instalando o plugin no KDE"
- #apt install plasma-discover-backend-flatpak
- 
+   
  echo "Adicionando o FlatHub.org ao sistema"
  flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
  
-# FIM DE installing_flatpak()
+# FIM DE installing_flatpak_gnome()
+}
+
+installing_flatpak_kde(){
+ echo "Habilitando pacotes FLATPAK do Flathub ao sistema"
+
+ apt install flatpak
+ echo "Instalando o plugin no KDE Discover"
+ sudo apt install plasma-discover-backend-flatpak
+   
+ echo "Adicionando o FlatHub.org ao sistema"
+ flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+ 
+# FIM DE installing_flatpak_kde()
 }
 
 installing_codecs(){
@@ -1601,7 +1611,7 @@ show_menu(){
  echo "5  - Instala Gnome-tweaks e Gnome-Extension_Manager"
  echo "6  - Menu para a instalação do Firmware da Intel ou AMD "
  echo "7  - Menu para a escolha do firewall"
- echo "8  - Instala o Flatpak"
+ echo "8  - Menu de integração do Flatpak"
  echo "9  - Instala o YAD e o Tasksel"
  echo "10 - Menu para a escolha de outros Desktops"
  echo "11 - Menu para a escolha do web-browser"
@@ -1665,7 +1675,7 @@ main() {
    echo "Digite o valor entre as opções listadas"
   ;;
   8)
-   installing_flatpak
+   sub_flatpak
    echo "Digite o valor entre as opções listadas"
   ;;
   9)
@@ -2597,8 +2607,41 @@ sub_nvidia(){
 
 # FIM DE sub_nvidia()
 }
+show_subMenu_flatpak(){
+ echo "Escolha a opção pela numeração abaixo: "
+ echo "1  - Instala o flatpak integrando ao Gnome-Software"
+ echo "2  - Instala o flatpak integrando ao KDE Discover"
+ echo "q  - Volta para o menu principal" 
 
+# FIM DE show_subMenu_flatpak()
+}
 
+sub_flatpak(){
+ while true; do
+  show_subMenu_flatpak
+  read -p "Escolha uma opção: " fire
+  case $fire in
+  1)
+   installing_flatpak_gnome
+   echo "Procedimento Realizado"
+  ;;
+  2)
+   installing_flatpak_kde
+   echo "Procedimento Realizado"
+  ;;
+  q|Q)
+   break
+  ;;
+  *)
+   echo "O valor escolhido deve estar entre os valores apresentados nas opções."
+  ;;
+  esac
+ done
+ 
+# FIM DE sub_flatpak()
+}
+
+# SELECTED FUNCTIONS
 execute_everything(){
  check_if_root_is_logged
  sources_list_modified
