@@ -2,33 +2,28 @@
 IMAGENS DO GNU/LINUX
 # README
 
-### Modificações Realizadas: Julho/03/2025
+### Modificações Realizadas: Agosto/06/2025
 Ubuntu LTS Unity 24.04 
 Flatpak, Codecs Multimídia
 
-## https://drive.google.com/file/d/1KvL2X5bh-keqHFHSYHAEo4L_RAowcJAA/view?usp=drivesdk
+## https://drive.google.com/file/d/1QtB7Adm_ABB71Pwzu2TcZuBBaoP_tKNL/view?usp=drive_link
 
-Fedora Live Python Classroom: 43 (Não utilizar em máquina de produção)
-Kernel: 6.15
 
-## https://drive.google.com/file/d/1sDzwHMx4od529gk1iYskvxEgrVs70q1_/view?usp=drivesdk
+### Modificações Realizadas:Agosto/06/2025
+GhostBSD MATE: Unix FreeBSD Distro que já vem com um Destop Environment, MATE, pronto para uso.
+Firewall, a maioria dos codecs multimedia instalado, Atualizador de pacotes Gráfico, tudo muito simples e prático. Documentação: https://ghostbsd-documentation-portal.readthedocs.io/en/latest/index.html
 
-### Modificações Realizadas:Julho/05/2025
-TigerOS: Distro Brasileira baseada no Ubuntu LTS 24.04 Noble. Design moderno e simples. 
-Feito para aqueles que pretendem migrar do Windows 10.
-Possui um menu de boas vindas com instalação de codecs, pacotes de office, mudança para cores noturnas, inteligência artificiais e mais.
-KDE Plasma.
-Adicionado pela instalação:
-Penguins-Eggs, Extratores e compactadores, mais alguns codecs, pronto para a visualização no virtualbox e GUFW (UFW firewall Gráfico).
-Penguins-Eggs root/live: evolution 
-  
-## https://drive.google.com/file/d/1NbIYgetBNm3HYuTQY9PmK1WepuMEddMN/view?usp=drive_link
+## https://drive.google.com/file/d/1ap7jVPcYCSTbhPg7ep3S5hrRL9JXgpGC/view?usp=drive_link
 
 
 # MD5-CHECKSUM
 
 Ubuntu Unity
-##  https://drive.google.com/file/d/16nkAxYqJnGxl2aBLP6Os_4MqAAPnM3YE/view?usp=drivesdk
+##  https://drive.google.com/file/d/1azSROUjz6ot4QbdCi3JVaIXjJp1CJ9ah/view?usp=drive_link
+
+# SHA256-CHECKSUM
+GhostBSD 
+## https://drive.google.com/file/d/1NbHMkIK1rX2U17KilJ-q5u9WGt6UY83P/view?usp=drive_link
 
 # Maiores Informações:
 
