@@ -14,10 +14,6 @@ Firewall, a maioria dos codecs multimedia instalado, Atualizador de pacotes Grá
 
 ## https://drive.google.com/file/d/1ap7jVPcYCSTbhPg7ep3S5hrRL9JXgpGC/view?usp=drive_link
 
-- Fedora LXQt : X Desktop, Kernel 6.17, Minimalista, simples.
-
-## https://drive.google.com/file/d/18x8gJoC9yJIA4MobgfJUEFyPN1ldC8EN/view?usp=drive_link
-
 # MD5-CHECKSUM
 
 - Ubuntu Unity
