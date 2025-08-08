@@ -9,7 +9,7 @@ Flatpak, Codecs Multimídia
 ## https://drive.google.com/file/d/1QtB7Adm_ABB71Pwzu2TcZuBBaoP_tKNL/view?usp=drive_link
 
 
-- GhostBSD MATE: Unix FreeBSD Distro que já vem com um Destop Environment, MATE, pronto para uso.
+- GhostBSD MATE: Unix FreeBSD Distro que já vem com um Desktop Environment, MATE, pronto para uso.
 Firewall, a maioria dos codecs multimedia instalado, Atualizador de pacotes Gráfico, tudo muito simples e prático. Documentação: https://ghostbsd-documentation-portal.readthedocs.io/en/latest/index.html
 
 ## https://drive.google.com/file/d/1ap7jVPcYCSTbhPg7ep3S5hrRL9JXgpGC/view?usp=drive_link
