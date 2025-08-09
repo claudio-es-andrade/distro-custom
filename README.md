@@ -8,21 +8,31 @@ Flatpak, Codecs Multimídia
 
 ## https://drive.google.com/file/d/1QtB7Adm_ABB71Pwzu2TcZuBBaoP_tKNL/view?usp=drive_link
 
-
 - GhostBSD MATE: Unix FreeBSD Distro que já vem com um Desktop Environment, MATE, pronto para uso.
 Firewall, a maioria dos codecs multimedia instalado, Atualizador de pacotes Gráfico, tudo muito simples e prático. Documentação: https://ghostbsd-documentation-portal.readthedocs.io/en/latest/index.html
 
 ## https://drive.google.com/file/d/1ap7jVPcYCSTbhPg7ep3S5hrRL9JXgpGC/view?usp=drive_link
 
-# MD5-CHECKSUM
+- Debian Trixie Release Candidate 3 Net Install: Versão de Teste do Debian Trixie que instalará o básico mais um Desktop da prepferência.
 
-- Ubuntu Unity
+## https://drive.google.com/file/d/1poE7IIkg-KO3qeKdQ0qweNrUtEX6wZBq/view?usp=drive_link
+
+
+# Arquivo de Verificação da ISO
+
+- Ubuntu Unity(MD5-CheckSum)
 ##  https://drive.google.com/file/d/1azSROUjz6ot4QbdCi3JVaIXjJp1CJ9ah/view?usp=drive_link
 
 - GhostBSD (SHA256-Checksum)
 ## https://drive.google.com/file/d/1NbHMkIK1rX2U17KilJ-q5u9WGt6UY83P/view?usp=drive_link
 
 # Maiores Informações:
+
+- Debian Pos Install Script (Bookworm):
+## https://github.com/claudio-es-andrade/distro-custom/blob/main/DebianBookwormPosInstallationScript.sh
+
+- Debian Pos Install Script (Trixie):
+## https://github.com/claudio-es-andrade/distro-custom/blob/main/DebianTrixiePosInstallationScript.sh
 
 - Cubic:
 ## https://github.com/PJ-Singh-001/Cubic
