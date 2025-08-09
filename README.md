@@ -17,6 +17,9 @@ Firewall, a maioria dos codecs multimedia instalado, Atualizador de pacotes Grá
 
 ## https://drive.google.com/file/d/1poE7IIkg-KO3qeKdQ0qweNrUtEX6wZBq/view?usp=drive_link
 
+- Fedora 43 Test Rawhide Net Install : Versão de Teste para o Fedora 43 que será lançada no final do ano.
+
+## https://drive.google.com/file/d/13TGv6Xb7A-kTOwO8hDZ9RgmIPxju62BC/view?usp=drive_link
 
 # Arquivo de Verificação da ISO
 
