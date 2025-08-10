@@ -4,18 +4,18 @@ IMAGENS GNU/LINUX e FreeBSD
 
 ### Modificações Realizadas: Agosto/06/2025
 - Ubuntu LTS Unity 24.04 
-Flatpak, Codecs Multimídia
+Adicionado novo kernel 6.14, Flatpak, Codecs Multimídia
 
 ## https://drive.google.com/file/d/1QtB7Adm_ABB71Pwzu2TcZuBBaoP_tKNL/view?usp=drive_link
 
-- GhostBSD MATE: Unix FreeBSD Distro que já vem com um Desktop Environment, MATE, pronto para uso.
+- GhostBSD MATE: Unix (Kernel) FreeBSD Distro que já vem com um Desktop Environment, MATE, pronto para uso.
 Firewall, a maioria dos codecs multimedia instalado, Atualizador de pacotes Gráfico, tudo muito simples e prático. Documentação: https://ghostbsd-documentation-portal.readthedocs.io/en/latest/index.html
 
 ## https://drive.google.com/file/d/1ap7jVPcYCSTbhPg7ep3S5hrRL9JXgpGC/view?usp=drive_link
 
-- Debian Trixie Release Candidate 3 Net Install: Versão de Teste do Debian Trixie que instalará o básico mais um Desktop da prepferência.
+- Debian Trixie Net Install: Nova versão do Debian (13) que instalará o básico mais o(s) Desktop(s) da preferência.
 
-## https://drive.google.com/file/d/1poE7IIkg-KO3qeKdQ0qweNrUtEX6wZBq/view?usp=drive_link
+## https://drive.google.com/file/d/1c0YNGCewjyAz9UY95uIo9AOOB0t2cmtS/view?usp=drive_link
 
 - Fedora 43 Test Rawhide Net Install : Versão de Teste para o Fedora 43 que será lançada no final do ano.
 
