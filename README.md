@@ -3,8 +3,7 @@ IMAGENS GNU/LINUX e FreeBSD
 # README
 
 ### Modificações Realizadas: Agosto/06/2025
-- Ubuntu LTS Unity 24.04 
-Adicionado novo kernel 6.14, Flatpak, Codecs Multimídia
+- Ubuntu LTS Unity 24.04: Adicionado novo kernel 6.14, Flatpak, Extratores gerais e Codecs Multimídia
 
 ## https://drive.google.com/file/d/1QtB7Adm_ABB71Pwzu2TcZuBBaoP_tKNL/view?usp=drive_link
 
