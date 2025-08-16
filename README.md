@@ -16,9 +16,16 @@ Firewall, a maioria dos codecs multimedia instalado, Atualizador de pacotes Grá
 
 ## https://drive.google.com/file/d/1c0YNGCewjyAz9UY95uIo9AOOB0t2cmtS/view?usp=drive_link
 
+# ISOs para testar na sua máquina virtual:
+
 - Fedora 43 Test Rawhide Net Install : Versão de Teste para o Fedora 43 que será lançada no final do ano.
 
 ## https://drive.google.com/file/d/13TGv6Xb7A-kTOwO8hDZ9RgmIPxju62BC/view?usp=drive_link
+
+- Linux Mint 22.2 Beta Test (Zara): A nova versão do popular Linux Mint está quase pronta.
+  Kernel 6.14, melhorias no Cinnamon, Leitor Digital, Flatpak. Adicionado: Mainline (instalador de Kernels do Ubuntu)
+
+## https://drive.google.com/file/d/1DSI5KsCxarOORW4gGzf6VCAkMp9i-1tq/view?usp=drive_link
 
 # Arquivo de Verificação da ISO
 
