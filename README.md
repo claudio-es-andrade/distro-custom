@@ -1,6 +1,7 @@
  Distro-Custom IMAGENS GNU/LINUX e FreeBSD
 
 # README
+Link de acesso corrigido!
 
 #### ISOs Originais : Setembro/10/2025
 
