@@ -2,7 +2,7 @@
 
 # README
 
-#### Modificações Realizadas: Setembro/04/2025
+#### ISOs Originais : Setembro/10/2025
 
 - Linux Lite 7.6 (Ubuntu 24.04 LTS): Link do Brasil desatualizado.
 Distro com XFCE Desktop e bastante recursos (Synaptic, Firewalld, Timeshift Backup) que facilitam a vida do usuário mais novo. A wiki, apesar do idioma ser outro, possui bons exemplos e detalhes de procedimentos.
