@@ -3,17 +3,15 @@
 # README
 Link de acesso corrigido!
 
-#### ISOs Originais : Setembro/10/2025
+## Setembro/19/2025
+
+#### ISOs Originais : 
 
 - Linux Lite 7.6 (Ubuntu 24.04 LTS): Link do Brasil desatualizado.
 Distro com XFCE Desktop e bastante recursos (Synaptic, Firewalld, Timeshift Backup) que facilitam a vida do usuário mais novo. A wiki, apesar do idioma ser outro, possui bons exemplos e detalhes de procedimentos.
 
 ### https://drive.google.com/file/d/1oQPFA20mwSJabGHg7-nmjNXiWl6YSvac/view?usp=drive_link
 
-
-- Linux Mint 22.2 Zara (Ubuntu 24.04 LTS): A versão mais completa do sistema operational que propõe simplificar a vida do usuário.
-
-### https://drive.google.com/file/d/13nXgRnuU-GCWT4pKY7FXKOxg5j371dzh/view?usp=drive_link
 
 - GhostBSD MATE (Atualização Agosto/25/2025): Unix (Kernel) FreeBSD Distro que já vem com um Desktop Environment, MATE, pronto para uso.
 Firewall, a maioria dos codecs multimedia instalado, Atualizador de pacotes Gráfico, tudo muito simples e prático. Documentação: https://ghostbsd-documentation-portal.readthedocs.io/en/latest/index.html
@@ -34,6 +32,10 @@ Firewall, a maioria dos codecs multimedia instalado, Atualizador de pacotes Grá
 
 # ISO(s) para testar na sua máquina virtual:
 
+- Linux Mint Debian Edition - LMDE7- Gigi (Cinnamon): Versão Beta liberada para teste.
+
+### https://drive.google.com/file/d/1Sfi__p7X2IPEgeT9A1NUM9WzLPPyzhgm/view?usp=drive_link
+
 - Fedora 43 Test Rawhide Net Install : Versão de Teste para o Fedora 43 que será lançada no final do ano.
 
 ### https://drive.google.com/file/d/13TGv6Xb7A-kTOwO8hDZ9RgmIPxju62BC/view?usp=drive_link
@@ -44,11 +46,6 @@ Firewall, a maioria dos codecs multimedia instalado, Atualizador de pacotes Grá
 - Linux Lite (MD5)
 
 ### https://drive.google.com/file/d/1T1rDggzS14yZIrhwFVBFQcfelrMImEFW/view?usp=drive_link
-
-- Linux Mint Zara 22.2 (SHA256)
-
-### https://drive.google.com/file/d/1Lji8_UOTcjnNKXTvdg_CAHrBwlr304RC/view?usp=drive_link
-
 
 - GhostBSD (SHA256)
 
