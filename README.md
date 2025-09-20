@@ -41,6 +41,15 @@ Na minha máquina, após instalação do LXQT, a tela ficou preta. Gnome, instal
 
 ### https://drive.google.com/file/d/1chojGKhcU7QTE0m732P9ANxN4-BTh8v3/view?usp=drive_link
 
+- Linux Zorin 18 Beta: Distro que possui interface amigável pretendendo substituir o Windows e ou o Mac.
+Web Apps: Microsoft Office/365, Teams, Google Docs, Adobe Photoshop e outros mais (170).
+
+### https://zorin.com/os/download/18/core/beta/
+
+- Ubuntu Dangerous Daily: Teste o Ubuntu lançado diariamente com correções e aprimoramentos recém lançados e não testados ainda.
+
+### https://cdimage.ubuntu.com/daily-dangerous/
+
 
 # Arquivo de Verificação da ISO
 
