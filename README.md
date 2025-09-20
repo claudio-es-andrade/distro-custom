@@ -3,7 +3,7 @@
 # README
 Link de acesso corrigido!
 
-## Setembro/19/2025
+## Setembro/20/2025
 
 #### ISOs Originais : 
 
@@ -28,18 +28,18 @@ Firewall, a maioria dos codecs multimedia instalado, Atualizador de pacotes Grá
 
 - Debian Trixie Net Install: Nova versão do Debian (13) que instalará o básico mais o(s) Desktop(s) da preferência.
 
-### https://drive.google.com/file/d/1c0YNGCewjyAz9UY95uIo9AOOB0t2cmtS/view?usp=drive_link
+### https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.1.0-amd64-netinst.iso
 
 # ISO(s) para testar na sua máquina virtual:
 
 - Linux Mint Debian Edition - LMDE7- Gigi (Cinnamon): Versão Beta liberada para teste com quase tudo pronto para o lançamento.
 
-### https://drive.google.com/file/d/1Sfi__p7X2IPEgeT9A1NUM9WzLPPyzhgm/view?usp=drive_link
+### https://mint.c3sl.ufpr.br/testing/lmde-7-cinnamon-64bit-beta.iso
 
 - Fedora 43 Beta Test Net Install : Versão Beta pronta para testes do Fedora 43 que será lançada no final do ano.
 Na minha máquina, após instalação do LXQT, a tela ficou preta. Gnome, instalação e pós: OK. Testem e informem os resultados.
 
-### https://drive.google.com/file/d/1chojGKhcU7QTE0m732P9ANxN4-BTh8v3/view?usp=drive_link
+### https://dl.fedoraproject.org/pub/fedora/linux/development/43/Server/x86_64/iso/Fedora-Server-netinst-x86_64-43-20250920.n.0.iso
 
 - Linux Zorin 18 Beta: Distro que possui interface amigável pretendendo substituir o Windows e ou o Mac.
 Web Apps: Microsoft Office/365, Teams, Google Docs, Adobe Photoshop e outros mais (170).
@@ -49,6 +49,10 @@ Web Apps: Microsoft Office/365, Teams, Google Docs, Adobe Photoshop e outros mai
 - Ubuntu Dangerous Daily: Teste o Ubuntu lançado diariamente com correções e aprimoramentos recém lançados e não testados ainda.
 
 ### https://cdimage.ubuntu.com/daily-dangerous/
+
+- KDE LINUX BETA: Depois da criação do KDE Neon, uma nova distro atômica, baseada no Arch Linux, com o de mais novo do KDE Plasma. Versões da ISO atualizada quase diariamente.
+
+### https://files.kde.org/kde-linux/?C=M;O=A
 
 
 # Arquivo de Verificação da ISO
