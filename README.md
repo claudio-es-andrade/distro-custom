@@ -32,13 +32,14 @@ Firewall, a maioria dos codecs multimedia instalado, Atualizador de pacotes Grá
 
 # ISO(s) para testar na sua máquina virtual:
 
-- Linux Mint Debian Edition - LMDE7- Gigi (Cinnamon): Versão Beta liberada para teste.
+- Linux Mint Debian Edition - LMDE7- Gigi (Cinnamon): Versão Beta liberada para teste com quase tudo pronto para o lançamento.
 
 ### https://drive.google.com/file/d/1Sfi__p7X2IPEgeT9A1NUM9WzLPPyzhgm/view?usp=drive_link
 
-- Fedora 43 Test Rawhide Net Install : Versão de Teste para o Fedora 43 que será lançada no final do ano.
+- Fedora 43 Beta Test Net Install : Versão Beta pronta para testes do Fedora 43 que será lançada no final do ano.
+Na minha máquina, após instalação do LXQT, a tela ficou preta. Gnome, instalação e pós: OK. Testem e informe o resultados.
 
-### https://drive.google.com/file/d/13TGv6Xb7A-kTOwO8hDZ9RgmIPxju62BC/view?usp=drive_link
+### https://drive.google.com/file/d/1chojGKhcU7QTE0m732P9ANxN4-BTh8v3/view?usp=drive_link
 
 
 # Arquivo de Verificação da ISO
