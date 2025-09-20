@@ -37,7 +37,7 @@ Firewall, a maioria dos codecs multimedia instalado, Atualizador de pacotes Grá
 ### https://drive.google.com/file/d/1Sfi__p7X2IPEgeT9A1NUM9WzLPPyzhgm/view?usp=drive_link
 
 - Fedora 43 Beta Test Net Install : Versão Beta pronta para testes do Fedora 43 que será lançada no final do ano.
-Na minha máquina, após instalação do LXQT, a tela ficou preta. Gnome, instalação e pós: OK. Testem e informe o resultados.
+Na minha máquina, após instalação do LXQT, a tela ficou preta. Gnome, instalação e pós: OK. Testem e informem os resultados.
 
 ### https://drive.google.com/file/d/1chojGKhcU7QTE0m732P9ANxN4-BTh8v3/view?usp=drive_link
 
