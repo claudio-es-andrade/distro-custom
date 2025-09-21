@@ -3,7 +3,7 @@
 # README
 Link de acesso corrigido!
 
-## Setembro/20/2025
+## Setembro/21/2025
 
 #### ISOs Originais : 
 
@@ -26,9 +26,14 @@ Firewall, a maioria dos codecs multimedia instalado, Atualizador de pacotes Grá
 
 ### https://drive.google.com/file/d/1P8aJc9LIG3RDAhFBENh57Jd8qeijUhXA/view?usp=drive_link 
 
-- Debian Trixie Net Install: Nova versão do Debian (13) que instalará o básico mais o(s) Desktop(s) da preferência.
+#### DISTRO CUSTOMIZADA:
 
-### https://cdimage.debian.org/debian-cd/current/amd64/iso-cd/debian-13.1.0-amd64-netinst.iso
+- BR-OS (KDE - Debian 13): Distro Linux com bastante aplicativos gráficos, como por exemplo, Blender, Inkscape, Krita e o GIMP.
+Chat GPT (Prompt - AI), Web-Browsers: Firefox-ESR e LibreWolf, KDE Connect, VLC Player e OnlyOffice como Office padrão.
+
+Adicionados: Codecs Multimedia, Compactadores e extratores gerais, Gerenciador de Pacotes Synaptic e o Gerenciador de Instalação GDebi, Firewall GUFW (UFW Gráfico).
+
+### https://drive.google.com/file/d/1QRc_3XNZUp1ZDka9B8VTrqMrxIkSq8ZJ/view?usp=drive_link
 
 # ISO(s) para testar na sua máquina virtual:
 
@@ -65,6 +70,9 @@ Web Apps: Microsoft Office/365, Teams, Google Docs, Adobe Photoshop e outros mai
 
 ### https://drive.google.com/file/d/1AXSWqd75qPqMnMKzxbDBkoVG4uUBwuTW/view?usp=drive_link
 
+- BR OS (MD5)
+
+### https://drive.google.com/file/d/17NArXjNL6O79gHLHCZBnLEBoZpiD93FQ/view?usp=drive_link
 
 
 ## Maiores Informações:
