@@ -61,6 +61,9 @@ Web Apps: Microsoft Office/365, Teams, Google Docs, Adobe Photoshop e outros mai
 
 ### https://files.kde.org/kde-linux/?C=M;O=A
 
+- System76 - Cosmic: O novo ambiente de Desktop está quase pronto. pode ser utilizado em diversas distros.
+
+### https://system76.com/cosmic/download
 
 # Arquivo de Verificação da ISO
 
