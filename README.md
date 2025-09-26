@@ -3,7 +3,7 @@
 # README
 Link de acesso corrigido!
 
-## Setembro/21/2025
+## Setembro/26/2025
 
 #### ISOs Originais : 
 
@@ -26,14 +26,16 @@ Firewall, a maioria dos codecs multimedia instalado, Atualizador de pacotes Grá
 
 ### https://drive.google.com/file/d/1P8aJc9LIG3RDAhFBENh57Jd8qeijUhXA/view?usp=drive_link 
 
-#### DISTRO CUSTOMIZADA:
+#### DISTRO-CUSTOM (MODIFICADA):
 
 - BR-OS (KDE - Debian 13): Distro Linux com bastante aplicativos gráficos, como por exemplo, Blender, Inkscape, Krita e o GIMP.
 Chat GPT (Prompt - AI), Web-Browsers: Firefox-ESR e LibreWolf, KDE Connect, VLC Player e OnlyOffice como Office padrão.
 
 Adicionados: Codecs Multimedia, Compactadores e extratores gerais, Gerenciador de Pacotes Synaptic e o Gerenciador de Instalação GDebi, Firewall GUFW (UFW Gráfico).
 
-### https://drive.google.com/file/d/1QRc_3XNZUp1ZDka9B8VTrqMrxIkSq8ZJ/view?usp=drive_link
+Repositório Debian BackPorts (Kernel mais recente entre outros).
+
+### https://drive.google.com/file/d/19lm3gtbKIgfLgPzosipeUzGmhbs7yWjN/view?usp=drive_link
 
 # ISO(s) para testar na sua máquina virtual:
 
@@ -72,7 +74,7 @@ Web Apps: Microsoft Office/365, Teams, Google Docs, Adobe Photoshop e outros mai
 
 - BR OS (MD5)
 
-### https://drive.google.com/file/d/17NArXjNL6O79gHLHCZBnLEBoZpiD93FQ/view?usp=drive_link
+### https://drive.google.com/file/d/1wuAPcKMLd7XTClmrA6iqhupMHGHgLQKW/view?usp=drive_link
 
 
 ## Maiores Informações:
