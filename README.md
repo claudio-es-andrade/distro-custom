@@ -61,6 +61,14 @@ Web Apps: Microsoft Office/365, Teams, Google Docs, Adobe Photoshop e outros mai
 
 ### https://files.kde.org/kde-linux/?C=M;O=A
 
+- System76 - POP!_OS 22.04 LTS Beta: O sistema baseado no Ubuntu
+
+### https://iso.pop-os.org/24.04/amd64/intel/19/pop-os_24.04_amd64_intel_19.iso
+
+- System76 - POP!_OS 22.04 LTS Beta (NVidia):
+
+### https://iso.pop-os.org/24.04/amd64/nvidia/19/pop-os_24.04_amd64_nvidia_19.iso
+
 - System76 - Cosmic: O novo ambiente de Desktop está quase pronto. pode ser utilizado em diversas distros.
 
 ### https://system76.com/cosmic/download
