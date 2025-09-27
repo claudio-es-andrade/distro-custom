@@ -226,6 +226,14 @@ installing_flatpak_kde(){
 # FIM DE installing_flatpak_kde()
 }
 
+installing_bazaar(){
+ echo "Instalando a loja de aplicativos para Flatpaks em ambientes Desktop Gnome Bazaar"
+ 
+ flatpak install flathub io.github.kolunmi.Bazaar
+ 
+ # FIM DE installing_bazaar()
+ }
+
 installing_codecs(){
  echo "Instalando Codecs diversos"
  apt install faad ffmpeg gstreamer1.0-fdkaac gstreamer1.0-libav gstreamer1.0-vaapi gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly lame libavcodec-extra libavcodec-extra* libavdevice* libgstreamer1.0-0 sox twolame vorbis-tools
@@ -2611,6 +2619,7 @@ show_subMenu_flatpak(){
  echo "Escolha a opção pela numeração abaixo: "
  echo "1  - Instala o flatpak integrando ao Gnome-Software"
  echo "2  - Instala o flatpak integrando ao KDE Discover"
+ echo "3  - Instala o Bazaar loja de aplicativos Flatpak em ambientes de Desktop Gnome"
  echo "q  - Volta para o menu principal" 
 
 # FIM DE show_subMenu_flatpak()
@@ -2627,6 +2636,10 @@ sub_flatpak(){
   ;;
   2)
    installing_flatpak_kde
+   echo "Procedimento Realizado"
+  ;;
+  3)
+   installing_bazaar
    echo "Procedimento Realizado"
   ;;
   q|Q)
