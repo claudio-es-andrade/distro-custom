@@ -53,7 +53,11 @@ Web Apps: Microsoft Office/365, Teams, Google Docs, Adobe Photoshop e outros mai
 
 ### https://zorin.com/os/download/18/core/beta/
 
-- Ubuntu Dangerous Daily: Teste o Ubuntu lançado diariamente com correções e aprimoramentos recém lançados e não testados ainda.
+- Ubuntu 25.10 Beta: Próximo lançamento do Ubuntu.
+
+### https://www.releases.ubuntu.com/25.10/ubuntu-25.10-beta-desktop-amd64.iso
+
+- Ubuntu Daily Dangerous: Teste o Ubuntu lançado diariamente com correções e aprimoramentos recém lançados e não testados ainda.
 
 ### https://cdimage.ubuntu.com/daily-dangerous/
 
