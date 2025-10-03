@@ -76,7 +76,18 @@ Web Apps: Microsoft Office/365, Teams, Google Docs, Adobe Photoshop e outros mai
 
 ### https://files.kde.org/kde-linux/?C=M;O=A
 
-- GNOME OS: Distro atômica que não possui pacotes próprios, utilza apenas Flatpaks. Esta distro pode ser testada em hardware reais também, possibilitando até configurar algumas placas da NVidia. É necessário ter o Gnome Boxes para rodar a ISO virtualmente.
+- GNOME OS Nightly: Distro atômica que não possui pacotes próprios e nem se baseia em pacotes de outras distros, utiliza apenas Flatpaks ou Snaps, se houver a habilitação (sudo updatectl enable snapd). Esta distro pode ser testada em hardware reais também possibilitando até configurar algumas placas da NVidia. É necessário ter o Gnome Boxes para rodar a ISO virtualmente.
+As extensões que o Gnome OS oferece são:
+
+1 - devel (Gnome SDK e outras ferramentas );
+
+2 - debug;
+
+3 - snapd; 
+
+4 - apparmor e,
+
+5 - Nvidia.
 
 ### https://os.gnome.org/download/latest/gnome_os_nightly.iso
 
