@@ -3,7 +3,7 @@
 # README
 Link de acesso corrigido!
 
-## Setembro/26/2025
+## Outubro/03/2025
 
 #### ISOs Originais : 
 
@@ -33,9 +33,9 @@ Chat GPT (Prompt - AI), Web-Browsers: Firefox-ESR e LibreWolf, KDE Connect, VLC 
 
 Adicionados: Codecs Multimedia, Compactadores e extratores gerais, Gerenciador de Pacotes Synaptic e o Gerenciador de Instalação GDebi, Firewall GUFW (UFW Gráfico).
 
-Repositório Debian BackPorts (Kernel mais recente entre outros).
+Repositório Debian BackPorts (Kernel mais recente, Firmwares,  entre outros).
 
-### https://drive.google.com/file/d/19lm3gtbKIgfLgPzosipeUzGmhbs7yWjN/view?usp=drive_link
+### https://drive.google.com/file/d/1v-hD8iCH35VSM9t8ptCVLSLQ3noEnAXS/view?usp=drive_link
 
 # ISO(s) para testar na sua máquina virtual:
 
@@ -89,7 +89,7 @@ Web Apps: Microsoft Office/365, Teams, Google Docs, Adobe Photoshop e outros mai
 
 - BR OS (MD5)
 
-### https://drive.google.com/file/d/1wuAPcKMLd7XTClmrA6iqhupMHGHgLQKW/view?usp=drive_link
+### https://drive.google.com/file/d/15k80sFtaeJ_lqQgI-HBwsnqgJyBSUX5l/view?usp=drive_link
 
 
 ## Maiores Informações:
