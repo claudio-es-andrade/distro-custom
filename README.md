@@ -1,7 +1,6 @@
  Distro-Custom IMAGENS GNU/LINUX e FreeBSD
 
 # README
-Link de acesso corrigido!
 
 ## Outubro/03/2025
 
@@ -61,10 +60,6 @@ Web Apps: Microsoft Office/365, Teams, Google Docs, Adobe Photoshop e outros mai
 
 ### https://cdimage.ubuntu.com/daily-dangerous/
 
-- KDE LINUX BETA: Depois da criação do KDE Neon, uma nova distro atômica, baseada no Arch Linux, com o de mais novo do KDE Plasma. Versões da ISO atualizada quase diariamente.
-
-### https://files.kde.org/kde-linux/?C=M;O=A
-
 - System76 - POP!_OS 22.04 LTS Beta: O sistema baseado no Ubuntu
 
 ### https://iso.pop-os.org/24.04/amd64/intel/19/pop-os_24.04_amd64_intel_19.iso
@@ -76,6 +71,14 @@ Web Apps: Microsoft Office/365, Teams, Google Docs, Adobe Photoshop e outros mai
 - System76 - Cosmic: O novo ambiente de Desktop está quase pronto. pode ser utilizado em diversas distros.
 
 ### https://system76.com/cosmic/download
+
+- KDE LINUX BETA: Depois da criação do KDE Neon, uma nova distro atômica, baseada no Arch Linux, com o de mais novo do KDE Plasma. Versões da ISO atualizada quase diariamente.
+
+### https://files.kde.org/kde-linux/?C=M;O=A
+
+- GNOME OS: Distro atômica que não possui pacotes próprios, utilza apenas Flatpaks. Esta distro pode ser testada em hardware reais também, possibilitando até configurar algumas placas da NVidia. É necessário ter o Gnome Boxes para rodar a ISO virtualmente.
+
+### https://os.gnome.org/download/latest/gnome_os_nightly.iso
 
 # Arquivo de Verificação da ISO
 
