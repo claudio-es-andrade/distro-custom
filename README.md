@@ -73,6 +73,10 @@ Web Apps: Microsoft Office/365, Teams, Google Docs, Adobe Photoshop e outros mai
 
 ### https://system76.com/cosmic/download
 
+- Redox OS : O Sistema Operacional totalmente feito do zero e em linguagem RUST assim como o seu Kernel.
+
+### https://static.redox-os.org/releases/0.9.0/x86_64/redox_desktop_x86_64_2024-09-07_1225_harddrive.img.zst
+
 - KDE LINUX BETA: Depois da criação do KDE Neon, uma nova distro atômica, baseada no Arch Linux, com o de mais novo do KDE Plasma. Versões da ISO atualizada quase diariamente.
 
 ### https://files.kde.org/kde-linux/?C=M;O=A
