@@ -25,16 +25,17 @@ Firewall, a maioria dos codecs multimedia instalado, Atualizador de pacotes Grá
 
 ### https://drive.google.com/file/d/1P8aJc9LIG3RDAhFBENh57Jd8qeijUhXA/view?usp=drive_link 
 
-#### DISTRO-CUSTOM (MODIFICADA):
+# DISTRO-CUSTOM (MODIFICADA):
 
 - BR-OS (KDE - Debian 13): Distro Linux com bastante aplicativos gráficos, como por exemplo, Blender, Inkscape, Krita e o GIMP.
-Chat GPT (Prompt - AI), Web-Browsers: Firefox-ESR e LibreWolf, KDE Connect, VLC Player e OnlyOffice como Office padrão.
+Chat GPT (Prompt - AI), Web-Browsers: Firefox e LibreWolf, KDE Connect, VLC Player e OnlyOffice como Office padrão.
 
-Adicionados: Codecs Multimedia, Compactadores e extratores gerais, Gerenciador de Pacotes Synaptic e o Gerenciador de Instalação GDebi, Firewall GUFW (UFW Gráfico).
+Adicionados: Codecs Multimedia, Compactadores e extratores gerais, Gerenciador de Pacotes Synaptic e o Gerenciador de Instalação GDebi, Firewall GUFW (UFW Gráfico), Docker, Distrobox e Firefox (143)
 
 Repositório Debian BackPorts (Kernel mais recente, Firmwares,  entre outros).
+Repositório para o Waydroid.
 
-### https://drive.google.com/file/d/1v-hD8iCH35VSM9t8ptCVLSLQ3noEnAXS/view?usp=drive_link
+### https://drive.google.com/file/d/1XvlcjeJuNIq8ISBgFzNto8-48BAUv_gL/view?usp=drive_link
 
 # ISO(s) para testar na sua máquina virtual:
 
@@ -103,7 +104,7 @@ As extensões que o Gnome OS oferece são:
 
 - BR OS (MD5)
 
-### https://drive.google.com/file/d/15k80sFtaeJ_lqQgI-HBwsnqgJyBSUX5l/view?usp=drive_link
+### https://drive.google.com/file/d/1rnbEjKUZWY64nKM6TbX8dgA3epVE2oal/view?usp=drive_link
 
 
 ## Maiores Informações:
