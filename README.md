@@ -35,6 +35,8 @@ Firewall, a maioria dos codecs multimedia instalado, Atualizador de pacotes Grá
 
 # DISTRO-CUSTOM (MODIFICADA):
 
+![](/home/claudio/Applications/distro-custom/distroIcons/linux_Tux.png)
+
 ![](/home/claudio/Applications/distro-custom/distroIcons/icons8-debian-50.png)
 
 - BR-OS (KDE - Debian 13): Distro Linux com bastante aplicativos gráficos, como por exemplo, Blender, Inkscape, Krita e o GIMP.
