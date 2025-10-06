@@ -6,10 +6,18 @@
 
 #### ISOs Originais : 
 
+
+
+![](/home/claudio/Applications/distro-custom/distroIcons/linux_lite.png)
+
+
+
 - Linux Lite 7.6 (Ubuntu 24.04 LTS): Link do Brasil desatualizado.
 Distro com XFCE Desktop e bastante recursos (Synaptic, Firewalld, Timeshift Backup) que facilitam a vida do usuário mais novo. A wiki, apesar do idioma ser outro, possui bons exemplos e detalhes de procedimentos.
 
 ### https://drive.google.com/file/d/1oQPFA20mwSJabGHg7-nmjNXiWl6YSvac/view?usp=drive_link
+
+![](/home/claudio/Applications/distro-custom/distroIcons/ghostbsd.png)
 
 
 - GhostBSD MATE (Atualização Agosto/25/2025): Unix (Kernel) FreeBSD Distro que já vem com um Desktop Environment, MATE, pronto para uso.
@@ -27,6 +35,8 @@ Firewall, a maioria dos codecs multimedia instalado, Atualizador de pacotes Grá
 
 # DISTRO-CUSTOM (MODIFICADA):
 
+![](/home/claudio/Applications/distro-custom/distroIcons/icons8-debian-50.png)
+
 - BR-OS (KDE - Debian 13): Distro Linux com bastante aplicativos gráficos, como por exemplo, Blender, Inkscape, Krita e o GIMP.
 Chat GPT (Prompt - AI), Web-Browsers: Firefox e LibreWolf, KDE Connect, VLC Player e OnlyOffice como Office padrão.
 
@@ -39,47 +49,80 @@ Repositório para o Waydroid.
 
 # ISO(s) para testar na sua máquina virtual:
 
+![](/home/claudio/Applications/distro-custom/distroIcons/linux_mint.png)
+
 - Linux Mint Debian Edition - LMDE7- Gigi (Cinnamon): Versão Beta liberada para teste com quase tudo pronto para o lançamento.
 
 ### https://mint.c3sl.ufpr.br/testing/lmde-7-cinnamon-64bit-beta.iso
+
+![](/home/claudio/Applications/distro-custom/distroIcons/icons8-fedora-50.png)
 
 - Fedora 43 Beta Test Net Install : Versão Beta pronta para testes do Fedora 43 que será lançada no final do ano.
 Na minha máquina, após instalação do LXQT, a tela ficou preta. Gnome, instalação e pós: OK. Testem e informem os resultados.
 
 ### https://dl.fedoraproject.org/pub/fedora/linux/development/43/Server/x86_64/iso/Fedora-Server-netinst-x86_64-43-20250920.n.0.iso
 
+![](/home/claudio/Applications/distro-custom/distroIcons/icons8-zorin-50.png)
+
+
 - Linux Zorin 18 Beta: Distro que possui interface amigável pretendendo substituir o Windows e ou o Mac.
 Web Apps: Microsoft Office/365, Teams, Google Docs, Adobe Photoshop e outros mais (170).
 
 ### https://zorin.com/os/download/18/core/beta/
 
+![](/home/claudio/Applications/distro-custom/distroIcons/icons8-ubuntu-50.png)
+
 - Ubuntu 25.10 Beta: Próximo lançamento do Ubuntu.
 
 ### https://cdimage.ubuntu.com/daily-live/current/
+
+![](/home/claudio/Applications/distro-custom/distroIcons/icons8-ubuntu-50.png)
 
 - Ubuntu Daily Dangerous: Teste o Ubuntu lançado diariamente com correções e aprimoramentos recém lançados e não testados ainda.
 
 ### https://cdimage.ubuntu.com/daily-dangerous/
 
+![](/home/claudio/Applications/distro-custom/distroIcons/icons8-pop-os-logo-50.png)
+
 - System76 - POP!_OS 22.04 LTS Beta: O sistema baseado no Ubuntu
 
 ### https://iso.pop-os.org/24.04/amd64/intel/19/pop-os_24.04_amd64_intel_19.iso
+
+![](/home/claudio/Applications/distro-custom/distroIcons/icons8-pop-os-logo-50.png)
 
 - System76 - POP!_OS 22.04 LTS Beta (NVidia):
 
 ### https://iso.pop-os.org/24.04/amd64/nvidia/19/pop-os_24.04_amd64_nvidia_19.iso
 
+![](/home/claudio/Applications/distro-custom/distroIcons/icons8-pop-os-logo-50.png)
+
 - System76 - Cosmic: O novo ambiente de Desktop está quase pronto. pode ser utilizado em diversas distros.
 
 ### https://system76.com/cosmic/download
+
+![](/home/claudio/Applications/distro-custom/distroIcons/RedoxOS.png)
 
 - Redox OS : O Sistema Operacional totalmente feito do zero e em linguagem RUST assim como o seu Kernel.
 
 ### https://static.redox-os.org/releases/0.9.0/x86_64/redox_desktop_x86_64_2024-09-07_1225_harddrive.img.zst
 
+
+
+
+
+![](/home/claudio/Applications/distro-custom/distroIcons/kde.png)
+
+
+
+
+
 - KDE LINUX BETA: Depois da criação do KDE Neon, uma nova distro atômica, baseada no Arch Linux, com o de mais novo do KDE Plasma. Versões da ISO atualizada quase diariamente.
 
 ### https://files.kde.org/kde-linux/?C=M;O=A
+
+
+![](/home/claudio/Applications/distro-custom/distroIcons/gnome.png)
+
 
 - GNOME OS Nightly: Distro atômica que não possui pacotes próprios e nem se baseia em pacotes de outras distros, utiliza apenas Flatpaks ou Snaps, se houver a habilitação (sudo updatectl enable snapd). Esta distro pode ser testada em hardware reais também possibilitando até configurar algumas placas da NVidia. É necessário ter o Gnome Boxes para rodar a ISO virtualmente.
 As extensões que o Gnome OS oferece são:
