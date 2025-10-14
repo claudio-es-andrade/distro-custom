@@ -60,6 +60,8 @@ Repositório para o Waydroid.
 
 ### Lançamentos (Outubro/14):
 
+Exemplos de distros que podem substituir o Windows 10,  com facilidade, sem exigir um hardware novo muito específico:
+
 
 ![](distroIcons/linux_mint.png)
 
@@ -90,6 +92,20 @@ América Estados Unidos
 ### https://mirror.umd.edu/zorin/18/Zorin-OS-18-Core-64-bit.iso
 
 ### https://mirror.clarkson.edu/zorinos/isos/18/Zorin-OS-18-Core-64-bit.iso
+
+
+![](distroIcons/icons8-ubuntu-50.png)
+
+- Ubuntu 25.10 : Ubuntu lançado com várias novidades, como por exemplo, o kernel 6.17, novo rust-utils (sudo e outras coisas mais reescritos na linguagem rust), Gnome 49 e muito mais.
+
+### https://ubuntu.c3sl.ufpr.br/releases/questing/ubuntu-25.10-desktop-amd64.iso
+
+
+### https://mirror.uepg.br/ubuntu-releases/25.10/ubuntu-25.10-desktop-amd64.iso
+
+### https://mirror.pop-sc.rnp.br/mirror/ubuntu-releases/questing/ubuntu-25.10-desktop-amd64.iso
+
+### https://deb.campolargo.pr.gov.br/ubuntu/releases/questing/ubuntu-25.10-desktop-amd64.iso
 
 
 ---
