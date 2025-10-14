@@ -85,7 +85,7 @@ Mundial
 
 ### https://mirrors.edge.kernel.org/zorinos-isos/18/Zorin-OS-18-Core-64-bit.iso
 
-América Estados Unidos
+América: Estados Unidos (Únicos)
 
 ### https://distro.ibiblio.org/zorinos/18/Zorin-OS-18-Core-64-bit.iso
 
@@ -107,6 +107,7 @@ América Estados Unidos
 
 ### https://deb.campolargo.pr.gov.br/ubuntu/releases/questing/ubuntu-25.10-desktop-amd64.iso
 
+### https://cdimage.ubuntu.com/releases/25.10/release/ubuntu-25.10-desktop-arm64.iso
 
 ---
 
