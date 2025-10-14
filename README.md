@@ -58,13 +58,46 @@ Repositório para o Waydroid.
 
 ---
 
-# ISO(s) para testar na sua máquina virtual:
+### Lançamentos (Outubro/14):
+
 
 ![](distroIcons/linux_mint.png)
 
-- Linux Mint Debian Edition - LMDE7- Gigi (Cinnamon): Versão Beta liberada para teste com quase tudo pronto para o lançamento.
+- Linux Mint Debian Edition - LMDE7- Gigi (Cinnamon): O Linux Mint feito com Base Debian Estável Trixie 13 com todas as facilidades que o Desktop Cinnamon oferece. Uma boa oportunidade para os computadores com hardwares não suportados pelo Windows 11, sendo hoje o dia do término do suporte de atualizações de segurança do Windows 10.
 
-### https://mint.c3sl.ufpr.br/testing/lmde-7-cinnamon-64bit-beta.iso
+### https://mint.c3sl.ufpr.br/debian/lmde-7-cinnamon-64bit.iso
+
+### https://isosmint.ic.ufmt.br/debian/lmde-7-cinnamon-64bit.iso
+
+![](distroIcons/icons8-zorin-50.png)
+
+- Linux Zorin 18: Uma excelente Distro baseada no Ubuntu Noble (24.04 LTS) com a sua interface amigável com a proposta de substituir o Windows e ou o Mac.
+Através desta distro é possível instalar até 170 programas utilizados no Windows.
+Web Apps: Microsoft Office/365, Teams, Google Docs, Adobe Photoshop e outros mais (170).
+
+### https://zorin.com/os/download/18/core
+
+Links mais próximos: 
+
+Mundial
+
+### https://mirrors.edge.kernel.org/zorinos-isos/18/Zorin-OS-18-Core-64-bit.iso
+
+América Estados Unidos
+
+### https://distro.ibiblio.org/zorinos/18/Zorin-OS-18-Core-64-bit.iso
+
+### https://mirror.umd.edu/zorin/18/Zorin-OS-18-Core-64-bit.iso
+
+### https://mirror.clarkson.edu/zorinos/isos/18/Zorin-OS-18-Core-64-bit.iso
+
+
+---
+
+
+# ISO(s) para testar na sua máquina virtual:
+
+
 
 
 ![](distroIcons/icons8-fedora-50.png)
@@ -75,18 +108,6 @@ Na minha máquina, após instalação do LXQT, a tela ficou preta. Gnome, instal
 ### https://dl.fedoraproject.org/pub/fedora/linux/development/43/Server/x86_64/iso/Fedora-Server-netinst-x86_64-43-20250920.n.0.iso
 
 
-![](distroIcons/icons8-zorin-50.png)
-
-- Linux Zorin 18 Beta: Distro que possui interface amigável pretendendo substituir o Windows e ou o Mac.
-Web Apps: Microsoft Office/365, Teams, Google Docs, Adobe Photoshop e outros mais (170).
-
-### https://zorin.com/os/download/18/core/beta/
-
-![](distroIcons/icons8-ubuntu-50.png)
-
-- Ubuntu 25.10 Beta: Próximo lançamento do Ubuntu.
-
-### https://cdimage.ubuntu.com/daily-live/current/
 
 ![](distroIcons/icons8-ubuntu-50.png)
 
