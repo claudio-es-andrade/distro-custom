@@ -74,8 +74,8 @@ Exemplos de distros que podem substituir o Windows 10,  com facilidade, sem exig
 ![](distroIcons/icons8-zorin-50.png)
 
 - Linux Zorin 18: Uma excelente Distro baseada no Ubuntu Noble (24.04 LTS) com a sua interface amigável com a proposta de substituir o Windows e ou o Mac.
-Através desta distro é possível instalar até 170 programas utilizados no Windows.
-Web Apps: Microsoft Office/365, Teams, Google Docs, Adobe Photoshop e outros mais (170).
+Através desta distro é possível instalar até 170 programas utilizados no Windows (Wine).
+Web Apps: Microsoft Office/365, Teams, Google Docs, Adobe Photoshop e outros mais.
 
 ### https://zorin.com/os/download/18/core
 
@@ -110,6 +110,13 @@ América: Estados Unidos (Únicos)
 ### https://cdimage.ubuntu.com/releases/25.10/release/ubuntu-25.10-desktop-arm64.iso
 
 ---
+
+![](distroIcons/pepermint_02.png)
+
+- Linux Pepermint: Distro baseadad no Debian Trixie 13 com o Desktop XFCE feita com a ajuda da comunidade com o propósito de ser bem simples e altamente configurável.
+
+### https://sourceforge.net/projects/peppermintos/files/isos/XFCE/PeppermintOS-Debian-64.iso/download
+
 
 
 # ISO(s) para testar na sua máquina virtual:
