@@ -133,7 +133,19 @@ Na minha máquina, após instalação do LXQT, a tela ficou preta. Gnome, instal
 ### https://dl.fedoraproject.org/pub/fedora/linux/development/43/Server/x86_64/iso/Fedora-Server-netinst-x86_64-43-20250920.n.0.iso
 
 
+![](distroIcons/mx.png)
 
+- MX Linux 25 RC: Distro Linux baseada no Debian trixie e seus repositórios. Como desktop possui KDE , Fluxbox e XFCE. Para mais informações e links das ISOS, acesse:
+
+### https://mxlinux.org/blog/mx-25-infinity-release-candidate-1-rc1-now-available-for-testing-purposes/
+
+
+![](distroIcons/icons8-ubuntu-50.png)
+
+- Ubuntu 26.04 (LTS) 'Resolute Racoon' Daily Build: Acompanhe o passo a passo diario da próxima Distribuição de Longo Suporte
+
+### https://cdimage.ubuntu.com/daily-live/current/
+  
 ![](distroIcons/icons8-ubuntu-50.png)
 
 - Ubuntu Daily Dangerous: Teste o Ubuntu lançado diariamente com correções e aprimoramentos recém lançados e não testados ainda.
