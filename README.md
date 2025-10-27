@@ -176,6 +176,16 @@ Na minha máquina, após instalação do LXQT, a tela ficou preta. Gnome, instal
 
 ### https://static.redox-os.org/releases/0.9.0/x86_64/redox_desktop_x86_64_2024-09-07_1225_harddrive.img.zst
 
+
+
+![](distroIcons/BSD.png)
+
+- FreeBSD 15: O Sistema Operacional Unix será lançado breve e contará com desktop de interface gráfica como opção (KDE). Drivers optimizados para Laptops e mais.
+
+
+### https://download.freebsd.org/releases/ISO-IMAGES/15.0/FreeBSD-15.0-BETA3-amd64-dvd1.iso
+
+
 ![](distroIcons/kde.png)
 
 - KDE LINUX BETA: Depois da criação do KDE Neon, uma nova distro atômica, baseada no Arch Linux, com o de mais novo do KDE Plasma. Versões da ISO atualizada quase diariamente.
