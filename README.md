@@ -8,7 +8,7 @@
 ---
 
 
-## Outubro/03/2025
+## Outubro/28/2025
 
 ---
 
@@ -54,7 +54,7 @@ Adicionados: Codecs Multimedia, Compactadores e extratores gerais, Gerenciador d
 Repositório Debian BackPorts (Kernel mais recente, Firmwares,  entre outros).
 Repositório para o Waydroid.
 
-### https://drive.google.com/file/d/1XvlcjeJuNIq8ISBgFzNto8-48BAUv_gL/view?usp=drive_link
+### https://drive.google.com/file/d/1LSLAk9rbYhw8x-3Ab6_PFLHQRep6e7mt/view?usp=drive_link
 
 ---
 
@@ -224,7 +224,7 @@ As extensões que o Gnome OS oferece são:
 
 - BR OS (MD5)
 
-### https://drive.google.com/file/d/1rnbEjKUZWY64nKM6TbX8dgA3epVE2oal/view?usp=drive_link
+### https://drive.google.com/file/d/1oVOO2yzNxgcmOOrFNnaN_IPwZ5Zw_hWP/view?usp=drive_link
 
 ---
 
