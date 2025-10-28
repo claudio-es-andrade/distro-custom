@@ -58,7 +58,7 @@ Repositório para o Waydroid.
 
 ---
 
-### Lançamentos (Outubro/14):
+### Lançamentos (Outubro/28):
 
 Exemplos de distros que podem substituir o Windows 10,  com facilidade, sem exigir um hardware novo muito específico:
 
@@ -94,6 +94,19 @@ América: Estados Unidos (Únicos)
 ### https://mirror.clarkson.edu/zorinos/isos/18/Zorin-OS-18-Core-64-bit.iso
 
 
+![](distroIcons/icons8-fedora-50.png)
+
+- Fedora 43: Lançado agora no final de outubro a distro passou por vários testes e adiamentos de lançamento para efetuar as desejadas correções. 
+O link abaixo é o ponto inicial para as versões existentes. 
+
+### https://dl.fedoraproject.org/pub/fedora/linux/releases/43/
+
+
+
+
+
+
+
 ![](distroIcons/icons8-ubuntu-50.png)
 
 - Ubuntu 25.10 : Ubuntu lançado com várias novidades, como por exemplo, o kernel 6.17, novo rust-utils (sudo e outras coisas mais reescritos na linguagem rust), Gnome 49 e muito mais.
@@ -121,17 +134,6 @@ América: Estados Unidos (Únicos)
 
 
 # ISO(s) para testar na sua máquina virtual:
-
-
-
-
-![](distroIcons/icons8-fedora-50.png)
-
-- Fedora 43 Beta Test Net Install : Versão Beta pronta para testes do Fedora 43 que será lançada no final do ano.
-Na minha máquina, após instalação do LXQT, a tela ficou preta. Gnome, instalação e pós: OK. Testem e informem os resultados.
-
-### https://dl.fedoraproject.org/pub/fedora/linux/development/43/Server/x86_64/iso/Fedora-Server-netinst-x86_64-43-20250920.n.0.iso
-
 
 ![](distroIcons/mx.png)
 
