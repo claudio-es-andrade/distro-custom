@@ -135,6 +135,24 @@ O link abaixo é o ponto inicial para as versões existentes.
 
 # ISO(s) para testar na sua máquina virtual:
 
+![](distroIcons/qubes.png)
+
+- Qubes OS 4.3.0 RC-3 : A distro que usa virtualização (Xen Hypervisor) para aumentar a segurança criando zonas de aplicativos e Sistemas Operacionais em ambientes virtuais, lança a versão para teste. Novidades previstas:
+
+    Dom0 atualizado para o Fedora 41 (#9402);
+    Xen atualizado para a versão 4.19 (#9420);
+    Modelo Fedora padrão atualizado para o Fedora 42 (versões com mais de 41 não suportadas);
+    Modelo Debian padrão atualizado para o Debian 13 (versões mais antigas que 12 não suportadas);
+    Modelos Whonix padrão atualizados para Whonix 18 (atualizado de 17.4.3 em RC2; versões com mais de 18 anos não são mais suportadas);
+    Descartáveis pré-carregados (#1512);
+    Atribuição “orientada à auto-identidade” do dispositivo (também conhecida como. Nova API de dispositivos) (#9325)
+    Qubes Windows Tools reintroduzido com recursos aprimorados (# 1861).
+
+### https://mirrors.edge.kernel.org/qubes/iso/Qubes-R4.3.0-rc3-x86_64.iso
+
+
+
+
 ![](distroIcons/mx.png)
 
 - MX Linux 25 RC: Distro Linux baseada no Debian trixie e seus repositórios. Como desktop possui KDE , Fluxbox e XFCE. Para mais informações e links das ISOS, acesse:
