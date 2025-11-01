@@ -58,7 +58,7 @@ Repositório para o Waydroid.
 
 ---
 
-### Lançamentos (Outubro/28):
+### Lançamentos:
 
 Exemplos de distros que podem substituir o Windows 10,  com facilidade, sem exigir um hardware novo muito específico:
 
@@ -128,6 +128,13 @@ O link abaixo é o ponto inicial para as versões existentes.
 - Linux Peppermint: Distro baseadad no Debian Trixie 13 com o Desktop XFCE feita com a ajuda da comunidade com o propósito de ser bem simples e altamente configurável.
 
 ### https://sourceforge.net/projects/peppermintos/files/isos/XFCE/PeppermintOS-Debian-64.iso/download
+
+![](distroIcons/openbsd.png)
+
+- OpenBSD: Distro Unix lançada no final de outubro com muitas mudanças. (Recomendada para usuários mais avançados)
+
+### https://cdn.openbsd.org/pub/OpenBSD/7.8/amd64/install78.iso
+
 
 ---
 
