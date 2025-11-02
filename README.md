@@ -8,7 +8,7 @@
 ---
 
 
-## Outubro/28/2025
+## Novembro/01/2025
 
 ---
 
@@ -44,17 +44,17 @@ Firewall, a maioria dos codecs multimedia instalado, Atualizador de pacotes Grá
 
 ![](distroIcons/linux_Tux.png)
 
-![](distroIcons/icons8-debian-50.png)
+![](distroIcons/icons8-zorin-50.png)
 
-- BR-OS (KDE - Debian 13): Distro Linux com bastante aplicativos gráficos, como por exemplo, Blender, Inkscape, Krita e o GIMP.
-Chat GPT (Prompt - AI), Web-Browsers: Firefox e LibreWolf, KDE Connect, VLC Player e OnlyOffice como Office padrão.
+- Linux Zorin 18: A Distro que simplesmente alcançou mais de 100k de downloads da ISO! 
+- Provou que o Sistema Operacional morreu (Software: Windows 10) mas o hardware continua pronto para ser cada vez mais util!
 
-Adicionados: Codecs Multimedia, Compactadores e extratores gerais, Gerenciador de Pacotes Synaptic e o Gerenciador de Instalação GDebi, Firewall GUFW (UFW Gráfico), Docker, Distrobox e Firefox (143)
+Adicionados: Codecs Multimedia, Compactadores e extratores gerais, Gerenciador de Pacotes Synaptic, Firewall GUFW (UFW Gráfico), MainLine (Kernel mais recentes ou mais antigos), 
+Docker, Distrobox, Virtualbox e Penguins-Eggs (para fazer a copia da sua ISO).
 
-Repositório Debian BackPorts (Kernel mais recente, Firmwares,  entre outros).
-Repositório para o Waydroid.
 
-### https://drive.google.com/file/d/1LSLAk9rbYhw8x-3Ab6_PFLHQRep6e7mt/view?usp=drive_link
+
+### https://drive.google.com/file/d/1oQPFA20mwSJabGHg7-nmjNXiWl6YSvac/view?usp=drive_link
 
 ---
 
@@ -249,9 +249,9 @@ As extensões que o Gnome OS oferece são:
 
 ### https://drive.google.com/file/d/1AXSWqd75qPqMnMKzxbDBkoVG4uUBwuTW/view?usp=drive_link
 
-- BR OS (MD5)
+- ZorinOS 18 (LTS) (MD5)
 
-### https://drive.google.com/file/d/1oVOO2yzNxgcmOOrFNnaN_IPwZ5Zw_hWP/view?usp=drive_link
+### https://drive.google.com/file/d/1v_hGh3HcTNFG9Vy99wdxORSrDaAhlTqA/view?usp=drive_link
 
 ---
 
