@@ -54,7 +54,7 @@ Docker, Distrobox, Virtualbox e Penguins-Eggs (para fazer a copia da sua ISO).
 
 
 
-### https://drive.google.com/file/d/1oQPFA20mwSJabGHg7-nmjNXiWl6YSvac/view?usp=drive_link
+### https://drive.google.com/file/d/1WbHAXaeeGITTI8vvoNovEkqB1PnwHEkL/view?usp=drive_link
 
 ---
 
