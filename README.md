@@ -47,10 +47,10 @@ Firewall, a maioria dos codecs multimedia instalado, Atualizador de pacotes Grá
 ![](distroIcons/icons8-zorin-50.png)
 
 - Linux Zorin 18: A Distro que simplesmente alcançou mais de 100k de downloads da ISO! 
-- Provou que o Sistema Operacional morreu (Software: Windows 10) mas o hardware continua pronto para ser cada vez mais util!
+- Provou que o Sistema Operacional morreu (Software: Windows 10), mas o hardware continua pronto para ser cada vez mais útil!
 
 Adicionados: Codecs Multimedia, Compactadores e extratores gerais, Gerenciador de Pacotes Synaptic, Firewall GUFW (UFW Gráfico), MainLine (Kernel mais recentes ou mais antigos), 
-Docker, Distrobox, Virtualbox e Penguins-Eggs (para fazer a copia da sua ISO).
+Docker, Distrobox, Virtualbox e Penguins-Eggs (para fazer a cópia da sua ISO).
 
 
 
