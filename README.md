@@ -201,8 +201,6 @@ Universal Blue
 
 ### https://download.liveslak.org/
 
-### https://mirrors.slackware.devl.club/slackware-live/
-
 ![](distroIcons/openbsd.png)
 
 - OpenBSD: Distro Unix lançada no final de outubro com muitas mudanças.
