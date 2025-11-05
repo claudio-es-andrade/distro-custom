@@ -170,7 +170,7 @@ Universal Blue
 
 ![](distroIcons/nixos.png)
 
-- Nix OS: Distro Atômica construída que utiliza uma linguagem de programação própria, sistemas de pacotes isolados e instalação declarativa: basta colocar o nome do pacote no arquivo de configuração aplicar o comando para montar os pacotes mais uma vez e utilizar o pacote desejado.
+- Nix OS: Distro Atômica construída que utiliza uma linguagem de programação própria, sistemas de pacotes isolados e instalação declarativa: basta colocar o nome do pacote no arquivo de configuração, aplicar o comando para montar os pacotes mais uma vez e utilizar o pacote desejado.
 
 ### https://nixos.org/download
 
