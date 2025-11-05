@@ -138,6 +138,32 @@ O link abaixo é o ponto inicial para as versões existentes.
 
 ### https://sourceforge.net/projects/peppermintos/files/isos/XFCE/PeppermintOS-Debian-64.iso/download
 
+---
+
+![](distroIcons/universal-blue.png)
+
+Universal Blue
+
+
+![](distroIcons/aurora.png)
+
+- Aurora: Distro Atômica baseada no Fedora KDE (Kinoite) + RPM Fusion, codecs e aplicativos específicos para desenvolvimento.
+
+### https://getaurora.dev/
+
+![](distroIcons/Bazzite.png)
+
+- Bazzite: Distro que a Universal-Blue preparou baseada no Fedora Atômico voltada para jogos e desenvolvimento em geral.
+
+### https://download.bazzite.gg/
+
+![](distroIcons/bluefin.png)
+
+- Bluefin: Distro Atômica baseada no Fedora GNOME (Silverblue) com as mesmas características do Aurora. Possui também uma versão LTS baseada no Centos OS Stream
+
+### https://projectbluefin.io/
+
+
 
 
 ---
