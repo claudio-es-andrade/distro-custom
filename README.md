@@ -133,7 +133,7 @@ O link abaixo é o ponto inicial para as versões existentes.
 
 ![](distroIcons/omarchy.png)
 
-- OmArchy: Arch Linux totalmente configurado com hyperland e pacotes para desenvolvimento.
+- OmArchy: Arch Linux totalmente configurado com hyprland e pacotes para desenvolvimento.
 
 ### https://omarchy.org/
 
