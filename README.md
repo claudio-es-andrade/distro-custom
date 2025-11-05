@@ -174,15 +174,22 @@ Universal Blue
 
 ### https://nixos.org/download
 
-![](distroIcons/omarchy.png)
+![](distroIcons/arch.png)
 
-- OmArchy: Arch Linux totalmente configurado com hyprland e pacotes selecionados para desenvolvimento, games e escritório.
+- Arch Linux: A distro que propõe ser simples e leve e altamente customizável e tem muitas distros que se baseam nela.
 
-### https://omarchy.org/
+### https://archlinux.org/
 
-### https://iso.omarchy.org/omarchy-3.1.5.iso
+### https://archlinux.c3sl.ufpr.br/iso/latest/
 
 
+![](distroIcons/gentoo.png)
+
+- Gentoo Linux: Distro muito mais customizável que o Arch Linux. Perfeita para quem prioriza desempenho.
+
+### https://www.gentoo.org/
+
+### https://www.gentoo.org/downloads/
 
 ![](distroIcons/openbsd.png)
 
