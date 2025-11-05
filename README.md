@@ -159,7 +159,7 @@ Universal Blue
 
 ![](distroIcons/bluefin.png)
 
-- Bluefin: Distro Atômica baseada no Fedora GNOME (Silverblue) com as mesmas características do Aurora. Possui também uma versão LTS baseada no Centos OS Stream
+- Bluefin: Distro Atômica baseada no Fedora GNOME (Silverblue) com as mesmas características do Aurora. Possui também uma versão LTS baseada no CentOS Stream
 
 ### https://projectbluefin.io/
 
