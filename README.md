@@ -189,9 +189,19 @@ Universal Blue
 
 - Gentoo Linux: Distro muito mais customizável que o Arch Linux. Perfeita para quem prioriza desempenho.
 
-### https://www.gentoo.org/
+### https://www.gentoo.org/ 
 
 ### https://www.gentoo.org/downloads/
+
+![](distroIcons/slackware.png)
+
+- Slackware Linux: Distro com a mesma filosofia de se manter simples que as distribuições anteriores e que possui seu próprio sistema de empacotamento.
+
+### http://www.slackware.com/
+
+### https://download.liveslak.org/
+
+### https://mirrors.slackware.devl.club/slackware-live/
 
 ![](distroIcons/openbsd.png)
 
