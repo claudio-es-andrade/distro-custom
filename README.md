@@ -129,16 +129,25 @@ O link abaixo é o ponto inicial para as versões existentes.
 
 ### https://sourceforge.net/projects/peppermintos/files/isos/XFCE/PeppermintOS-Debian-64.iso/download
 
+---
+
+![](distroIcons/omarchy.png)
+
+- OmArchy: Arch Linux totalmente configurado com hyperland e pacotes para desenvolvimento.
+
+### https://omarchy.org/
+
+### https://iso.omarchy.org/omarchy-3.1.5.iso
+
+
+
 ![](distroIcons/openbsd.png)
 
-- OpenBSD: Distro Unix lançada no final de outubro com muitas mudanças. (Recomendada para usuários mais avançados)
+- OpenBSD: Distro Unix lançada no final de outubro com muitas mudanças.
 
 ### https://cdn.openbsd.org/pub/OpenBSD/7.8/amd64/install78.iso
 
-
 ---
-
-
 
 # ISO(s) para testar na sua máquina virtual:
 
