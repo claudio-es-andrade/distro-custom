@@ -172,6 +172,8 @@ Universal Blue
 
 - Nix OS: Distro Atômica construída que utiliza uma linguagem de programação própria, sistemas de pacotes isolados e instalação declarativa: basta colocar o nome do pacote no arquivo de configuração, aplicar o comando para montar os pacotes mais uma vez e utilizar o pacote desejado.
 
+### https://nixos.org/
+
 ### https://nixos.org/download
 
 ![](distroIcons/arch.png)
@@ -194,6 +196,8 @@ Universal Blue
 ![](distroIcons/openbsd.png)
 
 - OpenBSD: Distro Unix lançada no final de outubro com muitas mudanças.
+
+### https://www.openbsd.org/
 
 ### https://cdn.openbsd.org/pub/OpenBSD/7.8/amd64/install78.iso
 
