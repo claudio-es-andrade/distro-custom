@@ -62,6 +62,15 @@ Docker, Distrobox, Virtualbox e Penguins-Eggs (para fazer a cópia da sua ISO).
 
 Exemplos de distros que podem substituir o Windows 10,  com facilidade, sem exigir um hardware novo muito específico:
 
+![](distroIcons/biglinux.png)
+
+- BigLinux: A distro baseada no ArchLinux (Manjaro) com vários aplicativos que facilitam a vida do usuário, seja para o office ou game. Há versões criadas em conjunto com a comunidade.
+
+
+### https://www.biglinux.com.br/download/
+
+### https://communitybig.org/download/
+
 
 ![](distroIcons/linux_mint.png)
 
@@ -128,6 +137,8 @@ O link abaixo é o ponto inicial para as versões existentes.
 - Linux Peppermint: Distro baseadad no Debian Trixie 13 com o Desktop XFCE feita com a ajuda da comunidade com o propósito de ser bem simples e altamente configurável.
 
 ### https://sourceforge.net/projects/peppermintos/files/isos/XFCE/PeppermintOS-Debian-64.iso/download
+
+
 
 ---
 
