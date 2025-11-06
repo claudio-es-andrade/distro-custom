@@ -130,15 +130,38 @@ O link abaixo é o ponto inicial para as versões existentes.
 ### https://deb.campolargo.pr.gov.br/ubuntu/releases/questing/ubuntu-25.10-desktop-amd64.iso
 
 ### https://cdimage.ubuntu.com/releases/25.10/release/ubuntu-25.10-desktop-arm64.iso
-
-
 ![](distroIcons/pepermint_02.png)
 
 - Linux Peppermint: Distro baseadad no Debian Trixie 13 com o Desktop XFCE feita com a ajuda da comunidade com o propósito de ser bem simples e altamente configurável.
 
 ### https://sourceforge.net/projects/peppermintos/files/isos/XFCE/PeppermintOS-Debian-64.iso/download
 
+
+
 ---
+
+
+
+![](distroIcons/tigeros.png)
+
+
+- Tiger OS: Distro Brasileira baseada no Kubuntu (24.04 LTS) e Mint com design e interface gráfica construídos para facilitar a transição do Windows para o Linux. Possui um canal no Youtube com vídeos demonstrativos explicando vários aspectos do sistema.
+
+
+### https://tigeros.com.br/
+
+Download:
+
+### https://bit.ly/TigerOS23plasma
+
+Youtube:
+
+### https://www.youtube.com/@tigerosbr/videos
+
+
+
+---
+
 
 ![](distroIcons/universal-blue.png)
 
