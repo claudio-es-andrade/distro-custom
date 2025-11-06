@@ -352,6 +352,10 @@ As extensões que o Gnome OS oferece são:
 
 ---
 
+- Existem diversos sistemas que apesar de não estarem incluídos, valem a pena pesquisar: Nobara, Ultramarine, RegataOS, Void, Gnoppix, Cachy, Endeavour, Garuda, PikaOS, Manjaro, Antoin, OpenSuse, OpenMandriva, Elementary, Kali Linux, AlmaLinux (Oracle Linux, Rocky Linux, Helios OS) e muito mais...
+
+___
+
 
 # Arquivo de Verificação da ISO
 
