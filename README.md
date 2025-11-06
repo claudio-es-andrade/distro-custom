@@ -213,6 +213,15 @@ Lançamento do Omarchy 3:
 
 ---
 
+![](distroIcons/debian.png)
+
+- Debian: A distro mais conhecida pelos testes que fazem com que ela seja uma das mais utilizadas e também seja a base para criação de outras distros.
+
+### https://www.debian.org/
+
+### https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/
+
+
 ![](distroIcons/nixos.png)
 
 - Nix OS: Distro Atômica construída que utiliza uma linguagem de programação própria, sistemas de pacotes isolados e instalação declarativa: basta colocar o nome do pacote no arquivo de configuração, aplicar o comando para montar os pacotes mais uma vez e utilizar o pacote desejado.
