@@ -159,9 +159,31 @@ Universal Blue
 
 ![](distroIcons/bluefin.png)
 
-- Bluefin: Distro Atômica baseada no Fedora GNOME (Silverblue) com as mesmas características do Aurora. Possui também uma versão LTS baseada no CentOS Stream
+- Bluefin: Distro Atômica baseada no Fedora GNOME (Silverblue) com as mesmas características do Aurora. Possui também uma versão LTS baseada no CentOS Stream.
 
 ### https://projectbluefin.io/
+
+
+
+
+---
+
+![](distroIcons/omarchy.png)
+
+- Omarchy: Sistema feito para ser prático, eficiente, moderno e também divertido. Utiliza Arch Linux como base. Para desenvolvedores e afins.
+
+### https://omarchy.org/
+
+### https://iso.omarchy.org/omarchy-3.1.5.iso
+
+YouTube do Criador:
+
+### https://www.youtube.com/@dhh37
+
+Lançamento do Omarchy 3:
+
+### https://www.youtube.com/watch?v=L3EafsSCv80
+
 
 
 
