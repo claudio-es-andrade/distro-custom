@@ -222,31 +222,6 @@ Lançamento do Omarchy 3:
 
 ---
 
-![](distroIcons/debian.png)
-
-- Debian: A distro mais conhecida pelos testes que fazem com que ela seja uma das mais utilizadas e também seja a base para criação de outras distros.
-
-### https://www.debian.org/
-
-### https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/
-
-![](distroIcons/redhat.png)
-
-- RedHat: A distro empresa que cria e mantém suporte de várias tecnologias, inclusive as ligadas ao mundo open source. Possui um sistema de Certificação reconhecido mundialmente. Possui as distros Fedora e CentOS. Cadastrando-se como desenvolvedor no site da empresa, é possível utilizar a distro Red Hat Enterprise Linux.
-
-### https://www.redhat.com/
-
-### https://developers.redhat.com/content-gateway/file/rhel/Red_Hat_Enterprise_Linux_10.0/rhel-10.0-x86_64-boot.iso
-
-
-![](distroIcons/nixos.png)
-
-- Nix OS: Distro Atômica construída que utiliza uma linguagem de programação própria, sistemas de pacotes isolados e instalação declarativa: basta colocar o nome do pacote no arquivo de configuração, aplicar o comando para montar os pacotes mais uma vez e utilizar o pacote desejado.
-
-### https://nixos.org/
-
-### https://nixos.org/download
-
 ![](distroIcons/arch.png)
 
 - Arch Linux: A distro que propõe ser simples e leve e altamente customizável e tem muitas distros que se baseam nela.
@@ -255,6 +230,20 @@ Lançamento do Omarchy 3:
 
 ### https://archlinux.c3sl.ufpr.br/iso/latest/
 
+![](distroIcons/debian.png)
+
+- Debian: A distro mais conhecida pelos testes que fazem com que ela seja uma das mais utilizadas e também seja a base para criação de outras distros.
+
+### https://www.debian.org/
+
+### https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/
+
+![](distroIcons/freebsd.png)
+- FreeBSD: Onde tudo começou. A criação do Sistema mais perfeito possível. Processo Judicial, reescrita do sistema, o kernel. Desde o começo até hoje, o Sistema se mantém fiel aos seus ideais.
+
+### https://www.freebsd.org/
+
+### https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/14.3/FreeBSD-14.3-RELEASE-amd64-dvd1.iso
 
 ![](distroIcons/gentoo.png)
 
@@ -264,6 +253,22 @@ Lançamento do Omarchy 3:
 
 ### https://www.gentoo.org/downloads/
 
+![](distroIcons/nixos.png)
+
+- Nix OS: Distro Atômica construída que utiliza uma linguagem de programação própria, sistemas de pacotes isolados e instalação declarativa: basta colocar o nome do pacote no arquivo de configuração, aplicar o comando para montar os pacotes mais uma vez e utilizar o pacote desejado.
+
+### https://nixos.org/
+
+### https://nixos.org/download
+
+![](distroIcons/redhat.png)
+
+- RedHat: A distro empresa que cria e mantém suporte de várias tecnologias, inclusive as ligadas ao mundo open source. Possui um sistema de Certificação reconhecido mundialmente. Possui as distros Fedora e CentOS. Cadastrando-se como desenvolvedor no site da empresa, é possível utilizar a distro Red Hat Enterprise Linux.
+
+### https://www.redhat.com/
+
+### https://developers.redhat.com/content-gateway/file/rhel/Red_Hat_Enterprise_Linux_10.0/rhel-10.0-x86_64-boot.iso
+
 ![](distroIcons/slackware.png)
 
 - Slackware Linux: Distro com a mesma filosofia de se manter simples que as distribuições anteriores e que possui seu próprio sistema de empacotamento.
@@ -271,8 +276,6 @@ Lançamento do Omarchy 3:
 ### http://www.slackware.com/
 
 ### https://download.liveslak.org/
-
-
 
 ---
 
@@ -293,15 +296,11 @@ Lançamento do Omarchy 3:
 
 ### https://mirrors.edge.kernel.org/qubes/iso/Qubes-R4.3.0-rc3-x86_64.iso
 
-
-
-
 ![](distroIcons/mx.png)
 
 - MX Linux 25 RC: Distro Linux baseada no Debian trixie e seus repositórios. Como desktop possui KDE , Fluxbox e XFCE. Para mais informações e links das ISOS, acesse:
 
 ### https://mxlinux.org/blog/mx-25-infinity-release-candidate-1-rc1-now-available-for-testing-purposes/
-
 
 ![](distroIcons/icons8-ubuntu-50.png)
 
@@ -339,8 +338,6 @@ Lançamento do Omarchy 3:
 
 ### https://static.redox-os.org/releases/0.9.0/x86_64/redox_desktop_x86_64_2024-09-07_1225_harddrive.img.zst
 
-
-
 ![](distroIcons/BSD.png)
 
 - FreeBSD 15: O Sistema Operacional Unix será lançado breve e contará com desktop de interface gráfica como opção (KDE). Drivers optimizados para Laptops e mais.
@@ -372,7 +369,7 @@ As extensões que o Gnome OS oferece são:
 
 ---
 
-- Existem diversos sistemas que apesar de não estarem incluídos, valem a pena pesquisar: Nobara, Ultramarine, RegataOS, Void, Gnoppix, Cachy, Endeavour, Garuda, PikaOS, Manjaro, Antoin, OpenSuse, OpenMandriva, Elementary, Kali Linux, AlmaLinux (Oracle Linux, Rocky Linux, Helios OS) e muito mais...
+- Existem diversos sistemas que apesar de não estarem incluídos, valem a pena serem pesquisados: Nobara, Ultramarine, RegataOS, Void, Gnoppix, Cachy, Endeavour, Garuda, PikaOS, Manjaro, Antoin, OpenSuse, OpenMandriva, Elementary, Kali Linux, AlmaLinux (Oracle Linux, Rocky Linux, Helios OS) Vanilla, Blend OS , Nitrux, Endless Linux, Guix, Tails e muito mais...
 
 ___
 
