@@ -58,7 +58,7 @@ Docker, Distrobox, Virtualbox e Penguins-Eggs (para fazer a cópia da sua ISO).
 
 ---
 
-### Lançamentos:
+### Lançamentos e Atualizações:
 
 Exemplos de distros que podem substituir o Windows 10,  com facilidade, sem exigir um hardware novo muito específico:
 
