@@ -142,6 +142,7 @@ O link abaixo é o ponto inicial para as versões existentes.
 
 
 
+
 ![](distroIcons/tigeros.png)
 
 
@@ -186,10 +187,18 @@ Universal Blue
 
 ### https://projectbluefin.io/
 
+---
 
+![](distroIcons/openbsd.png)
 
+- OpenBSD: Distro Unix lançada no final de outubro com muitas mudanças.
+
+### https://www.openbsd.org/
+
+### https://cdn.openbsd.org/pub/OpenBSD/7.8/amd64/install78.iso
 
 ---
+
 
 ![](distroIcons/omarchy.png)
 
@@ -220,6 +229,14 @@ Lançamento do Omarchy 3:
 ### https://www.debian.org/
 
 ### https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/
+
+![](distroIcons/redhat.png)
+
+- RedHat: A distro empresa que cria e mantém suporte de várias tecnologias, inclusive as ligadas ao mundo open source. Possui um sistema de Certificação reconhecido mundialmente. Possui as distros Fedora e CentOS. Cadastrando-se como desenvolvedor no site da empresa, é possível utilizar a distro Red Hat Enterprise Linux.
+
+### https://www.redhat.com/
+
+### https://developers.redhat.com/content-gateway/file/rhel/Red_Hat_Enterprise_Linux_10.0/rhel-10.0-x86_64-boot.iso
 
 
 ![](distroIcons/nixos.png)
@@ -255,13 +272,7 @@ Lançamento do Omarchy 3:
 
 ### https://download.liveslak.org/
 
-![](distroIcons/openbsd.png)
 
-- OpenBSD: Distro Unix lançada no final de outubro com muitas mudanças.
-
-### https://www.openbsd.org/
-
-### https://cdn.openbsd.org/pub/OpenBSD/7.8/amd64/install78.iso
 
 ---
 
