@@ -369,7 +369,7 @@ As extensões que o Gnome OS oferece são:
 
 ---
 
-- Existem diversos sistemas que apesar de não estarem incluídos, valem a pena serem pesquisados: Nobara, Ultramarine, RegataOS, Void, Gnoppix, Cachy, Endeavour, Garuda, PikaOS, Manjaro, Antoin, OpenSuse, OpenMandriva, Elementary, Kali Linux, AlmaLinux (Oracle Linux, Rocky Linux, Helios OS) Vanilla, Blend OS , Nitrux, Endless Linux, Guix, Tails e muito mais...
+- Existem diversos sistemas que apesar de não estarem incluídos, valem a pena serem pesquisados: Nobara, Ultramarine, RegataOS, Void, Gnoppix, Cachy, Endeavour, Garuda, PikaOS, Manjaro, Antoin, OpenSuse, OpenMandriva, Elementary, Kali Linux, AlmaLinux (Oracle Linux, Rocky Linux, Helios OS) Vanilla, Blend OS , Nitrux, Endless Linux, Guix, Tails, MidnightBSD, NomadBSD, TrueNAS, pfSense,NetBSD, PureDarwin e muito mais...
 
 ___
 
@@ -413,3 +413,5 @@ ___
 - Github Debullshit Script:
 
 ### https://github.com/polkaulfield/ubuntu-debullshit
+
+---
