@@ -253,14 +253,6 @@ Lançamento do Omarchy 3:
 
 ### https://www.gentoo.org/downloads/
 
-![](distroIcons/nixos.png)
-
-- Nix OS: Distro Atômica construída que utiliza uma linguagem de programação própria, sistemas de pacotes isolados e instalação declarativa: basta colocar o nome do pacote no arquivo de configuração, aplicar o comando para montar os pacotes mais uma vez e utilizar o pacote desejado.
-
-### https://nixos.org/
-
-### https://nixos.org/download
-
 ![](distroIcons/redhat.png)
 
 - RedHat: A distro empresa que cria e mantém suporte de várias tecnologias, inclusive as ligadas ao mundo open source. Possui um sistema de Certificação reconhecido mundialmente. Possui as distros Fedora e CentOS. Cadastrando-se como desenvolvedor no site da empresa, é possível utilizar a distro Red Hat Enterprise Linux.
@@ -278,6 +270,30 @@ Lançamento do Omarchy 3:
 ### https://download.liveslak.org/
 
 ---
+
+
+![](distroIcons/alpine.png)
+
+
+- Alpine Linux: Distro bastante utilizada como container, com foco na segurança, simplicidade e leveza.
+
+### https://www.alpinelinux.org/
+
+### https://www.alpinelinux.org/downloads/
+
+
+
+![](distroIcons/nixos.png)
+
+- Nix OS: Distro Atômica construída que utiliza uma linguagem de programação própria, sistemas de pacotes isolados e instalação declarativa: basta colocar o nome do pacote no arquivo de configuração, aplicar o comando para montar os pacotes mais uma vez e utilizar o pacote desejado.
+
+### https://nixos.org/
+
+### https://nixos.org/download
+
+---
+
+
 
 # ISO(s) para testar na sua máquina virtual:
 
