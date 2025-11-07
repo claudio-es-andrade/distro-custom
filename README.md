@@ -376,7 +376,7 @@ As extensões que o Gnome OS oferece são:
 
 ---
 
-- Existem diversos sistemas que apesar de não estarem incluídos, valem a pena serem pesquisados: Nobara, Ultramarine, RegataOS, Void, Gnoppix, Cachy, Solus, Endeavour, Garuda, PikaOS, Manjaro, Antoin, OpenSuse, OpenMandriva, Elementary, Kali Linux, Puppy, AlmaLinux (Oracle Linux, Rocky Linux, VzLinux, Cloud Linux, Helios OS) Vanilla, Blend OS , Nitrux, Endless Linux, Guix, Tails, MidnightBSD, NomadBSD, TrueNAS, pfSense,NetBSD, PureDarwin e muito mais...
+- Existem diversos sistemas que apesar de não estarem incluídos aqui, também valem a pena serem testados: Nobara, Ultramarine, RegataOS, Void, Gnoppix, Cachy, Solus, Endeavour, Garuda, PikaOS, Manjaro, Antoin, OpenSuse, OpenMandriva, Elementary, Kali Linux, Puppy, AlmaLinux (Oracle Linux, Rocky Linux, VzLinux, Cloud Linux, Helios OS) Vanilla, Blend OS , Nitrux, Endless Linux, Guix, Tails, MidnightBSD, NomadBSD, TrueNAS, pfSense,NetBSD, PureDarwin e muito mais...
 
 ___
 
