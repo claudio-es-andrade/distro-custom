@@ -229,7 +229,7 @@ Lançamento do Omarchy 3:
 ### https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/
 
 ![](distroIcons/freebsd.png)
-- FreeBSD: Onde tudo começou. A criação do Sistema mais perfeito possível. Processo Judicial, reescrita do sistema, o kernel. Desde o começo até hoje, o Sistema se mantém fiel aos seus ideais.
+- FreeBSD: Variante direta de onde tudo começou. A criação do Sistema mais perfeito possível. Processo Judicial, reescrita de partes do sistema, o kernel. Desde o começo até hoje, o Sistema se mantém fiel aos seus ideais.
 
 ### https://www.freebsd.org/
 
