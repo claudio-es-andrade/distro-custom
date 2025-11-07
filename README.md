@@ -136,13 +136,6 @@ O link abaixo é o ponto inicial para as versões existentes.
 
 ### https://sourceforge.net/projects/peppermintos/files/isos/XFCE/PeppermintOS-Debian-64.iso/download
 
-
-
----
-
-
-
-
 ![](distroIcons/tigeros.png)
 
 
@@ -189,17 +182,6 @@ Universal Blue
 
 ---
 
-![](distroIcons/openbsd.png)
-
-- OpenBSD: Distro Unix lançada no final de outubro com muitas mudanças.
-
-### https://www.openbsd.org/
-
-### https://cdn.openbsd.org/pub/OpenBSD/7.8/amd64/install78.iso
-
----
-
-
 ![](distroIcons/omarchy.png)
 
 - Omarchy: Sistema feito para ser prático, eficiente, moderno e também divertido. Utiliza Arch Linux como base. Para desenvolvedores e afins.
@@ -216,9 +198,17 @@ Lançamento do Omarchy 3:
 
 ### https://www.youtube.com/watch?v=L3EafsSCv80
 
+---
 
+![](distroIcons/openbsd.png)
 
+- OpenBSD: Distro Unix lançada no final de outubro com muitas mudanças.
 
+### https://www.openbsd.org/
+
+### https://cdn.openbsd.org/pub/OpenBSD/7.8/amd64/install78.iso
+
+---
 
 ---
 
@@ -271,6 +261,7 @@ Lançamento do Omarchy 3:
 
 ---
 
+---
 
 ![](distroIcons/alpine.png)
 
@@ -385,7 +376,7 @@ As extensões que o Gnome OS oferece são:
 
 ---
 
-- Existem diversos sistemas que apesar de não estarem incluídos, valem a pena serem pesquisados: Nobara, Ultramarine, RegataOS, Void, Gnoppix, Cachy, Endeavour, Garuda, PikaOS, Manjaro, Antoin, OpenSuse, OpenMandriva, Elementary, Kali Linux, AlmaLinux (Oracle Linux, Rocky Linux, Helios OS) Vanilla, Blend OS , Nitrux, Endless Linux, Guix, Tails, MidnightBSD, NomadBSD, TrueNAS, pfSense,NetBSD, PureDarwin e muito mais...
+- Existem diversos sistemas que apesar de não estarem incluídos, valem a pena serem pesquisados: Nobara, Ultramarine, RegataOS, Void, Gnoppix, Cachy, Solus, Endeavour, Garuda, PikaOS, Manjaro, Antoin, OpenSuse, OpenMandriva, Elementary, Kali Linux, Puppy, AlmaLinux (Oracle Linux, Rocky Linux, VzLinux, Cloud Linux, Helios OS) Vanilla, Blend OS , Nitrux, Endless Linux, Guix, Tails, MidnightBSD, NomadBSD, TrueNAS, pfSense,NetBSD, PureDarwin e muito mais...
 
 ___
 
