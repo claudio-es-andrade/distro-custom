@@ -315,7 +315,7 @@ Lançamento do Omarchy 3:
 
 ### https://cdimage.ubuntu.com/daily-live/current/
   
-![](distroIcons/icons8-ubuntu-50.png)
+
 
 - Ubuntu Daily Dangerous: Teste o Ubuntu lançado diariamente com correções e aprimoramentos recém lançados e não testados ainda.
 
@@ -327,17 +327,21 @@ Lançamento do Omarchy 3:
 
 ### https://iso.pop-os.org/24.04/amd64/intel/19/pop-os_24.04_amd64_intel_19.iso
 
-![](distroIcons/icons8-pop-os-logo-50.png)
+
 
 - System76 - POP!_OS 22.04 LTS Beta (NVidia):
 
 ### https://iso.pop-os.org/24.04/amd64/nvidia/19/pop-os_24.04_amd64_nvidia_19.iso
 
-![](distroIcons/icons8-pop-os-logo-50.png)
+
 
 - System76 - Cosmic: O novo ambiente de Desktop está quase pronto. pode ser utilizado em diversas distros.
 
 ### https://system76.com/cosmic/download
+
+### Anunciada a Data de Lançamento: Dezembro 11
+
+
 
 ![](distroIcons/RedoxOS.png)
 
