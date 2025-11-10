@@ -300,6 +300,14 @@ Lançamento do Omarchy 3:
 
 # ISO(s) para testar na sua máquina virtual:
 
+![](distroIcons/antiX.png)
+
+- AntiX 25 Beta 01: AntiX é uma distribuição leve e fácil de instalar sem SystemD com base no Debian Stable para sistemas compatíveis com Intel-AMD x86. O antiX oferece aos usuários o “antiX Magic” um ambiente adequado para computadores antigos e novos. O objetivo do antiX é fornecer um sistema operacional livre leve, mas totalmente funcional e flexível para recém-chegados e usuários experientes do Linux. A memória RAM de 512MB é o mínimo recomendado para antiX. A instalação no disco rígido requer um tamanho mínimo de 7.0GB do disco rígido.
+
+### https://antixlinux.com/
+
+### https://sourceforge.net/projects/antix-linux/files/Testing/antiX-25/
+
 ![](distroIcons/qubes.png)
 
 - Qubes OS 4.3.0 RC-3 : A distro que usa virtualização (Xen Hypervisor) para aumentar a segurança criando zonas de aplicativos e Sistemas Operacionais em ambientes virtuais, lança a versão para teste. Novidades previstas:
