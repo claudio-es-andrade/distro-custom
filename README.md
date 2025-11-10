@@ -62,6 +62,14 @@ Docker, Distrobox, Virtualbox e Penguins-Eggs (para fazer a cópia da sua ISO).
 
 Exemplos de distros que podem substituir o Windows 10,  com facilidade, sem exigir um hardware novo muito específico:
 
+![](distroIcons/mx.png)
+
+- MX Linux 25: Distro Linux baseada no Debian trixie e seus repositórios, buscando manter desktops elegantes com bastante estabilidade e alta performance. Como desktop possui KDE , Fluxbox e XFCE. Para mais informações e links das ISOS, acesse:
+
+### https://mxlinux.org/
+
+### https://mxlinux.org/download-links/#Mirrors
+
 ![](distroIcons/biglinux.png)
 
 - BigLinux: A distro baseada no ArchLinux (Manjaro) com vários aplicativos que facilitam a vida do usuário, seja para o office ou game. Há versões criadas em conjunto com a comunidade.
@@ -306,12 +314,6 @@ Lançamento do Omarchy 3:
     Qubes Windows Tools reintroduzido com recursos aprimorados (# 1861).
 
 ### https://mirrors.edge.kernel.org/qubes/iso/Qubes-R4.3.0-rc3-x86_64.iso
-
-![](distroIcons/mx.png)
-
-- MX Linux 25 RC: Distro Linux baseada no Debian trixie e seus repositórios. Como desktop possui KDE , Fluxbox e XFCE. Para mais informações e links das ISOS, acesse:
-
-### https://mxlinux.org/blog/mx-25-infinity-release-candidate-1-rc1-now-available-for-testing-purposes/
 
 ![](distroIcons/icons8-ubuntu-50.png)
 
