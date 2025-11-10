@@ -308,7 +308,7 @@ Lançamento do Omarchy 3:
 
 ![](distroIcons/aerynos.png)
 
-- AerynOS: Distro Atômica com sistema de empacotamento próprio (stones) que utiliza o diretório /usr como diretório exclusivo do sistema. Os diretórios /etc e /var pertencem ao usuário.
+- AerynOS: Distro Atômica com sistema de empacotamento próprio (stones) que utiliza o diretório /usr como diretório exclusivo do sistema. Os diretórios /etc e /var pertencem ao usuário. Ambientes de Desktop: Cosmic, Gnome, KDE Plasma e Sway como gerenciador de janelas com tiling.
 
 ### https://aerynos.com/
 
