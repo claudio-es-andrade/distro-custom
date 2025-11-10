@@ -146,7 +146,7 @@ O link abaixo é o ponto inicial para as versões existentes.
 
 ![](distroIcons/devuan.png)
 
-- Devuan 6.0.0 Excalibur: Fork do Debian sem o SYSTEMD (OpenRC, runit, SysV) com repositórios exclusivos.
+- Devuan XFCE 6.0.0 Excalibur: Fork do Debian sem o SYSTEMD (OpenRC, runit, SysV) com repositórios exclusivos.
 
 ### https://www.devuan.org/
 
