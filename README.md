@@ -62,14 +62,6 @@ Docker, Distrobox, Virtualbox e Penguins-Eggs (para fazer a cópia da sua ISO).
 
 Exemplos de distros que podem substituir o Windows 10,  com facilidade, sem exigir um hardware novo muito específico:
 
-![](distroIcons/mx.png)
-
-- MX Linux 25: Distro Linux baseada no Debian trixie e seus repositórios, buscando manter desktops elegantes com bastante estabilidade e alta performance. Como desktop possui KDE , Fluxbox e XFCE. Para mais informações e links das ISOS, acesse:
-
-### https://mxlinux.org/
-
-### https://mxlinux.org/download-links/#Mirrors
-
 ![](distroIcons/biglinux.png)
 
 - BigLinux: A distro baseada no ArchLinux (Manjaro) com vários aplicativos que facilitam a vida do usuário, seja para o office ou game. Há versões criadas em conjunto com a comunidade.
@@ -144,11 +136,25 @@ O link abaixo é o ponto inicial para as versões existentes.
 
 ### https://sourceforge.net/projects/peppermintos/files/isos/XFCE/PeppermintOS-Debian-64.iso/download
 
+![](distroIcons/mx.png)
+
+- MX Linux 25: Distro Linux baseada no Debian trixie e seus repositórios, buscando manter desktops elegantes com bastante estabilidade e alta performance. Como desktop possui KDE , Fluxbox e XFCE. Para mais informações e links das ISOS, acesse:
+
+### https://mxlinux.org/
+
+### https://mxlinux.org/download-links/#Mirrors
+
+![](distroIcons/devuan.png)
+
+- Devuan: Fork do Debian sem o SYSTEMD (OpenRC, runit, SysV) com repositórios exclusivos.
+
+### https://www.devuan.org/
+
+### https://files.devuan.org/devuan_excalibur/desktop-live/devuan_excalibur_6.0.0_amd64_desktop-live.iso
+
 ![](distroIcons/tigeros.png)
 
-
 - Tiger OS: Distro Brasileira baseada no Kubuntu (24.04 LTS) e Mint com design e interface gráfica construídos para facilitar a transição do Windows para o Linux. Possui um canal no Youtube com vídeos demonstrativos explicando vários aspectos do sistema.
-
 
 ### https://tigeros.com.br/
 
