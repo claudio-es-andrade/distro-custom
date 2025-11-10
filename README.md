@@ -212,6 +212,8 @@ Lançamento do Omarchy 3:
 
 ---
 
+---
+
 ![](distroIcons/arch.png)
 
 - Arch Linux: A distro que propõe ser simples e leve e altamente customizável e tem muitas distros que se baseam nela.
@@ -233,7 +235,7 @@ Lançamento do Omarchy 3:
 
 ### https://www.freebsd.org/
 
-### https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/14.3/FreeBSD-14.3-RELEASE-amd64-dvd1.iso
+### https://download.freebsd.org/releases/ISO-IMAGES/15.0/FreeBSD-15.0-BETA5-amd64-dvd1.iso
 
 ![](distroIcons/gentoo.png)
 
@@ -258,6 +260,8 @@ Lançamento do Omarchy 3:
 ### http://www.slackware.com/
 
 ### https://download.liveslak.org/
+
+---
 
 ---
 
