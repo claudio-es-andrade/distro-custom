@@ -306,6 +306,15 @@ Lançamento do Omarchy 3:
 
 # ISO(s) para testar na sua máquina virtual:
 
+![](distroIcons/aerynos.png)
+
+- AerynOS: Distro Atômica com sistema de empacotamento próprio (stones) que utiliza o diretório /usr como diretório exclusivo do sistema. Os diretórios /etc e /var pertencem ao usuário.
+
+### https://aerynos.com/
+
+### https://cdn.aerynos.dev/isos/AerynOS-2025.10-GNOME-live-x86_64.iso
+
+
 ![](distroIcons/antiX.png)
 
 - AntiX 25 Beta 01: AntiX é uma distribuição leve e fácil de instalar sem SystemD com base no Debian Stable para sistemas compatíveis com Intel-AMD x86. O antiX oferece aos usuários o “antiX Magic” um ambiente adequado para computadores antigos e novos. O objetivo do antiX é fornecer um sistema operacional livre leve, mas totalmente funcional e flexível para recém-chegados e usuários experientes do Linux. A memória RAM de 512MB é o mínimo recomendado para antiX. A instalação no disco rígido requer um tamanho mínimo de 7.0GB do disco rígido.
