@@ -483,4 +483,8 @@ ___
 
 ### https://github.com/polkaulfield/ubuntu-debullshit
 
+- Instalando NixOS manualmente:
+
+### https://github.com/claudio-es-andrade/Artigos/blob/main/InstalandoNixOSManualmente.pdf
+
 ---
