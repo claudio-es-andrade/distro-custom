@@ -102,6 +102,15 @@ América: Estados Unidos (Únicos)
 
 ### https://mirror.clarkson.edu/zorinos/isos/18/Zorin-OS-18-Core-64-bit.iso
 
+![](distroIcons/debian.png)
+
+- Debian 13.2: A segunda atualização da distro traz várias atualizações de pacotes devido a vários problemas de segurança e outras correções de bugs gerais. Correções de segurança e patches para Chromium, 7-Zip, o kernel Linux, Redis, Firefox ESR, Incus, GIMP, LXD, Bind9, cjson e demais pacotes. A nova versão também traz uma nova versão QEMU, corrigindo a função "browse local" para o virt-manager, atualizando o DKMS e várias outras atualizações.
+
+### https://www.debian.org/
+
+### https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/
+
+
 ![](distroIcons/icons8-fedora-50.png)
 
 - Fedora 43: Lançado agora no final de outubro a distro passou por vários testes e adiamentos de lançamento para efetuar as desejadas correções. A distro além de possuir vários ambientes Desktops, possui também ambientes preparados para várias atividades, tais como Design, Astronomia, Segurança de Dados e Pentest além dos Containers e suas imagens conteneirizadas. 
