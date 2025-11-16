@@ -104,7 +104,7 @@ América: Estados Unidos (Únicos)
 
 ![](distroIcons/debian.png)
 
-- Debian 13.2: A segunda atualização da distro traz várias atualizações de pacotes devido a vários problemas de segurança e outras correções de bugs gerais. Correções de segurança e patches para Chromium, 7-Zip, o kernel Linux, Redis, Firefox ESR, Incus, GIMP, LXD, Bind9, cjson e demais pacotes. A nova versão também traz uma nova versão QEMU, corrigindo a função "browse local" para o virt-manager, atualizando o DKMS e várias outras atualizações.
+- Debian 13.2: A segunda atualização da distro traz várias atualizações de pacotes devido a vários problemas de segurança e outras correções de caça aos bugs. Correções de segurança e patches para Chromium, 7-Zip, o kernel Linux, Redis, Firefox ESR, Incus, GIMP, LXD, Bind9, cjson e demais pacotes. A nova versão também traz uma nova versão QEMU, corrigindo a função "browse local" para o virt-manager, atualizando o DKMS e outras mais atualizações.
 
 ### https://www.debian.org/
 
