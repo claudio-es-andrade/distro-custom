@@ -20,6 +20,14 @@
 - Linux Lite 7.6 (Ubuntu 24.04 LTS): Link do Brasil desatualizado.
 Distro com XFCE Desktop e bastante recursos (Synaptic, Firewalld, Timeshift Backup) que facilitam a vida do usuário mais novo. A wiki, apesar do idioma ser outro, possui bons exemplos e detalhes de procedimentos.
 
+### https://www.linuxliteos.com/
+
+Downloads:
+
+### https://mirrors.linuxliteos.com/status/mirrors
+
+Meu link:
+
 ### https://drive.google.com/file/d/1oQPFA20mwSJabGHg7-nmjNXiWl6YSvac/view?usp=drive_link
 
 ![](distroIcons/ghostbsd.png)
@@ -35,6 +43,14 @@ Firewall, a maioria dos codecs multimedia instalado, Atualizador de pacotes Grá
  - 4 Melhorias no gerenciamento de boot com detecçaõ de ambientes de boot antigos;
  - 5 Atualização e melhorias de traduções, incluindo Russo, Português (Brazil) e,
  mais
+
+### https://www.ghostbsd.org/
+
+Downloads:
+
+### https://www.ghostbsd.org/download
+
+Meu link:
 
 ### https://drive.google.com/file/d/1P8aJc9LIG3RDAhFBENh57Jd8qeijUhXA/view?usp=drive_link 
 
