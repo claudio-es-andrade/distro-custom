@@ -178,7 +178,15 @@ Youtube:
 
 ### https://www.youtube.com/@tigerosbr/videos
 
+---
 
+![](distroIcons/gentoo.png)
+
+- Gentoo Linux: A Distro da alta performance, devido a compilação dos pacotes de acorco com a seu processador, lançou a sua mais nova atualização. Para mais detalhes acesse:
+
+### https://www.gentoo.org/ 
+
+### https://www.gentoo.org/downloads/
 
 ---
 
