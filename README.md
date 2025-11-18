@@ -314,7 +314,7 @@ Lançamento do Omarchy 3:
 
 ### https://www.freebsd.org/
 
-### https://download.freebsd.org/releases/ISO-IMAGES/15.0/FreeBSD-15.0-BETA5-amd64-dvd1.iso
+### https://download.freebsd.org/releases/ISO-IMAGES/15.0/FreeBSD-15.0-RC1-amd64-disc1.iso
 
 ![](distroIcons/gentoo.png)
 
@@ -463,7 +463,7 @@ Lançamento do Omarchy 3:
 
 - FreeBSD 15: O Sistema Operacional Unix será lançado breve e contará com desktop de interface gráfica como opção (KDE). Drivers optimizados para Laptops e mais.
 
-### https://download.freebsd.org/releases/ISO-IMAGES/15.0/FreeBSD-15.0-BETA4-amd64-dvd1.iso
+### https://download.freebsd.org/releases/ISO-IMAGES/15.0/FreeBSD-15.0-RC1-amd64-disc1.iso
 
 ![](distroIcons/kde.png)
 
