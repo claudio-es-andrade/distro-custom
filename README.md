@@ -180,6 +180,25 @@ O link abaixo é o ponto inicial para as versões existentes.
 
 ### https://files.devuan.org/devuan_excalibur/desktop-live/devuan_excalibur_6.0.0_amd64_desktop-live.iso
 
+![](distroIcons/deepin.png)
+
+- Deepin Linux 25.1: A distro Linux baseada no Debian que possui um dos ambientes mais belos de Desktop. A recente versão é equipada com Inteligência Artifical que auxilia o usuário nas tarefas relacionadas ao ambiente.
+
+### https://www.deepin.org/
+
+Downloads:
+
+### https://www.deepin.org/en/download/
+
+Comunidade do Brasil:
+
+### https://sites.google.com/view/deepinbrasil/
+
+Downloads: 
+
+### https://sites.google.com/view/deepinbrasil/download
+
+
 ![](distroIcons/tigeros.png)
 
 - Tiger OS: Distro Brasileira baseada no Kubuntu (24.04 LTS) e Mint com design e interface gráfica construídos para facilitar a transição do Windows para o Linux. Possui um canal no Youtube com vídeos demonstrativos explicando vários aspectos do sistema.
