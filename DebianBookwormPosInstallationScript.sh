@@ -6,6 +6,15 @@ function check_if_root_is_logged(){
 # FIM DE check_if_root_is_logged()
 }
 
+function check_if_last_command_was_done(){
+
+ if [ $? -eq 0 ]; then
+    echo "Procedimento Realizado"
+   else
+    echo "Comando Falhou"
+   fi
+}
+
 function sources_list_modified(){
 
  echo "Transformando o arquivo sources.list original em cópia"
@@ -73,6 +82,20 @@ adding_user_to_sudo(){
 # FIM DE adding_user_to_sudo()
 }
 
+installing_nala(){
+ echo "Instalando o NALA (Terminal FRONT END APT)"
+ apt install nala
+
+# FIM DE installing_nala()
+}
+
+installing_extrepo(){
+ echo "Instalando o EXTREPO (Habilita repositórios de pacotes específicos)"
+ apt install extrepo
+
+# FIM DE installing_extrepo()
+}
+
 installing_gnome_tweaks_and_extension_manager(){
  echo "Instalando Gnome-Tweaks e Gnome-Shell-Extension-Manager"
  apt install gnome-tweaks gnome-shell-extension-manager
@@ -97,8 +120,6 @@ installing_amd_firmware(){
 
 # FIM DE installing_amd_firmware()
 }
-
-
 
 installing_firewalld(){
  echo "Adicionando Firewall FIREWAALLD"
@@ -744,6 +765,13 @@ installing_docker(){
 
 # FIM DE installing_docker()
 }
+
+ installing_distrobox(){
+ echo "Instalando o distrobox"
+ apt install distrobox
+ 
+ # FIM DE installing_distrobox()
+ }
 
 installing_code(){
  echo "Antes de instalar o VSCode é necessário instalar apt-transport-https"
@@ -1616,29 +1644,31 @@ show_menu(){
  echo "2  - Modifica o arquivo Sources.List "
  echo "3  - Modifica o idioma do sistema"
  echo "4  - Adiciona usuário ao grupo SUDO"
- echo "5  - Instala Gnome-tweaks e Gnome-Extension_Manager"
- echo "6  - Menu para a instalação do Firmware da Intel ou AMD "
- echo "7  - Menu para a escolha do firewall"
- echo "8  - Menu de integração do Flatpak"
- echo "9  - Instala o YAD e o Tasksel"
- echo "10 - Menu para a escolha de outros Desktops"
- echo "11 - Menu para a escolha do web-browser"
- echo "12 - Instala Codecs Multimedia"
- echo "13 - Instala Extratores/Compactadores"
- echo "14 - Instala Fontes"
- echo "15 - Instala o particionador Gparted"
- echo "16 - Instala os facilitadores de instalação Gdebi e Synaptic"
- echo "17 - Menu para a escolha do players multimidia "
- echo "18 - Menu para a escolha dos editores de foto e imagens e criação de objetos"
- echo "19 - Menu para a escolha dos aplicativos para comunicação "
- echo "20 - Menu para a escolha de Linguagens e IDEs"
- echo "21 - Menu para a escolha das Máquinas Virtuais "
- echo "22 - Menu para a escolha dos emuladores (diversos) e STEAM"
- echo "23 - Menu para a escolha dos Crossovers (Wine)"
- echo "24 - Menu para a escolha dos serviços de armazenamento e ou edição em nuvem "
- echo "25 - Modifica o arquivo sysctl.conf adicionando swappiness"
- echo "26 - Otimizando a vida útil da bateria do Laptop"
- echo "27 - Menu para drivers Nvidia"
+ echo "5  - Instalando o NALA (Terminal APT Front End)"
+ echo "6  - Instalando o EXTREPO (Habilita repositório de pacotes específicos)"
+ echo "7  - Instala Gnome-tweaks e Gnome-Extension_Manager"
+ echo "8  - Menu para a instalação do Firmware da Intel ou AMD "
+ echo "9  - Menu para a escolha do firewall"
+ echo "10 - Menu de integração do Flatpak"
+ echo "11 - Instala o YAD e o Tasksel"
+ echo "12 - Menu para a escolha de outros Desktops"
+ echo "13 - Menu para a escolha do web-browser"
+ echo "14 - Instala Codecs Multimedia"
+ echo "15 - Instala Extratores/Compactadores"
+ echo "16 - Instala Fontes"
+ echo "17 - Instala o particionador Gparted"
+ echo "18 - Instala os facilitadores de instalação Gdebi e Synaptic"
+ echo "19 - Menu para a escolha do players multimidia "
+ echo "20 - Menu para a escolha dos editores de foto e imagens e criação de objetos"
+ echo "21 - Menu para a escolha dos aplicativos para comunicação "
+ echo "22 - Menu para a escolha de Linguagens e IDEs"
+ echo "23 - Menu para a escolha das Máquinas Virtuais "
+ echo "24 - Menu para a escolha dos emuladores (diversos) e STEAM"
+ echo "25 - Menu para a escolha dos Crossovers (Wine)"
+ echo "26 - Menu para a escolha dos serviços de armazenamento e ou edição em nuvem "
+ echo "27 - Modifica o arquivo sysctl.conf adicionando swappiness"
+ echo "28 - Otimizando a vida útil da bateria do Laptop"
+ echo "29 - Menu para drivers Nvidia"
  echo "a  - Atualiza o sistema"
  echo "r  - Reinicia o sistema"
  echo "x  - Fim do Programa"
@@ -1654,121 +1684,156 @@ main() {
   read -p "Escolha uma opção: " choice
   case $choice in
   1)
-   execute_everything
-   echo "Procedimento Realizado"
+   execute_everything  
+   check_if_last_command_was_done
+   
   ;;
   2)
    sources_list_modified
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   3)
    changing_locale
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   4)
    echo "Modifique o script para acrescentar o nome do usuário"
    adding_user_to_sudo
-  # echo "Procedimento Realizado"
+   check_if_last_command_was_done
+  
   ;;
+  
   5)
-   installing_gnome_tweaks_and_extension_manager
-   echo "Procedimento Realizado"
+   installing_nala
+   check_if_last_command_was_done
+   
   ;;
   6)
-   sub_cpu_firmware
-   echo "Procedimento Realizado"
+   installing_distrobox
+   check_if_last_command_was_done
+   
   ;;
+  
   7)
+   installing_gnome_tweaks_and_extension_manager
+   check_if_last_command_was_done
+   
+  ;;
+  8)
+   sub_cpu_firmware
+   echo "Digite o valor entre as opções listadas"     
+  ;;
+  
+  9)
    sub_firewall
    echo "Digite o valor entre as opções listadas"
   ;;
-  8)
+  
+  10)
    sub_flatpak
    echo "Digite o valor entre as opções listadas"
   ;;
-  9)
-   installing_yad_tasksel
-   echo "Procedimento Realizado"
+  
+  11)
+   installing_yad_tasksel   
+   check_if_last_command_was_done
+      
+   
   ;;
- 10)
-   sub_desktops
-   echo "Procedimento Realizado"
-  ;;
- 11)
-   sub_browsers
-   echo "Procedimento Realizado"
-  ;;
+ 
  12)
-   installing_codecs
-   echo "Procedimento Realizado"
+   sub_desktops
+   
   ;;
+  
  13)
-   installing_extractors
-   echo "Procedimento Realizado"
+   sub_browsers
+      
   ;;
+ 
  14)
-   installing_fonts
-   echo "Procedimento Realizado"
+   installing_codecs
+   check_if_last_command_was_done
+   
+   
   ;;
+ 
  15)
-   installing_gparted
-   echo "Procedimento Realizado"
+   installing_extractors
+   check_if_last_command_was_done
+   
   ;;
  16)
-   installing_gdebi_synaptic
-   echo "Procedimento Realizado"
+   installing_fonts
+   check_if_last_command_was_done
+   
   ;;
  17)
+   installing_gparted
+   check_if_last_command_was_done
+   
+  ;;
+ 18)
+   installing_gdebi_synaptic
+   check_if_last_command_was_done
+   
+  ;;
+ 19)
    sub_players
    echo "Digite o valor entre as opções listadas"
   ;;
- 18)
+ 20)
    sub_graphicals
    echo "Digite o valor entre as opções listadas"
   ;;
- 19)
+ 21)
    sub_comunication
    echo "Digite o valor entre as opções listadas"
   ;;
- 20)
+ 22)
    sub_developers
    echo "Digite o valor entre as opções listadas"
   ;;
- 21)
+ 23)
    sub_vmachines
    echo "Digite o valor entre as opções listadas"
   ;;
- 22)
+ 24)
    sub_games
    echo "Digite o valor entre as opções listadas"
   ;;
- 23)
+ 25)
    sub_crossovers
    echo "Digite o valor entre as opções listadas"
   ;; 
- 24)
+ 26)
    sub_cloud
    echo "Digite o valor entre as opções listadas"
   ;;
- 25)
-   modifying_sysctl_conf
-   echo "Procedimento Realizado"
-  ;;
- 26)
-   improving_laptop_battery_life
-   echo "Procedimento Realizado"
-  ;;
  27)
+   modifying_sysctl_conf
+   check_if_last_command_was_done
+   
+  ;;
+ 28)
+   improving_laptop_battery_life
+   check_if_last_command_was_done
+   
+  ;;
+ 29)
    sub_nvidia
-   echo "Procedimento Realizado"
+   
   ;;
  a|A)
    updating_system
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
  r|R)
   rebooting_system
-  echo "Procedimento Realizado"
+  
   ;;
  x|X)
   exit 0
@@ -1798,11 +1863,13 @@ sub_firewall(){
   case $fire in
   1)
    installing_firewalld
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   2)
    installing_firewall_ufw
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   q|Q)
    break
@@ -1839,39 +1906,48 @@ sub_graphicals(){
   case $fire in
   1)
    installing_audacity
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   2)
    installing_blender
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   3)
    installing_gimp
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   4)
    installing_handbrake
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;; 
   5)
    installing_inkscape
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;; 
   6)
    installing_kdenlive
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   7)
    installing_krita
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   8)
    installing_obs_studio
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   9)
    installing_openshot
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   q|Q)
    break
@@ -1904,23 +1980,26 @@ sub_comunication(){
   case $fire in
   1)
    installing_discord
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   2)
    installing_telegram
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   3)
    installing_thunderbird
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
   ;;
   4)
    installing_zoom
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   5)
    installing_teams
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
   ;;
   q|Q)
    break
@@ -1955,31 +2034,38 @@ sub_browsers(){
   case $fire in
   1)
    installing_chrome_repo
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   2)
    installing_opera_repo
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   3)
    installing_vivaldi_repo
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   4)
    installing_edge_repo
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;; 
   5)
    installing_chromium_repo
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;; 
   6)
    installing_librewolf
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   7)
    installing_zen
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   q|Q)
    break
@@ -2014,23 +2100,27 @@ sub_players(){
   case $fire in
   1)
    installing_audacious
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   2)
    installing_vlc
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   3)
    installing_smplayer
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   4)
    installing_kodi
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;; 
   5)
    installing_spotify
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
   ;; 
   q|Q)
    break
@@ -2066,31 +2156,38 @@ sub_desktops(){
   case $fire in
   1)
    installing_gnome
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   2)
    installing_xfce
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   3)
    installing_kde
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   4)
    installing_cinnamon
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;; 
   5)
    installing_mate
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;; 
   6)
    installing_lxde
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   7)
    installing_lxqt
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   q|Q)
    break
@@ -2119,14 +2216,15 @@ show_subMenu_developers(){
  echo "9  - Instala Postgresql"
  echo "10 - Instala o GIT, o Subversion e o Mercurial"
  echo "11 - Instala o Docker e Docker-Compose"
- echo "12 - Instala o Visual Studio Code"
- echo "13 - Instala o Sublime Text"
- echo "14 - Instala o Atom"
- echo "15 - Instala o VIM"
- echo "16 - Instala o NEOVIM"
- echo "17 - Instala o DBeaver Community (Flatpak)"
- echo "18 - Menu para IDEs Java"
- echo "19 - Menu para IDEs Python"
+ echo "12 - Instalando o Distrobox"
+ echo "13 - Instala o Visual Studio Code"
+ echo "14 - Instala o Sublime Text"
+ echo "15 - Instala o Atom"
+ echo "16 - Instala o VIM"
+ echo "17 - Instala o NEOVIM"
+ echo "18 - Instala o DBeaver Community (Flatpak)"
+ echo "19 - Menu para IDEs Java"
+ echo "20 - Menu para IDEs Python"
  echo "q  - Volta para o menu principal" 
 
 # FIM DE show_subMenu_developers()
@@ -2155,61 +2253,79 @@ sub_developers(){
   ;; 
   5)
    installing_build_essential
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   6)
    installing_nodejs_npm
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   7)
    installing_mariadb
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   8)
    installing_mysql
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   9)
    installing_postgresql
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   10)
    installing_git_subversion_mercurial
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   11)
    installing_docker
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   12)
-   installing_code
-   echo "Procedimento Realizado"
+   installing_distrobox
+   check_if_last_command_was_done
+   
   ;;
   13)
-   installing_sublime
-   echo "Procedimento Realizado"
+   installing_code
+   check_if_last_command_was_done
+   
   ;;
   14)
-   installing_atom
-   echo "Procedimento Realizado"
+   installing_sublime
+   check_if_last_command_was_done
+   
   ;;
   15)
-   installing_vim
-   echo "Procedimento Realizado"
+   installing_atom
+   check_if_last_command_was_done
+   
   ;;
   16)
-   installing_neo_vim
-   echo "Procedimento Realizado"
+   installing_vim
+   check_if_last_command_was_done
+   
   ;;
   17)
-   installing_dbeaver
-   echo "Procedimento Realizado"
+   installing_neo_vim
+   check_if_last_command_was_done
+   
   ;;
   18)
+   installing_dbeaver
+   check_if_last_command_was_done
+   
+  ;;
+  19)
    echo "IDEs Java"
    sub_IDE_java
   ;;
-  19)
+  20)
    echo "IDEs Python"
    sub_IDE_python
   ;;
@@ -2242,11 +2358,13 @@ sub_vmachines(){
   case $fire in
   1)
    installing_virtualbox
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   2)
    installing_virtualmanager
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   q|Q)
    break
@@ -2285,47 +2403,58 @@ sub_games(){
   case $fire in
   1)
    installing_steam
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   2)
    installing_dolphin_emulator
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   3)
    installing_citra
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   4)
    installing_flycast
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;; 
   5)
    installing_pcsx2
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;; 
   6)
    installing_rpcs3
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   7)
    installing_snes9x
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   8)
    installing_mgba
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   9)
    installing_xemu
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   10)
    installing_yuzu
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   11)
    installing_faugus
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   q|Q)
    break
@@ -2357,11 +2486,13 @@ sub_crossovers(){
   case $fire in
   1)
    installing_bottles
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   2)
    installing_playonlinux
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   3)
    installing_wine
@@ -2398,11 +2529,13 @@ sub_cloud(){
   case $fire in
   1)
    installing_dropbox
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   2)
    installing_mega
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   3)
    installing_anydesk
@@ -2439,19 +2572,23 @@ sub_IDE_java(){
   case $fire in
   1)
    installing_netbeans 
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   2)
    installing_bluej
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   3)
    installing_eclipse
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   4)
    installing_intellij
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;; 
   q|Q)
    break
@@ -2485,19 +2622,23 @@ sub_IDE_python(){
   case $fire in
   1)
    installing_pycharm 
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   2)
    installing_spyder
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   3)
    installing_conda
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   4)
    installing_jupiter
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;; 
   q|Q)
    break
@@ -2529,11 +2670,13 @@ sub_cpu_firmware(){
   case $fire in
   1)
    installing_intel_firmware
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   2)
    installing_amd_firmware
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   q|Q)
    break
@@ -2570,39 +2713,48 @@ sub_nvidia(){
   case $fire in
   1)
    checking_video_driver
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   2)
    installing_nvidia
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   3)
    installing_nvidia_legacy_470
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   4)
    installing_nvidia_legacy_390
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   5)
    installing_nvidia_legacy_340
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   6)
    installing_nvidia_legacy_304
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   7)
    installing_nvidia_legacy_173
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   8)
    installing_nvidia_legacy_96
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   9)
    installing_nvidia_legacy_71
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   q|Q)
    break
@@ -2632,15 +2784,18 @@ sub_flatpak(){
   case $fire in
   1)
    installing_flatpak_gnome
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   2)
    installing_flatpak_kde
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   3)
    installing_bazaar
-   echo "Procedimento Realizado"
+   check_if_last_command_was_done
+   
   ;;
   q|Q)
    break
