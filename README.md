@@ -8,69 +8,16 @@
 ---
 
 
-## Novembro/01/2025
+## Dezembro/01/2025
+
 
 ---
 
-#### ISOs Originais : 
 
-![](distroIcons/linux_lite.png)
-
-
-- Linux Lite 7.6 (Ubuntu 24.04 LTS): Link do Brasil desatualizado.
-Distro com XFCE Desktop e bastante recursos (Synaptic, Firewalld, Timeshift Backup) que facilitam a vida do usuário mais novo. A wiki, apesar do idioma ser outro, possui bons exemplos e detalhes de procedimentos.
-
-### https://www.linuxliteos.com/
-
-Downloads:
-
-### https://mirrors.linuxliteos.com/status/mirrors
-
-Meu link:
-
-### https://drive.google.com/file/d/1oQPFA20mwSJabGHg7-nmjNXiWl6YSvac/view?usp=drive_link
-
-![](distroIcons/ghostbsd.png)
-
-
-- GhostBSD MATE (Atualização Agosto/25/2025): Unix (Kernel) FreeBSD Distro que já vem com um Desktop Environment, MATE, pronto para uso.
-Firewall, a maioria dos codecs multimedia instalado, Atualizador de pacotes Gráfico, tudo muito simples e prático. Documentação: https://ghostbsd-documentation-portal.readthedocs.io/en/latest/index.html
-
- Várias Melhorias incluindo:
- - 1 Atualização alinhada ao lançamento do FreeBSD releng/14.3;
- - 2 Auto detecção de placas AMD Radeon HD 8790M, Radeon HD 8240 Kabini, NVidia RTX 4000/5000 series;
- - 3 Adicionada WiFi firmware compatibility para FreeBSD 14.3; 
- - 4 Melhorias no gerenciamento de boot com detecçaõ de ambientes de boot antigos;
- - 5 Atualização e melhorias de traduções, incluindo Russo, Português (Brazil) e,
- mais
-
-### https://www.ghostbsd.org/
-
-Downloads:
-
-### https://www.ghostbsd.org/download
-
-Meu link:
-
-### https://drive.google.com/file/d/1P8aJc9LIG3RDAhFBENh57Jd8qeijUhXA/view?usp=drive_link 
-
----
-
-# DISTRO-CUSTOM (MODIFICADA):
 
 ![](distroIcons/linux_Tux.png)
 
-![](distroIcons/icons8-zorin-50.png)
 
-- Linux Zorin 18: A Distro que simplesmente alcançou mais de 100k de downloads da ISO! 
-- Provou que o Sistema Operacional morreu (Software: Windows 10), mas o hardware continua pronto para ser cada vez mais útil!
-
-Adicionados: Codecs Multimedia, Compactadores e extratores gerais, Gerenciador de Pacotes Synaptic, Firewall GUFW (UFW Gráfico), MainLine (Kernel mais recentes ou mais antigos), 
-Docker, Distrobox, Virtualbox e Penguins-Eggs (para fazer a cópia da sua ISO).
-
-
-
-### https://drive.google.com/file/d/1WbHAXaeeGITTI8vvoNovEkqB1PnwHEkL/view?usp=drive_link
 
 ---
 
@@ -212,6 +159,38 @@ Download:
 Youtube:
 
 ### https://www.youtube.com/@tigerosbr/videos
+
+![](distroIcons/linux_lite.png)
+
+
+- Linux Lite 7.6 (Ubuntu 24.04 LTS): Link do Brasil desatualizado.
+Distro com XFCE Desktop e bastante recursos (Synaptic, Firewalld, Timeshift Backup) que facilitam a vida do usuário mais novo. A wiki, apesar do idioma ser outro, possui bons exemplos e detalhes de procedimentos.
+
+### https://www.linuxliteos.com/
+
+Downloads:
+
+### https://mirrors.linuxliteos.com/status/mirrors
+
+![](distroIcons/ghostbsd.png)
+
+
+- GhostBSD MATE (Atualização Agosto/25/2025): Unix (Kernel) FreeBSD Distro que já vem com um Desktop Environment, MATE, pronto para uso.
+Firewall, a maioria dos codecs multimedia instalado, Atualizador de pacotes Gráfico, tudo muito simples e prático. Documentação: https://ghostbsd-documentation-portal.readthedocs.io/en/latest/index.html
+
+ Várias Melhorias incluindo:
+ - 1 Atualização alinhada ao lançamento do FreeBSD releng/14.3;
+ - 2 Auto detecção de placas AMD Radeon HD 8790M, Radeon HD 8240 Kabini, NVidia RTX 4000/5000 series;
+ - 3 Adicionada WiFi firmware compatibility para FreeBSD 14.3; 
+ - 4 Melhorias no gerenciamento de boot com detecçaõ de ambientes de boot antigos;
+ - 5 Atualização e melhorias de traduções, incluindo Russo, Português (Brazil) e,
+ mais
+
+### https://www.ghostbsd.org/
+
+Downloads:
+
+### https://www.ghostbsd.org/download
 
 ---
 
@@ -493,23 +472,6 @@ As extensões que o Gnome OS oferece são:
 - Existem diversos sistemas que apesar de não estarem incluídos aqui, também valem a pena serem testados: Nobara, Ultramarine, RegataOS, Void, Gnoppix, Cachy, Solus, Endeavour, Garuda, PikaOS, Manjaro, Antoin, OpenSuse, OpenMandriva, Elementary, Kali Linux, Puppy, AlmaLinux (Oracle Linux, Rocky Linux, VzLinux, Cloud Linux, Helios OS) Vanilla, Blend OS , Nitrux, Endless Linux, Guix, Tails, MidnightBSD, NomadBSD, TrueNAS, pfSense,NetBSD, PureDarwin e muito mais...
 
 ___
-
-
-# Arquivo de Verificação da ISO
-
-- Linux Lite (MD5)
-
-### https://drive.google.com/file/d/1T1rDggzS14yZIrhwFVBFQcfelrMImEFW/view?usp=drive_link
-
-- GhostBSD (SHA256)
-
-### https://drive.google.com/file/d/1AXSWqd75qPqMnMKzxbDBkoVG4uUBwuTW/view?usp=drive_link
-
-- ZorinOS 18 (LTS) (MD5)
-
-### https://drive.google.com/file/d/1v_hGh3HcTNFG9Vy99wdxORSrDaAhlTqA/view?usp=drive_link
-
----
 
 
 ## Maiores Informações:
