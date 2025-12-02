@@ -8,7 +8,7 @@
 ---
 
 
-## Dezembro/01/2025
+## Dezembro/02/2025
 
 
 ---
@@ -18,8 +18,39 @@
 ![](distroIcons/linux_Tux.png)
 
 
+Última Distro-Custom
+
+![](distroIcons/debian.png)
+
+- Debian 13.2 Trixie Cinnamon
+
+Dois anos de modificações de distros que começaram com o fork da recente Universal Blue a criadora do Bazzite, Aurora e Bluefin para modificar sua exclusiva ISO. Muitas distros são similares ao processo de criação do Debian, Ubuntu e Mint. Outras são bem exclusivas como o Fedora, Bazzite e demais. Até o ArchLinux com Gnome e KDE foi customizado com o trabalho do criador do finado Arco-Linux. Seja com intenção de usar no desenvolvimento de testes, ou na produção, esta modificação é apenas uma singela demonstração do que se pode fazer com o trabalho da verdadeira equipe de produção de tais distribuições. Muito Obrigado!
+
+Modificações: Foram feitas utilizado o script DebianTrixiePostInstallationScript.sh.
+
+- Nala
+- Extrepo
+- Repositório do Firefox com a mais recente versão
+- Codecs Multimedia
+- Extratores e Compactadores
+- Docker
+- Distrobox
+- Virtualbox
+- Debian-Reference Original em Inglês e o traduzido em Português do Brasil
+- Modificação de limitação de número de arquivos no /etc/security/limits.conf 
+
+#### https://github.com/claudio-es-andrade/Artigos/blob/main/ForkBomb.pdf
+
+ISO
+
+### https://drive.google.com/file/d/1UXuXEW8qwScEFzKe1tTa1I6X3B2cItwz/view?usp=drive_link
+
+MD5
+
+### https://drive.google.com/file/d/1UCFVgCe8p68eVR12QxjBmF5fXVDd-6mE/view?usp=drive_link
 
 ---
+
 
 ### Lançamentos e Atualizações:
 
