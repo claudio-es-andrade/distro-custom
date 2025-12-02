@@ -223,6 +223,13 @@ Downloads:
 
 ### https://www.ghostbsd.org/download
 
+![](distroIcons/freebsd.png)
+- FreeBSD 15.0 Release: O FreeBSD 15.0 possui uma infinidade de atualizações de software do código de sistema de arquivos OpenZFS mais recente para OpenSSL atualizado, OpenSSH e inúmeras outras atualizações de software. O kernel FreeBSD 15.0 também tem grandes melhorias, como uma implementação nativa de inotify e inúmeras atualizações de driver de dispositivo. O esforço do FreeBSD em laptops também resultou em muitas melhorias no WiFi, aprimoramentos de drivers gráficos, correções de suspensão / reinício e outras melhorias. 
+
+### https://www.freebsd.org/
+
+### https://download.freebsd.org/releases/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-dvd1.iso
+
 ---
 
 ![](distroIcons/gentoo.png)
@@ -324,7 +331,7 @@ Lançamento do Omarchy 3:
 
 ### https://www.freebsd.org/
 
-### https://download.freebsd.org/releases/ISO-IMAGES/15.0/FreeBSD-15.0-RC1-amd64-disc1.iso
+### https://download.freebsd.org/releases/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-dvd1.iso
 
 ![](distroIcons/gentoo.png)
 
