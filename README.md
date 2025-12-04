@@ -384,6 +384,13 @@ Lançamento do Omarchy 3:
 
 ---
 
+### Teste várias distribuições sem ter máquinas virtuais e ou containers, via webbrowser :
+
+# https://distrosea.com/
+
+---
+
+
 
 
 # ISO(s) para testar na sua máquina virtual:
