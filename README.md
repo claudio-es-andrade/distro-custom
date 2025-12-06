@@ -41,9 +41,6 @@ Modificações: Foram feitas utilizado o script DebianTrixiePostInstallationScri
 - Docker
 - Distrobox
 - Virtualbox
-
----
-
 - Debian-Reference Original em Inglês e o traduzido em Português do Brasil
 - Modificação de limitação de número de arquivos no /etc/security/limits.conf 
 
