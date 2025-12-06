@@ -98,7 +98,7 @@ installing_extrepo(){
 
 installing_debian_reference(){
  echo "Removendo o Debian Reference Itália e Espanha"
- apt remove debian-reference-it apt remove debian-reference-es
+ apt remove debian-reference-it debian-reference-es
  
  echo "Instalando o Debian Reference Original (Inglês) e Traduzido para o português do Brasil"
  apt install debian-reference-en debian-reference-pt-br 
