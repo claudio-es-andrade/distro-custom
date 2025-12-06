@@ -96,6 +96,16 @@ installing_extrepo(){
 # FIM DE installing_extrepo()
 }
 
+installing_debian_reference(){
+ echo "Removendo o Debian Reference Itália e Espanha"
+ apt remove debian-reference-it apt remove debian-reference-es
+ 
+ echo "Instalando o Debian Reference Original (Inglês) e Traduzido para o português do Brasil"
+ apt install debian-reference-en debian-reference-pt-br 
+
+# FIM DE installing_debian_reference()
+}
+
 installing_gnome_tweaks_and_extension_manager(){
  echo "Instalando Gnome-Tweaks e Gnome-Shell-Extension-Manager"
  apt install gnome-tweaks gnome-shell-extension-manager
@@ -1646,29 +1656,30 @@ show_menu(){
  echo "4  - Adiciona usuário ao grupo SUDO"
  echo "5  - Instalando o NALA (Terminal APT Front End)"
  echo "6  - Instalando o EXTREPO (Habilita repositório de pacotes específicos)"
- echo "7  - Instala Gnome-tweaks e Gnome-Extension_Manager"
- echo "8  - Menu para a instalação do Firmware da Intel ou AMD "
- echo "9  - Menu para a escolha do firewall"
- echo "10 - Menu de integração do Flatpak"
- echo "11 - Instala o YAD e o Tasksel"
- echo "12 - Menu para a escolha de outros Desktops"
- echo "13 - Menu para a escolha do web-browser"
- echo "14 - Instala Codecs Multimedia"
- echo "15 - Instala Extratores/Compactadores"
- echo "16 - Instala Fontes"
- echo "17 - Instala o particionador Gparted"
- echo "18 - Instala os facilitadores de instalação Gdebi e Synaptic"
- echo "19 - Menu para a escolha do players multimidia "
- echo "20 - Menu para a escolha dos editores de foto e imagens e criação de objetos"
- echo "21 - Menu para a escolha dos aplicativos para comunicação "
- echo "22 - Menu para a escolha de Linguagens e IDEs"
- echo "23 - Menu para a escolha das Máquinas Virtuais "
- echo "24 - Menu para a escolha dos emuladores (diversos) e STEAM"
- echo "25 - Menu para a escolha dos Crossovers (Wine)"
- echo "26 - Menu para a escolha dos serviços de armazenamento e ou edição em nuvem "
- echo "27 - Modifica o arquivo sysctl.conf adicionando swappiness"
- echo "28 - Otimizando a vida útil da bateria do Laptop"
- echo "29 - Menu para drivers Nvidia"
+ echo "7  - Corrigindo o Debian Reference para o original e traduzido para o português do Brasil"
+ echo "8  - Instala Gnome-tweaks e Gnome-Extension_Manager"
+ echo "9  - Menu para a instalação do Firmware da Intel ou AMD "
+ echo "10  - Menu para a escolha do firewall"
+ echo "11 - Menu de integração do Flatpak"
+ echo "12 - Instala o YAD e o Tasksel"
+ echo "13 - Menu para a escolha de outros Desktops"
+ echo "14 - Menu para a escolha do web-browser"
+ echo "15 - Instala Codecs Multimedia"
+ echo "16 - Instala Extratores/Compactadores"
+ echo "17 - Instala Fontes"
+ echo "18 - Instala o particionador Gparted"
+ echo "19 - Instala os facilitadores de instalação Gdebi e Synaptic"
+ echo "20 - Menu para a escolha do players multimidia "
+ echo "21 - Menu para a escolha dos editores de foto e imagens e criação de objetos"
+ echo "22 - Menu para a escolha dos aplicativos para comunicação "
+ echo "23 - Menu para a escolha de Linguagens e IDEs"
+ echo "24 - Menu para a escolha das Máquinas Virtuais "
+ echo "25 - Menu para a escolha dos emuladores (diversos) e STEAM"
+ echo "26 - Menu para a escolha dos Crossovers (Wine)"
+ echo "27 - Menu para a escolha dos serviços de armazenamento e ou edição em nuvem "
+ echo "28 - Modifica o arquivo sysctl.conf adicionando swappiness"
+ echo "29 - Otimizando a vida útil da bateria do Laptop"
+ echo "30 - Menu para drivers Nvidia"
  echo "a  - Atualiza o sistema"
  echo "r  - Reinicia o sistema"
  echo "x  - Fim do Programa"
@@ -1717,112 +1728,119 @@ main() {
   ;;
   
   7)
+   installing_debian_reference
+   check_if_last_command_was_done
+   
+  ;;
+  
+  8)
    installing_gnome_tweaks_and_extension_manager
    check_if_last_command_was_done
    
   ;;
-  8)
+    
+  9)
    sub_cpu_firmware
    echo "Digite o valor entre as opções listadas"     
   ;;
   
-  9)
+  10)
    sub_firewall
    echo "Digite o valor entre as opções listadas"
   ;;
   
-  10)
+  11)
    sub_flatpak
    echo "Digite o valor entre as opções listadas"
   ;;
   
-  11)
+  12)
    installing_yad_tasksel   
    check_if_last_command_was_done
       
    
   ;;
  
- 12)
+ 13)
    sub_desktops
    
   ;;
   
- 13)
+ 14)
    sub_browsers
       
   ;;
  
- 14)
+ 15)
    installing_codecs
    check_if_last_command_was_done
    
    
   ;;
  
- 15)
+ 16)
    installing_extractors
    check_if_last_command_was_done
    
   ;;
- 16)
+ 17)
    installing_fonts
    check_if_last_command_was_done
    
   ;;
- 17)
+ 18)
    installing_gparted
    check_if_last_command_was_done
    
   ;;
- 18)
+ 19)
    installing_gdebi_synaptic
    check_if_last_command_was_done
    
   ;;
- 19)
+ 20)
    sub_players
    echo "Digite o valor entre as opções listadas"
   ;;
- 20)
+ 21)
    sub_graphicals
    echo "Digite o valor entre as opções listadas"
   ;;
- 21)
+ 22)
    sub_comunication
    echo "Digite o valor entre as opções listadas"
   ;;
- 22)
+ 23)
    sub_developers
    echo "Digite o valor entre as opções listadas"
   ;;
- 23)
+ 24)
    sub_vmachines
    echo "Digite o valor entre as opções listadas"
   ;;
- 24)
+ 25)
    sub_games
    echo "Digite o valor entre as opções listadas"
   ;;
- 25)
+ 26)
    sub_crossovers
    echo "Digite o valor entre as opções listadas"
   ;; 
- 26)
+ 27)
    sub_cloud
    echo "Digite o valor entre as opções listadas"
   ;;
- 27)
+ 28)
    modifying_sysctl_conf
    check_if_last_command_was_done
    
   ;;
- 28)
+ 29)
    improving_laptop_battery_life
    check_if_last_command_was_done
    
   ;;
- 29)
+ 30)
    sub_nvidia
    
   ;;
