@@ -28,14 +28,22 @@ Dois anos de modificações de distros que começaram com o fork da recente Univ
 
 Modificações: Foram feitas utilizado o script DebianTrixiePostInstallationScript.sh.
 
+- Flatpak integrado ao Gnome-Software
 - Nala
-- Extrepo
+- Extrepo 
+
+#### https://github.com/claudio-es-andrade/Artigos/blob/main/PacoteExtRepo_Debian.pdf
+
+
 - Repositório do Firefox com a mais recente versão
 - Codecs Multimedia
 - Extratores e Compactadores
 - Docker
 - Distrobox
 - Virtualbox
+
+---
+
 - Debian-Reference Original em Inglês e o traduzido em Português do Brasil
 - Modificação de limitação de número de arquivos no /etc/security/limits.conf 
 
@@ -48,6 +56,8 @@ ISO
 MD5
 
 ### https://drive.google.com/file/d/1UCFVgCe8p68eVR12QxjBmF5fXVDd-6mE/view?usp=drive_link
+
+Total: 13.6 Gb (Instalado)
 
 ---
 
