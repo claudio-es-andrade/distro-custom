@@ -48,7 +48,7 @@ EOF
  echo "Fim da modificação no arquivo /etc/apt/sources.list"
  echo "Recarregando a lista de repositórios e verificando pacotes a serem atualizados"
  apt update && apt upgrade
- echo "Modifying sources.list"
+ echo "Arquivo sources.list modificado"
  cat /etc/apt/sources.list
 # FIM de sources_list_modified()
 }
@@ -1236,10 +1236,25 @@ modifying_sysctl_conf(){
 
  echo "Fim da modificação no arquivo /etc/sysctl.conf"
  echo "Segue a descrição do arquivo. Verifique a alteração no final do texto."
- cat /etc/sysctl.conf
+ # cat /etc/sysctl.conf
 
 # FIM DE modifying_sysctl_conf
 }
+
+modifying_limits_conf(){
+echo "Alterando os limites do número de arquivos em limits.conf"
+
+cat <<EOF >> /etc/security/limits.conf
+*  soft nproc 2500
+*  hard nproc 5000
+EOF
+
+echo "Final do arquivo /etc/security/limits.conf"
+tail -n 2 /etc/security/limits.conf
+
+# FIM DE modifying_limits_conf()
+}
+
 
 improving_laptop_battery_life(){
  echo "Instalando os pacotes TLP e TLP-RDW"
@@ -1679,8 +1694,9 @@ show_menu(){
  echo "26 - Menu para a escolha dos Crossovers (Wine)"
  echo "27 - Menu para a escolha dos serviços de armazenamento e ou edição em nuvem "
  echo "28 - Modifica o arquivo sysctl.conf adicionando swappiness"
- echo "29 - Otimizando a vida útil da bateria do Laptop"
- echo "30 - Menu para drivers Nvidia"
+ echo "29 - Modifica o arquivo limits.conf adicionando número máximo de arquivos abertos"
+ echo "30 - Otimizando a vida útil da bateria do Laptop"
+ echo "31 - Menu para drivers Nvidia"
  echo "a  - Atualiza o sistema"
  echo "r  - Reinicia o sistema"
  echo "x  - Fim do Programa"
@@ -1833,14 +1849,16 @@ main() {
  28)
    modifying_sysctl_conf
    check_if_last_command_was_done
-   
   ;;
- 29)
-   improving_laptop_battery_life
+  29)
+   modifying_limits_conf
    check_if_last_command_was_done
-   
   ;;
  30)
+   improving_laptop_battery_life
+   check_if_last_command_was_done
+  ;;
+ 31)
    sub_nvidia
    
   ;;
@@ -2748,6 +2766,8 @@ execute_everything(){
  sources_list_modified
  changing_locale
  #adding_user_to_sudo
+ installing_nala
+ installing_extrepo
  installing_gnome_tweaks_and_extension_manager
  installing_intel_firmware
  #installing_firewalld
@@ -2763,6 +2783,7 @@ execute_everything(){
  installing_vivaldi_repo
  installing_gimp
  modifying_sysctl_conf
+ modifying_limits_conf
  improving_laptop_battery_life
  installing_nvidia
  updating_system
