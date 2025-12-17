@@ -111,7 +111,6 @@ América: Estados Unidos (Únicos)
 
 ### https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/
 
-
 ![](distroIcons/icons8-ubuntu-50.png)
 
 - Ubuntu 25.10 : Ubuntu lançado com várias novidades, como por exemplo, o kernel 6.17, novo rust-utils (sudo e outras coisas mais reescritos na linguagem rust), Gnome 49 e muito mais.
@@ -126,6 +125,15 @@ América: Estados Unidos (Únicos)
 ### https://deb.campolargo.pr.gov.br/ubuntu/releases/questing/ubuntu-25.10-desktop-amd64.iso
 
 ### https://cdimage.ubuntu.com/releases/25.10/release/ubuntu-25.10-desktop-arm64.iso
+
+![](distroIcons/icons8-fedora-50.png)
+
+- Fedora 43: Lançado agora no final de outubro a distro passou por vários testes e adiamentos de lançamento para efetuar as desejadas correções. A distro além de possuir vários ambientes Desktops, possui também ambientes preparados para várias atividades, tais como Design, Astronomia, Segurança de Dados e Pentest além dos Containers e suas imagens conteneirizadas. 
+
+O link abaixo é o ponto inicial para as versões existentes. 
+
+### https://dl.fedoraproject.org/pub/fedora/linux/releases/43/
+
 ![](distroIcons/pepermint_02.png)
 
 - Linux Peppermint: Distro baseadad no Debian Trixie 13 com o Desktop XFCE feita com a ajuda da comunidade com o propósito de ser bem simples e altamente configurável.
