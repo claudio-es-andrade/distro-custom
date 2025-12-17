@@ -112,23 +112,6 @@ América: Estados Unidos (Únicos)
 ### https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/
 
 
-![](distroIcons/icons8-fedora-50.png)
-
-- Fedora 43: Lançado agora no final de outubro a distro passou por vários testes e adiamentos de lançamento para efetuar as desejadas correções. A distro além de possuir vários ambientes Desktops, possui também ambientes preparados para várias atividades, tais como Design, Astronomia, Segurança de Dados e Pentest além dos Containers e suas imagens conteneirizadas. 
-O link abaixo é o ponto inicial para as versões existentes. 
-
-### https://dl.fedoraproject.org/pub/fedora/linux/releases/43/
-
-![](distroIcons/redhat.png)
-
-- RedHat 10.1: Atualização da distro Linux mais conhecida no mundo empresarial. Terminal turbinado com AI na linha de comando e muito mais.
-
-### https://www.redhat.com/
-
-### https://developers.redhat.com/content-gateway/file/rhel/Red_Hat_Enterprise_Linux_10.0/rhel-10.0-x86_64-boot.iso
-
-
-
 ![](distroIcons/icons8-ubuntu-50.png)
 
 - Ubuntu 25.10 : Ubuntu lançado com várias novidades, como por exemplo, o kernel 6.17, novo rust-utils (sudo e outras coisas mais reescritos na linguagem rust), Gnome 49 e muito mais.
