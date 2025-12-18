@@ -126,14 +126,6 @@ América: Estados Unidos (Únicos)
 
 ### https://cdimage.ubuntu.com/releases/25.10/release/ubuntu-25.10-desktop-arm64.iso
 
-![](distroIcons/icons8-fedora-50.png)
-
-- Fedora 43: Lançado agora no final de outubro a distro passou por vários testes e adiamentos de lançamento para efetuar as desejadas correções. A distro além de possuir vários ambientes Desktops, possui também ambientes preparados para várias atividades, tais como Design, Astronomia, Segurança de Dados e Pentest além dos Containers e suas imagens conteneirizadas. 
-
-O link abaixo é o ponto inicial para as versões existentes. 
-
-### https://dl.fedoraproject.org/pub/fedora/linux/releases/43/
-
 ![](distroIcons/pepermint_02.png)
 
 - Linux Peppermint: Distro baseadad no Debian Trixie 13 com o Desktop XFCE feita com a ajuda da comunidade com o propósito de ser bem simples e altamente configurável.
@@ -348,11 +340,11 @@ Lançamento do Omarchy 3:
 
 ![](distroIcons/redhat.png)
 
-- RedHat: A distro empresa que cria e mantém suporte de várias tecnologias, inclusive as ligadas ao mundo open source. Possui um sistema de Certificação reconhecido mundialmente. Possui as distros Fedora e CentOS. Cadastrando-se como desenvolvedor no site da empresa, é possível utilizar a distro Red Hat Enterprise Linux.
+- RedHat:
 
 ### https://www.redhat.com/
 
-### https://developers.redhat.com/content-gateway/file/rhel/Red_Hat_Enterprise_Linux_10.0/rhel-10.0-x86_64-boot.iso
+
 
 ![](distroIcons/slackware.png)
 
