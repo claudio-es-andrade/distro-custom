@@ -444,17 +444,23 @@ Lançamento do Omarchy 3:
 
 ---
 
+### Distro Sea
+
  Teste várias distribuições sem ter máquinas virtuais e ou containers, via web browser :
 
 ### https://distrosea.com/
 
 ---
 
+### Fully Automatic Installation
+
 Scripts de instalação e ISOs para instalar algumas distros através destes scripts automatizados:
 
 ### https://fai-project.org/
 
 ### https://fai-project.org/fai-cd/faicd64-large_6.4.3.iso
+
+Script on line:
 
 ### https://fai-project.org/FAIme/
 
