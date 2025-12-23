@@ -212,6 +212,8 @@ Downloads:
 
 - System76 - POP!_OS 24.04 LTS
 
+### https://system76.com/pop
+
 ### https://system76.com/pop/download/
 
 ---
