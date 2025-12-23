@@ -75,11 +75,27 @@ Exemplos de distros que podem substituir o Windows 10,  com facilidade, sem exig
 
 ![](distroIcons/linux_mint.png)
 
+### https://linuxmint.com/
+
 - Linux Mint Debian Edition - LMDE7- Gigi (Cinnamon): 
 
 ### https://mint.c3sl.ufpr.br/debian/lmde-7-cinnamon-64bit.iso
 
 ### https://isosmint.ic.ufmt.br/debian/lmde-7-cinnamon-64bit.iso
+
+- Linux Mint Ubuntu 24.04 (LTS): 22.2 - Zara
+
+Cinnamon
+
+### https://mirrors.cicku.me/linuxmint/iso/stable/22.2/linuxmint-22.2-cinnamon-64bit.iso
+
+XFCE
+
+### https://pub.linuxmint.io/stable/22.2/linuxmint-22.2-xfce-64bit.iso
+
+MATE
+
+### https://mirror.rackspace.com/linuxmint/iso/stable/22.2/linuxmint-22.2-mate-64bit.iso
 
 ![](distroIcons/icons8-zorin-50.png)
 
