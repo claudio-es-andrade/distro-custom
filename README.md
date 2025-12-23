@@ -450,7 +450,7 @@ Lançamento do Omarchy 3:
 
 ---
 
-Scripts de instalação ISOs para instalar algumas distros através destes scripts automatizados
+Scripts de instalação e ISOs para instalar algumas distros através destes scripts automatizados:
 
 ### https://fai-project.org/
 
