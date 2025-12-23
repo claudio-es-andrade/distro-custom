@@ -586,6 +586,16 @@ ___
 
 - Instalando NixOS manualmente:
 
+1- LVM e EXT4:
+
 ### https://github.com/claudio-es-andrade/Artigos/blob/main/InstalandoNixOSManualmente.pdf
+
+2- LVM, CRYPTOGRAFIA e BTRFS
+
+### https://github.com/claudio-es-andrade/Artigos/tree/main/Nix_LVM_Cryptsetup
+
+- Instalando Arch Linux manualmente:
+
+### https://github.com/claudio-es-andrade/Artigos/blob/main/ArchLinux_KDE_Install.pdf
 
 ---
