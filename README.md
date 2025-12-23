@@ -65,7 +65,7 @@ Exemplos de distros que podem substituir o Windows 10,  com facilidade, sem exig
 
 ![](distroIcons/biglinux.png)
 
-- BigLinux: A distro baseada no ArchLinux (Manjaro) com vários aplicativos que facilitam a vida do usuário, seja para o office ou game. Há versões criadas em conjunto com a comunidade.
+- BigLinux
 
 
 ### https://www.biglinux.com.br/download/
@@ -75,7 +75,7 @@ Exemplos de distros que podem substituir o Windows 10,  com facilidade, sem exig
 
 ![](distroIcons/linux_mint.png)
 
-- Linux Mint Debian Edition - LMDE7- Gigi (Cinnamon): O Linux Mint feito com Base Debian Estável Trixie 13 com todas as facilidades que o Desktop Cinnamon oferece. Uma boa oportunidade para os computadores com hardwares não suportados pelo Windows 11, sendo hoje o dia do término do suporte de atualizações de segurança do Windows 10.
+- Linux Mint Debian Edition - LMDE7- Gigi (Cinnamon): 
 
 ### https://mint.c3sl.ufpr.br/debian/lmde-7-cinnamon-64bit.iso
 
@@ -83,9 +83,7 @@ Exemplos de distros que podem substituir o Windows 10,  com facilidade, sem exig
 
 ![](distroIcons/icons8-zorin-50.png)
 
-- Linux Zorin 18: Uma excelente Distro baseada no Ubuntu Noble (24.04 LTS) com a sua interface amigável com a proposta de substituir o Windows e ou o Mac.
-Através desta distro é possível instalar até 170 programas utilizados no Windows (Wine).
-Web Apps: Microsoft Office/365, Teams, Google Docs, Adobe Photoshop e outros mais.
+- Linux Zorin 18: 
 
 ### https://zorin.com/os/download/18/core
 
@@ -105,7 +103,7 @@ América: Estados Unidos (Únicos)
 
 ![](distroIcons/debian.png)
 
-- Debian 13.2: A segunda atualização da distro traz várias atualizações de pacotes devido a vários problemas de segurança e outras correções de caça aos bugs. Correções de segurança e patches para Chromium, 7-Zip, o kernel Linux, Redis, Firefox ESR, Incus, GIMP, LXD, Bind9, cjson e demais pacotes. A nova versão também traz uma nova versão QEMU, corrigindo a função "browse local" para o virt-manager, atualizando o DKMS e outras mais atualizações.
+- Debian 13.2: 
 
 ### https://www.debian.org/
 
@@ -113,7 +111,7 @@ América: Estados Unidos (Únicos)
 
 ![](distroIcons/icons8-ubuntu-50.png)
 
-- Ubuntu 25.10 : Ubuntu lançado com várias novidades, como por exemplo, o kernel 6.17, novo rust-utils (sudo e outras coisas mais reescritos na linguagem rust), Gnome 49 e muito mais.
+- Ubuntu 25.10 : 
 
 ### https://ubuntu.c3sl.ufpr.br/releases/questing/ubuntu-25.10-desktop-amd64.iso
 
@@ -128,13 +126,13 @@ América: Estados Unidos (Únicos)
 
 ![](distroIcons/pepermint_02.png)
 
-- Linux Peppermint: Distro baseadad no Debian Trixie 13 com o Desktop XFCE feita com a ajuda da comunidade com o propósito de ser bem simples e altamente configurável.
+- Linux Peppermint: 
 
 ### https://sourceforge.net/projects/peppermintos/files/isos/XFCE/PeppermintOS-Debian-64.iso/download
 
 ![](distroIcons/mx.png)
 
-- MX Linux 25: Distro Linux baseada no Debian trixie e seus repositórios, buscando manter desktops elegantes com bastante estabilidade e alta performance. Como desktop possui KDE , Fluxbox e XFCE. Para mais informações e links das ISOS, acesse:
+- MX Linux 25:
 
 ### https://mxlinux.org/
 
@@ -150,7 +148,7 @@ América: Estados Unidos (Únicos)
 
 ![](distroIcons/deepin.png)
 
-- Deepin Linux 25.1: A distro Linux baseada no Debian que possui um dos ambientes mais belos de Desktop. A recente versão é equipada com Inteligência Artifical que auxilia o usuário nas tarefas relacionadas ao ambiente.
+- Deepin Linux 25.1: 
 
 ### https://www.deepin.org/
 
@@ -169,7 +167,7 @@ Downloads:
 
 ![](distroIcons/tigeros.png)
 
-- Tiger OS: Distro Brasileira baseada no Kubuntu (24.04 LTS) e Mint com design e interface gráfica construídos para facilitar a transição do Windows para o Linux. Possui um canal no Youtube com vídeos demonstrativos explicando vários aspectos do sistema.
+- Tiger OS
 
 ### https://tigeros.com.br/
 
@@ -184,8 +182,7 @@ Youtube:
 ![](distroIcons/linux_lite.png)
 
 
-- Linux Lite 7.6 (Ubuntu 24.04 LTS): Link do Brasil desatualizado.
-Distro com XFCE Desktop e bastante recursos (Synaptic, Firewalld, Timeshift Backup) que facilitam a vida do usuário mais novo. A wiki, apesar do idioma ser outro, possui bons exemplos e detalhes de procedimentos.
+- Linux Lite 7.6 (Ubuntu 24.04 LTS): 
 
 ### https://www.linuxliteos.com/
 
@@ -196,16 +193,7 @@ Downloads:
 ![](distroIcons/ghostbsd.png)
 
 
-- GhostBSD MATE (Atualização Agosto/25/2025): Unix (Kernel) FreeBSD Distro que já vem com um Desktop Environment, MATE, pronto para uso.
-Firewall, a maioria dos codecs multimedia instalado, Atualizador de pacotes Gráfico, tudo muito simples e prático. Documentação: https://ghostbsd-documentation-portal.readthedocs.io/en/latest/index.html
-
- Várias Melhorias incluindo:
- - 1 Atualização alinhada ao lançamento do FreeBSD releng/14.3;
- - 2 Auto detecção de placas AMD Radeon HD 8790M, Radeon HD 8240 Kabini, NVidia RTX 4000/5000 series;
- - 3 Adicionada WiFi firmware compatibility para FreeBSD 14.3; 
- - 4 Melhorias no gerenciamento de boot com detecçaõ de ambientes de boot antigos;
- - 5 Atualização e melhorias de traduções, incluindo Russo, Português (Brazil) e,
- mais
+- GhostBSD MATE (Atualização Agosto/25/2025):
 
 ### https://www.ghostbsd.org/
 
@@ -214,18 +202,88 @@ Downloads:
 ### https://www.ghostbsd.org/download
 
 ![](distroIcons/freebsd.png)
-- FreeBSD 15.0 Release: O FreeBSD 15.0 possui uma infinidade de atualizações de software do código de sistema de arquivos OpenZFS mais recente para OpenSSL atualizado, OpenSSH e inúmeras outras atualizações de software. O kernel FreeBSD 15.0 também tem grandes melhorias, como uma implementação nativa de inotify e inúmeras atualizações de driver de dispositivo. O esforço do FreeBSD em laptops também resultou em muitas melhorias no WiFi, aprimoramentos de drivers gráficos, correções de suspensão / reinício e outras melhorias. 
+- FreeBSD 15.0 Release:
 
 ### https://www.freebsd.org/
 
 ### https://download.freebsd.org/releases/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-dvd1.iso
 
+![](distroIcons/popOS.png)
 
-![](distroIcons/icons8-pop-os-logo-50.png)
-
-- System76 - POP!_OS 24.04 LTS: O sistema baseado no Ubuntu com o ambiente de Desktop Cosmic feito em Rust para trazer mais segurança, agilidade e estabilidade no seu ambiente de trabalho.
+- System76 - POP!_OS 24.04 LTS
 
 ### https://system76.com/pop/download/
+
+---
+
+Mais ...:
+
+![](distroIcons/elementary3.png)
+
+Elementary OS
+
+### https://elementary.io/
+
+### https://nyc3.dl.elementary.io/download/MTc2NjQyOTIzOQ==/elementaryos-8.1-stable-amd64.20251211.iso
+
+![](distroIcons/rhino.png)
+
+Rhino OS
+
+### https://rhinolinux.org/
+
+### https://downloads.sourceforge.net/rhino-linux-builder/Rhino-Linux-2025.4-amd64.iso
+
+
+![](distroIcons/talos.png)
+
+Talos OS:
+
+### https://www.talos.dev/
+
+### https://github.com/siderolabs/talos/releases/download/v1.12.0/metal-amd64.iso
+
+![](distroIcons/midnightBSD.png)
+
+MidnightBSD
+
+### https://www.midnightbsd.org/
+
+### https://discovery.midnightbsd.org/ftp/releases/amd64/ISO-IMAGES/4.0/MidnightBSD-4.0--amd64-disc1.iso
+
+![](distroIcons/mabox.png)
+
+Mabox
+
+### https://maboxlinux.org/
+
+### https://downloads.sourceforge.net/mabox-linux/mabox-linux-25.12-Istredd-251216-linux612.iso
+
+![](distroIcons/chimera.png)
+
+Chimera Linux
+
+### https://chimera-linux.org/
+
+### https://repo.chimera-linux.org/live/latest/
+
+![](distroIcons/easyos.png)
+
+Easy OS
+
+### https://easyos.org/
+
+### https://distro.ibiblio.org/easyos/amd64/releases/excalibur/
+
+
+![](distroIcons/qubes.png)
+
+- Qubes OS 4.3.0 
+
+### https://qubes-os.org/
+
+### https://mirrors.edge.kernel.org/qubes/iso/Qubes-R4.3.0-x86_64.iso
+
 
 ---
 
@@ -339,6 +397,9 @@ Lançamento do Omarchy 3:
 ### https://www.gentoo.org/downloads/
 
 ![](distroIcons/redhat.png)
+
+- RedHat: A distro empresa que cria e mantém suporte de várias tecnologias, inclusive as ligadas ao mundo open source. Possui um sistema de Certificação reconhecido mundialmente. Possui as distros Fedora e CentOS. Cadastrando-se como desenvolvedor no site da empresa, é possível utilizar a distro Red Hat Enterprise Linux.
+
 
 - RedHat:
 
