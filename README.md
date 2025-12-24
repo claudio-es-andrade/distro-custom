@@ -75,6 +75,8 @@ Exemplos de distros que podem substituir o Windows 10,  com facilidade, sem exig
 
 ![](distroIcons/linux_mint.png)
 
+- Linux Mint
+
 ### https://linuxmint.com/
 
 - Linux Mint Debian Edition - LMDE7- Gigi (Cinnamon): 
@@ -99,7 +101,7 @@ MATE
 
 ![](distroIcons/icons8-zorin-50.png)
 
-- Linux Zorin 18: 
+- Linux Zorin 18
 
 ### https://zorin.com/os/download/18/core
 
@@ -119,7 +121,7 @@ América: Estados Unidos (Únicos)
 
 ![](distroIcons/debian.png)
 
-- Debian 13.2: 
+- Debian 13.2 
 
 ### https://www.debian.org/
 
@@ -127,6 +129,8 @@ América: Estados Unidos (Únicos)
 
 
 ![](distroIcons/fedora.png)
+
+- Fedora 43.0
 
 ### https://fedoraproject.org/
 
@@ -136,7 +140,7 @@ América: Estados Unidos (Únicos)
 
 ![](distroIcons/icons8-ubuntu-50.png)
 
-- Ubuntu 25.10 : 
+- Ubuntu 25.10
 
 ### https://ubuntu.c3sl.ufpr.br/releases/questing/ubuntu-25.10-desktop-amd64.iso
 
@@ -151,6 +155,8 @@ América: Estados Unidos (Únicos)
 
 ![](distroIcons/redhat.png)
 
+- RedHat 10
+
 ### https://www.redhat.com/en
 
 ### https://www.redhat.com/en/products/ai/enterprise-linux-ai
@@ -158,13 +164,13 @@ América: Estados Unidos (Únicos)
 
 ![](distroIcons/pepermint_02.png)
 
-- Linux Peppermint: 
+- Linux Peppermint
 
 ### https://sourceforge.net/projects/peppermintos/files/isos/XFCE/PeppermintOS-Debian-64.iso/download
 
 ![](distroIcons/mx.png)
 
-- MX Linux 25:
+- MX Linux 25
 
 ### https://mxlinux.org/
 
@@ -172,7 +178,9 @@ América: Estados Unidos (Únicos)
 
 ![](distroIcons/devuan.png)
 
-- Devuan XFCE 6.0.0 Excalibur: Fork do Debian sem o SYSTEMD (OpenRC, runit, SysV) com repositórios exclusivos.
+- Devuan XFCE 6.0.0 Excalibur
+
+Fork do Debian sem o SYSTEMD (OpenRC, runit, SysV) com repositórios exclusivos.
 
 ### https://www.devuan.org/
 
@@ -180,7 +188,7 @@ América: Estados Unidos (Únicos)
 
 ![](distroIcons/deepin.png)
 
-- Deepin Linux 25.1: 
+- Deepin Linux 25.1
 
 ### https://www.deepin.org/
 
@@ -214,7 +222,7 @@ Youtube:
 ![](distroIcons/linux_lite.png)
 
 
-- Linux Lite 7.6 (Ubuntu 24.04 LTS): 
+- Linux Lite 7.6 (Ubuntu 24.04 LTS)
 
 ### https://www.linuxliteos.com/
 
@@ -225,7 +233,7 @@ Downloads:
 ![](distroIcons/ghostbsd.png)
 
 
-- GhostBSD MATE (Atualização Agosto/25/2025):
+- GhostBSD MATE (Atualização Agosto/25/2025)
 
 ### https://www.ghostbsd.org/
 
@@ -234,7 +242,8 @@ Downloads:
 ### https://www.ghostbsd.org/download
 
 ![](distroIcons/freebsd.png)
-- FreeBSD 15.0 Release:
+
+- FreeBSD 15.0 Release
 
 ### https://www.freebsd.org/
 
@@ -254,7 +263,7 @@ Mais ...
 
 ![](distroIcons/elementary3.png)
 
-Elementary OS
+- Elementary OS
 
 ### https://elementary.io/
 
@@ -262,7 +271,7 @@ Elementary OS
 
 ![](distroIcons/rhino.png)
 
-Rhino OS
+- Rhino OS
 
 ### https://rhinolinux.org/
 
@@ -271,7 +280,7 @@ Rhino OS
 
 ![](distroIcons/talos.png)
 
-Talos OS:
+- Talos OS
 
 ### https://www.talos.dev/
 
@@ -279,7 +288,7 @@ Talos OS:
 
 ![](distroIcons/midnightBSD.png)
 
-MidnightBSD
+- MidnightBSD
 
 ### https://www.midnightbsd.org/
 
@@ -287,7 +296,7 @@ MidnightBSD
 
 ![](distroIcons/mabox.png)
 
-Mabox
+- Mabox
 
 ### https://maboxlinux.org/
 
@@ -295,7 +304,7 @@ Mabox
 
 ![](distroIcons/chimera.png)
 
-Chimera Linux
+- Chimera Linux
 
 ### https://chimera-linux.org/
 
@@ -303,7 +312,7 @@ Chimera Linux
 
 ![](distroIcons/easyos.png)
 
-Easy OS
+- Easy OS
 
 ### https://easyos.org/
 
@@ -323,7 +332,9 @@ Easy OS
 
 ![](distroIcons/gentoo.png)
 
-- Gentoo Linux: A Distro da alta performance, devido a compilação dos pacotes de acorco com a seu processador, lançou a sua mais nova atualização. Para mais detalhes acesse:
+- Gentoo Linux
+
+A Distro da alta performance, devido a compilação dos pacotes de acorco com a seu processador, lançou a sua mais nova atualização. Para mais detalhes acesse:
 
 ### https://www.gentoo.org/ 
 
@@ -339,19 +350,25 @@ Universal Blue
 
 ![](distroIcons/aurora.png)
 
-- Aurora: Distro Atômica baseada no Fedora KDE (Kinoite) + RPM Fusion, codecs e aplicativos específicos para desenvolvimento.
+- Aurora
+
+Distro Atômica baseada no Fedora KDE (Kinoite) + RPM Fusion, codecs e aplicativos específicos para desenvolvimento.
 
 ### https://getaurora.dev/
 
 ![](distroIcons/Bazzite.png)
 
-- Bazzite: Distro que a Universal-Blue preparou baseada no Fedora Atômico voltada para jogos e desenvolvimento em geral.
+- Bazzite
+
+Distro que a Universal-Blue preparou baseada no Fedora Atômico voltada para jogos e desenvolvimento em geral.
 
 ### https://download.bazzite.gg/
 
 ![](distroIcons/bluefin.png)
 
-- Bluefin: Distro Atômica baseada no Fedora GNOME (Silverblue) com as mesmas características do Aurora. Possui também uma versão LTS baseada no CentOS Stream.
+- Bluefin
+
+Distro Atômica baseada no Fedora GNOME (Silverblue) com as mesmas características do Aurora. Possui também uma versão LTS baseada no CentOS Stream.
 
 ### https://projectbluefin.io/
 
@@ -359,7 +376,9 @@ Universal Blue
 
 ![](distroIcons/omarchy.png)
 
-- Omarchy: Sistema feito para ser prático, eficiente, moderno e também divertido. Utiliza Arch Linux como base. Para desenvolvedores e afins.
+- Omarchy
+
+Sistema feito para ser prático, eficiente, moderno e também divertido. Utiliza Arch Linux como base. Para desenvolvedores e afins.
 
 ### https://omarchy.org/
 
@@ -369,13 +388,11 @@ YouTube do Criador:
 
 ### https://www.youtube.com/@dhh37
 
-Lançamento do Omarchy 3:
-
-### https://www.youtube.com/watch?v=L3EafsSCv80
-
 ![](distroIcons/omakub.png)
 
-- Omakub: Um poderoso script que transforma seu Ubuntu (24.04- LTS) na melhor máquina preparada para o desenvolvimento. 
+- Omakub
+
+Um poderoso script que transforma seu Ubuntu (24.04- LTS) na melhor máquina preparada para o desenvolvimento. 
 
 ### https://omakub.org/
 
@@ -387,7 +404,9 @@ Lançamento do Omarchy 3:
 
 ![](distroIcons/openbsd.png)
 
-- OpenBSD: Distro Unix lançada no final de outubro com muitas mudanças.
+- OpenBSD
+
+Distro Unix lançada no final de outubro com muitas mudanças.
 
 ### https://www.openbsd.org/
 
@@ -401,7 +420,9 @@ Lançamento do Omarchy 3:
 
 ![](distroIcons/arch.png)
 
-- Arch Linux: A distro que propõe ser simples e leve e altamente customizável e tem muitas distros que se baseam nela.
+- Arch Linux
+
+ A distro que propõe ser simples e leve e altamente customizável e tem muitas distros que se baseam nela.
 
 ### https://archlinux.org/
 
@@ -409,14 +430,19 @@ Lançamento do Omarchy 3:
 
 ![](distroIcons/debian.png)
 
-- Debian: A distro mais conhecida pelos testes que fazem com que ela seja uma das mais utilizadas e também seja a base para criação de outras distros.
+- Debian
+
+A distro mais conhecida pelos testes que fazem com que ela seja uma das mais utilizadas e também seja a base para criação de outras distros.
 
 ### https://www.debian.org/
 
 ### https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/
 
 ![](distroIcons/freebsd.png)
-- FreeBSD: Variante direta de onde tudo começou. A criação do Sistema mais perfeito possível. Processo Judicial, reescrita de partes do sistema, o kernel. Desde o começo até hoje, o Sistema se mantém fiel aos seus ideais.
+
+- FreeBSD
+
+Variante direta de onde tudo começou. A criação do Sistema mais perfeito possível. Processo Judicial, reescrita de partes do sistema, o kernel. Desde o começo até hoje, o Sistema se mantém fiel aos seus ideais.
 
 ### https://www.freebsd.org/
 
@@ -424,7 +450,9 @@ Lançamento do Omarchy 3:
 
 ![](distroIcons/gentoo.png)
 
-- Gentoo Linux: Distro muito mais customizável que o Arch Linux. Perfeita para quem prioriza desempenho.
+- Gentoo Linux
+
+Distro muito mais customizável que o Arch Linux. Perfeita para quem prioriza desempenho.
 
 ### https://www.gentoo.org/ 
 
@@ -432,7 +460,9 @@ Lançamento do Omarchy 3:
 
 ![](distroIcons/redhat.png)
 
-- RedHat: A distro empresa que cria e mantém suporte de várias tecnologias, inclusive as ligadas ao mundo open source. Possui um sistema de Certificação reconhecido mundialmente. Possui as distros Fedora e CentOS. Cadastrando-se como desenvolvedor no site da empresa, é possível utilizar a distro Red Hat Enterprise Linux.
+- RedHat
+
+A distro empresa que cria e mantém suporte de várias tecnologias, inclusive as ligadas ao mundo open source. Possui um sistema de Certificação reconhecido mundialmente. Possui as distros Fedora e CentOS. Cadastrando-se como desenvolvedor no site da empresa, é possível utilizar a distro Red Hat Enterprise Linux.
 
 ### https://www.redhat.com/
 
@@ -440,7 +470,9 @@ Lançamento do Omarchy 3:
 
 ![](distroIcons/slackware.png)
 
-- Slackware Linux: Distro com a mesma filosofia de se manter simples que as distribuições anteriores e que possui seu próprio sistema de empacotamento.
+- Slackware Linux
+
+Distro com a mesma filosofia de se manter simples que as distribuições anteriores e que possui seu próprio sistema de empacotamento.
 
 ### http://www.slackware.com/
 
@@ -455,7 +487,9 @@ Lançamento do Omarchy 3:
 ![](distroIcons/alpine.png)
 
 
-- Alpine Linux: Distro bastante utilizada como container, com foco na segurança, simplicidade e leveza.
+- Alpine Linux
+
+Distro bastante utilizada como container, com foco na segurança, simplicidade e leveza.
 
 ### https://www.alpinelinux.org/
 
@@ -465,7 +499,9 @@ Lançamento do Omarchy 3:
 
 ![](distroIcons/nixos.png)
 
-- Nix OS: Distro Atômica construída que utiliza uma linguagem de programação própria, sistemas de pacotes isolados e instalação declarativa: basta colocar o nome do pacote no arquivo de configuração, aplicar o comando para montar os pacotes mais uma vez e utilizar o pacote desejado.
+- Nix OS
+
+Distro Atômica construída que utiliza uma linguagem de programação própria, sistemas de pacotes isolados e instalação declarativa: basta colocar o nome do pacote no arquivo de configuração, aplicar o comando para montar os pacotes mais uma vez e utilizar o pacote desejado.
 
 ### https://nixos.org/
 
@@ -499,7 +535,7 @@ Script on line:
 
 ![](distroIcons/linux_mint.png)
 
-- Linux Mint 22.3 Beta: 
+- Linux Mint 22.3 Beta
 
 ### https://linuxmint.com/
 
@@ -511,7 +547,7 @@ Script on line:
 
 ![](distroIcons/aerynos.png)
 
-- AerynOS: Distro Atômica com sistema de empacotamento próprio (stones) que utiliza o diretório /usr como diretório exclusivo do sistema. Os diretórios /etc e /var pertencem ao usuário. Ambientes de Desktop: Cosmic, Gnome, KDE Plasma e Sway como gerenciador de janelas com tiling.
+- AerynOS
 
 ### https://aerynos.com/
 
@@ -520,7 +556,9 @@ Script on line:
 
 ![](distroIcons/antiX.png)
 
-- AntiX 25 Beta 01: AntiX é uma distribuição leve e fácil de instalar sem SystemD com base no Debian Stable para sistemas compatíveis com Intel-AMD x86. O antiX oferece aos usuários o “antiX Magic” um ambiente adequado para computadores antigos e novos. O objetivo do antiX é fornecer um sistema operacional livre leve, mas totalmente funcional e flexível para recém-chegados e usuários experientes do Linux. A memória RAM de 512MB é o mínimo recomendado para antiX. A instalação no disco rígido requer um tamanho mínimo de 7.0GB do disco rígido.
+- AntiX 25 Beta 01
+
+AntiX é uma distribuição leve e fácil de instalar sem SystemD com base no Debian Stable para sistemas compatíveis com Intel-AMD x86. O antiX oferece aos usuários o “antiX Magic” um ambiente adequado para computadores antigos e novos. O objetivo do antiX é fornecer um sistema operacional livre leve, mas totalmente funcional e flexível para recém-chegados e usuários experientes do Linux. A memória RAM de 512MB é o mínimo recomendado para antiX. A instalação no disco rígido requer um tamanho mínimo de 7.0GB do disco rígido.
 
 ### https://antixlinux.com/
 
@@ -528,7 +566,9 @@ Script on line:
 
 ![](distroIcons/icons8-ubuntu-50.png)
 
-- Ubuntu 26.04 (LTS) 'Resolute Racoon' Daily Build: Acompanhe o passo a passo no desenvolvimento da próxima Distribuição de Longo Suporte.
+- Ubuntu 26.04 (LTS) 'Resolute Racoon' Daily Build
+
+Acompanhe o passo a passo no desenvolvimento da próxima Distribuição de Longo Suporte.
 
 ### https://cdimage.ubuntu.com/daily-live/current/
   
@@ -554,31 +594,33 @@ Script on line:
 
 ---
 
-- Ubuntu Daily Dangerous: Teste o Ubuntu lançado diariamente com correções e aprimoramentos recém lançados e não testados ainda.
+- Ubuntu Daily Dangerous 
+
+Teste o Ubuntu lançado diariamente com correções e aprimoramentos recém lançados e não testados ainda.
 
 ### https://cdimage.ubuntu.com/daily-dangerous/
 
 ![](distroIcons/RedoxOS.png)
 
-- Redox OS : O Sistema Operacional totalmente feito do zero e em linguagem RUST assim como o seu Kernel.
+- Redox OS
+
+O Sistema Operacional totalmente feito do zero e em linguagem RUST assim como o seu Kernel.
 
 ### https://static.redox-os.org/releases/0.9.0/x86_64/redox_desktop_x86_64_2024-09-07_1225_harddrive.img.zst
 
-![](distroIcons/BSD.png)
-
-- FreeBSD 15: O Sistema Operacional Unix será lançado breve e contará com desktop de interface gráfica como opção (KDE). Drivers optimizados para Laptops e mais.
-
-### https://download.freebsd.org/releases/ISO-IMAGES/15.0/FreeBSD-15.0-RC1-amd64-disc1.iso
-
 ![](distroIcons/kde.png)
 
-- KDE LINUX BETA: Depois da criação do KDE Neon, uma nova distro atômica, baseada no Arch Linux, com o de mais novo do KDE Plasma. Versões da ISO atualizada quase diariamente.
+- KDE LINUX BETA
+
+Depois da criação do KDE Neon, uma nova distro atômica, baseada no Arch Linux, com o de mais novo do KDE Plasma. Versões da ISO atualizada quase diariamente.
 
 ### https://files.kde.org/kde-linux/?C=M;O=A
 
 ![](distroIcons/gnome.png)
 
-- GNOME OS Nightly: Distro atômica que não possui pacotes próprios e nem se baseia em pacotes de outras distros, utiliza apenas Flatpaks ou Snaps, se houver a habilitação (sudo updatectl enable snapd). Esta distro pode ser testada em hardware reais também possibilitando até configurar algumas placas da NVidia. É necessário ter o Gnome Boxes para rodar a ISO virtualmente.
+- GNOME OS Nightly
+
+Distro atômica que não possui pacotes próprios e nem se baseia em pacotes de outras distros, utiliza apenas Flatpaks ou Snaps, se houver a habilitação (sudo updatectl enable snapd). Esta distro pode ser testada em hardware reais também possibilitando até configurar algumas placas da NVidia. É necessário ter o Gnome Boxes para rodar a ISO virtualmente.
 As extensões que o Gnome OS oferece são:
 
 1 - devel (Gnome SDK e outras ferramentas );
