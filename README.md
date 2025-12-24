@@ -125,6 +125,15 @@ América: Estados Unidos (Únicos)
 
 ### https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/
 
+
+![](distroIcons/fedora.png)
+
+### https://fedoraproject.org/
+
+### https://fedoraproject.org/#editions
+
+### https://fedora.c3sl.ufpr.br/linux/releases/43/
+
 ![](distroIcons/icons8-ubuntu-50.png)
 
 - Ubuntu 25.10 : 
@@ -139,6 +148,13 @@ América: Estados Unidos (Únicos)
 ### https://deb.campolargo.pr.gov.br/ubuntu/releases/questing/ubuntu-25.10-desktop-amd64.iso
 
 ### https://cdimage.ubuntu.com/releases/25.10/release/ubuntu-25.10-desktop-arm64.iso
+
+![](distroIcons/redhat.png)
+
+### https://www.redhat.com/en
+
+### https://www.redhat.com/en/products/ai/enterprise-linux-ai
+
 
 ![](distroIcons/pepermint_02.png)
 
@@ -418,12 +434,9 @@ Lançamento do Omarchy 3:
 
 - RedHat: A distro empresa que cria e mantém suporte de várias tecnologias, inclusive as ligadas ao mundo open source. Possui um sistema de Certificação reconhecido mundialmente. Possui as distros Fedora e CentOS. Cadastrando-se como desenvolvedor no site da empresa, é possível utilizar a distro Red Hat Enterprise Linux.
 
-
-- RedHat:
-
 ### https://www.redhat.com/
 
-
+### https://www.redhat.com/en/products/ai/enterprise-linux-ai
 
 ![](distroIcons/slackware.png)
 
