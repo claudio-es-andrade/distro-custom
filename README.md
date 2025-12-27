@@ -276,7 +276,7 @@ Mais ...
 
 - Porteux
 
-Distribuiçao baseada no Slackware (Rolling Release) com o intuito de ser leve, rápida [mais que Clear OS(Finada Linux da Intel)  e Cachy OS], modular, imutável com portabilidade e muito mais. Confira!
+Distribuição baseada no Slackware (Rolling Release) com o intuito de ser leve, rápida [mais que Clear OS(Finado Linux da Intel)  e Cachy OS], modular, imutável com portabilidade e muito mais. Confira!
 
 ### https://github.com/porteux
 
