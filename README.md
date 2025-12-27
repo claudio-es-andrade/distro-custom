@@ -290,6 +290,21 @@ Distribuiçao baseada no Slackware (Rolling Release) com o intuito de ser leve, 
 
 ### https://downloads.sourceforge.net/rhino-linux-builder/Rhino-Linux-2025.4-amd64.iso
 
+![](distroIcons/manjaro.png)
+
+- Manjaro
+
+### https://manjaro.org/
+
+### https://manjaro.org/download/
+
+![](distroIcons/nobara.png)
+
+- Nobara
+
+### https://nobaraproject.org/
+
+### https://nobaraproject.org/download-nobara/
 
 ![](distroIcons/talos.png)
 
