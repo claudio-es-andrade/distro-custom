@@ -72,6 +72,19 @@ Exemplos de distros que podem substituir o Windows 10,  com facilidade, sem exig
 
 ### https://communitybig.org/download/
 
+![](distroIcons/tigeros.png)
+
+- Tiger OS
+
+### https://tigeros.com.br/
+
+Download:
+
+### https://bit.ly/TigerOS23plasma
+
+Youtube:
+
+### https://www.youtube.com/@tigerosbr/videos
 
 ![](distroIcons/linux_mint.png)
 
@@ -127,6 +140,42 @@ América: Estados Unidos (Únicos)
 
 ### https://mirror.clarkson.edu/zorinos/isos/18/Zorin-OS-18-Core-64-bit.iso
 
+![](distroIcons/mx.png)
+
+- MX Linux 25
+
+### https://mxlinux.org/
+
+### https://mxlinux.org/download-links/#Mirrors
+
+![](distroIcons/linux_lite.png)
+
+- Linux Lite 7.6 (Ubuntu 24.04 LTS)
+
+### https://www.linuxliteos.com/
+
+Downloads:
+
+### https://mirrors.linuxliteos.com/status/mirrors
+
+![](distroIcons/ghostbsd.png)
+
+- GhostBSD MATE (Atualização Agosto/25/2025)
+
+### https://www.ghostbsd.org/
+
+Downloads:
+
+### https://www.ghostbsd.org/download
+
+![](distroIcons/popOS.png)
+
+- System76 - POP!_OS 24.04 LTS
+
+### https://system76.com/pop
+
+### https://system76.com/pop/download/
+
 ![](distroIcons/debian.png)
 
 - Debian 13.2 
@@ -169,31 +218,6 @@ América: Estados Unidos (Únicos)
 
 ### https://www.redhat.com/en/products/ai/enterprise-linux-ai
 
-
-![](distroIcons/pepermint_02.png)
-
-- Linux Peppermint
-
-### https://sourceforge.net/projects/peppermintos/files/isos/XFCE/PeppermintOS-Debian-64.iso/download
-
-![](distroIcons/mx.png)
-
-- MX Linux 25
-
-### https://mxlinux.org/
-
-### https://mxlinux.org/download-links/#Mirrors
-
-![](distroIcons/devuan.png)
-
-- Devuan XFCE 6.0.0 Excalibur
-
-Fork do Debian sem o SYSTEMD (OpenRC, runit, SysV) com repositórios exclusivos.
-
-### https://www.devuan.org/
-
-### https://files.devuan.org/devuan_excalibur/desktop-live/devuan_excalibur_6.0.0_amd64_desktop-live.iso
-
 ![](distroIcons/deepin.png)
 
 - Deepin Linux 25.1
@@ -212,42 +236,21 @@ Downloads:
 
 ### https://sites.google.com/view/deepinbrasil/download
 
+![](distroIcons/pepermint_02.png)
 
-![](distroIcons/tigeros.png)
+- Linux Peppermint
 
-- Tiger OS
+### https://sourceforge.net/projects/peppermintos/files/isos/XFCE/PeppermintOS-Debian-64.iso/download
 
-### https://tigeros.com.br/
+![](distroIcons/devuan.png)
 
-Download:
+- Devuan XFCE 6.0.0 Excalibur
 
-### https://bit.ly/TigerOS23plasma
+Fork do Debian sem o SYSTEMD (OpenRC, runit, SysV) com repositórios exclusivos.
 
-Youtube:
+### https://www.devuan.org/
 
-### https://www.youtube.com/@tigerosbr/videos
-
-![](distroIcons/linux_lite.png)
-
-
-- Linux Lite 7.6 (Ubuntu 24.04 LTS)
-
-### https://www.linuxliteos.com/
-
-Downloads:
-
-### https://mirrors.linuxliteos.com/status/mirrors
-
-![](distroIcons/ghostbsd.png)
-
-
-- GhostBSD MATE (Atualização Agosto/25/2025)
-
-### https://www.ghostbsd.org/
-
-Downloads:
-
-### https://www.ghostbsd.org/download
+### https://files.devuan.org/devuan_excalibur/desktop-live/devuan_excalibur_6.0.0_amd64_desktop-live.iso
 
 ![](distroIcons/freebsd.png)
 
@@ -257,13 +260,13 @@ Downloads:
 
 ### https://download.freebsd.org/releases/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-dvd1.iso
 
-![](distroIcons/popOS.png)
+![](distroIcons/qubes.png)
 
-- System76 - POP!_OS 24.04 LTS
+- Qubes OS 4.3.0 
 
-### https://system76.com/pop
+### https://qubes-os.org/
 
-### https://system76.com/pop/download/
+### https://mirrors.edge.kernel.org/qubes/iso/Qubes-R4.3.0-x86_64.iso
 
 ---
 
@@ -327,16 +330,6 @@ Distribuiçao baseada no Slackware (Rolling Release) com o intuito de ser leve, 
 ### https://easyos.org/
 
 ### https://distro.ibiblio.org/easyos/amd64/releases/excalibur/
-
-
-![](distroIcons/qubes.png)
-
-- Qubes OS 4.3.0 
-
-### https://qubes-os.org/
-
-### https://mirrors.edge.kernel.org/qubes/iso/Qubes-R4.3.0-x86_64.iso
-
 
 ---
 
