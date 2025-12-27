@@ -99,6 +99,14 @@ MATE
 
 ### https://mirror.rackspace.com/linuxmint/iso/stable/22.2/linuxmint-22.2-mate-64bit.iso
 
+![](distroIcons/elementary3.png)
+
+- Elementary OS
+
+### https://elementary.io/
+
+### https://nyc3.dl.elementary.io/download/MTc2NjQyOTIzOQ==/elementaryos-8.1-stable-amd64.20251211.iso
+
 ![](distroIcons/icons8-zorin-50.png)
 
 - Linux Zorin 18
@@ -261,13 +269,15 @@ Downloads:
 
 Mais ...
 
-![](distroIcons/elementary3.png)
+![](distroIcons/porteux.png)
 
-- Elementary OS
+- Porteux
 
-### https://elementary.io/
+Distribuiçao baseada no Slackware (Rolling Release) com o intuito de ser leve, rápida [mais que Clear OS(Finada Linux da Intel)  e Cachy OS], modular, imutável com portabilidade e muito mais. Confira!
 
-### https://nyc3.dl.elementary.io/download/MTc2NjQyOTIzOQ==/elementaryos-8.1-stable-amd64.20251211.iso
+### https://github.com/porteux
+
+### https://github.com/porteux/porteux/releases/tag/v2.5
 
 ![](distroIcons/rhino.png)
 
