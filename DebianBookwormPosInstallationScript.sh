@@ -224,6 +224,13 @@ installing_lxde(){
 # FIM DE installing_lxde()
 }
 
+installing_cinnamon(){
+ echo "Instalando o LXDE DESKTOP"
+ apt install task-cinnamon-desktop
+
+# FIM DE installing_cinnamon()
+}
+
 installing_mate(){
  echo "Instalando o MATE DESKTOP"
  apt install task-mate-desktop
