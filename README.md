@@ -24,7 +24,11 @@
 
 - Debian 13.2 Trixie Cinnamon
 
+<div style='text-align: justify;'>
+
 Dois anos de modificações de distros que começaram com o fork da recente Universal Blue a criadora do Bazzite, Aurora e Bluefin para modificar sua exclusiva ISO. Muitas distros são similares ao processo de criação do Debian, Ubuntu e Mint. Outras são bem exclusivas como o Fedora, Bazzite e demais. Até o ArchLinux com Gnome e KDE foi customizado com o trabalho do criador do finado Arco-Linux. Seja com intenção de usar no desenvolvimento de testes, ou na produção, esta modificação é apenas uma singela demonstração do que se pode fazer com o trabalho da verdadeira equipe de produção de tais distribuições. Muito Obrigado!
+
+</div>
 
 Modificações: Foram feitas utilizado o script DebianTrixiePostInstallationScript.sh.
 
@@ -276,7 +280,11 @@ Mais ...
 
 - Porteux
 
+<div style='text-align: justify;'>
+
 Distribuição baseada no Slackware (Rolling Release) com o intuito de ser leve, rápida [mais que Clear OS(Finado Linux da Intel)  e Cachy OS], modular, imutável com portabilidade e muito mais. Confira!
+
+</div>
 
 ### https://github.com/porteux
 
@@ -352,7 +360,11 @@ Distribuição baseada no Slackware (Rolling Release) com o intuito de ser leve,
 
 - Gentoo Linux
 
+<div style='text-align: justify;'>
+
 A Distro da alta performance, devido a compilação dos pacotes de acorco com a seu processador, lançou a sua mais nova atualização. Para mais detalhes acesse:
+
+</div>
 
 ### https://www.gentoo.org/ 
 
@@ -370,7 +382,11 @@ Universal Blue
 
 - Aurora
 
+<div style='text-align: justify;'>
+
 Distro Atômica baseada no Fedora KDE (Kinoite) + RPM Fusion, codecs e aplicativos específicos para desenvolvimento.
+
+</div>
 
 ### https://getaurora.dev/
 
@@ -378,7 +394,11 @@ Distro Atômica baseada no Fedora KDE (Kinoite) + RPM Fusion, codecs e aplicativ
 
 - Bazzite
 
+<div style='text-align: justify;'>
+
 Distro que a Universal-Blue preparou baseada no Fedora Atômico voltada para jogos e desenvolvimento em geral.
+
+</div>
 
 ### https://download.bazzite.gg/
 
@@ -386,7 +406,11 @@ Distro que a Universal-Blue preparou baseada no Fedora Atômico voltada para jog
 
 - Bluefin
 
+<div style='text-align: justify;'>
+
 Distro Atômica baseada no Fedora GNOME (Silverblue) com as mesmas características do Aurora. Possui também uma versão LTS baseada no CentOS Stream.
+
+</div>
 
 ### https://projectbluefin.io/
 
@@ -396,7 +420,11 @@ Distro Atômica baseada no Fedora GNOME (Silverblue) com as mesmas característi
 
 - Omarchy
 
+<div style='text-align: justify;'>
+
 Sistema feito para ser prático, eficiente, moderno e também divertido. Utiliza Arch Linux como base. Para desenvolvedores e afins.
+
+</div>
 
 ### https://omarchy.org/
 
@@ -410,7 +438,11 @@ YouTube do Criador:
 
 - Omakub
 
+<div style='text-align: justify;'>
+
 Um poderoso script que transforma seu Ubuntu (24.04- LTS) na melhor máquina preparada para o desenvolvimento. 
+
+</div>
 
 ### https://omakub.org/
 
@@ -440,7 +472,11 @@ Distro Unix lançada no final de outubro com muitas mudanças.
 
 - Arch Linux
 
+<div style='text-align: justify;'>
+
  A distro que propõe ser simples e leve e altamente customizável e tem muitas distros que se baseam nela.
+
+</div>
 
 ### https://archlinux.org/
 
@@ -450,7 +486,11 @@ Distro Unix lançada no final de outubro com muitas mudanças.
 
 - Debian
 
+<div style='text-align: justify;'>
+
 A distro mais conhecida pelos testes que fazem com que ela seja uma das mais utilizadas e também seja a base para criação de outras distros.
+
+</div>
 
 ### https://www.debian.org/
 
@@ -460,7 +500,11 @@ A distro mais conhecida pelos testes que fazem com que ela seja uma das mais uti
 
 - FreeBSD
 
+<div style='text-align: justify;'>
+
 Variante direta de onde tudo começou. A criação do Sistema mais perfeito possível. Processo Judicial, reescrita de partes do sistema, o kernel. Desde o começo até hoje, o Sistema se mantém fiel aos seus ideais.
+
+</div>
 
 ### https://www.freebsd.org/
 
@@ -470,7 +514,11 @@ Variante direta de onde tudo começou. A criação do Sistema mais perfeito poss
 
 - Gentoo Linux
 
+<div style='text-align: justify;'>
+
 Distro muito mais customizável que o Arch Linux. Perfeita para quem prioriza desempenho.
+
+</div>
 
 ### https://www.gentoo.org/ 
 
@@ -480,7 +528,11 @@ Distro muito mais customizável que o Arch Linux. Perfeita para quem prioriza de
 
 - RedHat
 
+<div style='text-align: justify;'>
+
 A distro empresa que cria e mantém suporte de várias tecnologias, inclusive as ligadas ao mundo open source. Possui um sistema de Certificação reconhecido mundialmente. Possui as distros Fedora e CentOS. Cadastrando-se como desenvolvedor no site da empresa, é possível utilizar a distro Red Hat Enterprise Linux.
+
+</div>
 
 ### https://www.redhat.com/
 
@@ -490,7 +542,11 @@ A distro empresa que cria e mantém suporte de várias tecnologias, inclusive as
 
 - Slackware Linux
 
+<div style='text-align: justify;'>
+
 Distro com a mesma filosofia de se manter simples que as distribuições anteriores e que possui seu próprio sistema de empacotamento.
+
+</div>
 
 ### http://www.slackware.com/
 
@@ -507,7 +563,11 @@ Distro com a mesma filosofia de se manter simples que as distribuições anterio
 
 - Alpine Linux
 
+<div style='text-align: justify;'>
+
 Distro bastante utilizada como container, com foco na segurança, simplicidade e leveza.
+
+</div>
 
 ### https://www.alpinelinux.org/
 
@@ -519,7 +579,11 @@ Distro bastante utilizada como container, com foco na segurança, simplicidade e
 
 - Nix OS
 
+<div style='text-align: justify;'>
+
 Distro Atômica construída que utiliza uma linguagem de programação própria, sistemas de pacotes isolados e instalação declarativa: basta colocar o nome do pacote no arquivo de configuração, aplicar o comando para montar os pacotes mais uma vez e utilizar o pacote desejado.
+
+</div>
 
 ### https://nixos.org/
 
@@ -529,7 +593,11 @@ Distro Atômica construída que utiliza uma linguagem de programação própria,
 
 ### Distro Sea
 
+<div style='text-align: justify;'>
+
  Teste várias distribuições sem ter máquinas virtuais e ou containers, via web browser :
+
+</div>
 
 ### https://distrosea.com/
 
@@ -537,7 +605,11 @@ Distro Atômica construída que utiliza uma linguagem de programação própria,
 
 ### Fully Automatic Installation
 
+<div style='text-align: justify;'>
+
 Scripts de instalação e ISOs para instalar algumas distros através destes scripts automatizados:
+
+</div>
 
 ### https://fai-project.org/
 
@@ -576,7 +648,13 @@ Script on line:
 
 - AntiX 25 Beta 01
 
+
+<div style='text-align: justify;'>
+
+
 AntiX é uma distribuição leve e fácil de instalar sem SystemD com base no Debian Stable para sistemas compatíveis com Intel-AMD x86. O antiX oferece aos usuários o “antiX Magic” um ambiente adequado para computadores antigos e novos. O objetivo do antiX é fornecer um sistema operacional livre leve, mas totalmente funcional e flexível para recém-chegados e usuários experientes do Linux. A memória RAM de 512MB é o mínimo recomendado para antiX. A instalação no disco rígido requer um tamanho mínimo de 7.0GB do disco rígido.
+
+</div>
 
 ### https://antixlinux.com/
 
@@ -586,7 +664,11 @@ AntiX é uma distribuição leve e fácil de instalar sem SystemD com base no De
 
 - Ubuntu 26.04 (LTS) 'Resolute Racoon' Daily Build
 
+<div style='text-align: justify;'>
+
 Acompanhe o passo a passo no desenvolvimento da próxima Distribuição de Longo Suporte.
+
+</div>
 
 ### https://cdimage.ubuntu.com/daily-live/current/
   
@@ -614,7 +696,11 @@ Acompanhe o passo a passo no desenvolvimento da próxima Distribuição de Longo
 
 - Ubuntu Daily Dangerous 
 
+<div style='text-align: justify;'>
+
 Teste o Ubuntu lançado diariamente com correções e aprimoramentos recém lançados e não testados ainda.
+
+</div>
 
 ### https://cdimage.ubuntu.com/daily-dangerous/
 
@@ -622,7 +708,11 @@ Teste o Ubuntu lançado diariamente com correções e aprimoramentos recém lan�
 
 - Redox OS
 
+<div style='text-align: justify;'>
+
 O Sistema Operacional totalmente feito do zero e em linguagem RUST assim como o seu Kernel.
+
+</div>
 
 ### https://static.redox-os.org/releases/0.9.0/x86_64/redox_desktop_x86_64_2024-09-07_1225_harddrive.img.zst
 
@@ -630,7 +720,11 @@ O Sistema Operacional totalmente feito do zero e em linguagem RUST assim como o 
 
 - KDE LINUX BETA
 
+<div style='text-align: justify;'>
+
 Depois da criação do KDE Neon, uma nova distro atômica, baseada no Arch Linux, com o de mais novo do KDE Plasma. Versões da ISO atualizada quase diariamente.
+
+</div>
 
 ### https://files.kde.org/kde-linux/?C=M;O=A
 
@@ -638,8 +732,12 @@ Depois da criação do KDE Neon, uma nova distro atômica, baseada no Arch Linux
 
 - GNOME OS Nightly
 
+<div style='text-align: justify;'>
+
 Distro atômica que não possui pacotes próprios e nem se baseia em pacotes de outras distros, utiliza apenas Flatpaks ou Snaps, se houver a habilitação (sudo updatectl enable snapd). Esta distro pode ser testada em hardware reais também possibilitando até configurar algumas placas da NVidia. É necessário ter o Gnome Boxes para rodar a ISO virtualmente.
 As extensões que o Gnome OS oferece são:
+
+</div>
 
 1 - devel (Gnome SDK e outras ferramentas );
 
@@ -655,7 +753,11 @@ As extensões que o Gnome OS oferece são:
 
 ---
 
+<div style='text-align: justify;'>
+
 - Existem diversos sistemas que apesar de não estarem incluídos aqui, também valem a pena serem testados: Nobara, Ultramarine, RegataOS, Void, Gnoppix, Cachy, Solus, Endeavour, Garuda, PikaOS, Manjaro, Antoin, OpenSuse, OpenMandriva, Elementary, Kali Linux, Puppy, AlmaLinux (Oracle Linux, Rocky Linux, VzLinux, Cloud Linux, Helios OS) Vanilla, Blend OS , Nitrux, Endless Linux, Guix, Tails, MidnightBSD, NomadBSD, TrueNAS, pfSense,NetBSD, PureDarwin e muito mais...
+
+</div>
 
 ___
 
