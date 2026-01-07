@@ -8,7 +8,7 @@
 ---
 
 
-## Dezembro/02/2025
+## Janeiro/07/2025
 
 
 ---
@@ -50,15 +50,7 @@ Modificações: Foram feitas utilizado o script DebianTrixiePostInstallationScri
 
 #### https://github.com/claudio-es-andrade/Artigos/blob/main/ForkBomb.pdf
 
-ISO
-
-### https://drive.google.com/file/d/1UXuXEW8qwScEFzKe1tTa1I6X3B2cItwz/view?usp=drive_link
-
-MD5
-
-### https://drive.google.com/file/d/1UCFVgCe8p68eVR12QxjBmF5fXVDd-6mE/view?usp=drive_link
-
-Total: 13.6 Gb (Instalado)
+### PROJETO DESCONTINUADO...
 
 ---
 
