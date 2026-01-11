@@ -8,7 +8,7 @@
 ---
 
 
-## Janeiro/07/2025
+## Janeiro/11/2025
 
 
 ---
@@ -18,9 +18,22 @@
 ![](distroIcons/linux_Tux.png)
 
 
-Última Distro-Custom
 
 ![](distroIcons/debian.png)
+
+- Debian Live Build
+
+<div align='justify'>
+
+O Debian Live Build funciona de maneira um pouco diferente do Cubic mas o processo é o mesmo: criar ISOs em ambientes isolados. Através de scripts ou pela comando no terminal a ferramenta é utilizada pelos próprios desenvolvedores Debian e tem um alto nível de personalização. Scripts e materiais adicionais foram deixados na pasta de mesmo nome.
+
+</div>
+
+---
+
+![](distroIcons/debian.png)
+
+Última Distro-Custom
 
 - Debian 13.2 Trixie Cinnamon
 
@@ -174,7 +187,7 @@ Downloads:
 
 ![](distroIcons/debian.png)
 
-- Debian 13.2 
+- Debian 13.3 
 
 ### https://www.debian.org/
 
@@ -420,7 +433,7 @@ Sistema feito para ser prático, eficiente, moderno e também divertido. Utiliza
 
 ### https://omarchy.org/
 
-### https://iso.omarchy.org/omarchy-3.1.5.iso
+### https://iso.omarchy.org/omarchy-3.3.0.iso
 
 YouTube do Criador:
 
@@ -626,6 +639,20 @@ Script on line:
 ### https://pub.linuxmint.io/testing/linuxmint-22.3-xfce-64bit-beta.iso
 
 ### https://mirrors.cicku.me/linuxmint/iso/testing/linuxmint-22.3-mate-64bit-beta.iso
+
+![](distroIcons/mageia.png)
+
+- Linux Mageia 10 Alpha
+
+### https://www.mageia.org/
+
+### https://mirrors.kernel.org/mageia/iso/10/Mageia-10-alpha1-x86_64/Mageia-10-alpha1-x86_64.iso
+
+### https://mirrors.kernel.org/mageia/iso/10/Mageia-10-alpha1-Live-Plasma-x86_64/Mageia-10-alpha1-Live-Plasma-x86_64.iso
+
+### https://mirrors.kernel.org/mageia/iso/10/Mageia-10-alpha1-Live-GNOME-x86_64/Mageia-10-alpha1-Live-GNOME-x86_64.iso
+
+### https://mirrors.kernel.org/mageia/iso/10/Mageia-10-alpha1-Live-Xfce-x86_64/Mageia-10-alpha1-Live-Xfce-x86_64.iso
 
 ![](distroIcons/aerynos.png)
 
