@@ -81,7 +81,7 @@ installing_gnome(){
 # FIM DE installing_gnome()
 }
 installing_xfce_core(){
-  echo "Instalando o XFCE DESKTOP"
+  echo "Instalando o XFCE DESKTOP BÁSICO"
 
 # Add Custom Packages
   installing_packages
@@ -104,7 +104,7 @@ installing_xfce(){
 }
 
 installing_kde_core(){
-  echo "Instalando o KDE PLASMA"
+  echo "Instalando o KDE PLASMA BÁSICO"
 
 # Add Custom Packages
   installing_packages
@@ -127,7 +127,7 @@ installing_kde(){
 # FIM DE installing_kde()
 }
 installing_cinnamon_core(){
-  echo "Instalando o LXDE DESKTOP"
+  echo "Instalando o CINNAMON DESKTOP BÁSICO"
  
  # Add Custom Packages
   installing_packages
@@ -139,7 +139,7 @@ installing_cinnamon_core(){
 }
 
 installing_cinnamon(){
-  echo "Instalando o LXDE DESKTOP"
+  echo "Instalando o CINNAMON DESKTOP"
  
  # Add Custom Packages
   installing_packages
@@ -151,7 +151,7 @@ installing_cinnamon(){
 }
 
 installing_mate_core(){
-  echo "Instalando o MATE DESKTOP"
+  echo "Instalando o MATE DESKTOP BÁSICO"
  
  # Add Custom Packages
   installing_packages
@@ -176,7 +176,7 @@ installing_mate(){
 }
 
 installing_lxde_core(){
-  echo "Instalando o LXDE DESKTOP"
+  echo "Instalando o LXDE DESKTOP BÁSICO"
  
  # Add Custom Packages
   installing_packages
@@ -198,7 +198,7 @@ installing_lxde(){
 }
 
 installing_lxqt_core(){
- echo "Instalando o LXQT DESKTOP"
+ echo "Instalando o LXQT DESKTOP BÁSICO"
 
 # Add Custom Packages
   installing_packages 
@@ -230,7 +230,7 @@ show_Menu_Desktops(){
  echo "4  - Instala o XFCE"
  echo "5  - Instala o KDE-CORE (Basico)"
  echo "6  - Instala o KDE PLASMA"
- echo "7  - Instala o CINNAMON-CORE (Basido)"
+ echo "7  - Instala o CINNAMON-CORE (Basico)"
  echo "8  - Instala o CINNAMON"
  echo "9  - Instala o MATE-CORE (Basico)"
  echo "10 - Instala o MATE"

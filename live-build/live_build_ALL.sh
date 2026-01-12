@@ -28,13 +28,13 @@ lb config \
 
 # 5. Add Custom Packages
 
-read -p "Digite enter para continuar"
+# read -p "Digite enter para continuar"
 echo "Adding Custom Packages and choosing the Desktop"
 bash /mnt/trixie/cores_and_Desktops.sh
 
 # 6. Adding menu and new background 
 
-read -p "Digite enter para continuar"
+# read -p "Digite enter para continuar"
 mkdir -p  config/bootloaders/isolinux
 cp /mnt/trixie/splash.png config/bootloaders/isolinux/splash.png
 
@@ -48,7 +48,7 @@ EOF
 
 # 7. Adding Calamares installer (Optional)
 
-read -p "Digite enter para continuar"
+# read -p "Digite enter para continuar"
 echo "Adding Calamares installer (Optional)"
 mkdir -p config/includes.chroot/etc
 cp -R /mnt/trixie/calamares-settings-debian  config/includes.chroot/etc
@@ -100,6 +100,3 @@ chmod +x config/hooks/live/0001-custom.hook.chroot
 echo "Build the ISO Image ..."
 lb build
 
-# 12. Cleaning the build Environment
-#echo "Cleaning the build Environment"
-#lb clean
