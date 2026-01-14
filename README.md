@@ -250,6 +250,14 @@ Downloads:
 
 ### https://sourceforge.net/projects/peppermintos/files/isos/XFCE/PeppermintOS-Debian-64.iso/download
 
+![](distroIcons/bros.png)
+
+- Linux BrOS
+
+### https://br-os.com/
+
+### https://br-os.com/download/
+
 ![](distroIcons/devuan.png)
 
 - Devuan XFCE 6.0.0 Excalibur
