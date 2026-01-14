@@ -258,6 +258,14 @@ Downloads:
 
 ### https://br-os.com/download/
 
+![](distroIcons/xivastudio.png)
+
+- XivaStudio
+
+### https://xivastudio.org/
+
+### https://xivastudio.org/download/
+
 ![](distroIcons/devuan.png)
 
 - Devuan XFCE 6.0.0 Excalibur
