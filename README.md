@@ -79,7 +79,6 @@ Exemplos de distros que podem substituir o Windows 10,  com facilidade, sem exig
 
 ### https://www.biglinux.com.br/download/
 
-### https://communitybig.org/download/
 
 ![](distroIcons/tigeros.png)
 
@@ -107,19 +106,19 @@ Youtube:
 
 ### https://isosmint.ic.ufmt.br/debian/lmde-7-cinnamon-64bit.iso
 
-- Linux Mint Ubuntu 24.04 (LTS): 22.2 - Zara
+- Linux Mint Ubuntu 24.04 (LTS): 22.3 - Zena
 
 Cinnamon
 
-### https://mirrors.cicku.me/linuxmint/iso/stable/22.2/linuxmint-22.2-cinnamon-64bit.iso
+### https://pub.linuxmint.io/stable/22.3/linuxmint-22.3-cinnamon-64bit.iso
 
 XFCE
 
-### https://pub.linuxmint.io/stable/22.2/linuxmint-22.2-xfce-64bit.iso
+### https://mirrors.cicku.me/linuxmint/iso/stable/22.3/linuxmint-22.3-xfce-64bit.iso
 
 MATE
 
-### https://mirror.rackspace.com/linuxmint/iso/stable/22.2/linuxmint-22.2-mate-64bit.iso
+### https://pub.linuxmint.io/stable/22.3/linuxmint-22.3-mate-64bit.iso
 
 ![](distroIcons/elementary3.png)
 
@@ -628,17 +627,7 @@ Script on line:
 
 # ISO(s) para testar na sua máquina virtual:
 
-![](distroIcons/linux_mint.png)
 
-- Linux Mint 22.3 Beta
-
-### https://linuxmint.com/
-
-### https://mirrors.cicku.me/linuxmint/iso/testing/linuxmint-22.3-cinnamon-64bit-beta.iso
-
-### https://pub.linuxmint.io/testing/linuxmint-22.3-xfce-64bit-beta.iso
-
-### https://mirrors.cicku.me/linuxmint/iso/testing/linuxmint-22.3-mate-64bit-beta.iso
 
 ![](distroIcons/mageia.png)
 
