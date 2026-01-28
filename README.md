@@ -248,7 +248,9 @@ Downloads:
 
 - Linux Peppermint
 
-### https://sourceforge.net/projects/peppermintos/files/isos/XFCE/PeppermintOS-Debian-64.iso/download
+### https://peppermintos.com
+
+### https://peppermintos.com/choose-your-base/
 
 ![](distroIcons/bros.png)
 
