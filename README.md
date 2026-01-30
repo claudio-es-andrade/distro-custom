@@ -25,7 +25,7 @@
 
 <div align='justify'>
 
-O Debian Live Build funciona de maneira um pouco diferente do Cubic mas o processo é o mesmo: criar ISOs em ambientes isolados. Através de scripts ou pela comando no terminal a ferramenta é utilizada pelos próprios desenvolvedores Debian e tem um alto nível de personalização. Scripts e materiais adicionais foram deixados na pasta de mesmo nome.
+O Debian Live Build funciona de maneira um pouco diferente do Cubic mas o processo é o mesmo: criar ISOs em ambientes isolados. Através de scripts ou pelo comando no terminal a ferramenta é utilizada pelos próprios desenvolvedores Debian e tem um alto nível de personalização. Scripts e materiais adicionais foram deixados na pasta de mesmo nome.
 
 </div>
 
