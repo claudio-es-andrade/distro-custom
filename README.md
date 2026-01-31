@@ -589,7 +589,12 @@ Distro Atômica construída que utiliza uma linguagem de programação própria,
 
 - Tails
 
+<div align='justify'>
+
 Distribuição Linux baseada no Debian que utiliza a rede Tor para o usuário. O foco é de proteção e segurança nesta distro. A distro é preferivelmente instalada em um Pen Drive.
+
+</div>
+
 
 ### https://tails.net/index.pt.html
 
@@ -599,7 +604,12 @@ Distribuição Linux baseada no Debian que utiliza a rede Tor para o usuário. O
 
 - Qubes OS 4.3.0
 
-Distribuição Linux focada em segurança com o isoloamento do sistema e criação de ambientes com vários níveis de acesso para o usuário (hypervisor 1).
+<div align='justify'>
+
+Distribuição Linux focada em segurança com o isolamento do sistema e criação de ambientes com aplicações em vários níveis de acesso para o usuário (hypervisor 1).
+
+</div>
+
 
 ### https://qubes-os.org/
 
@@ -611,7 +621,12 @@ Distribuição Linux focada em segurança com o isoloamento do sistema e criaç�
 
 - Whonix
 
+<div align='justify'>
+
 Distribuição Linux baseada no Debian com foco na proteção e segurança através do isolamento do sistema por criação de máquinas virtuais (hypervisor 2) e também utiliza a rede Tor para acesso à internet.
+
+</div>
+
 
 ### https://www.whonix.org/
 
