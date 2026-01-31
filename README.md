@@ -132,21 +132,9 @@ MATE
 
 - Linux Zorin 18
 
-### https://zorin.com/os/download/18/core
+### https://zorin.com/os/
 
-Links mais próximos: 
-
-Mundial
-
-### https://mirrors.edge.kernel.org/zorinos-isos/18/Zorin-OS-18-Core-64-bit.iso
-
-América: Estados Unidos (Únicos)
-
-### https://distro.ibiblio.org/zorinos/18/Zorin-OS-18-Core-64-bit.iso
-
-### https://mirror.umd.edu/zorin/18/Zorin-OS-18-Core-64-bit.iso
-
-### https://mirror.clarkson.edu/zorinos/isos/18/Zorin-OS-18-Core-64-bit.iso
+### https://zorinos.com/download
 
 ![](distroIcons/mx.png)
 
@@ -158,7 +146,7 @@ América: Estados Unidos (Únicos)
 
 ![](distroIcons/linux_lite.png)
 
-- Linux Lite 7.6 (Ubuntu 24.04 LTS)
+- Linux Lite 7.8 (Ubuntu 24.04 LTS)
 
 ### https://www.linuxliteos.com/
 
@@ -286,14 +274,6 @@ Fork do Debian sem o SYSTEMD (OpenRC, runit, SysV) com repositórios exclusivos.
 
 ### https://download.freebsd.org/releases/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-dvd1.iso
 
-![](distroIcons/qubes.png)
-
-- Qubes OS 4.3.0 
-
-### https://qubes-os.org/
-
-### https://mirrors.edge.kernel.org/qubes/iso/Qubes-R4.3.0-x86_64.iso
-
 ---
 
 Mais ...
@@ -336,13 +316,7 @@ Distribuição baseada no Slackware (Rolling Release) com o intuito de ser leve,
 
 ### https://nobaraproject.org/download-nobara/
 
-![](distroIcons/talos.png)
 
-- Talos OS
-
-### https://www.talos.dev/
-
-### https://github.com/siderolabs/talos/releases/download/v1.12.0/metal-amd64.iso
 
 ![](distroIcons/midnightBSD.png)
 
@@ -611,6 +585,39 @@ Distro Atômica construída que utiliza uma linguagem de programação própria,
 
 ### https://nixos.org/download
 
+![](distroIcons/tails.png)
+
+- Tails
+
+Distribuição Linux baseada no Debian que utiliza a rede Tor para o usuário. O foco é de proteção e segurança nesta distro. A distro é preferivelmente instalada em um Pen Drive.
+
+### https://tails.net/index.pt.html
+
+### https://tails.net/install/index.pt.html
+
+![](distroIcons/qubes.png)
+
+- Qubes OS 4.3.0
+
+Distribuição Linux focada em segurança com o isoloamento do sistema e criação de ambientes com vários níveis de acesso para o usuário (hypervisor 1).
+
+### https://qubes-os.org/
+
+### https://mirrors.edge.kernel.org/qubes/iso/Qubes-R4.3.0-x86_64.iso
+
+
+
+![](distroIcons/whonix.png)
+
+- Whonix
+
+Distribuição Linux baseada no Debian com foco na proteção e segurança através do isolamento do sistema por criação de máquinas virtuais (hypervisor 2) e também utiliza a rede Tor para acesso à internet.
+
+### https://www.whonix.org/
+
+### https://www.whonix.org/wiki/Download
+
+
 ---
 
 ### Distro Sea
@@ -667,7 +674,7 @@ Script on line:
 
 ### https://aerynos.com/
 
-### https://cdn.aerynos.dev/isos/AerynOS-2025.10-GNOME-live-x86_64.iso
+### https://cdn.aerynos.dev/isos/AerynOS-2026.01-GNOME-live-x86_64.iso
 
 
 ![](distroIcons/antiX.png)
@@ -684,7 +691,7 @@ AntiX é uma distribuição leve e fácil de instalar sem SystemD com base no De
 
 ### https://antixlinux.com/
 
-### https://sourceforge.net/projects/antix-linux/files/Testing/antiX-25/
+### https://antixlinux.com/antix/download/
 
 ![](distroIcons/icons8-ubuntu-50.png)
 
@@ -717,6 +724,8 @@ Acompanhe o passo a passo no desenvolvimento da próxima Distribuição de Longo
 8 - Lançamento Final do Ubuntu 26.04 LTS: 23 de abril de 2026
 
 9 - Lançamento do 26.04.1 LTS (para upgrades do 24.04): 6 de agosto de 2026
+
+### https://cdimage.ubuntu.com/ubuntu/releases/26.04/snapshot-3/
 
 ---
 
