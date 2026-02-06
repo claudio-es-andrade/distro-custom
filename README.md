@@ -8,7 +8,7 @@
 ---
 
 
-## Janeiro/11/2025
+## Fevereiro/06/2025
 
 
 ---
@@ -76,8 +76,17 @@ Exemplos de distros que podem substituir o Windows 10,  com facilidade, sem exig
 
 - BigLinux
 
+### https://www.biglinux.com.br/
+
+Download:
 
 ### https://www.biglinux.com.br/download/
+
+- Big Community [Gnome (pronto para baixar), XFCE e Cinnamon (lançamento em breve) ]
+
+### https://communitybig.org/
+
+### https://iso.communitybig.org/Gnome/bigcommunity_Whiskered_gnome_2026-02-03_k612.iso
 
 
 ![](distroIcons/tigeros.png)
