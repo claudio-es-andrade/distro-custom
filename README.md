@@ -273,7 +273,7 @@ Fork do Debian sem o SYSTEMD (OpenRC, runit, SysV) com repositórios exclusivos.
 
 ### https://www.devuan.org/
 
-### https://files.devuan.org/devuan_excalibur/desktop-live/devuan_excalibur_6.0.0_amd64_desktop-live.iso
+### https://www.devuan.org/get-devuan
 
 ![](distroIcons/freebsd.png)
 
