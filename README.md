@@ -165,7 +165,7 @@ Downloads:
 
 ![](distroIcons/ghostbsd.png)
 
-- GhostBSD MATE (Atualização Agosto/25/2025)
+- GhostBSD MATE (Atualização Fevereiro/25/2026)
 
 ### https://www.ghostbsd.org/
 
