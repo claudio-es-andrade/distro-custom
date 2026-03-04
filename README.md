@@ -8,7 +8,7 @@
 ---
 
 
-## Fevereiro/06/2025
+## Março/04/2026
 
 
 ---
@@ -135,15 +135,11 @@ MATE
 
 ### https://elementary.io/
 
-### https://nyc3.dl.elementary.io/download/MTc2NjQyOTIzOQ==/elementaryos-8.1-stable-amd64.20251211.iso
-
 ![](distroIcons/icons8-zorin-50.png)
 
 - Linux Zorin 18
 
 ### https://zorin.com/os/
-
-### https://zorinos.com/download
 
 ![](distroIcons/mx.png)
 
@@ -165,7 +161,7 @@ Downloads:
 
 ![](distroIcons/ghostbsd.png)
 
-- GhostBSD MATE (Atualização Fevereiro/25/2026)
+- GhostBSD MATE
 
 ### https://www.ghostbsd.org/
 
@@ -204,16 +200,9 @@ Downloads:
 
 - Ubuntu 25.10
 
-### https://ubuntu.c3sl.ufpr.br/releases/questing/ubuntu-25.10-desktop-amd64.iso
+### https://ubuntu.com/
 
-
-### https://mirror.uepg.br/ubuntu-releases/25.10/ubuntu-25.10-desktop-amd64.iso
-
-### https://mirror.pop-sc.rnp.br/mirror/ubuntu-releases/questing/ubuntu-25.10-desktop-amd64.iso
-
-### https://deb.campolargo.pr.gov.br/ubuntu/releases/questing/ubuntu-25.10-desktop-amd64.iso
-
-### https://cdimage.ubuntu.com/releases/25.10/release/ubuntu-25.10-desktop-arm64.iso
+### https://ubuntu.com/download/desktop
 
 ![](distroIcons/redhat.png)
 
@@ -291,15 +280,9 @@ Mais ...
 
 - Porteux
 
-<div align='justify'>
-
-Distribuição baseada no Slackware (Rolling Release) com o intuito de ser leve, rápida [mais que Clear OS(Finado Linux da Intel)  e Cachy OS], modular, imutável com portabilidade e muito mais. Confira!
-
-</div>
-
 ### https://github.com/porteux
 
-### https://github.com/porteux/porteux/releases/tag/v2.5
+### https://github.com/porteux/porteux/releases/tag/v2.6
 
 ![](distroIcons/rhino.png)
 
@@ -307,7 +290,7 @@ Distribuição baseada no Slackware (Rolling Release) com o intuito de ser leve,
 
 ### https://rhinolinux.org/
 
-### https://downloads.sourceforge.net/rhino-linux-builder/Rhino-Linux-2025.4-amd64.iso
+### https://rhinolinux.org/download
 
 ![](distroIcons/manjaro.png)
 
@@ -325,23 +308,13 @@ Distribuição baseada no Slackware (Rolling Release) com o intuito de ser leve,
 
 ### https://nobaraproject.org/download-nobara/
 
-
-
-![](distroIcons/midnightBSD.png)
-
-- MidnightBSD
-
-### https://www.midnightbsd.org/
-
-### https://discovery.midnightbsd.org/ftp/releases/amd64/ISO-IMAGES/4.0/MidnightBSD-4.0--amd64-disc1.iso
-
 ![](distroIcons/mabox.png)
 
 - Mabox
 
 ### https://maboxlinux.org/
 
-### https://downloads.sourceforge.net/mabox-linux/mabox-linux-25.12-Istredd-251216-linux612.iso
+### https://sourceforge.net/projects/mabox-linux/files/
 
 ![](distroIcons/chimera.png)
 
@@ -433,7 +406,7 @@ Sistema feito para ser prático, eficiente, moderno e também divertido. Utiliza
 
 ### https://omarchy.org/
 
-### https://iso.omarchy.org/omarchy-3.3.0.iso
+### https://iso.omarchy.org/omarchy-3.4.1-2.iso
 
 YouTube do Criador:
 
@@ -465,7 +438,7 @@ Distro Unix lançada no final de outubro com muitas mudanças.
 
 ### https://www.openbsd.org/
 
-### https://cdn.openbsd.org/pub/OpenBSD/7.8/amd64/install78.iso
+### https://www.openbsd.org/faq/faq4.html#Download
 
 ---
 
@@ -666,7 +639,7 @@ Scripts de instalação e ISOs para instalar algumas distros através destes scr
 
 ### https://fai-project.org/
 
-### https://fai-project.org/fai-cd/faicd64-large_6.4.3.iso
+### https://fai-project.org/fai-cd/faicd64-large_6.5.6.iso
 
 Script on line:
 
@@ -698,7 +671,7 @@ Script on line:
 
 ### https://aerynos.com/
 
-### https://cdn.aerynos.dev/isos/AerynOS-2026.01-GNOME-live-x86_64.iso
+### https://cdn.aerynos.dev/isos/AerynOS-2026.02-GNOME-live-x86_64.iso
 
 
 ![](distroIcons/antiX.png)
@@ -749,7 +722,7 @@ Acompanhe o passo a passo no desenvolvimento da próxima Distribuição de Longo
 
 9 - Lançamento do 26.04.1 LTS (para upgrades do 24.04): 6 de agosto de 2026
 
-### https://cdimage.ubuntu.com/ubuntu/releases/26.04/snapshot-3/
+### https://cdimage.ubuntu.com/ubuntu/releases/26.04/snapshot-4/
 
 ---
 
@@ -762,6 +735,21 @@ Teste o Ubuntu lançado diariamente com correções e aprimoramentos recém lan�
 </div>
 
 ### https://cdimage.ubuntu.com/daily-dangerous/
+
+![](distroIcons/reactos.png)
+
+- React OS
+
+<div align='justify'>
+
+O Sistema Operacional Open Source com a proposta de ser totalmente compatível com o Windows.
+
+</div>
+
+### https://reactos.org/
+
+### https://reactos.org/download
+
 
 ![](distroIcons/RedoxOS.png)
 
