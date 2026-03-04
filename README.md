@@ -332,6 +332,15 @@ Mais ...
 
 ### https://distro.ibiblio.org/easyos/amd64/releases/excalibur/
 
+![](distroIcons/midnightBSD.png)
+
+- MidnightBSD
+
+### https://www.midnightbsd.org/
+
+### https://www.midnightbsd.org/download/
+
+
 ---
 
 ![](distroIcons/gentoo.png)
