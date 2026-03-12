@@ -8,7 +8,7 @@
 ---
 
 
-## Março/04/2026
+## Março/12/2026
 
 
 ---
@@ -658,7 +658,11 @@ Script on line:
 
 # ISO(s) para testar na sua máquina virtual:
 
+![](distroIcons/fedora.png)
 
+- Fedora 44.0 BETA
+
+### https://fedoraproject.org/
 
 ![](distroIcons/mageia.png)
 
