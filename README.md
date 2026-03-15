@@ -8,7 +8,7 @@
 ---
 
 
-## Março/12/2026
+## Março/15/2026
 
 
 ---
@@ -179,7 +179,7 @@ Downloads:
 
 ![](distroIcons/debian.png)
 
-- Debian 13.3 
+- Debian 13.4 
 
 ### https://www.debian.org/
 
