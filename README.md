@@ -254,6 +254,14 @@ Downloads:
 
 ### https://xivastudio.org/download/
 
+![](distroIcons/antiX.png)
+
+- AntiX
+
+### https://antixlinux.com/
+
+### https://antixlinux.com/antix/download/
+
 ![](distroIcons/devuan.png)
 
 - Devuan XFCE 6.0.0 Excalibur
@@ -687,21 +695,6 @@ Script on line:
 ### https://cdn.aerynos.dev/isos/AerynOS-2026.02-GNOME-live-x86_64.iso
 
 
-![](distroIcons/antiX.png)
-
-- AntiX 25 Beta 01
-
-
-<div align='justify'>
-
-
-AntiX é uma distribuição leve e fácil de instalar sem SystemD com base no Debian Stable para sistemas compatíveis com Intel-AMD x86. O antiX oferece aos usuários o “antiX Magic” um ambiente adequado para computadores antigos e novos. O objetivo do antiX é fornecer um sistema operacional livre leve, mas totalmente funcional e flexível para recém-chegados e usuários experientes do Linux. A memória RAM de 512MB é o mínimo recomendado para antiX. A instalação no disco rígido requer um tamanho mínimo de 7.0GB do disco rígido.
-
-</div>
-
-### https://antixlinux.com/
-
-### https://antixlinux.com/antix/download/
 
 ![](distroIcons/icons8-ubuntu-50.png)
 
