@@ -8,7 +8,7 @@
 ---
 
 
-## Março/15/2026
+## Abril/10/2026
 
 
 ---
@@ -82,11 +82,15 @@ Download:
 
 ### https://www.biglinux.com.br/download/
 
-- Big Community [Gnome (pronto para baixar), XFCE e Cinnamon (lançamento em breve) ]
+- Big Community
 
 ### https://communitybig.org/
 
-### https://iso.communitybig.org/Gnome/bigcommunity_Whiskered_gnome_2026-02-03_k612.iso
+### https://iso.communitybig.org/Gnome/bigcommunity_Barn_gnome_2026-03-24_k618.iso
+
+### https://iso.communitybig.org/Cinnamon/bigcommunity_Barn_cinnamon_2026-03-23_k618.iso
+
+### https://iso.communitybig.org/XFCE/bigcommunity_Barn_xfce_2026-04-08_k618.iso
 
 
 ![](distroIcons/tigeros.png)
@@ -265,8 +269,6 @@ Downloads:
 ![](distroIcons/devuan.png)
 
 - Devuan XFCE 6.0.0 Excalibur
-
-Fork do Debian sem o SYSTEMD (OpenRC, runit, SysV) com repositórios exclusivos.
 
 ### https://www.devuan.org/
 
