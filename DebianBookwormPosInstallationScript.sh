@@ -92,6 +92,11 @@ installing_nala(){
 installing_extrepo(){
  echo "Instalando o EXTREPO (Habilita repositórios de pacotes específicos)"
  apt install extrepo
+ 
+ echo "Modificando a configuração do extrepo para incluir o contrib, non-free e non-free-firmware"
+ sudo sed -i 's/^# - contrib/- contrib/' /etc/extrepo/config.yaml
+ sudo sed -i 's/^# - non-free/- non-free/' /etc/extrepo/config.yaml
+ echo "- non-free-firmware" >> /etc/xtrepo/config.yaml
 
 # FIM DE installing_extrepo()
 }
@@ -479,7 +484,7 @@ installing_firefox(){
  apt install extrepo
  echo "Procurando o repositório Mozilla"
  extrepo search mozilla
- echo "Habiliatndo o repositório no sistema"
+ echo "Habilitando o repositório no sistema"
  extrepo enable mozilla
  echo "Atualizando a lista de repositórios"
  apt update
