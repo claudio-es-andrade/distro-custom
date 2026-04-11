@@ -474,6 +474,21 @@ preparing_to_install_web_browsers(){
 # FIM DE preparing_to_install_web_browsers()
 }
 
+installing_firefox(){
+ echo  "Adicionando o pacote extrepo para a inserção do repositório Mozilla"
+ apt install extrepo
+ echo "Procurando o repositório Mozilla"
+ extrepo search mozilla
+ echo "Habiliatndo o repositório no sistema"
+ extrepo enable mozilla
+ echo "Atualizando a lista de repositórios"
+ apt update
+ echo "Instalando o Mozilla Firefox mais recente"
+ apt install firefox
+
+# FIM DE installing_firefox_repo()
+}
+
 installing_chrome_repo(){
  echo "Adicionando o repositório do Google Chrome"
  echo "Adicionando a chave do repositório"
@@ -2062,6 +2077,7 @@ show_subMenu_browsers(){ # (Chrome, Opera, Vivaldi, Edge, Chromium)
  echo "5  - Instala o Chromium"  
  echo "6  - Instala o LibreWolf"
  echo "7  - Instala o Zen Browser"
+ echo "8  - Instala o Mozilla Firefox"
  echo "q  - Volta para o menu principal" 
 
 # FIM DE show_subMenu_browsers()
@@ -2104,6 +2120,11 @@ sub_browsers(){
   ;;
   7)
    installing_zen
+   check_if_last_command_was_done
+   
+  ;;
+  8)
+   installing_firefox
    check_if_last_command_was_done
    
   ;;
