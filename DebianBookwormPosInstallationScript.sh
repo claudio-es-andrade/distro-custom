@@ -96,7 +96,7 @@ installing_extrepo(){
  echo "Modificando a configuração do extrepo para incluir o contrib, non-free e non-free-firmware"
  sudo sed -i 's/^# - contrib/- contrib/' /etc/extrepo/config.yaml
  sudo sed -i 's/^# - non-free/- non-free/' /etc/extrepo/config.yaml
- echo "- non-free-firmware" >> /etc/xtrepo/config.yaml
+ echo "- non-free-firmware" >> /etc/extrepo/config.yaml
 
 # FIM DE installing_extrepo()
 }
