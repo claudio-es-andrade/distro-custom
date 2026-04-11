@@ -760,18 +760,15 @@ installing_git_subversion_mercurial(){
 
 installing_docker(){
  echo "Instalando pacotes necessários paa instalar o Docker"
- apt install apt-transport-https ca-certificates curl gnupg lsb-release
+ apt install apt-transport-https ca-certificates curl gnupg lsb-release extrepo
 
- echo "Instalando a Chave GPG"
- curl -fsSL https://download.docker.com/linux/debian/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
-
- echo "Instalando o repositório"
- echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/debian $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+ echo "Instalando o repositório do Docker (Via ExtRepo)"
+ extrepo enable docker-ce
 
  echo "Atualizando a lista de repositórios"
  apt update
  echo "Instalando de fato o Docker"
- apt install docker-ce docker-ce-cli containerd.io
+ apt install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
  echo "Instalando o Docker-Compose"
  apt install docker-compose-plugin
@@ -779,6 +776,7 @@ installing_docker(){
  echo "Verificando a instalação"
  docker --version
  docker compose version
+ systemctl status docker
 
 # FIM DE installing_docker()
 }
