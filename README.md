@@ -425,7 +425,7 @@ Sistema feito para ser prático, eficiente, moderno e também divertido. Utiliza
 
 ### https://omarchy.org/
 
-### https://iso.omarchy.org/omarchy-3.4.1-2.iso
+### https://iso.omarchy.org/omarchy-3.5.1-2.iso
 
 YouTube do Criador:
 
