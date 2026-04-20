@@ -135,15 +135,19 @@ MATE
 
 ![](distroIcons/elementary3.png)
 
-- Elementary OS
+- Elementary OS 8.1
 
 ### https://elementary.io/
 
 ![](distroIcons/icons8-zorin-50.png)
 
-- Linux Zorin 18
+- Linux Zorin 18.1
 
 ### https://zorin.com/os/
+
+- Linux Zorin Lite 18.1
+
+### https://zrn.co/18lite64
 
 ![](distroIcons/mx.png)
 
