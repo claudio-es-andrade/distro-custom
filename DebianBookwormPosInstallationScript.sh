@@ -2933,7 +2933,7 @@ echo "                                                                          
 echo "                                                                              "
 echo "                                                                              "
 echo "                                                                              "
-echo " Verifique se a seleção atende os seus requisitos e hardware"
+echo " Verifique se a seleção atende aos seus requisitos e hardware"
 
 echo "                                                                              "
 echo "Digite (i/I) para confirmar as instalações ou (q/Q) para sair"
