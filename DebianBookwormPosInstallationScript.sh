@@ -18,7 +18,7 @@ function check_if_last_command_was_done(){
 function sources_list_modified(){
 
  echo "Transformando o arquivo sources.list original em cópia"
- mv /etc/apt/sources.list /etc/apt/sources.list_original_002
+ mv /etc/apt/sources.list /etc/apt/sources.list_ORIGINAL
  echo "O arquivo anterior foi transformado em cópia: nome_do_arquivo_original_00x"
  echo "Adicionando MAIN CONTRIB NON-FREE NON-FREE-FIRMWARE no arquivo sources.list"
  cat <<EOF >> /etc/apt/sources.list
@@ -270,7 +270,7 @@ installing_flatpak_kde(){
 }
 
 installing_bazaar(){
- echo "Instalando a loja de aplicativos para Flatpaks em ambientes Desktop Gnome Bazaar"
+ echo "Instalando a loja de aplicativos para Flatpaks em ambientes Desktop Gnome: Bazaar"
  
  flatpak install flathub io.github.kolunmi.Bazaar
  
@@ -552,7 +552,7 @@ installing_vivaldi_repo(){
 
  #echo "Para instalar o Opera basta digitar apt install vivaldi-stable -y "
  #echo "Navegador pronto para ser instalado"
- echo "Instalando o Navegador VIVALDI... "
+ echo "Instalando o Navegador VIVALDI...(Flatpak) "
  #apt install vivaldi-stable
  flatpak install flathub com.vivaldi.Vivaldi
  #echo "Navegador instalado e pronto para o uso"
@@ -631,7 +631,8 @@ installing_java(){
  echo " curl -s "https://get.sdkman.io" | bash "
  echo "Execute no final da instalação o seguinte comando:"
  echo ' source "$HOME/.sdkman/bin/sdkman-init.sh" '
- echo "Descomente as linhas na função para instalar através do próprio repositório do Debian"
+ echo "Vantagens deste script: vários Javas que podem ser instalados como usuário: Oracle, Zulu, Azul, OpenJDK, Maven, e etc."
+ echo "Descomente as linhas na função installing_java() para instalar através do próprio repositório do Debian"
  #echo "Instalando o através do próprio repositório do DEBIAN. Versão: 17 LTS"
  #apt install openjdk-17-jdk
 
@@ -1735,8 +1736,8 @@ main() {
   read -p "Escolha uma opção: " choice
   case $choice in
   1)
-   execute_everything  
-   check_if_last_command_was_done
+   show_packagesToInstallMessage
+   sub_manyPackages
    
   ;;
   2)
@@ -2874,18 +2875,81 @@ sub_flatpak(){
  
 # FIM DE sub_flatpak()
 }
+######
+show_subMenu_manyPackages(){
+ echo "Escolha a opção desejada abaixo: "
+ echo "(i ou I) - Instala vários pacotes selecionados de uma vez"
+ echo "(q ou Q) - Volta para o menu principal" 
 
+# FIM DE show_subMenu_flatpak()
+}
+
+sub_manyPackages(){
+ while true; do
+  show_subMenu_manyPackages
+  read -p "Escolha uma opção: " fire
+  case $fire in
+  i|I)
+   execute_everything
+   check_if_last_command_was_done
+  ;;
+  q|Q)
+   break
+  ;;
+  *)
+   echo "O valor escolhido deve estar entre os valores apresentados nas opções."
+  ;;
+  esac
+ done
+ 
+# FIM DE sub_flatpak()
+}
+
+show_packagesToInstallMessage(){
+echo "Estes pacotes/configuração serão instalados/feitos diretamente no seu sistema:"
+echo "                                                                              "
+echo "1  - Checagem de Comando de administração sudo ou pelo root"
+echo "2  - Configura a sources.list com os repositórios backports, non-free e non-free-firmware"
+echo "3  - Modifica o idioma com o locale"
+echo "4  - Instala o front-end do atualizador de pacotes NALA"
+echo "5  - Instala o configurador de repositórios de aplicativos diversos EXTREPO"
+echo "6  - Instala o firmware da Intel (desinstala o AMD)"
+echo "7  - Instala e configura o firewall UFW (GUFW - Modo Gráfico)"
+echo "8  - Instala o YAD e o TASKSEL para possíveis instalações de outros ambientes Desktop"
+echo "9  - Instala e configura o flatpak com o Gnome Software ou KDE Discover"
+echo "10 - Instala Codecs diversos fontes (Incluindo Microsoft) e extratores"
+echo "11 - Instala Gdebi (Instala pacotes .DEB) Gparted (Partciona e configura HDs) e Synaptic (Gerenciador de Pacotes e Repositórios no modo Gráfico"
+echo "12 - Instala o VLC"
+echo "13 - Instala pacotes necessários para instalação de web-browsers como o Google Chrome, por exemplo"
+echo "14 - Instala o Mozilla Firefox mais recente via EXTREPO"
+echo "15 - Instala o Gimp do repositório Debian"
+echo "16 - Configura o arquivo sysctl_conf (Swap)"
+echo "17 - Configura o arquivo limits_conf (Limita número de arquivos abertos simultaneamente)"
+echo "18 - Melhora o rendimento da bateria através do TLP e TLP-RDW"
+echo "19 - Instala o driver da Nvidia"
+echo "20 - Atualiza o sistema (pacotes DEB e Flatpak)"
+echo "21 - Reinicia o sistema"
+echo "                                                                              "
+echo "                                                                              "
+echo "                                                                              "
+echo "                                                                              "
+echo " Verifique se a seleção atende os seus requisitos e hardware"
+
+echo "                                                                              "
+echo "Digite (i/I) para confirmar as instalações ou (q/Q) para sair"
+
+# FIM DE show_packagesToInstallMessage()
+}
+
+######
 # SELECTED FUNCTIONS
 execute_everything(){
  check_if_root_is_logged
  sources_list_modified
  changing_locale
- #adding_user_to_sudo
  installing_nala
  installing_extrepo
- installing_gnome_tweaks_and_extension_manager
  installing_intel_firmware
- #installing_firewalld
  installing_firewall_ufw
  installing_yad_tasksel
  installing_flatpak
@@ -2893,9 +2957,7 @@ execute_everything(){
  installing_gdebi_gparted_synaptic
  installing_vlc
  preparing_to_install_web_browsers
- #installing_chrome_repo
- #installing_opera_repo
- installing_vivaldi_repo
+ installing_firefox
  installing_gimp
  modifying_sysctl_conf
  modifying_limits_conf
