@@ -53,6 +53,58 @@ EOF
 # FIM de sources_list_modified()
 }
 
+sources_list_modern(){
+ 
+ echo "Realizando a transição para o novo arquivo debian.sources (DEB822)"
+ apt modernize-sources --assume-yes
+ 
+ echo "O seu novo arquivo /etc/apt/sources.list.d/debian.source tem esta estrutura:"
+ cat /etc/apt/sources.list.d/debian.sources
+ 
+ echo "O seu novo arquivo /etc/apt/sources.list.d/debian-backport.source tem esta estrutura:"
+ cat /etc/apt/sources.list.d/debian-backport.sources
+ 
+ echo "Caso contrário remova o comentário no final da função sources_list_modern() no início deste arquivo"
+ echo "Os arquivos serão unificados se alterar resultado."
+ 
+# Descomente tudo abaixo para modernizar a sua fonte de repositórios. 
+ 
+ #echo "Transformando o arquivo sources.list original em cópia"
+ #mv /etc/apt/sources.list /etc/apt/sources.list_ORIGINAL
+ #echo "O arquivo anterior foi transformado em cópia: nome_do_arquivo_ORIGINAL_00x"
+ 
+#cat <<FIM >> /etc/apt/sources.list.d/debian.sources
+ 
+#Types: deb
+#URIs: http://deb.debian.org/debian/
+#Suites: trixie
+#Components: main contrib non-free non-free-firmware
+#Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
+
+#Types: deb
+#URIs: http://security.debian.org/debian-security/
+#Suites: trixie-security
+#Components: main contrib non-free non-free-firmware
+#Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
+
+#Types: deb
+#URIs: http://deb.debian.org/debian/
+#Suites: trixie-updates
+#Components: main contrib non-free non-free-firmware
+#Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
+
+#Types: deb
+#URIs: http://deb.debian.org/debian/
+#Suites: trixie-backports
+#Components: main contrib non-free non-free-firmware
+#Signed-By:
+ 
+#FIM
+
+
+# FIM DE sources_list_modern()
+}
+
 changing_locale(){
 
  echo "Instalando o pacote locale"
@@ -1754,8 +1806,8 @@ main() {
    
   ;;
   2)
-   sources_list_modified
-   check_if_last_command_was_done
+   sub_sourcesList
+   echo "Digite o valor entre as opções listadas"
    
   ;;
   3)
@@ -2801,7 +2853,39 @@ sub_flatpak(){
  
 # FIM DE sub_flatpak()
 }
-######
+show_subMenu_sourcesList(){
+ echo "Escolha a opção pela numeração abaixo: "
+ echo "1  - Modifica apenas o arquivo sources.list"
+ echo "2  - Atualiza e moderniza o arquivo source.list"
+ echo "q  - Volta para o menu principal" 
+
+# FIM DE show_subMenu_sourcesList()
+}
+
+sub_sourcesList(){
+ while true; do
+  show_subMenu_sourcesList
+  read -p "Escolha uma opção: " fire
+  case $fire in
+  1)
+   sources_list_modified
+   check_if_last_command_was_done
+  ;;
+  2)
+   sources_list_modern
+   check_if_last_command_was_done
+  ;;
+  q|Q)
+   break
+  ;;
+  *)
+   echo "O valor escolhido deve estar entre os valores apresentados nas opções."
+  ;;
+  esac
+ done
+ 
+# FIM DE sub_sourcesList()
+}
 show_subMenu_manyPackages(){
  echo "Escolha a opção desejada abaixo: "
  echo "(i ou I) - Instala vários pacotes selecionados de uma vez"
@@ -2867,7 +2951,6 @@ echo "Digite (i/I) para confirmar as instalações ou (q/Q) para sair"
 # FIM DE show_packagesToInstallMessage()
 }
 
-######
 # SELECTED FUNCTIONS
 execute_everything(){
  check_if_root_is_logged
