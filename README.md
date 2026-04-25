@@ -206,7 +206,7 @@ Downloads:
 
 ![](distroIcons/icons8-ubuntu-50.png)
 
-- Ubuntu 25.10
+- Ubuntu 26.04 (LTS)
 
 ### https://ubuntu.com/
 
@@ -429,7 +429,7 @@ Sistema feito para ser prático, eficiente, moderno e também divertido. Utiliza
 
 ### https://omarchy.org/
 
-### https://iso.omarchy.org/omarchy-3.5.1-2.iso
+### https://iso.omarchy.org/omarchy-3.6.0.iso
 
 YouTube do Criador:
 
@@ -698,13 +698,13 @@ Script on line:
 
 ### https://aerynos.com/
 
-### https://cdn.aerynos.dev/isos/AerynOS-2026.02-GNOME-live-x86_64.iso
+### https://cdn.aerynos.dev/isos/AerynOS-2026.03-GNOME-live-x86_64.iso
 
 
 
 ![](distroIcons/icons8-ubuntu-50.png)
 
-- Ubuntu 26.04 (LTS) 'Resolute Racoon' Daily Build
+- Ubuntu 26.10 Daily Build
 
 <div align='justify'>
 
@@ -733,8 +733,6 @@ Acompanhe o passo a passo no desenvolvimento da próxima Distribuição de Longo
 8 - Lançamento Final do Ubuntu 26.04 LTS: 23 de abril de 2026
 
 9 - Lançamento do 26.04.1 LTS (para upgrades do 24.04): 6 de agosto de 2026
-
-### https://cdimage.ubuntu.com/ubuntu/releases/26.04/snapshot-4/
 
 ---
 
