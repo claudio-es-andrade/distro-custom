@@ -58,10 +58,10 @@ sources_list_modern(){
  echo "Realizando a transição para o novo arquivo debian.sources (DEB822)"
  apt modernize-sources --assume-yes
  
- echo "O seu novo arquivo /etc/apt/sources.list.d/debian.source tem esta estrutura:"
+ echo "O seu novo arquivo /etc/apt/sources.list.d/debian.sources tem esta estrutura:"
  cat /etc/apt/sources.list.d/debian.sources
  
- echo "O seu novo arquivo /etc/apt/sources.list.d/debian-backport.source tem esta estrutura:"
+ echo "O seu novo arquivo /etc/apt/sources.list.d/debian-backport.sources tem esta estrutura:"
  cat /etc/apt/sources.list.d/debian-backport.sources
  
  echo "Caso contrário remova o comentário no final da função sources_list_modern() no início deste arquivo"
