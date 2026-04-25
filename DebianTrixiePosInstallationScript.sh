@@ -65,7 +65,7 @@ sources_list_modern(){
  cat /etc/apt/sources.list.d/debian-backport.sources
  
  echo "Caso contrário remova o comentário no final da função sources_list_modern() no início deste arquivo"
- echo "Os arquivos serão unificados se alterar resultado."
+ echo "Os arquivos serão unificados sem alterar resultado."
  
 # Descomente tudo abaixo para modernizar a sua fonte de repositórios. 
  
