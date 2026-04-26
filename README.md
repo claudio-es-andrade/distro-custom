@@ -708,7 +708,7 @@ Script on line:
 
 <div align='justify'>
 
-Acompanhe o passo a passo no desenvolvimento da próxima Distribuição de Longo Suporte.
+Acompanhe o passo a passo no desenvolvimento da próxima Distribuição.
 
 </div>
 
@@ -716,23 +716,17 @@ Acompanhe o passo a passo no desenvolvimento da próxima Distribuição de Longo
   
 ##### Calendário de desenvolvimento:
 
-1 - Congelamento de Funcionalidades: 19 de fevereiro de 2026
+- Lançamento do 26.04.1 LTS (para upgrades do 24.04): 6 de agosto de 2026
 
-2 - Congelamento da Interface de Utilizador: 12 de março de 2026
+1 - Congelamento de Funcionalidades: 10 de Augusto de 2026
 
-3 - Congelamento de Funcionalidades do Kernel: 19 de março de 2026
+2 - Congelamento da Interface de Utilizador: 10 de Setembro de 2026
 
-4 - Congelamento da Beta: 23 de março de 2026
+3 - Lançamento da Beta: 24 de Setembro de 2026
 
-5 - Lançamento da Beta: 26 de março de 2026
+4 - Congelamento do Kernel: 01 de outubro de 2026
 
-6 - Congelamento do Kernel: 9 de abril de 2026
-
-7 - Congelamento Final (Release Candidate): 16 de abril de 2026
-
-8 - Lançamento Final do Ubuntu 26.04 LTS: 23 de abril de 2026
-
-9 - Lançamento do 26.04.1 LTS (para upgrades do 24.04): 6 de agosto de 2026
+5 - Lançamento: 15 de Outubro de 2026
 
 ---
 
