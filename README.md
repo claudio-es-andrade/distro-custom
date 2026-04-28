@@ -716,7 +716,7 @@ Acompanhe o passo a passo no desenvolvimento da próxima Distribuição.
   
 ##### Calendário de desenvolvimento:
 
-- Lançamento do 26.04.1 LTS (para upgrades do 24.04): 6 de agosto de 2026
+- Lançamento do 26.04.1 LTS (para upgrades do 26.04): 6 de agosto de 2026
 
 1 - Congelamento de Funcionalidades: 10 de Augusto de 2026
 
