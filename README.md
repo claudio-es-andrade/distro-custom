@@ -196,13 +196,13 @@ Downloads:
 
 ![](distroIcons/fedora.png)
 
-- Fedora 43.0
+- Fedora 44.0
 
 ### https://fedoraproject.org/
 
 ### https://fedoraproject.org/#editions
 
-### https://fedora.c3sl.ufpr.br/linux/releases/43/
+### https://fedora.c3sl.ufpr.br/linux/releases/44/
 
 ![](distroIcons/icons8-ubuntu-50.png)
 
@@ -672,12 +672,6 @@ Script on line:
 
 # ISO(s) para testar na sua máquina virtual:
 
-![](distroIcons/fedora.png)
-
-- Fedora 44.0 BETA
-
-### https://fedoraproject.org/
-
 ![](distroIcons/mageia.png)
 
 - Linux Mageia 10 Alpha
@@ -704,7 +698,7 @@ Script on line:
 
 ![](distroIcons/icons8-ubuntu-50.png)
 
-- Ubuntu 26.10 Daily Build
+- Ubuntu 26.10
 
 <div align='justify'>
 
