@@ -8,7 +8,7 @@
 ---
 
 
-## Abril/10/2026
+## Maio/05/2026
 
 
 ---
@@ -86,11 +86,11 @@ Download:
 
 ### https://communitybig.org/
 
-### https://iso.communitybig.org/Gnome/bigcommunity_Barn_gnome_2026-03-24_k618.iso
+### https://iso.communitybig.org/Gnome/bigcommunity_Barn_gnome_2026-05-04_k618.iso
 
-### https://iso.communitybig.org/Cinnamon/bigcommunity_Barn_cinnamon_2026-03-23_k618.iso
+### https://iso.communitybig.org/Cinnamon/bigcommunity_Barn_cinnamon_2026-05-04_k618.iso
 
-### https://iso.communitybig.org/XFCE/bigcommunity_Barn_xfce_2026-04-08_k618.iso
+### https://iso.communitybig.org/XFCE/bigcommunity_Barn_xfce_2026-05-04_k618.iso
 
 
 ![](distroIcons/tigeros.png)
@@ -429,7 +429,7 @@ Sistema feito para ser prático, eficiente, moderno e também divertido. Utiliza
 
 ### https://omarchy.org/
 
-### https://iso.omarchy.org/omarchy-3.6.0.iso
+### https://iso.omarchy.org/omarchy-3.7.0-2.iso
 
 YouTube do Criador:
 
@@ -662,7 +662,7 @@ Scripts de instalação e ISOs para instalar algumas distros através destes scr
 
 ### https://fai-project.org/
 
-### https://fai-project.org/fai-cd/faicd64-large_6.5.6.iso
+### https://fai-project.org/fai-cd/faicd64-large_6.5.8.iso
 
 Script on line:
 
@@ -678,13 +678,7 @@ Script on line:
 
 ### https://www.mageia.org/
 
-### https://mirrors.kernel.org/mageia/iso/10/Mageia-10-alpha1-x86_64/Mageia-10-alpha1-x86_64.iso
-
-### https://mirrors.kernel.org/mageia/iso/10/Mageia-10-alpha1-Live-Plasma-x86_64/Mageia-10-alpha1-Live-Plasma-x86_64.iso
-
-### https://mirrors.kernel.org/mageia/iso/10/Mageia-10-alpha1-Live-GNOME-x86_64/Mageia-10-alpha1-Live-GNOME-x86_64.iso
-
-### https://mirrors.kernel.org/mageia/iso/10/Mageia-10-alpha1-Live-Xfce-x86_64/Mageia-10-alpha1-Live-Xfce-x86_64.iso
+### https://us.mirrors.cicku.me/mageia/iso/10/Mageia-10-beta1-x86_64/Mageia-10-beta1-x86_64.iso
 
 ![](distroIcons/aerynos.png)
 
@@ -692,7 +686,7 @@ Script on line:
 
 ### https://aerynos.com/
 
-### https://cdn.aerynos.dev/isos/AerynOS-2026.03-GNOME-live-x86_64.iso
+### https://cdn.aerynos.dev/isos/AerynOS-2026.05.2-GNOME-live-x86_64.iso
 
 
 
