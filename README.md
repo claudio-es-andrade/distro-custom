@@ -151,7 +151,7 @@ MATE
 
 ![](distroIcons/mx.png)
 
-- MX Linux 25
+- MX Linux 25.2
 
 ### https://mxlinux.org/
 
@@ -187,7 +187,7 @@ Downloads:
 
 ![](distroIcons/debian.png)
 
-- Debian 13.4 
+- Debian 13.5 
 
 ### https://www.debian.org/
 
