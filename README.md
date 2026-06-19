@@ -159,7 +159,7 @@ MATE
 
 ![](distroIcons/linux_lite.png)
 
-- Linux Lite 7.8 (Ubuntu 24.04 LTS)
+- Linux Lite 8.0 (Ubuntu 26.04 LTS)
 
 ### https://www.linuxliteos.com/
 
