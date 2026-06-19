@@ -429,7 +429,7 @@ Sistema feito para ser prático, eficiente, moderno e também divertido. Utiliza
 
 ### https://omarchy.org/
 
-### https://iso.omarchy.org/omarchy-3.7.0-2.iso
+### https://iso.omarchy.org/omarchy-3.8.2.iso
 
 YouTube do Criador:
 
