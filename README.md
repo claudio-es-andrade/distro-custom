@@ -290,13 +290,25 @@ Downloads:
 
 Mais ...
 
+![](distroIcons/mageia.png)
+
+- Linux Mageia 10
+
+### https://www.mageia.org/
+
+### https://us.mirrors.cicku.me/mageia/iso/10/Mageia-10-Live-GNOME-x86_64/Mageia-10-Live-GNOME-x86_64.iso
+
+### https://us.mirrors.cicku.me/mageia/iso/10/Mageia-10-Live-Plasma-x86_64/Mageia-10-Live-Plasma-x86_64.iso
+
+### https://ftp.nluug.nl/pub/os/Linux/distr/mageia/iso/10/Mageia-10-Live-Xfce-x86_64/Mageia-10-Live-Xfce-x86_64.iso
+
 ![](distroIcons/porteux.png)
 
 - Porteux
 
 ### https://github.com/porteux
 
-### https://github.com/porteux/porteux/releases/tag/v2.6
+### https://github.com/porteux/porteux/releases/tag/v2.7
 
 ![](distroIcons/rhino.png)
 
@@ -671,14 +683,6 @@ Script on line:
 ---
 
 # ISO(s) para testar na sua máquina virtual:
-
-![](distroIcons/mageia.png)
-
-- Linux Mageia 10 Alpha
-
-### https://www.mageia.org/
-
-### https://us.mirrors.cicku.me/mageia/iso/10/Mageia-10-beta1-x86_64/Mageia-10-beta1-x86_64.iso
 
 ![](distroIcons/aerynos.png)
 
