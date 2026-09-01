@@ -8,7 +8,7 @@
 ---
 
 
-## Junho/13/2026
+## Setembro/01/2026
 
 
 ---
@@ -86,11 +86,11 @@ Download:
 
 ### https://communitybig.org/
 
-### https://iso.communitybig.org/Gnome/bigcommunity_Barn_gnome_2026-05-04_k618.iso
+### https://iso.communitybig.org/Gnome/bigcommunity_Taliabu_gnome_2026-08-16_k618.iso
 
-### https://iso.communitybig.org/Cinnamon/bigcommunity_Barn_cinnamon_2026-05-04_k618.iso
+### https://iso.communitybig.org/Cinnamon/bigcommunity_Taliabu_cinnamon_2026-08-16_k618.iso
 
-### https://iso.communitybig.org/XFCE/bigcommunity_Barn_xfce_2026-05-04_k618.iso
+### https://iso.communitybig.org/XFCE/bigcommunity_Taliabu_xfce_2026-08-16_k618.iso
 
 
 ![](distroIcons/tigeros.png)
@@ -210,7 +210,7 @@ Downloads:
 
 ### https://ubuntu.com/
 
-### https://ubuntu.com/download/desktop
+### https://ubuntu.com/download/
 
 ![](distroIcons/redhat.png)
 
@@ -222,7 +222,7 @@ Downloads:
 
 ![](distroIcons/deepin.png)
 
-- Deepin Linux 25.1
+- Deepin Linux 25.2.0
 
 ### https://www.deepin.org/
 
@@ -230,21 +230,11 @@ Downloads:
 
 ### https://www.deepin.org/en/download/
 
-Comunidade do Brasil:
-
-### https://sites.google.com/view/deepinbrasil/
-
-Downloads: 
-
-### https://sites.google.com/view/deepinbrasil/download
-
 ![](distroIcons/pepermint_02.png)
 
 - Linux Peppermint
 
 ### https://peppermintos.com
-
-### https://peppermintos.com/choose-your-base/
 
 ![](distroIcons/bros.png)
 
@@ -284,7 +274,7 @@ Downloads:
 
 ### https://www.freebsd.org/
 
-### https://download.freebsd.org/releases/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-dvd1.iso
+### https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/15.1/FreeBSD-15.1-RELEASE-amd64-dvd1.iso
 
 ---
 
@@ -308,7 +298,7 @@ Mais ...
 
 ### https://github.com/porteux
 
-### https://github.com/porteux/porteux/releases/tag/v2.7
+### https://github.com/porteux/porteux/releases/
 
 ![](distroIcons/rhino.png)
 
@@ -441,7 +431,7 @@ Sistema feito para ser prático, eficiente, moderno e também divertido. Utiliza
 
 ### https://omarchy.org/
 
-### https://iso.omarchy.org/omarchy-3.8.2.iso
+### https://iso.omarchy.org/omarchy-4.0.2.iso
 
 YouTube do Criador:
 
@@ -630,7 +620,7 @@ Distribuição Linux focada em segurança com o isolamento do sistema e criaçã
 
 ### https://qubes-os.org/
 
-### https://mirrors.edge.kernel.org/qubes/iso/Qubes-R4.3.0-x86_64.iso
+### https://mirrors.edge.kernel.org/qubes/iso/Qubes-R4.3.1-x86_64.iso
 
 
 
@@ -674,7 +664,7 @@ Scripts de instalação e ISOs para instalar algumas distros através destes scr
 
 ### https://fai-project.org/
 
-### https://fai-project.org/fai-cd/faicd64-large_6.5.8.iso
+### https://fai-project.org/fai-cd/faicd64-large_6.6.iso
 
 Script on line:
 
@@ -690,7 +680,7 @@ Script on line:
 
 ### https://aerynos.com/
 
-### https://cdn.aerynos.dev/isos/AerynOS-2026.05.2-GNOME-live-x86_64.iso
+### https://cdn.aerynos.dev/isos/AerynOS-2026.08-GNOME-live-x86_64.iso
 
 
 
