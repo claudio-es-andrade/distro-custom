@@ -86,11 +86,11 @@ Download:
 
 ### https://communitybig.org/
 
-### https://iso.communitybig.org/Gnome/bigcommunity_Taliabu_gnome_2026-08-16_k618.iso
+### https://iso.communitybig.org/Gnome/bigcommunity_Powerful_gnome_2026-09-10_k618.iso
 
-### https://iso.communitybig.org/Cinnamon/bigcommunity_Taliabu_cinnamon_2026-08-16_k618.iso
+### https://iso.communitybig.org/Cinnamon/bigcommunity_Powerful_cinnamon_2026-09-10_k618.iso
 
-### https://iso.communitybig.org/XFCE/bigcommunity_Taliabu_xfce_2026-08-16_k618.iso
+### https://iso.communitybig.org/XFCE/bigcommunity_Powerful_xfce_2026-09-10_k618.iso
 
 
 ![](distroIcons/tigeros.png)
@@ -187,7 +187,7 @@ Downloads:
 
 ![](distroIcons/debian.png)
 
-- Debian 13.5 
+- Debian 13.7 
 
 ### https://www.debian.org/
 
@@ -431,7 +431,7 @@ Sistema feito para ser prático, eficiente, moderno e também divertido. Utiliza
 
 ### https://omarchy.org/
 
-### https://iso.omarchy.org/omarchy-4.0.2.iso
+### https://iso.omarchy.org/omarchy-4.0.4.iso
 
 YouTube do Criador:
 
@@ -511,7 +511,7 @@ Variante direta de onde tudo começou. A criação do Sistema mais perfeito poss
 
 ### https://www.freebsd.org/
 
-### https://download.freebsd.org/releases/ISO-IMAGES/15.0/FreeBSD-15.0-RELEASE-amd64-dvd1.iso
+### https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/15.1/FreeBSD-15.1-RELEASE-amd64-dvd1.iso
 
 ![](distroIcons/gentoo.png)
 
@@ -622,8 +622,6 @@ Distribuição Linux focada em segurança com o isolamento do sistema e criaçã
 
 ### https://mirrors.edge.kernel.org/qubes/iso/Qubes-R4.3.1-x86_64.iso
 
-
-
 ![](distroIcons/whonix.png)
 
 - Whonix
@@ -674,15 +672,13 @@ Script on line:
 
 # ISO(s) para testar na sua máquina virtual:
 
-![](distroIcons/aerynos.png)
+![](distroIcons/AerynosNew.png)
 
 - AerynOS
 
 ### https://aerynos.com/
 
 ### https://cdn.aerynos.dev/isos/AerynOS-2026.08-GNOME-live-x86_64.iso
-
-
 
 ![](distroIcons/icons8-ubuntu-50.png)
 
