@@ -8,7 +8,7 @@
 ---
 
 
-## Setembro/01/2026
+## OUTUBRO/19/2026
 
 
 ---
@@ -206,7 +206,7 @@ Downloads:
 
 ![](distroIcons/icons8-ubuntu-50.png)
 
-- Ubuntu 26.04 (LTS)
+- Ubuntu 26.04 (LTS) / Ubuntu 26.10
 
 ### https://ubuntu.com/
 
@@ -431,7 +431,7 @@ Sistema feito para ser prático, eficiente, moderno e também divertido. Utiliza
 
 ### https://omarchy.org/
 
-### https://iso.omarchy.org/omarchy-4.0.4.iso
+### https://iso.omarchy.org/omarchy-4.0.5.iso
 
 YouTube do Criador:
 
@@ -620,7 +620,7 @@ Distribuição Linux focada em segurança com o isolamento do sistema e criaçã
 
 ### https://qubes-os.org/
 
-### https://mirrors.edge.kernel.org/qubes/iso/Qubes-R4.3.1-x86_64.iso
+### https://mirrors.edge.kernel.org/qubes/iso/Qubes-R4.3.2-x86_64.iso
 
 ![](distroIcons/whonix.png)
 
@@ -682,7 +682,7 @@ Script on line:
 
 ![](distroIcons/icons8-ubuntu-50.png)
 
-- Ubuntu 26.10
+- Ubuntu 27.04 Tenacious T-Rex
 
 <div align='justify'>
 
@@ -694,17 +694,27 @@ Acompanhe o passo a passo no desenvolvimento da próxima Distribuição.
   
 ##### Calendário de desenvolvimento:
 
-- Lançamento do 26.04.1 LTS (para upgrades do 26.04): 6 de agosto de 2026
+- Lançamento: 15 de Outubro de 2026: 26.10 Stonking Stingray
 
-1 - Congelamento de Funcionalidades: 10 de Augusto de 2026
+1 - Semana de Teste: 24 de Dezembro de 2026 
 
-2 - Congelamento da Interface de Utilizador: 10 de Setembro de 2026
+2 - Congelamento de Funcionalidades (Debian Import Freeze): 25 de Fevereiro de 2027
 
-3 - Lançamento da Beta: 24 de Setembro de 2026
+3 - Semana de Teste: 04 de Março de 2027
 
-4 - Congelamento do Kernel: 01 de outubro de 2026
+4 - Congelamento da Interface do Usuário: 18 de Março de 2027
 
-5 - Lançamento: 15 de Outubro de 2026
+5 - Congelamento da Documentação e do Kernel: 25 de Março de 2027
+
+6 - Congelamento Beta e Congelamento de Habilitação de Hardware: 29 de Março de 2027
+
+7 - Lançamento do Beta: 01 de Abril de 2027
+
+8 - Congelamento Final, Candidato a Lançamento, Tradução do Pacote de Linguagens, Encerramento do Prazo: 15 de Abril de 2027
+
+9 - Lançamento: 22 de Abril de 2027
+
+### http://ubuntu.com/download
 
 ---
 
