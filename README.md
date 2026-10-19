@@ -21,6 +21,26 @@
 
 ![](distroIcons/debian.png)
 
+![](distroIcons/trixie_GUI_Demo.png)
+
+- Trixie_GUI.deb
+
+<div align='justify'>
+
+O DebianTrixiePosInstallationScript.sh é ótimo. O problema: grande, código as vezes dificil de entender...
+
+Solução: que tal fazer um programa mais fácil e inituitivo com botão para clicar e instalar? 
+Assim nasce o Trixie_post_Install_1.0-all.deb!
+São vários pacotes e configurações para deixar seu Debian ainda mais simples.
+
+Curta!!
+
+</div>
+
+----
+
+![](distroIcons/debian.png)
+
 - Debian Live Build
 
 <div align='justify'>
