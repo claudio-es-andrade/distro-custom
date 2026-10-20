@@ -21,9 +21,13 @@
 
 ![](distroIcons/debian.png)
 
-![](distroIcons/trixie_GUI_Demo.png)
+
 
 - Trixie_GUI.deb
+
+![](posInstall/posInstall_aba_12.png)
+
+![](posInstall/posInstall_aba_02.png)
 
 <div align='justify'>
 
@@ -36,6 +40,55 @@ São vários pacotes e configurações para deixar seu Debian ainda mais simples
 Curta!!
 
 </div>
+
+---
+
+Instala e configura o firewall do sistema, entre os demais itens.
+
+
+![](posInstall/posInstall_aba_04.png)
+
+---
+
+Diversos ambientes de desktop a escolha.
+
+![](posInstall/posInstall_aba_05.png)
+
+---
+
+Faça a integração do Flathub (Flatpaks) com a sua loja preferida.
+
+![](posInstall/posInstall_aba_06.png)
+
+---
+
+Escolha entre os diversos browsers do sistema ou os Universais (Flatpaks).
+
+![](posInstall/posInstall_aba_07.png)
+
+---
+
+Diversos Players e Editores Gráficos.
+
+![](posInstall/posInstall_aba_08.png)
+
+---
+
+Várias linguagens de programação e criação de ambientes isolados com containers.
+
+![](posInstall/posInstall_aba_09.png)
+
+---
+
+Emuladores de Jogos, STEAM, wine e bottles.
+
+![](posInstall/posInstall_aba_10.png)
+
+---
+
+Drives para AMD, Intel, Nvidia e atualizações em geral.
+
+![](posInstall/posInstall_aba_11.png)
 
 ----
 
