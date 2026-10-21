@@ -82,7 +82,7 @@ Várias linguagens de programação e criação de ambientes isolados com contai
 
 ---
 
-Emuladores de Jogos, STEAM, wine e bottles.
+Emuladores de Jogos, STEAM e bottles.
 
 ![](posInstall/posInstall_aba_10_b.png)
 
