@@ -39,6 +39,8 @@ São vários pacotes e configurações para deixar seu Debian ainda mais simples
 
 Curta!!
 
+Comando no Terminal: sudo apt reinstall ./trixie-post-install-1.2_all.deb
+
 </div>
 
 ---
@@ -64,7 +66,7 @@ Faça a integração do Flathub (Flatpaks) com a sua loja preferida.
 
 Escolha entre os diversos browsers do sistema ou os Universais (Flatpaks).
 
-![](posInstall/posInstall_aba_07.png)
+![](posInstall/posInstall_aba_07_b.png)
 
 ---
 
@@ -82,7 +84,7 @@ Várias linguagens de programação e criação de ambientes isolados com contai
 
 Emuladores de Jogos, STEAM, wine e bottles.
 
-![](posInstall/posInstall_aba_10.png)
+![](posInstall/posInstall_aba_10_b.png)
 
 ---
 
