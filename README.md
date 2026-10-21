@@ -25,7 +25,7 @@
 
 - Trixie_GUI.deb
 
-![](posInstall/posInstall_aba_12.png)
+![](posInstall/posInstall_aba_12_b.png)
 
 ![](posInstall/posInstall_aba_02.png)
 
