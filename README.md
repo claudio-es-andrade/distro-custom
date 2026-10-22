@@ -25,9 +25,22 @@
 
 - Trixie_GUI.deb
 
-![](posInstall/posInstall_aba_12_b.png)
 
-![](posInstall/posInstall_aba_02.png)
+![](posInstall/postInstall_abas_10.png)
+
+---
+
+![](posInstall/postInstall_abas_12.png)
+
+---
+
+![](posInstall/postInstall_abas_11.png)
+
+---
+
+
+---
+
 
 <div align='justify'>
 
@@ -50,49 +63,55 @@ Para remover: sudo apt remove trixie-post-install
 Instala e configura o firewall do sistema, entre os demais itens.
 
 
-![](posInstall/posInstall_aba_04.png)
+![](posInstall/postInstall_abas_01.png)
 
 ---
 
 Diversos ambientes de desktop a escolha.
 
-![](posInstall/posInstall_aba_05.png)
+![](posInstall/postInstall_abas_02.png)
 
 ---
 
 Faça a integração do Flathub (Flatpaks) com a sua loja preferida.
 
-![](posInstall/posInstall_aba_06.png)
+![](posInstall/postInstall_abas_03.png)
 
 ---
 
 Escolha entre os diversos browsers do sistema ou os Universais (Flatpaks).
 
-![](posInstall/posInstall_aba_07_b.png)
+![](posInstall/postInstall_abas_04.png)
 
 ---
 
 Diversos Players e Editores Gráficos.
 
-![](posInstall/posInstall_aba_08.png)
+![](posInstall/postInstall_abas_05.png)
 
 ---
 
-Várias linguagens de programação e criação de ambientes isolados com containers.
+Instale o virtualbox através da criação automática do seu repositório para pacotes Debian.
 
-![](posInstall/posInstall_aba_09.png)
-
----
-
-Emuladores de Jogos, STEAM e bottles.
-
-![](posInstall/posInstall_aba_10_b.png)
+![](posInstall/postInstall_abas_06.png)
 
 ---
 
+Diversas linguagens de programação e pacotes para a criação de containers em geral.
+
+![](posInstall/postInstall_abas_07.png)
+
+---
+
+Emuladores de Jogos, STEAM e bottles (Wine wrapper).
+
+![](posInstall/postInstall_abas_08.png)
+
+---
 Drives para AMD, Intel, Nvidia e atualizações em geral.
 
-![](posInstall/posInstall_aba_11.png)
+![](posInstall/postInstall_abas_09.png)
+
 
 ----
 
