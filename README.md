@@ -26,17 +26,32 @@
 - Trixie_GUI.deb
 
 
-![](posInstall/postInstall_abas_10.png)
+![](GUI_Images/GUI_01.png)
 
 ---
 
-![](posInstall/postInstall_abas_12.png)
+Confirmação da execução da tarefa
+
+![](GUI_Images/GUI_02.png)
 
 ---
 
-![](posInstall/postInstall_abas_11.png)
+Desinstalação do Pacote feito de forma simples e prática
+
+![](GUI_Images/GUI_12.png)
 
 ---
+
+Novidade: Ambiente Claro
+
+
+![](GUI_Images/GUI_13.png)
+
+---
+
+Ambiente Escuro (Padrão)
+
+![](GUI_Images/GUI_14.png)
 
 
 ---
@@ -63,54 +78,54 @@ Para remover: sudo apt remove trixie-post-install
 Instala e configura o firewall do sistema, entre os demais itens.
 
 
-![](posInstall/postInstall_abas_01.png)
+![](GUI_Images/GUI_03.png)
 
 ---
 
 Diversos ambientes de desktop a escolha.
 
-![](posInstall/postInstall_abas_02.png)
+![](GUI_Images/GUI_04.png)
 
 ---
 
 Faça a integração do Flathub (Flatpaks) com a sua loja preferida.
 
-![](posInstall/postInstall_abas_03.png)
+![](GUI_Images/GUI_05.png)
 
 ---
 
 Escolha entre os diversos browsers do sistema ou os Universais (Flatpaks).
 
-![](posInstall/postInstall_abas_04.png)
+![](GUI_Images/GUI_06.png)
 
 ---
 
 Diversos Players e Editores Gráficos.
 
-![](posInstall/postInstall_abas_05.png)
+![](GUI_Images/GUI_07.png)
 
 ---
 
 Instale o virtualbox através da criação automática do seu repositório para pacotes Debian.
 
-![](posInstall/postInstall_abas_06.png)
+![](GUI_Images/GUI_08.png)
 
 ---
 
 Diversas linguagens de programação e pacotes para a criação de containers em geral.
 
-![](posInstall/postInstall_abas_07.png)
+![](GUI_Images/GUI_09.png)
 
 ---
 
 Emuladores de Jogos, STEAM e bottles (Wine wrapper).
 
-![](posInstall/postInstall_abas_08.png)
+![](GUI_Images/GUI_10.png)
 
 ---
 Drives para AMD, Intel, Nvidia e atualizações em geral.
 
-![](posInstall/postInstall_abas_09.png)
+![](GUI_Images/GUI_11.png)
 
 
 ----
