@@ -41,6 +41,8 @@ Curta!!
 
 Comando no Terminal: sudo apt reinstall ./trixie-post-install-1.2_all.deb
 
+Para remover: sudo apt remove trixie-post-install
+
 </div>
 
 ---
