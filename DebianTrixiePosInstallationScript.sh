@@ -981,6 +981,13 @@ fi
 # FIM DE installing_docker()
 }
 
+installing_podman(){
+ echo "Instalando o Podman"
+ apt install podman
+
+# FIM DE installing_podman()
+}
+
 installing_distrobox(){
  echo "Instalando o distrobox"
  apt install distrobox
@@ -2449,15 +2456,16 @@ show_subMenu_developers(){
  echo "9  - Instala Postgresql"
  echo "10 - Instala o GIT, o Subversion e o Mercurial"
  echo "11 - Instala o Docker e Docker-Compose"
- echo "12 - Instalando o Distrobox"
- echo "13 - Instala o Visual Studio Code"
- echo "14 - Instala o Sublime Text"
- echo "15 - Instala o Atom"
- echo "16 - Instala o VIM"
- echo "17 - Instala o NEOVIM"
- echo "18 - Instala o DBeaver Community (Flatpak)"
- echo "19 - Menu para IDEs Java"
- echo "20 - Menu para IDEs Python"
+ echo "12 - Instala o Podman e o Buildah"
+ echo "13 - Instalando o Distrobox"
+ echo "14 - Instala o Visual Studio Code"
+ echo "15 - Instala o Sublime Text"
+ echo "16 - Instala o Atom"
+ echo "17 - Instala o VIM"
+ echo "18 - Instala o NEOVIM"
+ echo "19 - Instala o DBeaver Community (Flatpak)"
+ echo "20 - Menu para IDEs Java"
+ echo "21 - Menu para IDEs Python"
  echo "q  - Volta para o menu principal" 
 
 # FIM DE show_subMenu_developers()
@@ -2513,38 +2521,42 @@ sub_developers(){
    check_if_last_command_was_done
   ;;
   12)
-   installing_distrobox
+   installing_podman
    check_if_last_command_was_done
   ;;
   13)
-   installing_code
+   installing_distrobox
    check_if_last_command_was_done
   ;;
   14)
-   installing_sublime
+   installing_code
    check_if_last_command_was_done
   ;;
   15)
-   installing_atom
+   installing_sublime
    check_if_last_command_was_done
   ;;
   16)
-   installing_vim
+   installing_atom
    check_if_last_command_was_done
   ;;
   17)
-   installing_neo_vim
+   installing_vim
    check_if_last_command_was_done
   ;;
   18)
-   installing_dbeaver
+   installing_neo_vim
    check_if_last_command_was_done
   ;;
   19)
+   installing_dbeaver
+   check_if_last_command_was_done
+  ;;
+  20)
    echo "IDEs Java"
    sub_IDE_java
   ;;
-  20)
+  21)
    echo "IDEs Python"
    sub_IDE_python
   ;;
