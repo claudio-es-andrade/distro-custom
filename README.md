@@ -69,7 +69,19 @@ Curta!!
 
 Comando no Terminal: sudo apt reinstall ./trixie-post-install-1.2_all.deb
 
-Para remover: sudo apt remove trixie-post-install
+Para remover: sudo apt remove trixie-post-installtc/
+
+PROBLEMAS:
+
+Aba Navegadores -> Firefox (Criação do Repositório Debian): Há um problema de assinatura de chave gpg que desaparece quando há a transição da sources.list para sua versão moderna debian.sources.
+
+Docker: Problema de reconhecimento de chave, não instala e que "quebra" as atualizações. Procedimento: rm /etc/apt/sources.list.d/docker.sources e depois apt update. 
+
+Virtualbox: usuário normal não é catalogado no grupo vboxusers. Solução: usermod -a -G vboxusers <seu_nome>.
+
+As correções estão sendo realizadas e logo serão postadas.
+
+Caso haja mais situações diferentes do normal, comente, envie um e-mail. 
 
 </div>
 
@@ -802,7 +814,7 @@ Acompanhe o passo a passo no desenvolvimento da próxima Distribuição.
 </div>
 
 ### https://cdimage.ubuntu.com/daily-live/current/
-  
+
 ##### Calendário de desenvolvimento:
 
 - Lançamento: 15 de Outubro de 2026: 26.10 Stonking Stingray
