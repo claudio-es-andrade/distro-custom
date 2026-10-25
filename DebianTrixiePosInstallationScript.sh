@@ -1498,365 +1498,391 @@ installing_nvidia(){
  apt install linux-headers-amd64
  
  echo "Instalando as dependências para a placa de vídeo"
- apt install dirmngr ca-certificates software-properties-common apt-transport-https dkms curl
+ apt install dirmngr ca-certificates apt-transport-https dkms curl
  
  echo "Importando a chave GPG"
- curl -fSsL https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/3bf863cc.pub | sudo gpg --dearmor | sudo tee /usr/share/keyrings/nvidia-drivers.gpg > /dev/null 2>&1
- 
+ wget https://developer.download.nvidia.com/compute/cuda/repos/<distribution>/x86_64/cuda-archive-keyring.gpg
+ mv cuda-archive-keyring.gpg /usr/share/keyrings/cuda-archive-keyring.gpg
+
  echo "Adicionando o repositório Nvidia CUDA"
- echo 'deb [signed-by=/usr/share/keyrings/nvidia-drivers.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/ /' | sudo tee /etc/apt/sources.list.d/nvidia-drivers.list
+ echo "deb [signed-by=/usr/share/keyrings/cuda-archive-keyring.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian13/x86_64/ /" \
+    | tee /etc/apt/sources.list.d/cuda-<distribution>-<arch>.list
+
  
  echo "Atualizando a lista de repositórios do sistema"
  apt update
- #echo "Instalando nvidia-detect"
- #apt install nvidia-detect
- #echo "verifique sua placa com o comando nvidia-detect ou lspci -nn | egrep -i {3d|display|vga}"
 
- echo "Instalando placas NVIDIA mais recentes"
- apt install nvidia-driver nvidia-smi nvidia-settings
- #apt install nvidia-driver firmware-misc-nonfree
- echo "Instalando tecnologia NVIDIA CUDA"
- apt install cuda
- #apt install nvidia-cuda-dev nvidia-cuda-toolkit
-n
+ echo "Instalando nvidia-detect"
+ apt install nvidia-detect
+ echo " ############################################################################################"
+ echo " ############################################################################################"
+ echo " ############################################################################################"
+ echo "verifique sua placa com o comando nvidia-detect ou lspci -nn | egrep -i {3d|display|vga}"
+ echo " ############################################################################################"
+ echo " ############################################################################################"
+ echo " ############################################################################################"
+ 
+ echo "Resultado do comando lspci:"
+ lspci -nn | egrep -i {3d|display|vga}
+
+ echo " ############################################################################################"
+ echo " ############################################################################################"
+ echo " ############################################################################################"
+ echo "Resultado do comando nvidia-detect:"
+ nvidia-detect
+ echo " ############################################################################################"
+ echo " ############################################################################################"
+ echo " ############################################################################################"
+
+ echo " ############################################################################################"
+ echo " ############################################################################################"
+ echo " ############################################################################################"
+ echo "Para instalar sua placa de vídeo basta digitar"
+ echo "apt install nvidia-driver-pinning-<branch> ou apt install nvidia-driver-pinning-<version>"
+
+ echo "Maiores Informações: https://docs.nvidia.com/datacenter/tesla/driver-installation-guide/debian.html (Outubro/24/2026)"
+
  echo "Reinicie o sistema para carregar o driver instalado"
+ echo " ############################################################################################"
+ echo " ############################################################################################"
+ echo " ############################################################################################"
 
 # FIM DE installing_nvidia()
 }
 
 # NVIDIA #470
-installing_nvidia_legacy_470(){
- echo "Informações: https://www.nvidia.com/en-us/drivers/unix/legacy-gpu/"
- echo "Instalando Driver NVIDIA para placas mais antigas"
- echo "Instalando linux-headers"
- apt install linux-headers-amd64
- 
- echo "Instalando as dependências para a placa de vídeo"
- apt install dirmngr ca-certificates software-properties-common apt-transport-https dkms curl
- 
- echo "Importando a chave GPG"
- curl -fSsL https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/3bf863cc.pub | sudo gpg --dearmor | sudo tee /usr/share/keyrings/nvidia-drivers.gpg > /dev/null 2>&1
- 
- echo "Adicionando o repositório Nvidia CUDA"
- echo 'deb [signed-by=/usr/share/keyrings/nvidia-drivers.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/ /' | sudo tee /etc/apt/sources.list.d/nvidia-drivers.list
- 
- echo "Atualizando a lista de repositórios do sistema"
- apt update 
- 
- echo "Instalando nvidia-detect"
- apt install nvidia-detect
- echo "Instalando nvidia-legacy-check"
- apt install nvidia-legacy-check
- echo "verifique sua placa com o comando nvidia-detect ou lspci -nn | egrep -i {3d|display|vga}"
- echo "Verificando a placa de video instalada pelo nvidia-detect"
- nvidia-detect
- echo "Verificando a placa de video instalada pelo comando no terminal lspci"
- lspci -nn | egrep -i {3d|display|vga}
- echo "Verificando a placa de video instalada pelo nvidia-legacy-check"
- nvidia-legacy-ckeck
- 
- echo "Adicionando firmware-misc-nonfree"
- apt install firmware-misc-nonfree
- 
- echo "Baixando o arquivo para o sistema"
- wget -c https://us.download.nvidia.com/XFree86/Linux-x86_64/470.256.02/NVIDIA-Linux-x86_64-470.256.02.run
- 
- echo "Geralmente, é necessário executar o arquivo (NVIDIA-Linux-x86_64-470.256.02.run) saindo do ambiente gráfico"
- 
- echo "Caso isso aconteça, faça no terminal : systemctl set-default multi-user.target"
- echo "Reinicie o pc, vá para o diretório e execute o arquivo: ./NVIDIA-Linux-x86_64-470.256.02.run"
- echo "Volte para a interface gráfica com o comando: systemctl set-default graphical.target"
- echo "Reinicie o sistema: systemctl reboot"
+#installing_nvidia_legacy_470(){
+# echo "Informações: https://www.nvidia.com/en-us/drivers/unix/legacy-gpu/"
+# echo "Instalando Driver NVIDIA para placas mais antigas"
+# echo "Instalando linux-headers"
+# apt install linux-headers-amd64
+
+# echo "Instalando as dependências para a placa de vídeo"
+# apt install dirmngr ca-certificates software-properties-common apt-transport-https dkms curl
+
+# echo "Importando a chave GPG"
+# curl -fSsL https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/3bf863cc.pub | sudo gpg --dearmor | sudo tee /usr/share/keyrings/nvidia-drivers.gpg > /dev/null 2>&1
+
+# echo "Adicionando o repositório Nvidia CUDA"
+# echo 'deb [signed-by=/usr/share/keyrings/nvidia-drivers.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/ /' | sudo tee /etc/apt/sources.list.d/nvidia-drivers.list
+
+# echo "Atualizando a lista de repositórios do sistema"
+# apt update
+
+# echo "Instalando nvidia-detect"
+# apt install nvidia-detect
+# echo "Instalando nvidia-legacy-check"
+# apt install nvidia-legacy-check
+# echo "verifique sua placa com o comando nvidia-detect ou lspci -nn | egrep -i {3d|display|vga}"
+# echo "Verificando a placa de video instalada pelo nvidia-detect"
+# nvidia-detect
+# echo "Verificando a placa de video instalada pelo comando no terminal lspci"
+# lspci -nn | egrep -i {3d|display|vga}
+# echo "Verificando a placa de video instalada pelo nvidia-legacy-check"
+# nvidia-legacy-ckeck
+
+# echo "Adicionando firmware-misc-nonfree"
+# apt install firmware-misc-nonfree
+
+# echo "Baixando o arquivo para o sistema"
+# wget -c https://us.download.nvidia.com/XFree86/Linux-x86_64/470.256.02/NVIDIA-Linux-x86_64-470.256.02.run
+
+# echo "Geralmente, é necessário executar o arquivo (NVIDIA-Linux-x86_64-470.256.02.run) saindo do ambiente gráfico"
+
+# echo "Caso isso aconteça, faça no terminal : systemctl set-default multi-user.target"
+# echo "Reinicie o pc, vá para o diretório e execute o arquivo: ./NVIDIA-Linux-x86_64-470.256.02.run"
+# echo "Volte para a interface gráfica com o comando: systemctl set-default graphical.target"
+# echo "Reinicie o sistema: systemctl reboot"
 
 # FIM DE installing_nvidia_legacy_470()
-}
+#}
 
 # NVIDIA #390
-installing_nvidia_legacy_390(){
- echo "Informações: https://www.nvidia.com/en-us/drivers/unix/legacy-gpu/"
- echo "Instalando Driver NVIDIA para placas mais antigas"
- echo "Instalando linux-headers"
- apt install linux-headers-amd64
- 
- echo "Instalando as dependências para a placa de vídeo"
- apt install dirmngr ca-certificates software-properties-common apt-transport-https dkms curl
- 
- echo "Importando a chave GPG"
- curl -fSsL https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/3bf863cc.pub | sudo gpg --dearmor | sudo tee /usr/share/keyrings/nvidia-drivers.gpg > /dev/null 2>&1
- 
- echo "Adicionando o repositório Nvidia CUDA"
- echo 'deb [signed-by=/usr/share/keyrings/nvidia-drivers.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/ /' | sudo tee /etc/apt/sources.list.d/nvidia-drivers.list
- 
- echo "Atualizando a lista de repositórios do sistema"
- apt update 
- 
- echo "Instalando nvidia-detect"
- apt install nvidia-detect
- echo "Instalando nvidia-legacy-check"
- apt install nvidia-legacy-check
- echo "verifique sua placa com o comando nvidia-detect ou lspci -nn | egrep -i {3d|display|vga}"
- echo "Verificando a placa de video instalada pelo nvidia-detect"
- nvidia-detect
- echo "Verificando a placa de video instalada pelo comando no terminal lspci"
- lspci -nn | egrep -i {3d|display|vga}
- echo "Verificando a placa de video instalada pelo nvidia-legacy-check"
- nvidia-legacy-ckeck
- 
- echo "Adicionando firmware-misc-nonfree"
- apt install firmware-misc-nonfree
- 
- echo "Baixando o arquivo para o sistema"
- wget -c https://us.download.nvidia.com/XFree86/Linux-x86_64/390.157/NVIDIA-Linux-x86_64-390.157.run
- 
- echo "Geralmente, é necessário executar o arquivo (NVIDIA-Linux-x86_64-390.157.run) saindo do ambiente gráfico"
- 
- echo "Caso isso aconteça, faça no terminal : systemctl set-default multi-user.target"
- echo "Reinicie o pc, vá para o diretório e execute o arquivo: ./NVIDIA-Linux-x86_64-390.157.run"
- echo "Volte para a interface gráfica com o comando: systemctl set-default graphical.target"
- echo "Reinicie o sistema: systemctl reboot"
+#installing_nvidia_legacy_390(){
+# echo "Informações: https://www.nvidia.com/en-us/drivers/unix/legacy-gpu/"
+# echo "Instalando Driver NVIDIA para placas mais antigas"
+# echo "Instalando linux-headers"
+# apt install linux-headers-amd64
+
+# echo "Instalando as dependências para a placa de vídeo"
+# apt install dirmngr ca-certificates software-properties-common apt-transport-https dkms curl
+
+# echo "Importando a chave GPG"
+# curl -fSsL https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/3bf863cc.pub | sudo gpg --dearmor | sudo tee /usr/share/keyrings/nvidia-drivers.gpg > /dev/null 2>&1
+
+# echo "Adicionando o repositório Nvidia CUDA"
+# echo 'deb [signed-by=/usr/share/keyrings/nvidia-drivers.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/ /' | sudo tee /etc/apt/sources.list.d/nvidia-drivers.list
+
+# echo "Atualizando a lista de repositórios do sistema"
+# apt update
+
+# echo "Instalando nvidia-detect"
+# apt install nvidia-detect
+# echo "Instalando nvidia-legacy-check"
+# apt install nvidia-legacy-check
+# echo "verifique sua placa com o comando nvidia-detect ou lspci -nn | egrep -i {3d|display|vga}"
+# echo "Verificando a placa de video instalada pelo nvidia-detect"
+# nvidia-detect
+# echo "Verificando a placa de video instalada pelo comando no terminal lspci"
+# lspci -nn | egrep -i {3d|display|vga}
+# echo "Verificando a placa de video instalada pelo nvidia-legacy-check"
+# nvidia-legacy-ckeck
+
+# echo "Adicionando firmware-misc-nonfree"
+# apt install firmware-misc-nonfree
+
+# echo "Baixando o arquivo para o sistema"
+# wget -c https://us.download.nvidia.com/XFree86/Linux-x86_64/390.157/NVIDIA-Linux-x86_64-390.157.run
+
+# echo "Geralmente, é necessário executar o arquivo (NVIDIA-Linux-x86_64-390.157.run) saindo do ambiente gráfico"
+
+# echo "Caso isso aconteça, faça no terminal : systemctl set-default multi-user.target"
+# echo "Reinicie o pc, vá para o diretório e execute o arquivo: ./NVIDIA-Linux-x86_64-390.157.run"
+# echo "Volte para a interface gráfica com o comando: systemctl set-default graphical.target"
+# echo "Reinicie o sistema: systemctl reboot"
 
 # FIM DE installing_nvidia_legacy_390()
-}
+#}
 
 # NVIDIA #340
 
-installing_nvidia_legacy_340(){
- echo "Informações: https://www.nvidia.com/en-us/drivers/unix/legacy-gpu/"
- echo "Instalando Driver NVIDIA para placas mais antigas"
- echo "Instalando linux-headers"
- apt install linux-headers-amd64
- 
- echo "Instalando as dependências para a placa de vídeo"
- apt install dirmngr ca-certificates software-properties-common apt-transport-https dkms curl
- 
- echo "Importando a chave GPG"
- curl -fSsL https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/3bf863cc.pub | sudo gpg --dearmor | sudo tee /usr/share/keyrings/nvidia-drivers.gpg > /dev/null 2>&1
- 
- echo "Adicionando o repositório Nvidia CUDA"
- echo 'deb [signed-by=/usr/share/keyrings/nvidia-drivers.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/ /' | sudo tee /etc/apt/sources.list.d/nvidia-drivers.list
- 
- echo "Atualizando a lista de repositórios do sistema"
- apt update 
- 
- echo "Instalando nvidia-detect"
- apt install nvidia-detect
- echo "Instalando nvidia-legacy-check"
- apt install nvidia-legacy-check
- echo "verifique sua placa com o comando nvidia-detect ou lspci -nn | egrep -i {3d|display|vga}"
- echo "Verificando a placa de video instalada pelo nvidia-detect"
- nvidia-detect
- echo "Verificando a placa de video instalada pelo comando no terminal lspci"
- lspci -nn | egrep -i {3d|display|vga}
- echo "Verificando a placa de video instalada pelo nvidia-legacy-check"
- nvidia-legacy-ckeck
- 
- echo "Adicionando firmware-misc-nonfree"
- apt install firmware-misc-nonfree
- 
- echo "Baixando o arquivo para o sistema"
- wget -c https://us.download.nvidia.com/XFree86/Linux-x86_64/340.108/NVIDIA-Linux-x86_64-340.108.run
- 
- echo "Geralmente, é necessário executar o arquivo (NVIDIA-Linux-x86_64-340.108.run) saindo do ambiente gráfico"
- 
- echo "Caso isso aconteça, faça no terminal : systemctl set-default multi-user.target"
- echo "Reinicie o pc, vá para o diretório e execute o arquivo: ./NVIDIA-Linux-x86_64-340.108.run"
- echo "Volte para a interface gráfica com o comando: systemctl set-default graphical.target"
- echo "Reinicie o sistema: systemctl reboot" 
+#installing_nvidia_legacy_340(){
+# echo "Informações: https://www.nvidia.com/en-us/drivers/unix/legacy-gpu/"
+# echo "Instalando Driver NVIDIA para placas mais antigas"
+# echo "Instalando linux-headers"
+# apt install linux-headers-amd64
+
+# echo "Instalando as dependências para a placa de vídeo"
+# apt install dirmngr ca-certificates software-properties-common apt-transport-https dkms curl
+
+# echo "Importando a chave GPG"
+# curl -fSsL https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/3bf863cc.pub | sudo gpg --dearmor | sudo tee /usr/share/keyrings/nvidia-drivers.gpg > /dev/null 2>&1
+
+# echo "Adicionando o repositório Nvidia CUDA"
+# echo 'deb [signed-by=/usr/share/keyrings/nvidia-drivers.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/ /' | sudo tee /etc/apt/sources.list.d/nvidia-drivers.list
+
+# echo "Atualizando a lista de repositórios do sistema"
+# apt update
+
+# echo "Instalando nvidia-detect"
+# apt install nvidia-detect
+# echo "Instalando nvidia-legacy-check"
+# apt install nvidia-legacy-check
+# echo "verifique sua placa com o comando nvidia-detect ou lspci -nn | egrep -i {3d|display|vga}"
+# echo "Verificando a placa de video instalada pelo nvidia-detect"
+# nvidia-detect
+# echo "Verificando a placa de video instalada pelo comando no terminal lspci"
+# lspci -nn | egrep -i {3d|display|vga}
+# echo "Verificando a placa de video instalada pelo nvidia-legacy-check"
+# nvidia-legacy-ckeck
+
+# echo "Adicionando firmware-misc-nonfree"
+ #apt install firmware-misc-nonfree
+
+ #echo "Baixando o arquivo para o sistema"
+ #wget -c https://us.download.nvidia.com/XFree86/Linux-x86_64/340.108/NVIDIA-Linux-x86_64-340.108.run
+
+ #echo "Geralmente, é necessário executar o arquivo (NVIDIA-Linux-x86_64-340.108.run) saindo do ambiente gráfico"
+
+ #echo "Caso isso aconteça, faça no terminal : systemctl set-default multi-user.target"
+ #echo "Reinicie o pc, vá para o diretório e execute o arquivo: ./NVIDIA-Linux-x86_64-340.108.run"
+ #echo "Volte para a interface gráfica com o comando: systemctl set-default graphical.target"
+ #echo "Reinicie o sistema: systemctl reboot"
 
 # FIM DE installing_nvidia_legacy_340()
-}
+#}
 
 # NVIDIA #304
 
-installing_nvidia_legacy_304(){
- echo "Informações: https://www.nvidia.com/en-us/drivers/unix/legacy-gpu/"
- echo "Instalando Driver NVIDIA para placas mais antigas"
- echo "Instalando linux-headers"
- apt install linux-headers-amd64
- 
- echo "Instalando as dependências para a placa de vídeo"
- apt install dirmngr ca-certificates software-properties-common apt-transport-https dkms curl
- 
- echo "Importando a chave GPG"
- curl -fSsL https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/3bf863cc.pub | sudo gpg --dearmor | sudo tee /usr/share/keyrings/nvidia-drivers.gpg > /dev/null 2>&1
- 
- echo "Adicionando o repositório Nvidia CUDA"
- echo 'deb [signed-by=/usr/share/keyrings/nvidia-drivers.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/ /' | sudo tee /etc/apt/sources.list.d/nvidia-drivers.list
- 
- echo "Atualizando a lista de repositórios do sistema"
- apt update 
- 
- echo "Instalando nvidia-detect"
- apt install nvidia-detect
- echo "Instalando nvidia-legacy-check"
- apt install nvidia-legacy-check
- echo "verifique sua placa com o comando nvidia-detect ou lspci -nn | egrep -i {3d|display|vga}"
- echo "Verificando a placa de video instalada pelo nvidia-detect"
- nvidia-detect
- echo "Verificando a placa de video instalada pelo comando no terminal lspci"
- lspci -nn | egrep -i {3d|display|vga}
- echo "Verificando a placa de video instalada pelo nvidia-legacy-check"
- nvidia-legacy-ckeck
- 
- echo "Adicionando firmware-misc-nonfree"
- apt install firmware-misc-nonfree
- 
- echo "Baixando o arquivo para o sistema"
- wget -c https://us.download.nvidia.com/XFree86/Linux-x86_64/304.137/NVIDIA-Linux-x86_64-304.137.run
- 
- echo "Geralmente, é necessário executar o arquivo (NVIDIA-Linux-x86_64-304.137.run) saindo do ambiente gráfico"
- 
- echo "Caso isso aconteça, faça no terminal : systemctl set-default multi-user.target"
- echo "Reinicie o pc, vá para o diretório e execute o arquivo: ./NVIDIA-Linux-x86_64-304.137.run"
- echo "Volte para a interface gráfica com o comando: systemctl set-default graphical.target"
- echo "Reinicie o sistema: systemctl reboot"
+#installing_nvidia_legacy_304(){
+ #echo "Informações: https://www.nvidia.com/en-us/drivers/unix/legacy-gpu/"
+ #echo "Instalando Driver NVIDIA para placas mais antigas"
+ #echo "Instalando linux-headers"
+ #apt install linux-headers-amd64
+
+ #echo "Instalando as dependências para a placa de vídeo"
+ #apt install dirmngr ca-certificates software-properties-common apt-transport-https dkms curl
+
+ #echo "Importando a chave GPG"
+ #curl -fSsL https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/3bf863cc.pub | sudo gpg --dearmor | sudo tee /usr/share/keyrings/nvidia-drivers.gpg > /dev/null 2>&1
+
+ #echo "Adicionando o repositório Nvidia CUDA"
+ #echo 'deb [signed-by=/usr/share/keyrings/nvidia-drivers.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/ /' | sudo tee /etc/apt/sources.list.d/nvidia-drivers.list
+
+ #echo "Atualizando a lista de repositórios do sistema"
+ #apt update
+
+ #echo "Instalando nvidia-detect"
+ #apt install nvidia-detect
+ #echo "Instalando nvidia-legacy-check"
+ #apt install nvidia-legacy-check
+ #echo "verifique sua placa com o comando nvidia-detect ou lspci -nn | egrep -i {3d|display|vga}"
+ #echo "Verificando a placa de video instalada pelo nvidia-detect"
+ #nvidia-detect
+ #echo "Verificando a placa de video instalada pelo comando no terminal lspci"
+ #lspci -nn | egrep -i {3d|display|vga}
+ #echo "Verificando a placa de video instalada pelo nvidia-legacy-check"
+ #nvidia-legacy-ckeck
+
+ #echo "Adicionando firmware-misc-nonfree"
+ #apt install firmware-misc-nonfree
+
+ #echo "Baixando o arquivo para o sistema"
+ #wget -c https://us.download.nvidia.com/XFree86/Linux-x86_64/304.137/NVIDIA-Linux-x86_64-304.137.run
+
+ #echo "Geralmente, é necessário executar o arquivo (NVIDIA-Linux-x86_64-304.137.run) saindo do ambiente gráfico"
+
+ #echo "Caso isso aconteça, faça no terminal : systemctl set-default multi-user.target"
+ #echo "Reinicie o pc, vá para o diretório e execute o arquivo: ./NVIDIA-Linux-x86_64-304.137.run"
+ #echo "Volte para a interface gráfica com o comando: systemctl set-default graphical.target"
+ #echo "Reinicie o sistema: systemctl reboot"
 
 # FIM DE installing_nvidia_legacy_304()
-}
+#}
 
 # NVIDIA #173
 
-installing_nvidia_legacy_173(){
- echo "Informações: https://www.nvidia.com/en-us/drivers/unix/legacy-gpu/"
- echo "Instalando Driver NVIDIA para placas mais antigas"
- echo "Instalando linux-headers"
- apt install linux-headers-amd64
- 
- echo "Instalando as dependências para a placa de vídeo"
- apt install dirmngr ca-certificates software-properties-common apt-transport-https dkms curl
- 
- echo "Importando a chave GPG"
- curl -fSsL https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/3bf863cc.pub | sudo gpg --dearmor | sudo tee /usr/share/keyrings/nvidia-drivers.gpg > /dev/null 2>&1
- 
- echo "Adicionando o repositório Nvidia CUDA"
- echo 'deb [signed-by=/usr/share/keyrings/nvidia-drivers.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/ /' | sudo tee /etc/apt/sources.list.d/nvidia-drivers.list
- 
- echo "Atualizando a lista de repositórios do sistema"
- apt update 
- 
- echo "Instalando nvidia-detect"
- apt install nvidia-detect
- echo "Instalando nvidia-legacy-check"
- apt install nvidia-legacy-check
- echo "verifique sua placa com o comando nvidia-detect ou lspci -nn | egrep -i {3d|display|vga}"
- echo "Verificando a placa de video instalada pelo nvidia-detect"
- nvidia-detect
- echo "Verificando a placa de video instalada pelo comando no terminal lspci"
- lspci -nn | egrep -i {3d|display|vga}
- echo "Verificando a placa de video instalada pelo nvidia-legacy-check"
- nvidia-legacy-ckeck
- 
- echo "Adicionando firmware-misc-nonfree"
- apt install firmware-misc-nonfree
- 
- echo "Baixando o arquivo para o sistema"
- wget -c https://us.download.nvidia.com/XFree86/Linux-x86_64/173.14.39/NVIDIA-Linux-x86_64-173.14.39-pkg2.run
- 
- echo "Geralmente, é necessário executar o arquivo (NVIDIA-Linux-x86_64-173.14.39-pkg2.run) saindo do ambiente gráfico"
- 
- echo "Caso isso aconteça, faça no terminal : systemctl set-default multi-user.target"
- echo "Reinicie o pc, vá para o diretório e execute o arquivo: ./NVIDIA-Linux-x86_64-173.14.39-pkg2.run"
- echo "Volte para a interface gráfica com o comando: systemctl set-default graphical.target"
- echo "Reinicie o sistema: systemctl reboot"
+#installing_nvidia_legacy_173(){
+# echo "Informações: https://www.nvidia.com/en-us/drivers/unix/legacy-gpu/"
+# echo "Instalando Driver NVIDIA para placas mais antigas"
+# echo "Instalando linux-headers"
+# apt install linux-headers-amd64
+
+# echo "Instalando as dependências para a placa de vídeo"
+# apt install dirmngr ca-certificates software-properties-common apt-transport-https dkms curl
+
+# echo "Importando a chave GPG"
+# curl -fSsL https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/3bf863cc.pub | sudo gpg --dearmor | sudo tee /usr/share/keyrings/nvidia-drivers.gpg > /dev/null 2>&1
+
+# echo "Adicionando o repositório Nvidia CUDA"
+# echo 'deb [signed-by=/usr/share/keyrings/nvidia-drivers.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/ /' | sudo tee /etc/apt/sources.list.d/nvidia-drivers.list
+
+# echo "Atualizando a lista de repositórios do sistema"
+# apt update
+
+# echo "Instalando nvidia-detect"
+# apt install nvidia-detect
+# echo "Instalando nvidia-legacy-check"
+# apt install nvidia-legacy-check
+# echo "verifique sua placa com o comando nvidia-detect ou lspci -nn | egrep -i {3d|display|vga}"
+# echo "Verificando a placa de video instalada pelo nvidia-detect"
+# nvidia-detect
+# echo "Verificando a placa de video instalada pelo comando no terminal lspci"
+# lspci -nn | egrep -i {3d|display|vga}
+# echo "Verificando a placa de video instalada pelo nvidia-legacy-check"
+# nvidia-legacy-ckeck
+
+# echo "Adicionando firmware-misc-nonfree"
+# apt install firmware-misc-nonfree
+
+# echo "Baixando o arquivo para o sistema"
+# wget -c https://us.download.nvidia.com/XFree86/Linux-x86_64/173.14.39/NVIDIA-Linux-x86_64-173.14.39-pkg2.run
+
+# echo "Geralmente, é necessário executar o arquivo (NVIDIA-Linux-x86_64-173.14.39-pkg2.run) saindo do ambiente gráfico"
+
+# echo "Caso isso aconteça, faça no terminal : systemctl set-default multi-user.target"
+# echo "Reinicie o pc, vá para o diretório e execute o arquivo: ./NVIDIA-Linux-x86_64-173.14.39-pkg2.run"
+# echo "Volte para a interface gráfica com o comando: systemctl set-default graphical.target"
+# echo "Reinicie o sistema: systemctl reboot"
 
 # FIM DE installing_nvidia_legacy_173()
-}
+#}
 
 # NVIDIA #96
 
-installing_nvidia_legacy_96(){
- echo "Informações: https://www.nvidia.com/en-us/drivers/unix/legacy-gpu/"
- echo "Instalando Driver NVIDIA para placas mais antigas"
- echo "Instalando linux-headers"
- apt install linux-headers-amd64
- 
- echo "Instalando as dependências para a placa de vídeo"
- apt install dirmngr ca-certificates software-properties-common apt-transport-https dkms curl
- 
- echo "Importando a chave GPG"
- curl -fSsL https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/3bf863cc.pub | sudo gpg --dearmor | sudo tee /usr/share/keyrings/nvidia-drivers.gpg > /dev/null 2>&1
- 
- echo "Adicionando o repositório Nvidia CUDA"
- echo 'deb [signed-by=/usr/share/keyrings/nvidia-drivers.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/ /' | sudo tee /etc/apt/sources.list.d/nvidia-drivers.list
- 
- echo "Atualizando a lista de repositórios do sistema"
- apt update 
- 
- echo "Instalando nvidia-detect"
- apt install nvidia-detect
- echo "Instalando nvidia-legacy-check"
- apt install nvidia-legacy-check
- echo "verifique sua placa com o comando nvidia-detect ou lspci -nn | egrep -i {3d|display|vga}"
- echo "Verificando a placa de video instalada pelo nvidia-detect"
- nvidia-detect
- echo "Verificando a placa de video instalada pelo comando no terminal lspci"
- lspci -nn | egrep -i {3d|display|vga}
- echo "Verificando a placa de video instalada pelo nvidia-legacy-check"
- nvidia-legacy-ckeck
- 
- echo "Adicionando firmware-misc-nonfree"
- apt install firmware-misc-nonfree
- 
- echo "Baixando o arquivo para o sistema"
- wget -c https://us.download.nvidia.com/XFree86/Linux-x86_64/96.43.23/NVIDIA-Linux-x86_64-96.43.23-pkg2.run
- 
- echo "Geralmente, é necessário executar o arquivo (NVIDIA-Linux-x86_64-96.43.23-pkg2.run) saindo do ambiente gráfico"
- 
- echo "Caso isso aconteça, faça no terminal : systemctl set-default multi-user.target"
- echo "Reinicie o pc, vá para o diretório e execute o arquivo: ./NVIDIA-Linux-x86_64-96.43.23-pkg2.run"
- echo "Volte para a interface gráfica com o comando: systemctl set-default graphical.target"
- echo "Reinicie o sistema: systemctl reboot"
+#installing_nvidia_legacy_96(){
+# echo "Informações: https://www.nvidia.com/en-us/drivers/unix/legacy-gpu/"
+# echo "Instalando Driver NVIDIA para placas mais antigas"
+# echo "Instalando linux-headers"
+# apt install linux-headers-amd64
+
+# echo "Instalando as dependências para a placa de vídeo"
+# apt install dirmngr ca-certificates software-properties-common apt-transport-https dkms curl
+
+# echo "Importando a chave GPG"
+# curl -fSsL https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/3bf863cc.pub | sudo gpg --dearmor | sudo tee /usr/share/keyrings/nvidia-drivers.gpg > /dev/null 2>&1
+
+# echo "Adicionando o repositório Nvidia CUDA"
+# echo 'deb [signed-by=/usr/share/keyrings/nvidia-drivers.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/ /' | sudo tee /etc/apt/sources.list.d/nvidia-drivers.list
+
+# echo "Atualizando a lista de repositórios do sistema"
+# apt update
+
+# echo "Instalando nvidia-detect"
+# apt install nvidia-detect
+# echo "Instalando nvidia-legacy-check"
+# apt install nvidia-legacy-check
+# echo "verifique sua placa com o comando nvidia-detect ou lspci -nn | egrep -i {3d|display|vga}"
+# echo "Verificando a placa de video instalada pelo nvidia-detect"
+# nvidia-detect
+# echo "Verificando a placa de video instalada pelo comando no terminal lspci"
+# lspci -nn | egrep -i {3d|display|vga}
+# echo "Verificando a placa de video instalada pelo nvidia-legacy-check"
+# nvidia-legacy-ckeck
+
+# echo "Adicionando firmware-misc-nonfree"
+# apt install firmware-misc-nonfree
+
+# echo "Baixando o arquivo para o sistema"
+# wget -c https://us.download.nvidia.com/XFree86/Linux-x86_64/96.43.23/NVIDIA-Linux-x86_64-96.43.23-pkg2.run
+
+# echo "Geralmente, é necessário executar o arquivo (NVIDIA-Linux-x86_64-96.43.23-pkg2.run) saindo do ambiente gráfico"
+
+# echo "Caso isso aconteça, faça no terminal : systemctl set-default multi-user.target"
+# echo "Reinicie o pc, vá para o diretório e execute o arquivo: ./NVIDIA-Linux-x86_64-96.43.23-pkg2.run"
+# echo "Volte para a interface gráfica com o comando: systemctl set-default graphical.target"
+# echo "Reinicie o sistema: systemctl reboot"
 
 # FIM DE installing_nvidia_legacy_96()
-}
+#}
 
 # NVIDIA #71
 
-installing_nvidia_legacy_71(){
- echo "Informações: https://www.nvidia.com/en-us/drivers/unix/legacy-gpu/"
- echo "Instalando Driver NVIDIA para placas mais antigas"
- echo "Instalando linux-headers"
- apt install linux-headers-amd64
- 
- echo "Instalando as dependências para a placa de vídeo"
- apt install dirmngr ca-certificates software-properties-common apt-transport-https dkms curl
- 
- echo "Importando a chave GPG"
- curl -fSsL https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/3bf863cc.pub | sudo gpg --dearmor | sudo tee /usr/share/keyrings/nvidia-drivers.gpg > /dev/null 2>&1
- 
- echo "Adicionando o repositório Nvidia CUDA"
- echo 'deb [signed-by=/usr/share/keyrings/nvidia-drivers.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/ /' | sudo tee /etc/apt/sources.list.d/nvidia-drivers.list
- 
- echo "Atualizando a lista de repositórios do sistema"
- apt update 
- 
- echo "Instalando nvidia-detect"
- apt install nvidia-detect
- echo "Instalando nvidia-legacy-check"
- apt install nvidia-legacy-check
- echo "verifique sua placa com o comando nvidia-detect ou lspci -nn | egrep -i {3d|display|vga}"
- echo "Verificando a placa de video instalada pelo nvidia-detect"
- nvidia-detect
- echo "Verificando a placa de video instalada pelo comando no terminal lspci"
- lspci -nn | egrep -i {3d|display|vga}
- echo "Verificando a placa de video instalada pelo nvidia-legacy-check"
- nvidia-legacy-ckeck
- 
- echo "Adicionando firmware-misc-nonfree"
- apt install firmware-misc-nonfree
- 
- echo "Baixando o arquivo para o sistema"
- wget -c https://us.download.nvidia.com/XFree86/Linux-x86_64/71.86.15/NVIDIA-Linux-x86_64-71.86.15-pkg2.run
- 
- echo "Geralmente, é necessário executar o arquivo (NVIDIA-Linux-x86_64-71.86.15-pkg2.run) saindo do ambiente gráfico"
- 
- echo "Caso isso aconteça, faça no terminal : systemctl set-default multi-user.target"
- echo "Reinicie o pc, vá para o diretório e execute o arquivo: ./NVIDIA-Linux-x86_64-71.86.15-pkg2.run"
- echo "Volte para a interface gráfica com o comando: systemctl set-default graphical.target"
- echo "Reinicie o sistema: systemctl reboot"
+#installing_nvidia_legacy_71(){
+# echo "Informações: https://www.nvidia.com/en-us/drivers/unix/legacy-gpu/"
+# echo "Instalando Driver NVIDIA para placas mais antigas"
+# echo "Instalando linux-headers"
+# apt install linux-headers-amd64
+
+# echo "Instalando as dependências para a placa de vídeo"
+# apt install dirmngr ca-certificates software-properties-common apt-transport-https dkms curl
+
+# echo "Importando a chave GPG"
+# curl -fSsL https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/3bf863cc.pub | sudo gpg --dearmor | sudo tee /usr/share/keyrings/nvidia-drivers.gpg > /dev/null 2>&1
+
+# echo "Adicionando o repositório Nvidia CUDA"
+# echo 'deb [signed-by=/usr/share/keyrings/nvidia-drivers.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/ /' | sudo tee /etc/apt/sources.list.d/nvidia-drivers.list
+
+# echo "Atualizando a lista de repositórios do sistema"
+# apt update
+
+# echo "Instalando nvidia-detect"
+# apt install nvidia-detect
+# echo "Instalando nvidia-legacy-check"
+# apt install nvidia-legacy-check
+# echo "verifique sua placa com o comando nvidia-detect ou lspci -nn | egrep -i {3d|display|vga}"
+# echo "Verificando a placa de video instalada pelo nvidia-detect"
+# nvidia-detect
+# echo "Verificando a placa de video instalada pelo comando no terminal lspci"
+# lspci -nn | egrep -i {3d|display|vga}
+# echo "Verificando a placa de video instalada pelo nvidia-legacy-check"
+# nvidia-legacy-ckeck
+
+# echo "Adicionando firmware-misc-nonfree"
+# apt install firmware-misc-nonfree
+
+# echo "Baixando o arquivo para o sistema"
+# wget -c https://us.download.nvidia.com/XFree86/Linux-x86_64/71.86.15/NVIDIA-Linux-x86_64-71.86.15-pkg2.run
+
+# echo "Geralmente, é necessário executar o arquivo (NVIDIA-Linux-x86_64-71.86.15-pkg2.run) saindo do ambiente gráfico"
+
+# echo "Caso isso aconteça, faça no terminal : systemctl set-default multi-user.target"
+# echo "Reinicie o pc, vá para o diretório e execute o arquivo: ./NVIDIA-Linux-x86_64-71.86.15-pkg2.run"
+# echo "Volte para a interface gráfica com o comando: systemctl set-default graphical.target"
+# echo "Reinicie o sistema: systemctl reboot"
 
 # FIM DE installing_nvidia_legacy_71()
-}
+#}
 
 updating_system(){
  
@@ -2897,14 +2923,14 @@ sub_cpu_firmware(){
 show_subMenu_nvidia(){
  echo "Escolha a opção pela numeração abaixo: "
  echo "1  - Verifica se há identificação do driver"
- echo "2  - Instala o driver para placas mais recentes"
- echo "3  - Instala o driver para placas antigas ( a partir de 470.x.x)"
- echo "4  - Instala o driver para placas antigas ( a partir de 390.x.x)"
- echo "5  - Instala o driver para placas antigas ( a partir de 340.x.x)"
- echo "6  - Instala o driver para placas antigas ( a partir de 304.x.x)"
- echo "7  - Instala o driver para placas antigas ( a partir de 173.14.x.x)"
- echo "8  - Instala o driver para placas antigas ( a partir de 96.43.x.x)"
- echo "9  - Instala o driver para placas antigas ( a partir de 71.86.x.x)"
+ echo "2  - Instala o driver mais recente para as diversas placas"
+ #echo "3  - Instala o driver para placas antigas ( a partir de 470.x.x)"
+ #echo "4  - Instala o driver para placas antigas ( a partir de 390.x.x)"
+ #echo "5  - Instala o driver para placas antigas ( a partir de 340.x.x)"
+ #echo "6  - Instala o driver para placas antigas ( a partir de 304.x.x)"
+ #echo "7  - Instala o driver para placas antigas ( a partir de 173.14.x.x)"
+ #echo "8  - Instala o driver para placas antigas ( a partir de 96.43.x.x)"
+ #echo "9  - Instala o driver para placas antigas ( a partir de 71.86.x.x)"
  echo "q  - Volta para o menu principal" 
 
 # FIM DE show_subMenu_nvidia()
@@ -2923,34 +2949,34 @@ sub_nvidia(){
    installing_nvidia
    check_if_last_command_was_done
   ;;
-  3)
-   installing_nvidia_legacy_470
-   check_if_last_command_was_done
-  ;;
-  4)
-   installing_nvidia_legacy_390
-   check_if_last_command_was_done
-  ;;
-  5)
-   installing_nvidia_legacy_340
-   check_if_last_command_was_done
-  ;;
-  6)
-   installing_nvidia_legacy_304
-   check_if_last_command_was_done
-  ;;
-  7)
-   installing_nvidia_legacy_173
-   check_if_last_command_was_done
-  ;;
-  8)
-   installing_nvidia_legacy_96
-   check_if_last_command_was_done
-  ;;
-  9)
-   installing_nvidia_legacy_71
-   check_if_last_command_was_done
-  ;;
+  #3)
+   # installing_nvidia_legacy_470
+   # check_if_last_command_was_done
+  #;;
+  #4)
+   # installing_nvidia_legacy_390
+   # check_if_last_command_was_done
+  #;;
+  #5)
+   # installing_nvidia_legacy_340
+   # check_if_last_command_was_done
+  #;;
+  #6)
+   # installing_nvidia_legacy_304
+   # check_if_last_command_was_done
+  #;;
+  #7)
+   # installing_nvidia_legacy_173
+   # check_if_last_command_was_done
+  #;;
+  #8)
+   # installing_nvidia_legacy_96
+   # check_if_last_command_was_done
+  #;;
+  #9)
+   # installing_nvidia_legacy_71
+   # check_if_last_command_was_done
+  #;;
   q|Q)
    break
   ;;
