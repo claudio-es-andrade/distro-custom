@@ -73,7 +73,7 @@ Para remover: sudo apt remove trixie-post-install
 
 PROBLEMAS:
 
-Os problemas anteriores forma corrigidos.
+Os problemas anteriores foram corrigidos.
 
 Realizando testes.
 
