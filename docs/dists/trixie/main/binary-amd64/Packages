@@ -1,0 +1,16 @@
+Package: trixie-post-install
+Version: 1.6
+Architecture: all
+Maintainer: Claudio ES Andrade <claudioe.s.andrade@gmail.com>
+Depends: python3, python3-pyqt6
+Filename: /home/claudio/Downloads/docs/pool/main/t/trixie-post-install/trixie-post-install_1.6_all.deb
+Size: 65930048
+MD5sum: 36d910e24b131bd2e98ff7bf8b54c79d
+SHA1: 2390eacfcd8bfbca05571da646c98dc23c3f4da8
+SHA256: 19458c62157f1878b2386d303a09b15f6ed13f3a500883fde50d187667f87a5f
+Section: utils
+Priority: optional
+Description: Assistente de Pós-Instalação para Debian 13 Trixie
+ Uma interface gráfica em PyQt6 para automatizar tarefas e configurações
+ iniciais no Debian Trixie.
+
