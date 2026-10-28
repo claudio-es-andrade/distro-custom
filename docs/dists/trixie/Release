@@ -1,0 +1,7 @@
+Origin: Debian Trixie Custom Repo
+Label: Trixie Post Install
+Codename: trixie
+Architectures: amd64
+Components: main
+Description: Repositorio oficial do Assistente de Pos-Instalacao do Debian 13
+Sign: omitted
