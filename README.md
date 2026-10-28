@@ -71,6 +71,8 @@ Comando no Terminal: sudo apt reinstall ./trixie-post-install-1.5.3_all.deb
 
 Para remover: sudo apt remove trixie-post-install
 
+A partir da versão 1.6, para atualizar: sudo apt update && apt upgrade trixie-post-install  
+
 PROBLEMAS:
 
 Os problemas anteriores foram corrigidos.
