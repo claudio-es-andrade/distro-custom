@@ -1,7 +1,17 @@
-Origin: Debian Trixie Custom Repo
-Label: Trixie Post Install
-Codename: trixie
-Architectures: amd64
-Components: main
-Description: Repositorio oficial do Assistente de Pos-Instalacao do Debian 13
-Sign: omitted
+Date: Fri, 30 Oct 2026 17:46:36 +0000
+MD5Sum:
+ 912ac0f47fed3945b9ad9a7d890f0ee8               38 Release
+ 12da0ed31a31fed6c818b60e7ea65078              619 main/binary-amd64/Packages
+ 5c65e45a31f8ff85510dc63e591cf735              454 main/binary-amd64/Packages.gz
+SHA1:
+ 55c3e20b9f5b9e95f8494e53b209a80c5d68a418               38 Release
+ fc625cd5dec9569f4dda1ea690457adce7b0c35c              619 main/binary-amd64/Packages
+ 6f434eac2fba503d1597c2ec31f09c2e3a4667e5              454 main/binary-amd64/Packages.gz
+SHA256:
+ 8b8598efa010a446217346f72ac74f781e9da7b79f6ffed8326ae98ca13e3785               38 Release
+ 0f271a50eeb94cb7388f3f74546973c2cd2561dd34357a2450d41dde05df883a              619 main/binary-amd64/Packages
+ 7ef29d2f6507cae2733777bcec6df8d7c6908d55dc46814703a3f0886394662d              454 main/binary-amd64/Packages.gz
+SHA512:
+ 01dba341da03b52097bc969bf4b6ebc5abf22546cd76ec40d9eb4b1de428bc2b844d70df1c253c6ee527ef08911b2a86d8c3d1558eac182a9e7f8070121f1798               38 Release
+ 263d01a68d6d47f8c565c931c339d9dac3d05390f53be8ef01a4c2cbfd14956acd21380812c14b7b47b8f3a6c4a252fb0f7556fe53a23c93a9d53e52f49dde98              619 main/binary-amd64/Packages
+ 5224ce194fcbbb092aeaa4713316cf5e0bc26618b357cf640c416fcc41d11474b4241a9c2fe7b2ac8f673764237983eb8b5c607a9af5b2cb9ddd6d0eb872d28f              454 main/binary-amd64/Packages.gz

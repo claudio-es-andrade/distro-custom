@@ -3,7 +3,7 @@ Version: 1.7.1
 Architecture: all
 Maintainer: Claudio ES Andrade <claudioe.s.andrade@gmail.com>
 Depends: python3, python3-pyqt6
-Filename: pool/main/t/trixie-post-install/trixie-post-install_1.7.1_all.deb
+Filename: docs/pool/main/t/trixie-post-install/trixie-post-install_1.7.1_all.deb
 Size: 65931840
 MD5sum: 45d19b7c6eb2eb58ae9651555053c719
 SHA1: 912ce83af9cfcc65b6b9b74c3e230f25146ce40f
