@@ -19,39 +19,39 @@
 
 
 
-![](distroIcons/debian.png)
+![img](distroIcons/debian.png)
 
 
 
 - Trixie_GUI.deb
 
 
-![](GUI_Images/GUI_01.png)
+![img](GUI_Images/GUI_01.png)
 
 ---
 
 Confirmação da execução da tarefa
 
-![](GUI_Images/GUI_02.png)
+![img](GUI_Images/GUI_02.png)
 
 ---
 
 Desinstalação do Pacote feito de forma simples e prática
 
-![](GUI_Images/GUI_12.png)
+![img](GUI_Images/GUI_12.png)
 
 ---
 
 Novidade: Ambiente Claro
 
 
-![](GUI_Images/GUI_13.png)
+![img](GUI_Images/GUI_13.png)
 
 ---
 
 Ambiente Escuro (Padrão)
 
-![](GUI_Images/GUI_14.png)
+![img](GUI_Images/GUI_14.png)
 
 
 ---
@@ -67,7 +67,7 @@ São vários pacotes e configurações para deixar seu Debian ainda mais simples
 
 Curta!!
 
-Comando no Terminal: sudo apt reinstall ./trixie-post-install-1.5.3_all.deb
+Comando no Terminal: sudo apt install ./trixie-post-install-1.6.1_all.deb
 
 Para remover: sudo apt remove trixie-post-install
 
@@ -88,59 +88,59 @@ Caso haja mais situações diferentes do normal, comente, envie e-mail.
 Instala e configura o firewall do sistema, entre os demais itens.
 
 
-![](GUI_Images/GUI_03.png)
+![img](GUI_Images/GUI_03.png)
 
 ---
 
 Diversos ambientes de desktop a escolha.
 
-![](GUI_Images/GUI_04.png)
+![img](GUI_Images/GUI_04.png)
 
 ---
 
 Faça a integração do Flathub (Flatpaks) com a sua loja preferida.
 
-![](GUI_Images/GUI_05.png)
+![img](GUI_Images/GUI_05.png)
 
 ---
 
 Escolha entre os diversos browsers do sistema ou os Universais (Flatpaks).
 
-![](GUI_Images/GUI_06.png)
+![img](GUI_Images/GUI_06.png)
 
 ---
 
 Diversos Players e Editores Gráficos.
 
-![](GUI_Images/GUI_07.png)
+![img](GUI_Images/GUI_07.png)
 
 ---
 
 Instale o virtualbox através da criação automática do seu repositório para pacotes Debian.
 
-![](GUI_Images/GUI_08.png)
+![img](GUI_Images/GUI_08.png)
 
 ---
 
 Diversas linguagens de programação e pacotes para a criação de containers em geral.
 
-![](GUI_Images/GUI_09.png)
+![img](GUI_Images/GUI_09.png)
 
 ---
 
 Emuladores de Jogos, STEAM e bottles (Wine wrapper).
 
-![](GUI_Images/GUI_10.png)
+![img](GUI_Images/GUI_10.png)
 
 ---
 Drives para AMD, Intel, Nvidia e atualizações em geral.
 
-![](GUI_Images/GUI_11.png)
+![img](GUI_Images/GUI_11.png)
 
 
 ----
 
-![](distroIcons/debian.png)
+![img](distroIcons/debian.png)
 
 - Debian Live Build
 
@@ -152,7 +152,7 @@ O Debian Live Build funciona de maneira um pouco diferente do Cubic mas o proces
 
 ---
 
-![](distroIcons/debian.png)
+![img](distroIcons/debian.png)
 
 Última Distro-Custom
 
@@ -193,7 +193,7 @@ Modificações: Foram feitas utilizado o script DebianTrixiePostInstallationScri
 
 Exemplos de distros que podem substituir o Windows 10,  com facilidade, sem exigir um hardware novo muito específico:
 
-![](distroIcons/biglinux.png)
+![img](distroIcons/biglinux.png)
 
 - BigLinux
 
@@ -214,7 +214,7 @@ Download:
 ### https://iso.communitybig.org/XFCE/bigcommunity_Powerful_xfce_2026-09-10_k618.iso
 
 
-![](distroIcons/tigeros.png)
+![img](distroIcons/tigeros.png)
 
 - Tiger OS
 
@@ -228,7 +228,7 @@ Youtube:
 
 ### https://www.youtube.com/@tigerosbr/videos
 
-![](distroIcons/linux_mint.png)
+![img](distroIcons/linux_mint.png)
 
 - Linux Mint
 
@@ -254,13 +254,13 @@ MATE
 
 ### https://pub.linuxmint.io/stable/22.3/linuxmint-22.3-mate-64bit.iso
 
-![](distroIcons/elementary3.png)
+![img](distroIcons/elementary3.png)
 
 - Elementary OS 8.1
 
 ### https://elementary.io/
 
-![](distroIcons/icons8-zorin-50.png)
+![img](distroIcons/icons8-zorin-50.png)
 
 - Linux Zorin 18.1
 
@@ -270,7 +270,7 @@ MATE
 
 ### https://zrn.co/18lite64
 
-![](distroIcons/mx.png)
+![img](distroIcons/mx.png)
 
 - MX Linux 25.2
 
@@ -278,7 +278,7 @@ MATE
 
 ### https://mxlinux.org/download-links/#Mirrors
 
-![](distroIcons/linux_lite.png)
+![img](distroIcons/linux_lite.png)
 
 - Linux Lite 8.0 (Ubuntu 26.04 LTS)
 
@@ -288,7 +288,7 @@ Downloads:
 
 ### https://mirrors.linuxliteos.com/status/mirrors
 
-![](distroIcons/ghostbsd.png)
+![img](distroIcons/ghostbsd.png)
 
 - GhostBSD MATE
 
@@ -298,7 +298,7 @@ Downloads:
 
 ### https://www.ghostbsd.org/download
 
-![](distroIcons/popOS.png)
+![img](distroIcons/popOS.png)
 
 - System76 - POP!_OS 24.04 LTS
 
@@ -306,7 +306,7 @@ Downloads:
 
 ### https://system76.com/pop/download/
 
-![](distroIcons/debian.png)
+![img](distroIcons/debian.png)
 
 - Debian 13.7 
 
@@ -315,7 +315,7 @@ Downloads:
 ### https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/
 
 
-![](distroIcons/fedora.png)
+![img](distroIcons/fedora.png)
 
 - Fedora 44.0
 
@@ -325,7 +325,7 @@ Downloads:
 
 ### https://fedora.c3sl.ufpr.br/linux/releases/44/
 
-![](distroIcons/icons8-ubuntu-50.png)
+![img](distroIcons/icons8-ubuntu-50.png)
 
 - Ubuntu 26.04 (LTS) / Ubuntu 26.10
 
@@ -333,7 +333,7 @@ Downloads:
 
 ### https://ubuntu.com/download/
 
-![](distroIcons/redhat.png)
+![img](distroIcons/redhat.png)
 
 - RedHat 10
 
@@ -341,7 +341,7 @@ Downloads:
 
 ### https://www.redhat.com/en/products/ai/enterprise-linux-ai
 
-![](distroIcons/deepin.png)
+![img](distroIcons/deepin.png)
 
 - Deepin Linux 25.2.0
 
@@ -351,13 +351,13 @@ Downloads:
 
 ### https://www.deepin.org/en/download/
 
-![](distroIcons/pepermint_02.png)
+![img](distroIcons/pepermint_02.png)
 
 - Linux Peppermint
 
 ### https://peppermintos.com
 
-![](distroIcons/bros.png)
+![img](distroIcons/bros.png)
 
 - Linux BrOS
 
@@ -365,7 +365,7 @@ Downloads:
 
 ### https://br-os.com/download/
 
-![](distroIcons/xivastudio.png)
+![img](distroIcons/xivastudio.png)
 
 - XivaStudio
 
@@ -373,7 +373,7 @@ Downloads:
 
 ### https://xivastudio.org/download/
 
-![](distroIcons/antiX.png)
+![img](distroIcons/antiX.png)
 
 - AntiX
 
@@ -381,7 +381,7 @@ Downloads:
 
 ### https://antixlinux.com/antix/download/
 
-![](distroIcons/devuan.png)
+![img](distroIcons/devuan.png)
 
 - Devuan XFCE 6.0.0 Excalibur
 
@@ -389,7 +389,7 @@ Downloads:
 
 ### https://www.devuan.org/get-devuan
 
-![](distroIcons/freebsd.png)
+![img](distroIcons/freebsd.png)
 
 - FreeBSD 15.0 Release
 
@@ -401,7 +401,7 @@ Downloads:
 
 Mais ...
 
-![](distroIcons/mageia.png)
+![img](distroIcons/mageia.png)
 
 - Linux Mageia 10
 
@@ -413,7 +413,7 @@ Mais ...
 
 ### https://ftp.nluug.nl/pub/os/Linux/distr/mageia/iso/10/Mageia-10-Live-Xfce-x86_64/Mageia-10-Live-Xfce-x86_64.iso
 
-![](distroIcons/porteux.png)
+![img](distroIcons/porteux.png)
 
 - Porteux
 
@@ -421,7 +421,7 @@ Mais ...
 
 ### https://github.com/porteux/porteux/releases/
 
-![](distroIcons/rhino.png)
+![img](distroIcons/rhino.png)
 
 - Rhino OS
 
@@ -429,7 +429,7 @@ Mais ...
 
 ### https://rhinolinux.org/download
 
-![](distroIcons/manjaro.png)
+![img](distroIcons/manjaro.png)
 
 - Manjaro
 
@@ -437,7 +437,7 @@ Mais ...
 
 ### https://manjaro.org/download/
 
-![](distroIcons/nobara.png)
+![img](distroIcons/nobara.png)
 
 - Nobara
 
@@ -445,7 +445,7 @@ Mais ...
 
 ### https://nobaraproject.org/download-nobara/
 
-![](distroIcons/mabox.png)
+![img](distroIcons/mabox.png)
 
 - Mabox
 
@@ -453,7 +453,7 @@ Mais ...
 
 ### https://sourceforge.net/projects/mabox-linux/files/
 
-![](distroIcons/chimera.png)
+![img](distroIcons/chimera.png)
 
 - Chimera Linux
 
@@ -461,7 +461,7 @@ Mais ...
 
 ### https://repo.chimera-linux.org/live/latest/
 
-![](distroIcons/easyos.png)
+![img](distroIcons/easyos.png)
 
 - Easy OS
 
@@ -469,7 +469,7 @@ Mais ...
 
 ### https://distro.ibiblio.org/easyos/amd64/releases/excalibur/
 
-![](distroIcons/midnightBSD.png)
+![img](distroIcons/midnightBSD.png)
 
 - MidnightBSD
 
@@ -480,7 +480,7 @@ Mais ...
 
 ---
 
-![](distroIcons/gentoo.png)
+![img](distroIcons/gentoo.png)
 
 - Gentoo Linux
 
@@ -497,12 +497,12 @@ A Distro da alta performance, devido a compilação dos pacotes de acorco com a 
 ---
 
 
-![](distroIcons/universal-blue.png)
+![img](distroIcons/universal-blue.png)
 
 Universal Blue
 
 
-![](distroIcons/aurora.png)
+![img](distroIcons/aurora.png)
 
 - Aurora
 
@@ -514,7 +514,7 @@ Distro Atômica baseada no Fedora KDE (Kinoite) + RPM Fusion, codecs e aplicativ
 
 ### https://getaurora.dev/
 
-![](distroIcons/Bazzite.png)
+![img](distroIcons/Bazzite.png)
 
 - Bazzite
 
@@ -526,7 +526,7 @@ Distro que a Universal-Blue preparou baseada no Fedora Atômico voltada para jog
 
 ### https://download.bazzite.gg/
 
-![](distroIcons/bluefin.png)
+![img](distroIcons/bluefin.png)
 
 - Bluefin
 
@@ -540,7 +540,7 @@ Distro Atômica baseada no Fedora GNOME (Silverblue) com as mesmas característi
 
 ---
 
-![](distroIcons/omarchy.png)
+![img](distroIcons/omarchy.png)
 
 - Omarchy
 
@@ -558,7 +558,7 @@ YouTube do Criador:
 
 ### https://www.youtube.com/@dhh37
 
-![](distroIcons/omakub.png)
+![img](distroIcons/omakub.png)
 
 - Omakub
 
@@ -576,7 +576,7 @@ Um poderoso script que transforma seu Ubuntu (24.04- LTS) na melhor máquina pre
 
 ---
 
-![](distroIcons/openbsd.png)
+![img](distroIcons/openbsd.png)
 
 - OpenBSD
 
@@ -592,7 +592,7 @@ Distro Unix lançada no final de outubro com muitas mudanças.
 
 ---
 
-![](distroIcons/arch.png)
+![img](distroIcons/arch.png)
 
 - Arch Linux
 
@@ -606,7 +606,7 @@ Distro Unix lançada no final de outubro com muitas mudanças.
 
 ### https://archlinux.c3sl.ufpr.br/iso/latest/
 
-![](distroIcons/debian.png)
+![img](distroIcons/debian.png)
 
 - Debian
 
@@ -620,7 +620,7 @@ A distro mais conhecida pelos testes que fazem com que ela seja uma das mais uti
 
 ### https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/
 
-![](distroIcons/freebsd.png)
+![img](distroIcons/freebsd.png)
 
 - FreeBSD
 
@@ -634,7 +634,7 @@ Variante direta de onde tudo começou. A criação do Sistema mais perfeito poss
 
 ### https://download.freebsd.org/releases/amd64/amd64/ISO-IMAGES/15.1/FreeBSD-15.1-RELEASE-amd64-dvd1.iso
 
-![](distroIcons/gentoo.png)
+![img](distroIcons/gentoo.png)
 
 - Gentoo Linux
 
@@ -648,7 +648,7 @@ Distro muito mais customizável que o Arch Linux. Perfeita para quem prioriza de
 
 ### https://www.gentoo.org/downloads/
 
-![](distroIcons/redhat.png)
+![img](distroIcons/redhat.png)
 
 - RedHat
 
@@ -662,7 +662,7 @@ A distro empresa que cria e mantém suporte de várias tecnologias, inclusive as
 
 ### https://www.redhat.com/en/products/ai/enterprise-linux-ai
 
-![](distroIcons/slackware.png)
+![img](distroIcons/slackware.png)
 
 - Slackware Linux
 
@@ -682,7 +682,7 @@ Distro com a mesma filosofia de se manter simples que as distribuições anterio
 
 ---
 
-![](distroIcons/alpine.png)
+![img](distroIcons/alpine.png)
 
 
 - Alpine Linux
@@ -699,7 +699,7 @@ Distro bastante utilizada como container, com foco na segurança, simplicidade e
 
 
 
-![](distroIcons/nixos.png)
+![img](distroIcons/nixos.png)
 
 - Nix OS
 
@@ -713,7 +713,7 @@ Distro Atômica construída que utiliza uma linguagem de programação própria,
 
 ### https://nixos.org/download
 
-![](distroIcons/tails.png)
+![img](distroIcons/tails.png)
 
 - Tails
 
@@ -728,7 +728,7 @@ Distribuição Linux baseada no Debian que utiliza a rede Tor para o usuário. O
 
 ### https://tails.net/install/index.pt.html
 
-![](distroIcons/qubes.png)
+![img](distroIcons/qubes.png)
 
 - Qubes OS 4.3.0
 
@@ -743,7 +743,7 @@ Distribuição Linux focada em segurança com o isolamento do sistema e criaçã
 
 ### https://mirrors.edge.kernel.org/qubes/iso/Qubes-R4.3.2-x86_64.iso
 
-![](distroIcons/whonix.png)
+![img](distroIcons/whonix.png)
 
 - Whonix
 
@@ -801,7 +801,7 @@ Script on line:
 
 ### https://cdn.aerynos.dev/isos/AerynOS-2026.08-GNOME-live-x86_64.iso
 
-![](distroIcons/icons8-ubuntu-50.png)
+![img](distroIcons/icons8-ubuntu-50.png)
 
 - Ubuntu 27.04 Tenacious T-Rex
 
@@ -849,7 +849,7 @@ Teste o Ubuntu lançado diariamente com correções e aprimoramentos recém lan�
 
 ### https://cdimage.ubuntu.com/daily-dangerous/
 
-![](distroIcons/reactos.png)
+![img](distroIcons/reactos.png)
 
 - React OS
 
@@ -864,7 +864,7 @@ O Sistema Operacional Open Source com a proposta de ser totalmente compatível c
 ### https://reactos.org/download
 
 
-![](distroIcons/RedoxOS.png)
+![img](distroIcons/RedoxOS.png)
 
 - Redox OS
 
@@ -876,7 +876,7 @@ O Sistema Operacional totalmente feito do zero e em linguagem RUST assim como o 
 
 ### https://static.redox-os.org/releases/0.9.0/x86_64/redox_desktop_x86_64_2024-09-07_1225_harddrive.img.zst
 
-![](distroIcons/kde.png)
+![img](distroIcons/kde.png)
 
 - KDE LINUX BETA
 
@@ -888,12 +888,11 @@ Depois da criação do KDE Neon, uma nova distro atômica, baseada no Arch Linux
 
 ### https://files.kde.org/kde-linux/?C=M;O=A
 
-![](distroIcons/gnome.png)
+![img](distroIcons/gnome.png)
 
 - GNOME OS Nightly
 
 <div align='justify'>
-
 Distro atômica que não possui pacotes próprios e nem se baseia em pacotes de outras distros, utiliza apenas Flatpaks ou Snaps, se houver a habilitação (sudo updatectl enable snapd). Esta distro pode ser testada em hardware reais também possibilitando até configurar algumas placas da NVidia. É necessário ter o Gnome Boxes para rodar a ISO virtualmente.
 As extensões que o Gnome OS oferece são:
 
