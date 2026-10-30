@@ -67,11 +67,11 @@ São vários pacotes e configurações para deixar seu Debian ainda mais simples
 
 Curta!!
 
-Comando no Terminal: sudo apt install ./trixie-post-install-1.6.1_all.deb
+Comando no Terminal: sudo apt install ./trixie-post-install-1.7.1_all.deb
 
 Para remover: sudo apt remove trixie-post-install
 
-A partir da versão 1.6, para atualizar: sudo apt update && apt upgrade trixie-post-install  
+A partir da versão 1.7.1, para atualizar: sudo apt update && apt upgrade trixie-post-install  
 
 PROBLEMAS:
 
