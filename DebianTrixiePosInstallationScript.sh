@@ -1677,7 +1677,7 @@ installing_nvidia(){
  echo " ############################################################################################"
  echo " ############################################################################################"
  echo " ############################################################################################"
- echo "Com o repositótio instalado e as informações da(s) placa(s) detectada(s) basta procurar a versão do Driver que mais se adequa ao seu sistema"
+ echo "Com o repositório instalado e as informações da(s) placa(s) detectada(s) basta procurar a versão do Driver que mais se adequa ao seu sistema"
  echo "Para instalar sua placa de vídeo basta digitar"
  echo "apt install nvidia-driver ou nvidia-driver-pinning-<branch> ou apt install nvidia-driver-pinning-<version>"
 
