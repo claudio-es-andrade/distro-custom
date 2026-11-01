@@ -207,7 +207,7 @@ installing_firewalld(){
  systemctl enable firewalld
  systemctl start firewalld
  
- echo "verificando o estado do firewall"
+ echo "Verificando o estado do firewall"
  systemctl status firewalld
  firewall-cmd --state
 
@@ -256,7 +256,7 @@ installing_yad_tasksel(){
 
 # FIM DE installing_yad_tasksel()
 }
-
+####################################################################################
 installing_gnome(){
  echo "Instalando o GNOME DESKTOP"
  apt install task-gnome-desktop
@@ -305,7 +305,7 @@ installing_mate(){
 
 # FIM DE installing_mate()
 }
-
+####################################################################################
 installing_flatpak_gnome(){
  echo "Habilitando pacotes FLATPAK do Flathub ao sistema"
 
@@ -340,6 +340,7 @@ installing_bazaar(){
  # FIM DE installing_bazaar()
  }
 
+ ####################################################################################
 installing_codecs(){
  echo "Instalando Codecs diversos"
  apt install faad ffmpeg gstreamer1.0-fdkaac gstreamer1.0-libav gstreamer1.0-vaapi gstreamer1.0-plugins-bad gstreamer1.0-plugins-base gstreamer1.0-plugins-good gstreamer1.0-plugins-ugly lame libavcodec-extra libavcodec-extra* libavdevice* libgstreamer1.0-0 sox twolame vorbis-tools
@@ -536,6 +537,8 @@ installing_gparted(){
 
 # FIM DE installing_gparted()
 }
+
+####################################################################################
 
 preparing_to_install_web_browsers(){
  echo "Adicionando pacotes necessários para a instalação"
@@ -763,20 +766,22 @@ installing_zen(){
 # FIM DE installing_zen()
 }
 
+####################################################################################
 
 installing_rust(){
  echo "Instalando o RUST através do script do site"
  echo "Para maiores informações, visite https://www.rust-lang.org/learn/get-started "
  echo "Não é necessário ser o administrador para executar este script"
+ echo "Abra uma aba no seu terminal e como usuário, cole o comando abaixo:"
  echo " curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh  "
- echo "Caso queira instalar como o administrador do sistema, desbloqueie o comando na função no script"
+ #echo "Caso queira instalar como o administrador do sistema, desbloqueie o comando na função no script"
  # curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh
 
 # FIM DE installing_rust()
 }
 
 installing_python(){
- echo "Instalando o através do próprio repositório do DEBIAN. Versão: 3.11.2-1+bi"
+ echo "Instalando através do próprio repositório do DEBIAN."
  apt install python3 python3-dev python3-pip python3-venv libpython3-dev
 
 # FIM DE installing_python()
@@ -1326,7 +1331,7 @@ installing_ollama_openwebui_podman(){
 # FIM DE installing_ollama_openwebui_podman()
 }
 
-
+####################################################################################
 installing_virtualbox(){
  echo "Importando a Chave GPG"
  wget -O- -q https://www.virtualbox.org/download/oracle_vbox_2016.asc | sudo gpg --dearmour -o /usr/share/keyrings/oracle_vbox_2016.gpg
@@ -1368,7 +1373,7 @@ installing_virtualmanager(){
 
 # FIM DE installing_virtualmanager()
 }
-
+####################################################################################
 installing_steam(){
  echo "Habilitar o suporte a 32 bits"
  dpkg --add-architecture i386
@@ -1512,6 +1517,7 @@ installing_wine(){
  
 # FIM DE installing_wine()
 }
+####################################################################################
 
 installing_dropbox(){
 
@@ -1537,7 +1543,7 @@ installing_mega(){
  echo "Atualizando a lista de repositórios e instalando o pacote"
  apt update && apt install megasync
 
- echo "Descomente a linha abaixo para realizar a integração com o Gerenciador de Arquivos do seu DESKTOP"
+ echo "Descomentes aa linhas após a instalação do pacote no script para realizar a integração com o Gerenciador de Arquivos do seu DESKTOP"
  # Nautilus Gnome
  #apt install nautilus-megasync
 
@@ -1566,6 +1572,7 @@ installing_anydesk(){
 # FIM DE installing_anydesk()
 }
 
+####################################################################################
 modifying_sysctl_conf(){
  sysctl -w vm.swappiness=10
  sysctl -w vm.vfs_cache_pressure=50
@@ -1604,6 +1611,7 @@ improving_laptop_battery_life(){
 # FIM DE improving_battery_life()
 }
 
+
 checking_video_driver(){
  echo "Instalando o pacote PCIutils para o comando LSPCI:"
  apt install -y pciutils
@@ -1624,7 +1632,7 @@ checking_video_driver(){
 }
 
 installing_nvidia(){
- echo "Instalando Driver NVIDIA mais recente"
+ echo "Instala o Reposítório para o Driver NVIDIA mais recente"
  echo "Instalando linux-headers"
  apt install linux-headers-amd64
  
@@ -1669,8 +1677,9 @@ installing_nvidia(){
  echo " ############################################################################################"
  echo " ############################################################################################"
  echo " ############################################################################################"
+ echo "Com o repositótio instalado e as informações da(s) placa(s) detectada(s) basta procurar a versão do Driver que mais se adequa ao seu sistema"
  echo "Para instalar sua placa de vídeo basta digitar"
- echo "apt install nvidia-driver-pinning-<branch> ou apt install nvidia-driver-pinning-<version>"
+ echo "apt install nvidia-driver ou nvidia-driver-pinning-<branch> ou apt install nvidia-driver-pinning-<version>"
 
  echo "Maiores Informações: https://docs.nvidia.com/datacenter/tesla/driver-installation-guide/debian.html (Outubro/24/2026)"
 
@@ -1681,340 +1690,6 @@ installing_nvidia(){
 
 # FIM DE installing_nvidia()
 }
-
-# NVIDIA #470
-#installing_nvidia_legacy_470(){
-# echo "Informações: https://www.nvidia.com/en-us/drivers/unix/legacy-gpu/"
-# echo "Instalando Driver NVIDIA para placas mais antigas"
-# echo "Instalando linux-headers"
-# apt install linux-headers-amd64
-
-# echo "Instalando as dependências para a placa de vídeo"
-# apt install dirmngr ca-certificates software-properties-common apt-transport-https dkms curl
-
-# echo "Importando a chave GPG"
-# curl -fSsL https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/3bf863cc.pub | sudo gpg --dearmor | sudo tee /usr/share/keyrings/nvidia-drivers.gpg > /dev/null 2>&1
-
-# echo "Adicionando o repositório Nvidia CUDA"
-# echo 'deb [signed-by=/usr/share/keyrings/nvidia-drivers.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/ /' | sudo tee /etc/apt/sources.list.d/nvidia-drivers.list
-
-# echo "Atualizando a lista de repositórios do sistema"
-# apt update
-
-# echo "Instalando nvidia-detect"
-# apt install nvidia-detect
-# echo "Instalando nvidia-legacy-check"
-# apt install nvidia-legacy-check
-# echo "verifique sua placa com o comando nvidia-detect ou lspci -nn | egrep -i {3d|display|vga}"
-# echo "Verificando a placa de video instalada pelo nvidia-detect"
-# nvidia-detect
-# echo "Verificando a placa de video instalada pelo comando no terminal lspci"
-# lspci -nn | egrep -i {3d|display|vga}
-# echo "Verificando a placa de video instalada pelo nvidia-legacy-check"
-# nvidia-legacy-ckeck
-
-# echo "Adicionando firmware-misc-nonfree"
-# apt install firmware-misc-nonfree
-
-# echo "Baixando o arquivo para o sistema"
-# wget -c https://us.download.nvidia.com/XFree86/Linux-x86_64/470.256.02/NVIDIA-Linux-x86_64-470.256.02.run
-
-# echo "Geralmente, é necessário executar o arquivo (NVIDIA-Linux-x86_64-470.256.02.run) saindo do ambiente gráfico"
-
-# echo "Caso isso aconteça, faça no terminal : systemctl set-default multi-user.target"
-# echo "Reinicie o pc, vá para o diretório e execute o arquivo: ./NVIDIA-Linux-x86_64-470.256.02.run"
-# echo "Volte para a interface gráfica com o comando: systemctl set-default graphical.target"
-# echo "Reinicie o sistema: systemctl reboot"
-
-# FIM DE installing_nvidia_legacy_470()
-#}
-
-# NVIDIA #390
-#installing_nvidia_legacy_390(){
-# echo "Informações: https://www.nvidia.com/en-us/drivers/unix/legacy-gpu/"
-# echo "Instalando Driver NVIDIA para placas mais antigas"
-# echo "Instalando linux-headers"
-# apt install linux-headers-amd64
-
-# echo "Instalando as dependências para a placa de vídeo"
-# apt install dirmngr ca-certificates software-properties-common apt-transport-https dkms curl
-
-# echo "Importando a chave GPG"
-# curl -fSsL https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/3bf863cc.pub | sudo gpg --dearmor | sudo tee /usr/share/keyrings/nvidia-drivers.gpg > /dev/null 2>&1
-
-# echo "Adicionando o repositório Nvidia CUDA"
-# echo 'deb [signed-by=/usr/share/keyrings/nvidia-drivers.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/ /' | sudo tee /etc/apt/sources.list.d/nvidia-drivers.list
-
-# echo "Atualizando a lista de repositórios do sistema"
-# apt update
-
-# echo "Instalando nvidia-detect"
-# apt install nvidia-detect
-# echo "Instalando nvidia-legacy-check"
-# apt install nvidia-legacy-check
-# echo "verifique sua placa com o comando nvidia-detect ou lspci -nn | egrep -i {3d|display|vga}"
-# echo "Verificando a placa de video instalada pelo nvidia-detect"
-# nvidia-detect
-# echo "Verificando a placa de video instalada pelo comando no terminal lspci"
-# lspci -nn | egrep -i {3d|display|vga}
-# echo "Verificando a placa de video instalada pelo nvidia-legacy-check"
-# nvidia-legacy-ckeck
-
-# echo "Adicionando firmware-misc-nonfree"
-# apt install firmware-misc-nonfree
-
-# echo "Baixando o arquivo para o sistema"
-# wget -c https://us.download.nvidia.com/XFree86/Linux-x86_64/390.157/NVIDIA-Linux-x86_64-390.157.run
-
-# echo "Geralmente, é necessário executar o arquivo (NVIDIA-Linux-x86_64-390.157.run) saindo do ambiente gráfico"
-
-# echo "Caso isso aconteça, faça no terminal : systemctl set-default multi-user.target"
-# echo "Reinicie o pc, vá para o diretório e execute o arquivo: ./NVIDIA-Linux-x86_64-390.157.run"
-# echo "Volte para a interface gráfica com o comando: systemctl set-default graphical.target"
-# echo "Reinicie o sistema: systemctl reboot"
-
-# FIM DE installing_nvidia_legacy_390()
-#}
-
-# NVIDIA #340
-
-#installing_nvidia_legacy_340(){
-# echo "Informações: https://www.nvidia.com/en-us/drivers/unix/legacy-gpu/"
-# echo "Instalando Driver NVIDIA para placas mais antigas"
-# echo "Instalando linux-headers"
-# apt install linux-headers-amd64
-
-# echo "Instalando as dependências para a placa de vídeo"
-# apt install dirmngr ca-certificates software-properties-common apt-transport-https dkms curl
-
-# echo "Importando a chave GPG"
-# curl -fSsL https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/3bf863cc.pub | sudo gpg --dearmor | sudo tee /usr/share/keyrings/nvidia-drivers.gpg > /dev/null 2>&1
-
-# echo "Adicionando o repositório Nvidia CUDA"
-# echo 'deb [signed-by=/usr/share/keyrings/nvidia-drivers.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/ /' | sudo tee /etc/apt/sources.list.d/nvidia-drivers.list
-
-# echo "Atualizando a lista de repositórios do sistema"
-# apt update
-
-# echo "Instalando nvidia-detect"
-# apt install nvidia-detect
-# echo "Instalando nvidia-legacy-check"
-# apt install nvidia-legacy-check
-# echo "verifique sua placa com o comando nvidia-detect ou lspci -nn | egrep -i {3d|display|vga}"
-# echo "Verificando a placa de video instalada pelo nvidia-detect"
-# nvidia-detect
-# echo "Verificando a placa de video instalada pelo comando no terminal lspci"
-# lspci -nn | egrep -i {3d|display|vga}
-# echo "Verificando a placa de video instalada pelo nvidia-legacy-check"
-# nvidia-legacy-ckeck
-
-# echo "Adicionando firmware-misc-nonfree"
- #apt install firmware-misc-nonfree
-
- #echo "Baixando o arquivo para o sistema"
- #wget -c https://us.download.nvidia.com/XFree86/Linux-x86_64/340.108/NVIDIA-Linux-x86_64-340.108.run
-
- #echo "Geralmente, é necessário executar o arquivo (NVIDIA-Linux-x86_64-340.108.run) saindo do ambiente gráfico"
-
- #echo "Caso isso aconteça, faça no terminal : systemctl set-default multi-user.target"
- #echo "Reinicie o pc, vá para o diretório e execute o arquivo: ./NVIDIA-Linux-x86_64-340.108.run"
- #echo "Volte para a interface gráfica com o comando: systemctl set-default graphical.target"
- #echo "Reinicie o sistema: systemctl reboot"
-
-# FIM DE installing_nvidia_legacy_340()
-#}
-
-# NVIDIA #304
-
-#installing_nvidia_legacy_304(){
- #echo "Informações: https://www.nvidia.com/en-us/drivers/unix/legacy-gpu/"
- #echo "Instalando Driver NVIDIA para placas mais antigas"
- #echo "Instalando linux-headers"
- #apt install linux-headers-amd64
-
- #echo "Instalando as dependências para a placa de vídeo"
- #apt install dirmngr ca-certificates software-properties-common apt-transport-https dkms curl
-
- #echo "Importando a chave GPG"
- #curl -fSsL https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/3bf863cc.pub | sudo gpg --dearmor | sudo tee /usr/share/keyrings/nvidia-drivers.gpg > /dev/null 2>&1
-
- #echo "Adicionando o repositório Nvidia CUDA"
- #echo 'deb [signed-by=/usr/share/keyrings/nvidia-drivers.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/ /' | sudo tee /etc/apt/sources.list.d/nvidia-drivers.list
-
- #echo "Atualizando a lista de repositórios do sistema"
- #apt update
-
- #echo "Instalando nvidia-detect"
- #apt install nvidia-detect
- #echo "Instalando nvidia-legacy-check"
- #apt install nvidia-legacy-check
- #echo "verifique sua placa com o comando nvidia-detect ou lspci -nn | egrep -i {3d|display|vga}"
- #echo "Verificando a placa de video instalada pelo nvidia-detect"
- #nvidia-detect
- #echo "Verificando a placa de video instalada pelo comando no terminal lspci"
- #lspci -nn | egrep -i {3d|display|vga}
- #echo "Verificando a placa de video instalada pelo nvidia-legacy-check"
- #nvidia-legacy-ckeck
-
- #echo "Adicionando firmware-misc-nonfree"
- #apt install firmware-misc-nonfree
-
- #echo "Baixando o arquivo para o sistema"
- #wget -c https://us.download.nvidia.com/XFree86/Linux-x86_64/304.137/NVIDIA-Linux-x86_64-304.137.run
-
- #echo "Geralmente, é necessário executar o arquivo (NVIDIA-Linux-x86_64-304.137.run) saindo do ambiente gráfico"
-
- #echo "Caso isso aconteça, faça no terminal : systemctl set-default multi-user.target"
- #echo "Reinicie o pc, vá para o diretório e execute o arquivo: ./NVIDIA-Linux-x86_64-304.137.run"
- #echo "Volte para a interface gráfica com o comando: systemctl set-default graphical.target"
- #echo "Reinicie o sistema: systemctl reboot"
-
-# FIM DE installing_nvidia_legacy_304()
-#}
-
-# NVIDIA #173
-
-#installing_nvidia_legacy_173(){
-# echo "Informações: https://www.nvidia.com/en-us/drivers/unix/legacy-gpu/"
-# echo "Instalando Driver NVIDIA para placas mais antigas"
-# echo "Instalando linux-headers"
-# apt install linux-headers-amd64
-
-# echo "Instalando as dependências para a placa de vídeo"
-# apt install dirmngr ca-certificates software-properties-common apt-transport-https dkms curl
-
-# echo "Importando a chave GPG"
-# curl -fSsL https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/3bf863cc.pub | sudo gpg --dearmor | sudo tee /usr/share/keyrings/nvidia-drivers.gpg > /dev/null 2>&1
-
-# echo "Adicionando o repositório Nvidia CUDA"
-# echo 'deb [signed-by=/usr/share/keyrings/nvidia-drivers.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/ /' | sudo tee /etc/apt/sources.list.d/nvidia-drivers.list
-
-# echo "Atualizando a lista de repositórios do sistema"
-# apt update
-
-# echo "Instalando nvidia-detect"
-# apt install nvidia-detect
-# echo "Instalando nvidia-legacy-check"
-# apt install nvidia-legacy-check
-# echo "verifique sua placa com o comando nvidia-detect ou lspci -nn | egrep -i {3d|display|vga}"
-# echo "Verificando a placa de video instalada pelo nvidia-detect"
-# nvidia-detect
-# echo "Verificando a placa de video instalada pelo comando no terminal lspci"
-# lspci -nn | egrep -i {3d|display|vga}
-# echo "Verificando a placa de video instalada pelo nvidia-legacy-check"
-# nvidia-legacy-ckeck
-
-# echo "Adicionando firmware-misc-nonfree"
-# apt install firmware-misc-nonfree
-
-# echo "Baixando o arquivo para o sistema"
-# wget -c https://us.download.nvidia.com/XFree86/Linux-x86_64/173.14.39/NVIDIA-Linux-x86_64-173.14.39-pkg2.run
-
-# echo "Geralmente, é necessário executar o arquivo (NVIDIA-Linux-x86_64-173.14.39-pkg2.run) saindo do ambiente gráfico"
-
-# echo "Caso isso aconteça, faça no terminal : systemctl set-default multi-user.target"
-# echo "Reinicie o pc, vá para o diretório e execute o arquivo: ./NVIDIA-Linux-x86_64-173.14.39-pkg2.run"
-# echo "Volte para a interface gráfica com o comando: systemctl set-default graphical.target"
-# echo "Reinicie o sistema: systemctl reboot"
-
-# FIM DE installing_nvidia_legacy_173()
-#}
-
-# NVIDIA #96
-
-#installing_nvidia_legacy_96(){
-# echo "Informações: https://www.nvidia.com/en-us/drivers/unix/legacy-gpu/"
-# echo "Instalando Driver NVIDIA para placas mais antigas"
-# echo "Instalando linux-headers"
-# apt install linux-headers-amd64
-
-# echo "Instalando as dependências para a placa de vídeo"
-# apt install dirmngr ca-certificates software-properties-common apt-transport-https dkms curl
-
-# echo "Importando a chave GPG"
-# curl -fSsL https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/3bf863cc.pub | sudo gpg --dearmor | sudo tee /usr/share/keyrings/nvidia-drivers.gpg > /dev/null 2>&1
-
-# echo "Adicionando o repositório Nvidia CUDA"
-# echo 'deb [signed-by=/usr/share/keyrings/nvidia-drivers.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/ /' | sudo tee /etc/apt/sources.list.d/nvidia-drivers.list
-
-# echo "Atualizando a lista de repositórios do sistema"
-# apt update
-
-# echo "Instalando nvidia-detect"
-# apt install nvidia-detect
-# echo "Instalando nvidia-legacy-check"
-# apt install nvidia-legacy-check
-# echo "verifique sua placa com o comando nvidia-detect ou lspci -nn | egrep -i {3d|display|vga}"
-# echo "Verificando a placa de video instalada pelo nvidia-detect"
-# nvidia-detect
-# echo "Verificando a placa de video instalada pelo comando no terminal lspci"
-# lspci -nn | egrep -i {3d|display|vga}
-# echo "Verificando a placa de video instalada pelo nvidia-legacy-check"
-# nvidia-legacy-ckeck
-
-# echo "Adicionando firmware-misc-nonfree"
-# apt install firmware-misc-nonfree
-
-# echo "Baixando o arquivo para o sistema"
-# wget -c https://us.download.nvidia.com/XFree86/Linux-x86_64/96.43.23/NVIDIA-Linux-x86_64-96.43.23-pkg2.run
-
-# echo "Geralmente, é necessário executar o arquivo (NVIDIA-Linux-x86_64-96.43.23-pkg2.run) saindo do ambiente gráfico"
-
-# echo "Caso isso aconteça, faça no terminal : systemctl set-default multi-user.target"
-# echo "Reinicie o pc, vá para o diretório e execute o arquivo: ./NVIDIA-Linux-x86_64-96.43.23-pkg2.run"
-# echo "Volte para a interface gráfica com o comando: systemctl set-default graphical.target"
-# echo "Reinicie o sistema: systemctl reboot"
-
-# FIM DE installing_nvidia_legacy_96()
-#}
-
-# NVIDIA #71
-
-#installing_nvidia_legacy_71(){
-# echo "Informações: https://www.nvidia.com/en-us/drivers/unix/legacy-gpu/"
-# echo "Instalando Driver NVIDIA para placas mais antigas"
-# echo "Instalando linux-headers"
-# apt install linux-headers-amd64
-
-# echo "Instalando as dependências para a placa de vídeo"
-# apt install dirmngr ca-certificates software-properties-common apt-transport-https dkms curl
-
-# echo "Importando a chave GPG"
-# curl -fSsL https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/3bf863cc.pub | sudo gpg --dearmor | sudo tee /usr/share/keyrings/nvidia-drivers.gpg > /dev/null 2>&1
-
-# echo "Adicionando o repositório Nvidia CUDA"
-# echo 'deb [signed-by=/usr/share/keyrings/nvidia-drivers.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/ /' | sudo tee /etc/apt/sources.list.d/nvidia-drivers.list
-
-# echo "Atualizando a lista de repositórios do sistema"
-# apt update
-
-# echo "Instalando nvidia-detect"
-# apt install nvidia-detect
-# echo "Instalando nvidia-legacy-check"
-# apt install nvidia-legacy-check
-# echo "verifique sua placa com o comando nvidia-detect ou lspci -nn | egrep -i {3d|display|vga}"
-# echo "Verificando a placa de video instalada pelo nvidia-detect"
-# nvidia-detect
-# echo "Verificando a placa de video instalada pelo comando no terminal lspci"
-# lspci -nn | egrep -i {3d|display|vga}
-# echo "Verificando a placa de video instalada pelo nvidia-legacy-check"
-# nvidia-legacy-ckeck
-
-# echo "Adicionando firmware-misc-nonfree"
-# apt install firmware-misc-nonfree
-
-# echo "Baixando o arquivo para o sistema"
-# wget -c https://us.download.nvidia.com/XFree86/Linux-x86_64/71.86.15/NVIDIA-Linux-x86_64-71.86.15-pkg2.run
-
-# echo "Geralmente, é necessário executar o arquivo (NVIDIA-Linux-x86_64-71.86.15-pkg2.run) saindo do ambiente gráfico"
-
-# echo "Caso isso aconteça, faça no terminal : systemctl set-default multi-user.target"
-# echo "Reinicie o pc, vá para o diretório e execute o arquivo: ./NVIDIA-Linux-x86_64-71.86.15-pkg2.run"
-# echo "Volte para a interface gráfica com o comando: systemctl set-default graphical.target"
-# echo "Reinicie o sistema: systemctl reboot"
-
-# FIM DE installing_nvidia_legacy_71()
-#}
 
 updating_system(){
  
@@ -2042,6 +1717,8 @@ power_off_system(){
 
 # FIM DE power_off_system()
 }
+####################################################################################
+# MENU PRINCIPAL
 
 show_menu(){
  echo "Escolha a opção pela numeração abaixo: "
@@ -2054,7 +1731,7 @@ show_menu(){
  echo "7  - Corrigindo o Debian Reference para o original e traduzido para o português do Brasil"
  echo "8  - Instala Gnome-tweaks e Gnome-Extension_Manager"
  echo "9  - Menu para a instalação do Firmware da Intel ou AMD "
- echo "10  - Menu para a escolha do firewall"
+ echo "10 - Menu para a escolha do firewall"
  echo "11 - Menu de integração do Flatpak"
  echo "12 - Instala o YAD e o Tasksel"
  echo "13 - Menu para a escolha de outros Desktops"
@@ -2266,6 +1943,7 @@ main() {
 
 # FIM DE main()
 }
+####################################################################################
 
 show_subMenu_firewall(){
  echo "Escolha a opção pela numeração abaixo: "
@@ -2300,6 +1978,7 @@ sub_firewall(){
  
 # FIM DE sub_firewall()
 }
+####################################################################################
 
 show_subMenu_graphicals(){
  echo "Escolha a opção pela numeração abaixo: "
@@ -2369,6 +2048,7 @@ sub_graphicals(){
  
 # FIM DE sub_graphicals()
 }
+####################################################################################
 
 show_subMenu_comunication(){
  echo "Escolha a opção pela numeração abaixo: "
@@ -2418,6 +2098,7 @@ sub_comunication(){
  
 # FIM DE sub_comunication()
 }
+####################################################################################
 
 show_subMenu_browsers(){ # (Chrome, Opera, Vivaldi, Edge, Chromium)
  echo "Escolha a opção pela numeração abaixo: "
@@ -2487,6 +2168,7 @@ sub_browsers(){
  
 # FIM DE sub_browsers()
 }
+####################################################################################
 
 # Players
 
@@ -2538,6 +2220,7 @@ sub_players(){
  
 # FIM DE sub_players()
 }
+####################################################################################
 
 # DESKTOPS
 show_subMenu_desktops(){
@@ -2598,7 +2281,7 @@ sub_desktops(){
  
 # FIM DE sub_desktops()
 }
-
+####################################################################################
 # JAVA && DEVELOPERS
 
 show_subMenu_developers(){
@@ -2624,8 +2307,7 @@ show_subMenu_developers(){
  echo "19 - Instala o DBeaver Community (Flatpak)"
  echo "20 - Menu para IDEs Java"
  echo "21 - Menu para IDEs Python"
- echo "22 - Instala Ollama + Open Web-UI (Docker)"
- echo "23 - Instala Ollama + Open Web-UI (Podman)"
+ echo "22 - Menu Ollama + Open Web-UI via (Docker/Podman)"
  echo "q  - Volta para o menu principal" 
 
 # FIM DE show_subMenu_developers()
@@ -2721,12 +2403,9 @@ sub_developers(){
    sub_IDE_python
   ;;
   22)
-    installing_ollama_openwebui_docker
-    check_if_last_command_was_done
-  ;;
-  23)
-    installing_ollama_openwebui_podman
-    check_if_last_command_was_done
+   echo "Ollama + Open WebUI via (Docker/Podman)"
+    sub_ollama
+
   ;;
   q|Q)
    break
@@ -2739,6 +2418,7 @@ sub_developers(){
  
 # FIM DE sub_developers()
 }
+####################################################################################
 
 # VIRTUAL MACHINES
 show_subMenu_vmachines(){
@@ -2774,6 +2454,8 @@ sub_vmachines(){
  
 # FIM DE sub_vmachines()
 }
+
+####################################################################################
 
 show_subMenu_games(){
  echo "Escolha a opção pela numeração abaixo: "
@@ -2853,6 +2535,8 @@ sub_games(){
  
 # FIM DE sub_games()
 }
+
+####################################################################################
 # CROSSOVERS
 
 show_subMenu_crossovers(){
@@ -2893,7 +2577,7 @@ sub_crossovers(){
 # FIM DE sub_crossovers()
 }
 
-
+####################################################################################
 # CLOUD STORAGE
 
 show_subMenu_cloud(){
@@ -2933,7 +2617,42 @@ sub_cloud(){
  
 # FIM DE sub_cloud()
 }
+####################################################################################
+# OLLAMA
+show_subMenu_ollama(){
+ echo "Escolha a opção pela numeração abaixo: "
+ echo "1  - Instala o Ollama + Open WebUI via Docker"
+ echo "2  - Instala o Ollama + Open WebUI via Podman"
+ echo "q  - Volta para o menu principal"
 
+# FIM DE show_subMenu_ollama()
+}
+
+sub_ollama(){
+ while true; do
+  show_subMenu_ollama
+  read -p "Escolha uma opção: " fire
+  case $fire in
+  1)
+   installing_ollama_openwebui_docker
+   check_if_last_command_was_done
+  ;;
+  2)
+   installing_ollama_openwebui_podman
+   check_if_last_command_was_done
+  ;;
+  q|Q)
+   break
+  ;;
+  *)
+   echo "O valor escolhido deve estar entre os valores apresentados nas opções."
+  ;;
+  esac
+ done
+
+# FIM DE sub_ollama()
+}
+####################################################################################
 # IDEs JAVA
 
 show_subMenu_IDE_java(){
@@ -2979,7 +2698,7 @@ sub_IDE_java(){
  
 # FIM DE sub_IDE_java()
 }
-
+####################################################################################
 # PYTHON
 
 show_subMenu_IDE_python(){
@@ -3025,7 +2744,7 @@ sub_IDE_python(){
  
 # FIM DE sub_IDE_python()
 }
-
+####################################################################################
 # FIRMWARE
 
 show_subMenu_firmware(){
@@ -3061,11 +2780,11 @@ sub_cpu_firmware(){
  
 # FIM DE sub_cpu_firmware()
 }
-
+####################################################################################
 show_subMenu_nvidia(){
  echo "Escolha a opção pela numeração abaixo: "
  echo "1  - Verifica se há identificação do driver"
- echo "2  - Instala o driver mais recente para as diversas placas"
+ echo "2  - Instala o repositório do driver mais recente para as diversas placas"
  #echo "3  - Instala o driver para placas antigas ( a partir de 470.x.x)"
  #echo "4  - Instala o driver para placas antigas ( a partir de 390.x.x)"
  #echo "5  - Instala o driver para placas antigas ( a partir de 340.x.x)"
@@ -3091,34 +2810,6 @@ sub_nvidia(){
    installing_nvidia
    check_if_last_command_was_done
   ;;
-  #3)
-   # installing_nvidia_legacy_470
-   # check_if_last_command_was_done
-  #;;
-  #4)
-   # installing_nvidia_legacy_390
-   # check_if_last_command_was_done
-  #;;
-  #5)
-   # installing_nvidia_legacy_340
-   # check_if_last_command_was_done
-  #;;
-  #6)
-   # installing_nvidia_legacy_304
-   # check_if_last_command_was_done
-  #;;
-  #7)
-   # installing_nvidia_legacy_173
-   # check_if_last_command_was_done
-  #;;
-  #8)
-   # installing_nvidia_legacy_96
-   # check_if_last_command_was_done
-  #;;
-  #9)
-   # installing_nvidia_legacy_71
-   # check_if_last_command_was_done
-  #;;
   q|Q)
    break
   ;;
@@ -3130,6 +2821,7 @@ sub_nvidia(){
 
 # FIM DE sub_nvidia()
 }
+####################################################################################
 show_subMenu_flatpak(){
  echo "Escolha a opção pela numeração abaixo: "
  echo "1  - Instala o flatpak integrando ao Gnome-Software"
@@ -3168,6 +2860,8 @@ sub_flatpak(){
  
 # FIM DE sub_flatpak()
 }
+
+####################################################################################
 show_subMenu_sourcesList(){
  echo "Escolha a opção pela numeração abaixo: "
  echo "1  - Modifica apenas o arquivo sources.list"
@@ -3201,13 +2895,16 @@ sub_sourcesList(){
  
 # FIM DE sub_sourcesList()
 }
+####################################################################################
+
 show_subMenu_manyPackages(){
  echo "Escolha a opção desejada abaixo: "
  echo "(i ou I) - Instala vários pacotes selecionados de uma vez"
  echo "(q ou Q) - Volta para o menu principal" 
 
-# FIM DE show_subMenu_flatpak()
+# FIM DE show_subMenu_manyPackages()
 }
+
 
 sub_manyPackages(){
  while true; do
@@ -3227,9 +2924,10 @@ sub_manyPackages(){
   esac
  done
  
-# FIM DE sub_flatpak()
+# FIM DE sub_manyPackages()
 }
 
+####################################################################################
 show_packagesToInstallMessage(){
 echo "Estes pacotes/configuração serão instalados/feitos diretamente no seu sistema:"
 echo "                                                                              "
@@ -3292,10 +2990,9 @@ execute_everything(){
 
 # FIM DE execute_everything()
 }
-
+####################################################################################
 main
 
-# Fonte de referência: https://www.blogopcaolinux.com.br/
-# Blog Opção Linux
-# Site dos demais aplicativos.
-
+# Fonte de Referência:
+# Site dos aplicativos.
+# Site diversos e https://www.blogopcaolinux.com.br/ (Blog Opção Linux)
