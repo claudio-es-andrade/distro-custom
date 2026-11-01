@@ -766,6 +766,26 @@ installing_zen(){
 # FIM DE installing_zen()
 }
 
+installing_brave(){
+
+ echo "Preparando para instalar o repositório"
+ apt install curl
+
+ echo "Importando e copiando a chave GPG"
+ curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+
+ echo "Importando e copiando o arquivo para o local"
+ curl -fsSLo /etc/apt/sources.list.d/brave-browser-release.sources https://brave-browser-apt-release.s3.brave.com/brave-browser.sources
+
+ echo "Atualizando a lista de repositórios"
+ apt update
+
+ echo "Instalando o navegador"
+ apt install brave-browser
+
+# FIM DE installing_brave()
+}
+
 ####################################################################################
 
 installing_rust(){
@@ -1677,7 +1697,7 @@ installing_nvidia(){
  echo " ############################################################################################"
  echo " ############################################################################################"
  echo " ############################################################################################"
- echo "Com o repositório instalado e as informações da(s) placa(s) detectada(s) basta procurar a versão do Driver que mais se adequa ao seu sistema"
+ echo "Com o repositótio instalado e as informações da(s) placa(s) detectada(s) basta procurar a versão do Driver que mais se adequa ao seu sistema"
  echo "Para instalar sua placa de vídeo basta digitar"
  echo "apt install nvidia-driver ou nvidia-driver-pinning-<branch> ou apt install nvidia-driver-pinning-<version>"
 
@@ -2111,6 +2131,7 @@ show_subMenu_browsers(){ # (Chrome, Opera, Vivaldi, Edge, Chromium)
  echo "7  - Instala o Zen Browser"
  echo "8  - Instala o Mozilla Firefox"
  echo "9  - Instala o Opera GX"
+ echo "10 - Instala o Brave"
  echo "q  - Volta para o menu principal" 
 
 # FIM DE show_subMenu_browsers()
@@ -2155,6 +2176,10 @@ sub_browsers(){
   ;;
   9)
    installing_opera_gx_repo
+   check_if_last_command_was_done
+  ;;
+  10)
+   installing_brave
    check_if_last_command_was_done
   ;;
   q|Q)
@@ -2785,6 +2810,13 @@ show_subMenu_nvidia(){
  echo "Escolha a opção pela numeração abaixo: "
  echo "1  - Verifica se há identificação do driver"
  echo "2  - Instala o repositório do driver mais recente para as diversas placas"
+ #echo "3  - Instala o driver para placas antigas ( a partir de 470.x.x)"
+ #echo "4  - Instala o driver para placas antigas ( a partir de 390.x.x)"
+ #echo "5  - Instala o driver para placas antigas ( a partir de 340.x.x)"
+ #echo "6  - Instala o driver para placas antigas ( a partir de 304.x.x)"
+ #echo "7  - Instala o driver para placas antigas ( a partir de 173.14.x.x)"
+ #echo "8  - Instala o driver para placas antigas ( a partir de 96.43.x.x)"
+ #echo "9  - Instala o driver para placas antigas ( a partir de 71.86.x.x)"
  echo "q  - Volta para o menu principal" 
 
 # FIM DE show_subMenu_nvidia()
