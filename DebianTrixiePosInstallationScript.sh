@@ -2785,13 +2785,6 @@ show_subMenu_nvidia(){
  echo "Escolha a opção pela numeração abaixo: "
  echo "1  - Verifica se há identificação do driver"
  echo "2  - Instala o repositório do driver mais recente para as diversas placas"
- #echo "3  - Instala o driver para placas antigas ( a partir de 470.x.x)"
- #echo "4  - Instala o driver para placas antigas ( a partir de 390.x.x)"
- #echo "5  - Instala o driver para placas antigas ( a partir de 340.x.x)"
- #echo "6  - Instala o driver para placas antigas ( a partir de 304.x.x)"
- #echo "7  - Instala o driver para placas antigas ( a partir de 173.14.x.x)"
- #echo "8  - Instala o driver para placas antigas ( a partir de 96.43.x.x)"
- #echo "9  - Instala o driver para placas antigas ( a partir de 71.86.x.x)"
  echo "q  - Volta para o menu principal" 
 
 # FIM DE show_subMenu_nvidia()
