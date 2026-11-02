@@ -73,13 +73,13 @@ Para remover: sudo apt remove trixie-post-install
 
 A partir da versão 1.7.1, para atualizar: sudo apt update && apt upgrade trixie-post-install  
 
-PROBLEMAS:
+Versão 1.7.3:
 
-Os problemas anteriores foram corrigidos.
+Inclusão dos Navegadores Opera, Opera-GX e Brave de seus repositórios.
 
-Realizando testes.
 
-Caso haja mais situações diferentes do normal, comente, envie e-mail. 
+
+Caso haja situações diferentes do normal, comente, tire um "print screen" e envie e-mail. 
 
 </div>
 

@@ -1,13 +1,13 @@
 Package: trixie-post-install
-Version: 1.7.2
+Version: 1.7.3
 Architecture: all
 Maintainer: Claudio ES Andrade <claudioe.s.andrade@gmail.com>
 Depends: python3, python3-pyqt6
-Filename: pool/main/t/trixie-post-install/trixie-post-install_1.7.2_all.deb
-Size: 65931844
-MD5sum: 0f4a3c53506dff81a9754b1b9a929ca4
-SHA1: 51eaf5dcbcd00fed87ceb237b5d0fc5d79b54cc8
-SHA256: 60b7a51f7569e75cfb80a081a6a885096b84ee77b360232f527f54b24397c69f
+Filename: pool/main/t/trixie-post-install/trixie-post-install_1.7.3_all.deb
+Size: 65931860
+MD5sum: 628e19a93003649b8b651450ceb6aa22
+SHA1: f9cebda5bdeb56869f7de64249520067b715e324
+SHA256: 3b56d964ba6a963a47ccf968d22b2642260e7e26a06645d8d0853bcdbcf66afd
 Section: utils
 Priority: optional
 Description: Assistente de Pós-Instalação para Debian 13 Trixie
