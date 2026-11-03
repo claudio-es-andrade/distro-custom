@@ -8,7 +8,7 @@
 ---
 
 
-## OUTUBRO/19/2026
+## NOVEMBRO/03/2026
 
 
 ---
@@ -237,9 +237,9 @@ Download:
 
 ### https://iso.communitybig.org/Gnome/bigcommunity_Powerful_gnome_2026-09-10_k618.iso
 
-### https://iso.communitybig.org/Cinnamon/bigcommunity_Powerful_cinnamon_2026-09-10_k618.iso
+### https://iso.communitybig.org/Cinnamon/bigcommunity_Snowy_cinnamon_2026-11-02_k618.iso
 
-### https://iso.communitybig.org/XFCE/bigcommunity_Powerful_xfce_2026-09-10_k618.iso
+### https://iso.communitybig.org/XFCE/bigcommunity_Snowy_xfce_2026-11-02_k618.iso
 
 
 ![img](distroIcons/tigeros.png)
@@ -274,13 +274,19 @@ Cinnamon
 
 ### https://pub.linuxmint.io/stable/22.3/linuxmint-22.3-cinnamon-64bit.iso
 
+### https://mint.c3sl.ufpr.br/stable/22.3/linuxmint-22.3-cinnamon-64bit.iso
+
 XFCE
 
 ### https://mirrors.cicku.me/linuxmint/iso/stable/22.3/linuxmint-22.3-xfce-64bit.iso
 
+### https://mint.c3sl.ufpr.br/stable/22.3/linuxmint-22.3-xfce-64bit.iso
+
 MATE
 
 ### https://pub.linuxmint.io/stable/22.3/linuxmint-22.3-mate-64bit.iso
+
+### https://mint.c3sl.ufpr.br/stable/22.3/linuxmint-22.3-mate-64bit.iso
 
 ![img](distroIcons/elementary3.png)
 
@@ -345,13 +351,13 @@ Downloads:
 
 ![img](distroIcons/fedora.png)
 
-- Fedora 44.0
+- Fedora 45.0
 
 ### https://fedoraproject.org/
 
 ### https://fedoraproject.org/#editions
 
-### https://fedora.c3sl.ufpr.br/linux/releases/44/
+### https://fedora.c3sl.ufpr.br/linux/releases/45/
 
 ![img](distroIcons/icons8-ubuntu-50.png)
 
@@ -580,7 +586,7 @@ Sistema feito para ser prático, eficiente, moderno e também divertido. Utiliza
 
 ### https://omarchy.org/
 
-### https://iso.omarchy.org/omarchy-4.0.5.iso
+### https://iso.omarchy.org/omarchy-4.0.6.iso
 
 YouTube do Criador:
 
@@ -827,7 +833,9 @@ Script on line:
 
 ### https://aerynos.com/
 
-### https://cdn.aerynos.dev/isos/AerynOS-2026.08-GNOME-live-x86_64.iso
+### https://cdn.aerynos.dev/isos/aerynOS-2026.11-GNOME-live-x86_64.iso
+
+
 
 ![img](distroIcons/icons8-ubuntu-50.png)
 
@@ -950,14 +958,6 @@ ___
 
 
 ## Maiores Informações:
-
-- Debian Pos Install Script (Bookworm):
-
-### https://github.com/claudio-es-andrade/distro-custom/blob/main/DebianBookwormPosInstallationScript.sh
-
-- Debian Pos Install Script (Trixie):
-
-### https://github.com/claudio-es-andrade/distro-custom/blob/main/DebianTrixiePosInstallationScript.sh
 
 - Cubic:
 
