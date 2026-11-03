@@ -71,7 +71,35 @@ Comando no Terminal: sudo apt install ./trixie-post-install-1.7.1_all.deb
 
 Para remover: sudo apt remove trixie-post-install
 
-A partir da versão 1.7.1, para atualizar: sudo apt update && apt upgrade trixie-post-install  
+A partir da versão 1.7.1, para atualizar: sudo apt update && apt upgrade trixie-post-install
+
+
+
+---
+
+
+
+Versão 1.7.4:
+
+Inclusão da Aba de Ferramentas de Inteligência Artificial:
+
+Ollama + Open WebUI (Docker/Podman)
+
+AnythingLLM (RAG / Gestão de documentos)
+
+SearXNG (Motor de busca privado para integração Web em LLMs)
+
+WhisperWebUI (Transcrição e tradução local de áudio/vídeo)
+
+ComfyUI (Geração avançada e modular de imagens via Stable Diffusion)
+
+AUTOMATIC1111 WebUI (Interface clássica para geração de imagens via Stable Diffusion)
+
+
+
+---
+
+
 
 Versão 1.7.3:
 

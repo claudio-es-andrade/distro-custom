@@ -1273,6 +1273,10 @@ installing_conda(){
 # FIM DE installing_conda()
 }
 
+####################################################################################
+
+# INTELIGÊNCIA ARTIFICIAL
+
 installing_ollama_openwebui_docker(){
  echo "Instalando Ollama e Open Web-UI usando Docker..."
  
@@ -1349,6 +1353,78 @@ installing_ollama_openwebui_podman(){
  echo "Acesse o Open Web-UI no navegador através de: http://localhost:3000"
 
 # FIM DE installing_ollama_openwebui_podman()
+}
+
+installing_anythingllm(){
+
+ echo "Instalando AnythingLLM (RAG/Documentos) via Docker..."
+ docker run -d \
+   --name anythingllm \
+   --restart always \
+   -p 3001:3001 \
+   -v anythingllm:/app/server/storage \
+   -e STORAGE_DIR=/app/server/storage \
+   mintplexlabs/anythingllm:latest
+ echo "AnythingLLM rodando na porta 3001! (http://localhost:3001)"
+
+ # FIM DE installing_anythingllm()
+}
+
+installing_searxng(){
+
+ echo "Instalando SearXNG (Busca Privada) via Docker..."
+ docker run -d \
+   --name searxng \
+   --restart always \
+   -p 8080:8080 \
+   -e SEARXNG_BASE_URL=http://localhost:8080/ \
+   searxng/searxng:latest
+ echo "SearXNG rodando na porta 8080! (http://localhost:8080)"
+
+  # FIM DE installing_searxng()
+}
+
+installing_whisper_webui(){
+
+ echo "Instalando Faster-Whisper WebUI (Transcrição de Áudio) via Docker..."
+ docker run -d \
+   --name whisper-webui \
+   --restart always \
+   -p 7860:7860 \
+   ghcr.io/jhj0517/whisper-webui:latest
+ echo "Whisper WebUI rodando na porta 7860! (http://localhost:7860)"
+
+  # FIM DE installing_whisper_webui()
+}
+
+installing_comfyui(){
+
+ echo "Instalando ComfyUI (Geração de Imagens) via Docker..."
+ docker run -d \
+   --name comfyui \
+   --gpus all \
+   --restart always \
+   -p 8188:8188 \
+   -v comfyui_data:/home/user/ComfyUI \
+   yanwk/comfyui-boot:latest
+ echo "ComfyUI rodando na porta 8188! (http://localhost:8188)"
+
+ # FIM DE installing_comfyui()
+}
+
+installing_sd_webui(){
+
+echo "Instalando AUTOMATIC1111 Stable Diffusion WebUI via Docker..."
+ docker run -d \
+   --name sd-webui \
+   --gpus all \
+   --restart always \
+   -p 7861:7860 \
+   -v sd_data:/data \
+   universalpt/stable-diffusion-webui:latest
+ echo "Stable Diffusion WebUI rodando na porta 7861! (http://localhost:7861)"
+
+  # FIM DE installing_sd_webui()
 }
 
 ####################################################################################
@@ -2332,7 +2408,7 @@ show_subMenu_developers(){
  echo "19 - Instala o DBeaver Community (Flatpak)"
  echo "20 - Menu para IDEs Java"
  echo "21 - Menu para IDEs Python"
- echo "22 - Menu Ollama + Open Web-UI via (Docker/Podman)"
+ echo "22 - Menu para ferramentas com Inteligência Artificial"
  echo "q  - Volta para o menu principal" 
 
 # FIM DE show_subMenu_developers()
@@ -2428,8 +2504,8 @@ sub_developers(){
    sub_IDE_python
   ;;
   22)
-   echo "Ollama + Open WebUI via (Docker/Podman)"
-    sub_ollama
+   echo "Ferramentas com Inteligência Artifical"
+    sub_ai
 
   ;;
   q|Q)
@@ -2643,21 +2719,25 @@ sub_cloud(){
 # FIM DE sub_cloud()
 }
 ####################################################################################
-# OLLAMA
-show_subMenu_ollama(){
- echo "Escolha a opção pela numeração abaixo: "
- echo "1  - Instala o Ollama + Open WebUI via Docker"
- echo "2  - Instala o Ollama + Open WebUI via Podman"
- echo "q  - Volta para o menu principal"
-
-# FIM DE show_subMenu_ollama()
+show_subMenu_ai(){
+ echo "----------------------------------------------------"
+ echo "          Ferramentas de Inteligência Artificial     "
+ echo "----------------------------------------------------"
+ echo "1 - Ollama + Open WebUI (via Docker)"
+ echo "2 - Ollama + Open WebUI (via Podman)"
+ echo "3 - AnythingLLM (Conversar com Documentos/RAG)"
+ echo "4 - SearXNG (Busca Privada para LLMs)"
+ echo "5 - Faster-Whisper (Transcrição de Áudio Local)"
+ echo "6 - ComfyUI (Geração de Imagens - Stable Diffusion)"
+ echo "7 - AUTOMATIC1111 (Stable Diffusion WebUI)"
+ echo "q - Volta para o menu principal"
 }
 
-sub_ollama(){
+sub_ai(){
  while true; do
-  show_subMenu_ollama
-  read -p "Escolha uma opção: " fire
-  case $fire in
+  show_subMenu_ai
+  read -p "Escolha uma opção: " ai_choice
+  case $ai_choice in
   1)
    installing_ollama_openwebui_docker
    check_if_last_command_was_done
@@ -2666,17 +2746,36 @@ sub_ollama(){
    installing_ollama_openwebui_podman
    check_if_last_command_was_done
   ;;
+  3)
+   installing_anythingllm
+   check_if_last_command_was_done
+  ;;
+  4)
+   installing_searxng
+   check_if_last_command_was_done
+  ;;
+  5)
+   installing_whisper_webui
+   check_if_last_command_was_done
+  ;;
+  6)
+   installing_comfyui
+   check_if_last_command_was_done
+  ;;
+  7)
+   installing_sd_webui
+   check_if_last_command_was_done
+  ;;
   q|Q)
    break
   ;;
   *)
-   echo "O valor escolhido deve estar entre os valores apresentados nas opções."
+   echo "Opção inválida!"
   ;;
   esac
  done
-
-# FIM DE sub_ollama()
 }
+
 ####################################################################################
 # IDEs JAVA
 
