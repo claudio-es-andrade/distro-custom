@@ -73,6 +73,12 @@ Para remover: sudo apt remove trixie-post-install
 
 A partir da versão 1.7.1, para atualizar: sudo apt update && apt upgrade trixie-post-install
 
+---
+
+Versão 1.7.5:
+
+Adição da assinatura GPG no repositório.
+
 
 
 ---
