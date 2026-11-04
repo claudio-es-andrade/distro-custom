@@ -67,7 +67,19 @@ São vários pacotes e configurações para deixar seu Debian ainda mais simples
 
 Curta!!
 
-Comando no Terminal: sudo apt install ./trixie-post-install-1.7.1_all.deb
+Instalação do pacote trixie-post-install:
+
+1) Adicionando a chave GPG:
+curl -sSL https://claudio-es-andrade.github.io/distro-custom/pgp-key.asc | gpg --dearmor | sudo tee /usr/share/keyrings/trixie-post-install-keyring.gpg > /dev/null
+
+2) Adicionando o repositório local:
+echo "deb [arch=amd64 signed-by=/usr/share/keyrings/trixie-post-install-keyring.gpg] https://claudio-es-andrade.github.io/distro-custom trixie main" | sudo tee /etc/apt/sources.list.d/trixie-custom.list
+
+3) Atualizando a lista de repositórios:
+sudo apt update
+
+4) Instalando a aplicação:
+sudo apt install trixie-post-install
 
 Para remover: sudo apt remove trixie-post-install
 
