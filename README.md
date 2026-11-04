@@ -75,6 +75,12 @@ A partir da versão 1.7.1, para atualizar: sudo apt update && apt upgrade trixie
 
 ---
 
+Versão 1.7.6:
+
+Corrigindo erro de duplicidade para a chave de GPG.
+
+---
+
 Versão 1.7.5:
 
 Adição da assinatura GPG no repositório.
