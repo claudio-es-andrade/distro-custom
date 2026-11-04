@@ -1,0 +1,43 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA512
+
+Architectures: amd64
+Codename: trixie
+Components: main
+Date: Wed, 04 Nov 2026 18:29:04 +0000
+Description: Repositorio pessoal para Trixie Post Install
+Label: Trixie Custom
+Origin: Claudio Custom Distro
+Suite: trixie
+MD5Sum:
+ 7f60657bf42e9469ec07fec2e0070414              216 Release
+ ab6235bfa9cf03733b98a4799e9843f8              614 main/binary-amd64/Packages
+ 9e2470cf9fce37ffa8fe7e1c8e2d9d21              452 main/binary-amd64/Packages.gz
+SHA1:
+ 4dc6fce536b284b2fb2b1dddc2413e1cc8d08480              216 Release
+ 95aa84525912112e4712d4da0d37692130f09666              614 main/binary-amd64/Packages
+ c26e8544d81bc231c06da24de89a1abe2f2533aa              452 main/binary-amd64/Packages.gz
+SHA256:
+ eb5b1c86760f37bb6318d56870922bbda3d442a5a62ca9d80d73b8547afe15e2              216 Release
+ 633df8440a290f0c9bd6486c5ab381c42d92769f057b605b1f47384d28979170              614 main/binary-amd64/Packages
+ 8b61b82c6a51f37c46d673736c7da58e2061a3e2ee4d18c1b77ac537d5aacd8f              452 main/binary-amd64/Packages.gz
+SHA512:
+ d009daf2d78974aba0325e5375bf2452ab561cdbfd5903705e7e7d675b64191cf1180be2710804ea42945730ba298fb98a20d6d16e70f01789f8785b9982de65              216 Release
+ 75ed2f43c872fedbd98678ee96d087b2537d53400bc280a6bb312e500aafcbdf9617c22282b877d883712fe5c8ed231955624a8b84019b9ace0587a954ac9d0c              614 main/binary-amd64/Packages
+ bb95bee42485ef573a52e18fcd0e999869e61b314faaad846e03a8e5ec84bb843688284f50454a195efe1b7a899b432e8c9b5c051d67b0de15024201984883d3              452 main/binary-amd64/Packages.gz
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCgAdFiEEI2kiBFOa1SbHE4aQrcNBTfVQYNkFAmrreXAACgkQrcNBTfVQ
+YNnLEA/9F9L8kBBofzJykYgmyu67UfRWatH4YApjhIv1TToS8qmsNQLX1bsSNaWG
+wswOVoopel7k58TmPMG6u/M1xrHzWU1pLf1utFhEL5/eBUluMmC/JZA938UZiE7O
+mMMMvnyqjsz2mfDAXDvoAmsmlTofLSAdfGNnmgS1ZyWij13dS51OA1bnnig5tfOk
+aR9CjkYiabZEEN1ShezjeskiqyDXBX+bv6yfl+Q+QXOg5CDDh0W6I5vak9eGwh79
+St1oV22PJdOaSdNaF1tFW7VfwtI3Kn+HUan0J7vAv2ys2DJRapbVkstAMY09nX4z
+idFrKJmsMs6+2DH7TELFUrWE41c+OmSUfeXrbmbb5PB7N6jwG3DYW70Tuykc3VN7
+UpmpIykmYRKujBUv/WlXVkOsYuroyXUl12d2gJC3Wph4r7KsUTAUgAJB69liZyF3
+8M2LUmUJih/xPNAf5EpD7ZE5ugeqMvZvwo9ULPUAhldA4SeSECc1GlpVW12M3b9W
+N0OMo+1uszWtokzcp9Kx97QW+cd5l9tgJiO56ceSVYPtP0CJ6OciDfq8Yh7Asx5R
+gzgPMJ0742fKMF0TrXuxQ4ryP/GBXq6v+oNBq6FkJmDko8F2NFPpgikW6edWADT3
+0koQ5qFF82xMJLOZBFpZYh2GYChqF50oth6Owv2vfVFq9dKS5Zg=
+=7u/X
+-----END PGP SIGNATURE-----
