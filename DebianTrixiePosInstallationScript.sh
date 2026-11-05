@@ -305,6 +305,26 @@ installing_mate(){
 
 # FIM DE installing_mate()
 }
+
+####################################################################################
+# AppImages
+installing_appimages(){
+
+ echo "Verificando se as bibliotecas estão instaladas, caso contrário, instala"
+ apt install fuse3 libfuse3-4
+ 
+ echo "Realizando o download e instalando o aplicativo appImage Launcher"
+ wget -c https://github.com/TheAssassin/AppImageLauncher/releases/download/v3.0.0-beta-3/appimagelauncher_3.0.0-beta-2-gha287.96cb937_amd64.deb
+ 
+ apt install -y ./appimagelauncher_3.0.0-beta-2-gha287.96cb937_amd64.deb
+ 
+ echo "O aplicativo appImage Launcher fará a integração do arquivo com o Sistema"
+ echo "Ao baixar um aplicativo neste formato, verifique a permissão de execução do usuário"
+ echo "Abra o appImage Launcher. Ele o auxiliará na criação de uma entrada do aplicativo no Desktop"
+
+# FIM DE installing_appimages()
+}
+
 ####################################################################################
 installing_flatpak_gnome(){
  echo "Habilitando pacotes FLATPAK do Flathub ao sistema"
@@ -1356,7 +1376,6 @@ installing_ollama_openwebui_podman(){
 }
 
 installing_anythingllm(){
-
  echo "Instalando AnythingLLM (RAG/Documentos) via Docker..."
  docker run -d \
    --name anythingllm \
@@ -1366,12 +1385,9 @@ installing_anythingllm(){
    -e STORAGE_DIR=/app/server/storage \
    mintplexlabs/anythingllm:latest
  echo "AnythingLLM rodando na porta 3001! (http://localhost:3001)"
-
- # FIM DE installing_anythingllm()
 }
 
 installing_searxng(){
-
  echo "Instalando SearXNG (Busca Privada) via Docker..."
  docker run -d \
    --name searxng \
@@ -1380,12 +1396,9 @@ installing_searxng(){
    -e SEARXNG_BASE_URL=http://localhost:8080/ \
    searxng/searxng:latest
  echo "SearXNG rodando na porta 8080! (http://localhost:8080)"
-
-  # FIM DE installing_searxng()
 }
 
 installing_whisper_webui(){
-
  echo "Instalando Faster-Whisper WebUI (Transcrição de Áudio) via Docker..."
  docker run -d \
    --name whisper-webui \
@@ -1393,12 +1406,9 @@ installing_whisper_webui(){
    -p 7860:7860 \
    ghcr.io/jhj0517/whisper-webui:latest
  echo "Whisper WebUI rodando na porta 7860! (http://localhost:7860)"
-
-  # FIM DE installing_whisper_webui()
 }
 
 installing_comfyui(){
-
  echo "Instalando ComfyUI (Geração de Imagens) via Docker..."
  docker run -d \
    --name comfyui \
@@ -1408,13 +1418,10 @@ installing_comfyui(){
    -v comfyui_data:/home/user/ComfyUI \
    yanwk/comfyui-boot:latest
  echo "ComfyUI rodando na porta 8188! (http://localhost:8188)"
-
- # FIM DE installing_comfyui()
 }
 
 installing_sd_webui(){
-
-echo "Instalando AUTOMATIC1111 Stable Diffusion WebUI via Docker..."
+ echo "Instalando AUTOMATIC1111 Stable Diffusion WebUI via Docker..."
  docker run -d \
    --name sd-webui \
    --gpus all \
@@ -1423,8 +1430,6 @@ echo "Instalando AUTOMATIC1111 Stable Diffusion WebUI via Docker..."
    -v sd_data:/data \
    universalpt/stable-diffusion-webui:latest
  echo "Stable Diffusion WebUI rodando na porta 7861! (http://localhost:7861)"
-
-  # FIM DE installing_sd_webui()
 }
 
 ####################################################################################
@@ -1828,27 +1833,28 @@ show_menu(){
  echo "8  - Instala Gnome-tweaks e Gnome-Extension_Manager"
  echo "9  - Menu para a instalação do Firmware da Intel ou AMD "
  echo "10 - Menu para a escolha do firewall"
- echo "11 - Menu de integração do Flatpak"
- echo "12 - Instala o YAD e o Tasksel"
- echo "13 - Menu para a escolha de outros Desktops"
- echo "14 - Menu para a escolha do web-browser"
- echo "15 - Instala Codecs Multimedia"
- echo "16 - Instala Extratores/Compactadores"
- echo "17 - Instala Fontes"
- echo "18 - Instala o particionador Gparted"
- echo "19 - Instala os facilitadores de instalação Gdebi e Synaptic"
- echo "20 - Menu para a escolha do players multimidia "
- echo "21 - Menu para a escolha dos editores de foto e imagens e criação de objetos"
- echo "22 - Menu para a escolha dos aplicativos para comunicação "
- echo "23 - Menu para a escolha de Linguagens e IDEs"
- echo "24 - Menu para a escolha das Máquinas Virtuais "
- echo "25 - Menu para a escolha dos emuladores (diversos) e STEAM"
- echo "26 - Menu para a escolha dos Crossovers (Wine)"
- echo "27 - Menu para a escolha dos serviços de armazenamento e ou edição em nuvem "
- echo "28 - Modifica o arquivo sysctl.conf adicionando swappiness"
- echo "29 - Modifica o arquivo limits.conf adicionando número máximo de arquivos abertos"
- echo "30 - Otimizando a vida útil da bateria do Laptop"
- echo "31 - Menu para drivers Nvidia"
+ echo "11 - Prepara o sistema para receber arquivos do tipo AppImage"
+ echo "12 - Menu de integração do Flatpak"
+ echo "13 - Instala o YAD e o Tasksel"
+ echo "14 - Menu para a escolha de outros Desktops"
+ echo "15 - Menu para a escolha do web-browser"
+ echo "16 - Instala Codecs Multimedia"
+ echo "17 - Instala Extratores/Compactadores"
+ echo "18 - Instala Fontes"
+ echo "19 - Instala o particionador Gparted"
+ echo "20 - Instala os facilitadores de instalação Gdebi e Synaptic"
+ echo "21 - Menu para a escolha do players multimidia "
+ echo "22 - Menu para a escolha dos editores de foto e imagens e criação de objetos"
+ echo "23 - Menu para a escolha dos aplicativos para comunicação "
+ echo "24 - Menu para a escolha de Linguagens e IDEs"
+ echo "25 - Menu para a escolha das Máquinas Virtuais "
+ echo "26 - Menu para a escolha dos emuladores (diversos) e STEAM"
+ echo "27 - Menu para a escolha dos Crossovers (Wine)"
+ echo "28 - Menu para a escolha dos serviços de armazenamento e ou edição em nuvem "
+ echo "29 - Modifica o arquivo sysctl.conf adicionando swappiness"
+ echo "30 - Modifica o arquivo limits.conf adicionando número máximo de arquivos abertos"
+ echo "31 - Otimizando a vida útil da bateria do Laptop"
+ echo "32 - Menu para drivers Nvidia"
  echo "a  - Atualiza o sistema"
  echo "r  - Reinicia o sistema"
  echo "d  - Desliga o sistema"
@@ -1867,173 +1873,147 @@ main() {
   1)
    show_packagesToInstallMessage
    sub_manyPackages  
-   
   ;;
   2)
    sub_sourcesList
    echo "Digite o valor entre as opções listadas"
-   
   ;;
   3)
    changing_locale
    check_if_last_command_was_done
-   
   ;;
   4)
    echo "Modifique o script para acrescentar o nome do usuário"
    adding_user_to_sudo
    check_if_last_command_was_done
-  
   ;;
-  
   5)
    installing_nala
    check_if_last_command_was_done
-   
   ;;
   6)
    installing_extrepo
    check_if_last_command_was_done
-   
   ;;
-  
   7)
    installing_debian_reference
    check_if_last_command_was_done
-   
   ;;
-  
   8)
    installing_gnome_tweaks_and_extension_manager
    check_if_last_command_was_done
-   
   ;;
   9)
    sub_cpu_firmware
    echo "Digite o valor entre as opções listadas"     
   ;;
-  
   10)
    sub_firewall
    echo "Digite o valor entre as opções listadas"
   ;;
-  
   11)
+   installing_appimages
+   check_if_last_command_was_done
+  ;;
+  12)
    sub_flatpak
    echo "Digite o valor entre as opções listadas"
   ;;
-  
-  12)
+  13)
    installing_yad_tasksel   
    check_if_last_command_was_done
-      
-   
   ;;
- 
- 13)
+  14)
    sub_desktops
-   
   ;;
-  
- 14)
-   sub_browsers
-      
+  15)
+   sub_browsers  
   ;;
- 
- 15)
+  16)
    installing_codecs
    check_if_last_command_was_done
-   
-   
-  ;;
- 
- 16)
+  ;; 
+  17)
    installing_extractors
    check_if_last_command_was_done
-   
   ;;
- 17)
+  18)
    installing_fonts
    check_if_last_command_was_done
-   
   ;;
- 18)
+  19)
    installing_gparted
    check_if_last_command_was_done
-   
   ;;
- 19)
+  20)
    installing_gdebi_synaptic
-   check_if_last_command_was_done
-   
+   check_if_last_command_was_done  
   ;;
- 20)
+  21)
    sub_players
    echo "Digite o valor entre as opções listadas"
   ;;
- 21)
+  22)
    sub_graphicals
    echo "Digite o valor entre as opções listadas"
   ;;
- 22)
+  23)
    sub_comunication
    echo "Digite o valor entre as opções listadas"
   ;;
- 23)
+  24)
    sub_developers
    echo "Digite o valor entre as opções listadas"
   ;;
- 24)
+  25)
    sub_vmachines
    echo "Digite o valor entre as opções listadas"
   ;;
- 25)
+  26)
    sub_games
    echo "Digite o valor entre as opções listadas"
   ;;
- 26)
+  27)
    sub_crossovers
    echo "Digite o valor entre as opções listadas"
   ;; 
- 27)
+  28)
    sub_cloud
    echo "Digite o valor entre as opções listadas"
   ;;
- 28)
+  29)
    modifying_sysctl_conf
    check_if_last_command_was_done
   ;;
-  29)
+  30)
    modifying_limits_conf
    check_if_last_command_was_done
   ;;
- 30)
+  31)
    improving_laptop_battery_life
    check_if_last_command_was_done
   ;;
- 31)
-   sub_nvidia
-   
+  32)
+   sub_nvidia 
   ;;
  a|A)
    updating_system
    check_if_last_command_was_done
-   
-  ;;
+ ;;
  r|R)
   rebooting_system
   
-  ;;
+ ;;
  d|d)
   power_off_system
   
-  ;;
+ ;;
  x|X)
   exit 0
-  ;;
+ ;;
  *)
   echo "O valor escolhido deve estar entre os valores apresentados nas opções."
-  ;;
+ ;;
   esac
  done
 

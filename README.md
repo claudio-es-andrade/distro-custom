@@ -87,6 +87,12 @@ A partir da versão 1.7.1, para atualizar: sudo apt update && apt upgrade trixie
 
 ---
 
+Versao 1.7.7:
+
+Instalando bibliotecas e integrando o arquivo do tipo appImage ao sistema com a instalaçao do AppImage Launcher.
+
+---
+
 Versão 1.7.6:
 
 Corrigindo erro de duplicidade para a chave de GPG.
