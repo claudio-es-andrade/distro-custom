@@ -616,7 +616,7 @@ Sistema feito para ser prático, eficiente, moderno e também divertido. Utiliza
 
 ### https://omarchy.org/
 
-### https://iso.omarchy.org/omarchy-4.0.6.iso
+### https://iso.omarchy.org/omarchy-4.5.0-x86.iso
 
 YouTube do Criador:
 
