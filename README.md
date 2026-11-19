@@ -265,7 +265,7 @@ Download:
 
 ### https://communitybig.org/
 
-### https://iso.communitybig.org/Gnome/bigcommunity_Powerful_gnome_2026-09-10_k618.iso
+### https://iso.communitybig.org/Gnome/bigcommunity_Snowy_gnome_2026-11-03_big72.iso
 
 ### https://iso.communitybig.org/Cinnamon/bigcommunity_Snowy_cinnamon_2026-11-02_k618.iso
 
@@ -336,7 +336,7 @@ MATE
 
 ![](distroIcons/mx.png)
 
-- MX Linux 25.2
+- MX Linux 25.3
 
 ### https://mxlinux.org/
 
@@ -344,7 +344,7 @@ MATE
 
 ![](distroIcons/linux_lite.png)
 
-- Linux Lite 8.0 (Ubuntu 26.04 LTS)
+- Linux Lite 8.2 (Ubuntu 26.04 LTS)
 
 ### https://www.linuxliteos.com/
 
@@ -407,7 +407,7 @@ Downloads:
 
 ![](distroIcons/deepin.png)
 
-- Deepin Linux 25.2.0
+- Deepin Linux 25.3.0
 
 ### https://www.deepin.org/
 
@@ -794,7 +794,7 @@ Distribuição Linux baseada no Debian que utiliza a rede Tor para o usuário. O
 
 ![](distroIcons/qubes.png)
 
-- Qubes OS 4.3.0
+- Qubes OS 4.3.2
 
 <div align='justify'>
 
