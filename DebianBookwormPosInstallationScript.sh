@@ -47,10 +47,70 @@ function sources_list_modified(){
 EOF
  echo "Fim da modificação no arquivo /etc/apt/sources.list"
  echo "Recarregando a lista de repositórios e verificando pacotes a serem atualizados"
- apt update && apt upgrade
+ apt update
  echo "Arquivo sources.list modificado"
  cat /etc/apt/sources.list
 # FIM de sources_list_modified()
+}
+
+sources_list_modern(){
+ 
+ echo "Realizando a transição para o novo arquivo debian.sources (DEB822)"
+ # apt modernize-sources --assume-yes
+ 
+ #echo "O seu novo arquivo /etc/apt/sources.list.d/debian.sources tem esta estrutura:"
+ #cat /etc/apt/sources.list.d/debian.sources
+ 
+ #echo "O seu novo arquivo /etc/apt/sources.list.d/debian-backport.sources tem esta estrutura:"
+ #cat /etc/apt/sources.list.d/debian-backport.sources
+ 
+ #echo "Atualizando as chaves dos repositórios e a lista dos repositórios"
+ #apt install --reinstall debian-archive-keyring
+ #apt update
+ 
+ #echo "Caso contrário remova o comentário no final da função sources_list_modern() no início deste arquivo"
+ #echo "Os arquivos serão unificados sem alterar resultado."
+ 
+ # rm /etc/apt/sources.list.d/debian.sources
+ # rm /etc/apt/sources.list.d/debian-backport.sources
+# Descomente tudo abaixo para modernizar a sua fonte de repositórios. 
+ 
+ echo "Transformando o arquivo sources.list original em cópia"
+ mv /etc/apt/sources.list /etc/apt/sources.list_ORIGINAL
+ echo "O arquivo anterior foi transformado em cópia: sources.list_ORIGINAL"
+ 
+cat <<FIM >> /etc/apt/sources.list.d/debian.sources
+ 
+Types: deb
+URIs: http://deb.debian.org/debian/
+Suites: bookworm
+Components: main contrib non-free non-free-firmware
+Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
+
+Types: deb
+URIs: http://security.debian.org/debian-security/
+Suites: bookworm-security
+Components: main contrib non-free non-free-firmware
+Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
+
+Types: deb
+URIs: http://deb.debian.org/debian/
+Suites: bookworm-updates
+Components: main contrib non-free non-free-firmware
+Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
+
+Types: deb
+URIs: http://deb.debian.org/debian/
+Suites: bookworm-backports
+Components: main contrib non-free non-free-firmware
+Signed-By: /usr/share/keyrings/debian-archive-keyring.gpg
+ 
+FIM
+
+echo "O conteúdo do novo arquivo contendo os repositórios Debian:"
+cat /etc/apt/sources.list.d/debian.sources
+
+# FIM DE sources_list_modern()
 }
 
 changing_locale(){
@@ -194,6 +254,8 @@ installing_yad_tasksel(){
 # FIM DE installing_yad_tasksel()
 }
 
+####################################################################################
+
 installing_gnome(){
  echo "Instalando o GNOME DESKTOP"
  apt install task-gnome-desktop
@@ -243,6 +305,27 @@ installing_mate(){
 # FIM DE installing_mate()
 }
 
+####################################################################################
+# AppImages
+installing_appimages(){
+
+ echo "Verificando se as bibliotecas estão instaladas, caso contrário, instala"
+ apt install fuse3 libfuse3-4
+ 
+ echo "Realizando o download e instalando o aplicativo appImage Launcher"
+ wget -c https://github.com/TheAssassin/AppImageLauncher/releases/download/v3.0.0-beta-3/appimagelauncher_3.0.0-beta-2-gha287.96cb937_amd64.deb
+ 
+ apt install -y ./appimagelauncher_3.0.0-beta-2-gha287.96cb937_amd64.deb
+ 
+ echo "O aplicativo appImage Launcher fará a integração do arquivo com o Sistema"
+ echo "Ao baixar um aplicativo neste formato, verifique a permissão de execução do usuário"
+ echo "Abra o appImage Launcher. Ele o auxiliará na criação de uma entrada do aplicativo no Desktop"
+
+# FIM DE installing_appimages()
+}
+
+####################################################################################
+
 installing_flatpak_gnome(){
  echo "Habilitando pacotes FLATPAK do Flathub ao sistema"
 
@@ -276,6 +359,8 @@ installing_bazaar(){
  
  # FIM DE installing_bazaar()
  }
+ 
+ ####################################################################################
 
 installing_codecs(){
  echo "Instalando Codecs diversos"
@@ -442,17 +527,21 @@ installing_zoom(){
 }
 
 installing_teams(){
- echo "Importando a chave GPG"
- curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
+ #echo "Importando a chave GPG"
+ #curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add -
 
- echo "Adicionando o Repositório"
- sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/ms-teams stable main" > /etc/apt/sources.list.d/teams.list'
+ #echo "Adicionando o Repositório"
+ #sh -c 'echo "deb [arch=amd64] https://packages.microsoft.com/repos/ms-teams stable main" > /etc/apt/sources.list.d/teams.list'
 
- echo "Atualizando a lista dos repositórios"
- apt update
+ #echo "Atualizando a lista dos repositórios"
+ #apt update
 
- echo "Instalando o Microsoft Teams"
- apt install teams
+ #echo "Instalando o Microsoft Teams"
+ #apt install teams
+ 
+ echo "Instalando o Portal for Teams (Não Oficial versão para Teams - Flatpak)"
+ #apt install teams
+ flatpak install flathub com.github.IsmaelMartinez.teams_for_linux
 
 # FIM DE installing_teams()
 }
@@ -471,6 +560,8 @@ installing_gparted(){
 # FIM DE installing_gparted()
 }
 
+####################################################################################
+
 preparing_to_install_web_browsers(){
  echo "Adicionando pacotes necessários para a instalação"
  apt install software-properties-common apt-transport-https ca-certificates curl wget 
@@ -480,12 +571,69 @@ preparing_to_install_web_browsers(){
 }
 
 installing_firefox(){
+ #echo  "Adicionando o pacote extrepo para a inserção do repositório Mozilla"
+ #apt install extrepo
+ #echo "Procurando o repositório Mozilla"
+ #extrepo search mozilla
+ #echo "Habilitando o repositório no sistema"
+ #extrepo enable mozilla
+ #echo "Atualizando a lista de repositórios"
+ #apt update
+ #echo "Instalando o Mozilla Firefox mais recente"
+ #apt install firefox
+ echo "Criando um diretório para armazenar chaves do repositório APT, se ainda não existir:"
+ sudo install -d -m 0755 /etc/apt/keyrings
+
+ echo "Importando a chave de assinatura do repositório APT da Mozilla:"
+ apt install -y wget
+ wget -q https://packages.mozilla.org/apt/repo-signing-key.gpg -O- | sudo tee /etc/apt/keyrings/packages.mozilla.org.asc > /dev/null
+
+ echo "Verificando se o fingerprint é este: 35BAA0B33E9EB396F59CA838C0BA5CE6DC6315A3"
+ gpg -n -q --import --import-options import-show /etc/apt/keyrings/packages.mozilla.org.asc | awk '/pub/{getline; gsub(/^ +| +$/,""); if($0 == "35BAA0B33E9EB396F59CA838C0BA5CE6DC6315A3") print "\nO fingerprint da chave corresponde ("$0").\n"; else print "\nFalha na verificação: o fingerprint ("$0") não corresponde ao esperado.\n"}'
+
+ echo "Adicionando o repositório"
+ filename='/etc/apt/sources.list'
+ if [ -e "$filename" ]; then
+ echo "deb [signed-by=/etc/apt/keyrings/packages.mozilla.org.asc] https://packages.mozilla.org/apt mozilla main" | sudo tee -a /etc/apt/sources.list.d/mozilla.list > /dev/null
+ echo "Configure o APT para dar prioridade a pacotes do repositório da Mozilla"
+ sudo tee /etc/apt/preferences.d/mozilla > /dev/null << EOF
+Package: *
+Pin: origin packages.mozilla.org
+Pin-Priority: 1000
+EOF
+
+elif [ -e '/etc/apt/sources.list.d/debian.sources' ]; then
+ sudo tee /etc/apt/sources.list.d/mozilla.sources > /dev/null << EOF
+Types: deb
+URIs: https://packages.mozilla.org/apt
+Suites: mozilla
+Components: main
+Signed-By: /etc/apt/keyrings/packages.mozilla.org.asc
+EOF
+echo "Configure o APT para dar prioridade a pacotes do repositório da Mozilla"
+ sudo tee /etc/apt/preferences.d/mozilla > /dev/null << EOF
+Package: *
+Pin: origin packages.mozilla.org
+Pin-Priority: 1000
+EOF
+
+else
  echo  "Adicionando o pacote extrepo para a inserção do repositório Mozilla"
  apt install extrepo
  echo "Procurando o repositório Mozilla"
  extrepo search mozilla
  echo "Habilitando o repositório no sistema"
  extrepo enable mozilla
+ 
+ echo "Configure o APT para dar prioridade a pacotes do repositório da Mozilla"
+ sudo tee /etc/apt/preferences.d/mozilla > /dev/null << EOF
+Package: *
+Pin: origin packages.mozilla.org
+Pin-Priority: 1000
+EOF
+
+fi
+
  echo "Atualizando a lista de repositórios"
  apt update
  echo "Instalando o Mozilla Firefox mais recente"
@@ -518,14 +666,16 @@ installing_chrome_repo(){
 installing_opera_repo(){
  echo "Adicionando o repositório do Opera"
  echo "Adicionando a chave do repositório"
- curl -fSsL https://deb.opera.com/archive.key | sudo gpg --dearmor | sudo tee /usr/share/keyrings/opera.gpg >> /dev/null
+ wget -qO- https://deb.opera.com/archive.key | gpg --dearmor | sudo dd of=/usr/share/keyrings/opera-browser.gpg
+ # curl -fSsL https://deb.opera.com/archive.key | sudo gpg --dearmor | sudo tee /usr/share/keyrings/opera.gpg >> /dev/null
  echo "Adicionando o repositório"
- echo deb [arch=amd64 signed-by=/usr/share/keyrings/opera.gpg] http://deb.opera.com/opera-stable/ stable main | sudo tee /etc/apt/sources.list.d/opera.list
+ echo "deb [signed-by=/usr/share/keyrings/opera-browser.gpg] https://deb.opera.com/opera-stable/ stable non-free" | sudo dd of=/etc/apt/sources.list.d/opera-archive.list
+ # echo deb [arch=amd64 signed-by=/usr/share/keyrings/opera.gpg] http://deb.opera.com/opera-stable/ stable main | sudo tee /etc/apt/sources.list.d/opera.list
  echo "Atualizando o repositório"
  apt update
 
  echo "Segue o arquivo repositório para conferir "
- cat /etc/apt/sources.list.d/opera.list
+ cat /etc/apt/sources.list.d/opera-archive.list
 
  #echo "Para instalar o Opera basta digitar apt install opera-stable -y"
  #echo "Navegador pronto para ser instalado"
@@ -536,26 +686,69 @@ installing_opera_repo(){
 # FIM DE installing_opera_repo()
 }
 
-installing_vivaldi_repo(){
- #echo "Adicionando o repositório do Vivaldi"
- #echo "Adicionando a chave do repositório"
- #curl -fsSL https://repo.vivaldi.com/archive/linux_signing_key.pub | gpg --dearmor | sudo tee /usr/share/keyrings/vivaldi.gpg > /dev/null
+installing_opera_gx_repo(){
+ echo "Adicionando o repositório do Opera"
+ echo "Adicionando a chave do repositório"
+ wget -qO- https://deb.opera.com/archive.key | gpg --dearmor | sudo dd of=/usr/share/keyrings/opera-browser.gpg
+ # curl -fSsL https://deb.opera.com/archive.key | sudo gpg --dearmor | sudo tee /usr/share/keyrings/opera.gpg >> /dev/null
+ echo "Adicionando o repositório"
+ echo "deb [signed-by=/usr/share/keyrings/opera-browser.gpg] https://deb.opera.com/opera-stable/ stable non-free" | sudo dd of=/etc/apt/sources.list.d/opera-archive.list
+ # echo deb [arch=amd64 signed-by=/usr/share/keyrings/opera.gpg] http://deb.opera.com/opera-stable/ stable main | sudo tee /etc/apt/sources.list.d/opera.list
+ echo "Atualizando o repositório"
+ apt update
 
- #echo "Adicionando o repositório"
- #echo "deb [arch=amd64 signed-by=/usr/share/keyrings/vivaldi-browser.gpg ] https://repo.vivaldi.com/archive/deb/ stable main" | sudo tee /etc/apt/sources.list.d/vivaldi.list
+ echo "Segue o arquivo repositório para conferir "
+ cat /etc/apt/sources.list.d/opera-archive.list
 
- #echo "Atualizando o repositório"
- #apt update
-
- #echo "Segue o arquivo repositório para conferir "
- #cat /etc/apt/sources.list.d/vivaldi.list
-
- #echo "Para instalar o Opera basta digitar apt install vivaldi-stable -y "
+ #echo "Para instalar o Opera basta digitar apt install opera-stable -y"
  #echo "Navegador pronto para ser instalado"
- echo "Instalando o Navegador VIVALDI...(Flatpak) "
- #apt install vivaldi-stable
- flatpak install flathub com.vivaldi.Vivaldi
+ echo "Instalando o navegador OPERA GX"
+ apt install opera-gx-stable 
  #echo "Navegador instalado e pronto para o uso"
+
+# FIM DE installing_opera_gx_repo()
+}
+
+installing_vivaldi_repo(){
+ 
+ echo "Adicionando o repositório do Vivaldi"
+ echo "Adicionando a chave do repositório"
+ apt install curl gpg ca-certificates -y
+ curl -fsSL https://repo.vivaldi.com/stable/linux_signing_key.pub | sudo gpg --dearmor --yes -o /usr/share/keyrings/vivaldi.gpg
+ echo "Chaves importadas:"
+ gpg --show-keys --with-fingerprint /usr/share/keyrings/vivaldi.gpg
+ 
+  
+ echo "Adicionando o repositório"
+ sudo install -m 0644 /dev/null /etc/default/vivaldi
+ 
+ arch=$(dpkg --print-architecture)
+
+if [ "$arch" = "amd64" ] || [ "$arch" = "arm64" ]; then
+  printf '%s\n' \
+  'Types: deb' \
+  'URIs: https://repo.vivaldi.com/archive/deb/' \
+  'Suites: stable' \
+  'Components: main' \
+  "Architectures: $arch" \
+  'Signed-By: /usr/share/keyrings/vivaldi.gpg' | sudo tee /etc/apt/sources.list.d/vivaldi.sources > /dev/null
+else
+  printf 'Current Vivaldi stable and snapshot packages are not available for %s through this setup.\n' "$arch"
+fi
+ 
+ echo "Novo repositório: Vivaldi.sources"
+ cat /etc/apt/sources.list.d/vivaldi.sources
+ 
+ echo "Atualizando o repositório"
+ apt update
+ echo "Confirmando que o repositório está operacional"
+ apt-cache policy vivaldi-stable
+
+ echo "Instalando o Navegador VIVALDI Estável."
+ apt install vivaldi-stable
+ # flatpak install flathub com.vivaldi.Vivaldi
+ echo "Navegador instalado e pronto para o uso"
+ vivaldi --version
 
 # FIM DE installing_vivaldi_repo
 }
@@ -605,6 +798,28 @@ installing_zen(){
 # FIM DE installing_zen()
 }
 
+
+installing_brave(){
+
+ echo "Preparando para instalar o repositório"
+ apt install curl
+
+ echo "Importando e copiando a chave GPG"
+ curl -fsSLo /usr/share/keyrings/brave-browser-archive-keyring.gpg https://brave-browser-apt-release.s3.brave.com/brave-browser-archive-keyring.gpg
+
+ echo "Importando e copiando o arquivo para o local"
+ curl -fsSLo /etc/apt/sources.list.d/brave-browser-release.sources https://brave-browser-apt-release.s3.brave.com/brave-browser.sources
+
+ echo "Atualizando a lista de repositórios"
+ apt update
+
+ echo "Instalando o navegador"
+ apt install brave-browser
+
+# FIM DE installing_brave()
+}
+
+####################################################################################
 
 installing_rust(){
  echo "Instalando o RUST através do script do site"
@@ -671,42 +886,61 @@ installing_nodejs_npm(){
 }
 
 installing_mariadb(){
- #echo "Importando as chaves PGP"
+ 
+ echo "Importando as chaves PGP"
+ apt install apt-transport-https curl
+ mkdir -p /etc/apt/keyrings
+ curl -o /etc/apt/keyrings/mariadb-keyring.asc 'https://mariadb.org/mariadb_release_signing_key.pgp'
 
- #apt-get install apt-transport-https curl
- #mkdir -p /etc/apt/keyrings
- #curl -o /etc/apt/keyrings/mariadb-keyring.pgp 'https://mariadb.org/mariadb_release_signing_key.pgp'
+sourcefile='/etc/apt/sources.list.d/debian.sources'
 
- #cat <<FIM >> /etc/apt/sources.list.d/mariadb.sources
- # MariaDB 11.8 repository list - created 2025-05-22 22:10 UTC
- # https://mariadb.org/download/
- #X-Repolib-Name: MariaDB
- #Types: deb
- # deb.mariadb.org is a dynamic mirror if your preferred mirror goes offline. See https://mariadb.org/mirrorbits/ for details.
- # URIs: https://deb.mariadb.org/11.rc/debian
- #URIs: https://espejito.fder.edu.uy/mariadb/repo/11.8/debian
- #Suites: bookworm
- #Components: main
- #Signed-By: /etc/apt/keyrings/mariadb-keyring.pgp
- #FIM
+if [ -e $sourcefile ]; then
 
- #echo "Atualizando a lista de repositórios e instalando o pacote"
- #apt update
- #apt install mariadb-server
+cat <<FIM >> /etc/apt/sources.list.d/mariadb.sources
+# MariaDB 12.0 repository list - created 2026-10-26 15:30 UTC
+# https://mariadb.org/download/
+X-Repolib-Name: MariaDB
+Types: deb
+# deb.mariadb.org is a dynamic mirror if your preferred mirror goes offline. See https://mariadb.org/mirrorbits/ for details.
+# URIs: https://deb.mariadb.org/12.0/debian
+URIs: https://mariadb.mirror.globo.tech/repo/12.0/debian
+Suites: bookworm
+Components: main
+Signed-By: /etc/apt/keyrings/mariadb-keyring.asc
+FIM
 
- echo "Instalando o MARIADB pelo repositório Debian"
- apt install mariadb-server
+elif [ -e '/etc/apt/sources.list' ]; then
 
+cat <FIM >> /etc/apt/sources.list.d/mariadb.list
+# MariaDB 12.0 repository list - created 2026-10-26 15:30 UTC
+# https://mariadb.org/download/
+# deb.mariadb.org is a dynamic mirror if your preferred mirror goes offline. See https://mariadb.org/mirrorbits/ for details.
+# deb [signed-by=/etc/apt/keyrings/mariadb-keyring.asc] https://deb.mariadb.org/12.0/debian bookworm main
+deb [signed-by=/etc/apt/keyrings/mariadb-keyring.asc] https://mariadb.mirror.globo.tech/repo/12.0/debian bookworm main
+# deb-src [signed-by=/etc/apt/keyrings/mariadb-keyring.asc] https://mariadb.mirror.globo.tech/repo/12.0/debian bookworm main
+FIM
+
+fi
+
+echo "Atualizando a lista de repositórios e instalando o pacote"
+apt update
+apt install mariadb-server
+
+ echo "Checando a versão do MariaDB"
+ mariadb --version
 # FIM DE installing_mariadb()
 }
 
 installing_mysql(){
  echo "Importando o arquivo .DEB contendo as informações do repositório"
- wget https://dev.mysql.com/get/mysql-apt-config_0.8.34-1_all.deb
+ wget https://dev.mysql.com/get/mysql-apt-config_0.8.36-1_all.deb
  
  echo "Instalando o arquivo importado"
  # sudo dpkg -i mysql-apt-config_0.8.34-1_all.deb
- apt install ./mysql-apt-config_0.8.34-1_all.deb
+ apt install ./mysql-apt-config_0.8.36-1_all.deb
+ 
+ echo "Instalando biblioteca necessária para dependências"
+ apt install libaio1
  
  echo "Selecione a opção desejada"
  cat <<FIM
@@ -742,20 +976,27 @@ FIM
 }
 
 installing_postgresql(){
- echo "Instalando o Postgresql pelo repositório Debian"
- apt install postgresql postgresql-contrib
+ echo "Instalando dependências e Importando a chave ASC"
+ apt install curl ca-certificates
+ sudo install -d /usr/share/postgresql-common/pgdg
+ curl -o /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc --fail https://www.postgresql.org/media/keys/ACCC4CF8.asc
 
- #echo "Instalando dependências e Importando a chave ASC"
- #apt install curl ca-certificates
- #sudo install -d /usr/share/postgresql-common/pgdg
- #curl -o /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc --fail https://www.postgresql.org/media/keys/ACCC4CF8.asc
+ echo "Adicionando o repositório"
 
- #echo "Adicionando o repositório"
- #sh -c "echo 'deb [signed-by=/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc] https://apt.postgresql.org/pub/repos/apt $VERSION_CODENAME-pgdg main' > /etc/apt/sources.list.d/pgdg.list"
+cat <<EOF >> /etc/apt/sources.list.d/pgdg.sources
+Types: deb deb-src
+URIs: https://apt.postgresql.org/pub/repos/apt
+Suites: bookworm-pgdg
+Architectures: amd64
+Components: main
+Signed-By: /usr/share/postgresql-common/pgdg/apt.postgresql.org.asc
+EOF
 
- #echo "Atualizando a lista de repositórios e instalando o pacote"
- #apt update
- #apt install postgresql
+#sh -c "echo 'deb [signed-by=/usr/share/postgresql-common/pgdg/apt.postgresql.org.asc] https://apt.postgresql.org/pub/repos/apt $VERSION_CODENAME-pgdg main' > /etc/apt/sources.list.d/pgdg.list"
+
+echo "Atualizando a lista de repositórios e instalando o pacote"
+apt update
+apt install postgresql
 
 # FIM DE installing_postgresql()
 }
@@ -780,11 +1021,42 @@ installing_git_subversion_mercurial(){
 }
 
 installing_docker(){
- echo "Instalando pacotes necessários paa instalar o Docker"
- apt install apt-transport-https ca-certificates curl gnupg lsb-release extrepo
+  echo "Instalando pacotes necessários para instalar o Docker"
+ apt install apt-transport-https ca-certificates curl gnupg lsb-release
 
- echo "Instalando o repositório do Docker (Via ExtRepo)"
+ echo "Instalando a Chave GPG"
+ sudo install -m 0755 -d /etc/apt/keyrings
+ sudo curl -fsSL https://download.docker.com/linux/debian/gpg -o /etc/apt/keyrings/docker.asc
+ sudo chmod a+r /etc/apt/keyrings/docker.asc
+ 
+ #### REPO
+ echo "Adicionando o repositório"
+filename='/etc/apt/sources.list'
+if [ -e "$filename" ]; then
+ echo "Instalando o repositório docker.list"
+ "echo \"deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/debian bookworm stable\" > /etc/apt/sources.list.d/docker.list && "
+
+elif [ -e '/etc/apt/sources.list.d/debian.sources' ]; then
+ echo "Instalando o repositório docker.sources"
+sudo tee /etc/apt/sources.list.d/docker.sources <<EOF
+Types: deb
+URIs: https://download.docker.com/linux/debian
+Suites: $(. /etc/os-release && echo "$VERSION_CODENAME")
+Components: stable
+Architectures: $(dpkg --print-architecture)
+Signed-By: /etc/apt/keyrings/docker.asc
+EOF
+
+else
+ echo  "Adicionando o pacote extrepo para a inserção do repositório Docker-CE"
+ apt install extrepo
+ echo "Procurando o repositório docker-ce"
+ extrepo search docker-ce
+ echo "Habilitando o repositório no sistema"
  extrepo enable docker-ce
+ 
+fi
+ #### REPO
 
  echo "Atualizando a lista de repositórios"
  apt update
@@ -797,9 +1069,15 @@ installing_docker(){
  echo "Verificando a instalação"
  docker --version
  docker compose version
- systemctl status docker
 
 # FIM DE installing_docker()
+}
+
+installing_podman(){
+ echo "Instalando o Podman"
+ apt install podman
+
+# FIM DE installing_podman()
 }
 
  installing_distrobox(){
@@ -993,29 +1271,174 @@ installing_spyder(){
 }
 
 installing_conda(){
- echo "Importando a chave GPG"
- curl https://repo.anaconda.com/pkgs/misc/gpgkeys/anaconda.asc | gpg --dearmor > conda.gpg
- install -o root -g root -m 644 conda.gpg /usr/share/keyrings/conda-archive-keyring.gpg
+ echo "Realizando o download do script"
+  curl -O https://repo.anaconda.com/archive/Anaconda3-2026.07-1-Linux-x86_64.sh
+
+  echo "Executando o script de instalação"
+  bash ~/Anaconda3-2026.07-1-Linux-x86_64.sh
+
+  echo "Pressione Return para continuar. Você pode revisar os Termos de Serviço da Anaconda (TOS) em https://anaconda.com/legal."
+
+  echo "Entrar yespara concordar com os TOS."
+
+  echo "Pressione Retorno para aceitar o local de instalação padrão (PREFIX=/home/<USER>/anaconda3), ou insira outro caminho de arquivo para especificar um diretório de instalação alternativo. A instalação pode demorar alguns minutos para ser concluída."
+
+  echo "Escolha yesquando perguntado se você deseja inicializar conda. Isso modifica sua configuração de shell para inicializar o conda sempre que você abrir um novo shell e para reconhecer comandos conda automaticamente."
+
+  echo "O instalador termina e exibe: “Obrigado por instalar o Anaconda3!”"
+
+  echo "Feche e reabra a janela do terminal para que a instalação entre em vigor totalmente ou use o seguinte comando para atualizar o terminal, dependendo do shell:"
+  source ~/.bashrc
+
+  echo "Lista os pacotes instalados"
+  conda list
+
+  echo "Verifique a sua instalação"
+  anaconda-navigator
  
- echo "Checando a impressão digital"
- gpg --keyring /usr/share/keyrings/conda-archive-keyring.gpg --no-default-keyring --fingerprint 34161F5BF5EB1D4BFBBB8F0A8AEB4F8B29D82806
-
- echo "Adicionando o repositório"
- echo "deb [arch=amd64 signed-by=/usr/share/keyrings/conda-archive-keyring.gpg] https://repo.anaconda.com/pkgs/misc/debrepo/conda stable main" | sudo tee -a /etc/apt/sources.list.d/conda.list
-
- echo "Atualizando a lista de repositórios"
- apt update
- 
- echo "Instalando o Conda"
- apt install conda
- 
- echo "Checando o sucesso da instalação"
- source /opt/conda/etc/profile.d/conda.sh
- conda -V
-
-
 # FIM DE installing_conda()
 }
+
+####################################################################################
+
+# INTELIGÊNCIA ARTIFICIAL
+
+installing_ollama_openwebui_docker(){
+ echo "Instalando Ollama e Open Web-UI usando Docker..."
+ 
+ # Garante que o Docker está instalado
+ if ! command -v docker &> /dev/null; then
+     echo "Docker não encontrado. Executando instalação do Docker..."
+     installing_docker
+ fi
+
+ # Criação de uma rede bridge para os containers se comunicarem (opcional, mas recomendado)
+ docker network create ollama-network 2>/dev/null || true
+
+ # Executa o container do Ollama
+ echo "Iniciando o container do Ollama..."
+ docker run -d \
+   --name ollama \
+   --restart always \
+   --network ollama-network \
+   -v ollama:/root/.ollama \
+   -p 11434:11434 \
+   ollama/ollama:latest
+
+ # Executa o container do Open Web-UI conectado ao Ollama
+ echo "Iniciando o container do Open Web-UI..."
+ docker run -d \
+   --name open-webui \
+   --restart always \
+   --network ollama-network \
+   -v open-webui:/app/backend/data \
+   -p 3000:8080 \
+   -e OLLAMA_BASE_URL=http://ollama:11434 \
+   ghcr.io/open-webui/open-webui:main
+
+ echo "Ollama e Open Web-UI instalados e rodando!"
+ echo "Acesse o Open Web-UI no navegador através de: http://localhost:3000"
+
+# FIM DE installing_ollama_openwebui_docker()
+}
+
+installing_ollama_openwebui_podman(){
+ echo "Instalando Ollama e Open Web-UI usando Podman..."
+ 
+ # Garante que o Podman está instalado
+ if ! command -v podman &> /dev/null; then
+     echo "Podman não encontrado. Instalando..."
+     apt install -y podman
+ fi
+
+ # Criação de uma rede para os containers
+ podman network create ollama-network 2>/dev/null || true
+
+ # Executa o container do Ollama
+ echo "Iniciando o container do Ollama via Podman..."
+ podman run -d \
+   --name ollama \
+   --restart=always \
+   --network ollama-network \
+   -v ollama:/root/.ollama:Z \
+   -p 11434:11434 \
+   docker.io/ollama/ollama:latest
+
+ # Executa o container do Open Web-UI
+ echo "Iniciando o container do Open Web-UI via Podman..."
+ podman run -d \
+   --name open-webui \
+   --restart=always \
+   --network ollama-network \
+   -v open-webui:/app/backend/data:Z \
+   -p 3000:8080 \
+   -e OLLAMA_BASE_URL=http://ollama:11434 \
+   ghcr.io/open-webui/open-webui:main
+
+ echo "Ollama e Open Web-UI instalados com Podman!"
+ echo "Acesse o Open Web-UI no navegador através de: http://localhost:3000"
+
+# FIM DE installing_ollama_openwebui_podman()
+}
+
+installing_anythingllm(){
+ echo "Instalando AnythingLLM (RAG/Documentos) via Docker..."
+ docker run -d \
+   --name anythingllm \
+   --restart always \
+   -p 3001:3001 \
+   -v anythingllm:/app/server/storage \
+   -e STORAGE_DIR=/app/server/storage \
+   mintplexlabs/anythingllm:latest
+ echo "AnythingLLM rodando na porta 3001! (http://localhost:3001)"
+}
+
+installing_searxng(){
+ echo "Instalando SearXNG (Busca Privada) via Docker..."
+ docker run -d \
+   --name searxng \
+   --restart always \
+   -p 8080:8080 \
+   -e SEARXNG_BASE_URL=http://localhost:8080/ \
+   searxng/searxng:latest
+ echo "SearXNG rodando na porta 8080! (http://localhost:8080)"
+}
+
+installing_whisper_webui(){
+ echo "Instalando Faster-Whisper WebUI (Transcrição de Áudio) via Docker..."
+ docker run -d \
+   --name whisper-webui \
+   --restart always \
+   -p 7860:7860 \
+   ghcr.io/jhj0517/whisper-webui:latest
+ echo "Whisper WebUI rodando na porta 7860! (http://localhost:7860)"
+}
+
+installing_comfyui(){
+ echo "Instalando ComfyUI (Geração de Imagens) via Docker..."
+ docker run -d \
+   --name comfyui \
+   --gpus all \
+   --restart always \
+   -p 8188:8188 \
+   -v comfyui_data:/home/user/ComfyUI \
+   yanwk/comfyui-boot:latest
+ echo "ComfyUI rodando na porta 8188! (http://localhost:8188)"
+}
+
+installing_sd_webui(){
+ echo "Instalando AUTOMATIC1111 Stable Diffusion WebUI via Docker..."
+ docker run -d \
+   --name sd-webui \
+   --gpus all \
+   --restart always \
+   -p 7861:7860 \
+   -v sd_data:/data \
+   universalpt/stable-diffusion-webui:latest
+ echo "Stable Diffusion WebUI rodando na porta 7861! (http://localhost:7861)"
+}
+
+####################################################################################
 
 installing_virtualbox(){
  echo "Importando a Chave GPG"
@@ -1027,7 +1450,7 @@ installing_virtualbox(){
  echo "Atualizando a lista de repositórios"
  apt update
  echo "Instalando o pacote"
- apt install virtualbox-7.1
+ apt install virtualbox-7.2
 
  echo "Para instalar o Extension Pack verifique a versão com este comando: vboxmanage -v | cut -dr -f1"
  echo "Substitua os valores X e Y abaixo e faça o download do pacote com este comando:"
@@ -1048,7 +1471,7 @@ installing_virtualbox(){
 
 installing_virtualmanager(){
  echo "Instalando o Virtual Manager a partir do repositório Debian"
- apt install virt-manager qemu-system libvirt-clients libvirt-daemon-system
+ apt install virt-manager qemu-system libvirt-clients libvirt-daemon-system virtiofsd
 
  echo "Habilitando o serviço no início do sistema:"
  systemctl enable libvirtd
@@ -1058,6 +1481,8 @@ installing_virtualmanager(){
 
 # FIM DE installing_virtualmanager()
 }
+
+####################################################################################
 
 installing_steam(){
  echo "Habilitar o suporte a 32 bits"
@@ -1199,6 +1624,8 @@ installing_wine(){
 # FIM DE installing_wine()
 }
 
+####################################################################################
+
 installing_dropbox(){
 
  #echo "Importando o pacote .DEB do site oficial: https://linux.dropboxstatic.com/packages/debian/"
@@ -1251,6 +1678,8 @@ installing_anydesk(){
 
 # FIM DE installing_anydesk()
 }
+
+####################################################################################
 
 modifying_sysctl_conf(){
  sysctl -w vm.swappiness=10
@@ -1306,387 +1735,94 @@ checking_video_driver(){
 }
 
 installing_nvidia(){
- echo "Instalando Driver NVIDIA mais recente"
+ echo "Instala o Reposítório para o Driver NVIDIA mais recente"
  echo "Instalando linux-headers"
  apt install linux-headers-amd64
  
  echo "Instalando as dependências para a placa de vídeo"
- apt install dirmngr ca-certificates software-properties-common apt-transport-https dkms curl
+ apt install dirmngr ca-certificates apt-transport-https dkms curl pciutils
  
  echo "Importando a chave GPG"
- curl -fSsL https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/3bf863cc.pub | sudo gpg --dearmor | sudo tee /usr/share/keyrings/nvidia-drivers.gpg > /dev/null 2>&1
+ curl -O 'https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/cuda-keyring_1.1-1_all.deb'
+ apt install -y ./cuda-keyring_1.1-1_all.deb
  
+
  echo "Adicionando o repositório Nvidia CUDA"
- echo 'deb [signed-by=/usr/share/keyrings/nvidia-drivers.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/ /' | sudo tee /etc/apt/sources.list.d/nvidia-drivers.list
+ echo "deb [signed-by=/usr/share/keyrings/cuda-archive-keyring.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/ /" \
+    | tee /etc/apt/sources.list.d/cuda-debian12-x86_64.list
+
  
  echo "Atualizando a lista de repositórios do sistema"
  apt update
- #echo "Instalando nvidia-detect"
- #apt install nvidia-detect
- #echo "verifique sua placa com o comando nvidia-detect ou lspci -nn | egrep -i {3d|display|vga}"
 
- echo "Instalando placas NVIDIA mais recentes"
- apt install nvidia-driver nvidia-smi nvidia-settings
- #apt install nvidia-driver firmware-misc-nonfree
- echo "Instalando tecnologia NVIDIA CUDA"
- apt install cuda
- #apt install nvidia-cuda-dev nvidia-cuda-toolkit
-n
+ echo "Instalando nvidia-detect"
+ apt install nvidia-detect
+ echo " ############################################################################################"
+ echo " ############################################################################################"
+ echo " ############################################################################################"
+ echo "verifique sua placa com o comando nvidia-detect ou lspci -nn | egrep -i {3d|display|vga}"
+ echo " ############################################################################################"
+ echo " ############################################################################################"
+ echo " ############################################################################################"
+ 
+ echo "Outro comando para verificar a sua placa:"
+ lspci -nn | egrep -i {3d|display|vga}
+
+ echo " ############################################################################################"
+ echo " ############################################################################################"
+ echo " ############################################################################################"
+ echo "Resultado do comando nvidia-detect:"
+ nvidia-detect
+ echo " ############################################################################################"
+ echo " ############################################################################################"
+ echo " ############################################################################################"
+
+ echo " ############################################################################################"
+ echo " ############################################################################################"
+ echo " ############################################################################################"
+ echo "Com o repositótio instalado e as informações da(s) placa(s) detectada(s) basta procurar a versão do Driver que mais se adequa ao seu sistema"
+ echo "Para instalar sua placa de vídeo basta digitar"
+ echo "apt install nvidia-driver ou nvidia-driver-pinning-<branch> ou apt install nvidia-driver-pinning-<version>"
+
+ echo "Maiores Informações: https://docs.nvidia.com/datacenter/tesla/driver-installation-guide/debian.html (Outubro/24/2026)"
+
  echo "Reinicie o sistema para carregar o driver instalado"
+ echo " ############################################################################################"
+ echo " ############################################################################################"
+ echo " ############################################################################################"
 
 # FIM DE installing_nvidia()
-}
-
-# NVIDIA #470
-installing_nvidia_legacy_470(){
- echo "Informações: https://www.nvidia.com/en-us/drivers/unix/legacy-gpu/"
- echo "Instalando Driver NVIDIA para placas mais antigas"
- echo "Instalando linux-headers"
- apt install linux-headers-amd64
- 
- echo "Instalando as dependências para a placa de vídeo"
- apt install dirmngr ca-certificates software-properties-common apt-transport-https dkms curl
- 
- echo "Importando a chave GPG"
- curl -fSsL https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/3bf863cc.pub | sudo gpg --dearmor | sudo tee /usr/share/keyrings/nvidia-drivers.gpg > /dev/null 2>&1
- 
- echo "Adicionando o repositório Nvidia CUDA"
- echo 'deb [signed-by=/usr/share/keyrings/nvidia-drivers.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/ /' | sudo tee /etc/apt/sources.list.d/nvidia-drivers.list
- 
- echo "Atualizando a lista de repositórios do sistema"
- apt update 
- 
- echo "Instalando nvidia-detect"
- apt install nvidia-detect
- echo "Instalando nvidia-legacy-check"
- apt install nvidia-legacy-check
- echo "verifique sua placa com o comando nvidia-detect ou lspci -nn | egrep -i {3d|display|vga}"
- echo "Verificando a placa de video instalada pelo nvidia-detect"
- nvidia-detect
- echo "Verificando a placa de video instalada pelo comando no terminal lspci"
- lspci -nn | egrep -i {3d|display|vga}
- echo "Verificando a placa de video instalada pelo nvidia-legacy-check"
- nvidia-legacy-ckeck
- 
- echo "Adicionando firmware-misc-nonfree"
- apt install firmware-misc-nonfree
- 
- echo "Baixando o arquivo para o sistema"
- wget -c https://us.download.nvidia.com/XFree86/Linux-x86_64/470.256.02/NVIDIA-Linux-x86_64-470.256.02.run
- 
- echo "Geralmente, é necessário executar o arquivo (NVIDIA-Linux-x86_64-470.256.02.run) saindo do ambiente gráfico"
- 
- echo "Caso isso aconteça, faça no terminal : systemctl set-default multi-user.target"
- echo "Reinicie o pc, vá para o diretório e execute o arquivo: ./NVIDIA-Linux-x86_64-470.256.02.run"
- echo "Volte para a interface gráfica com o comando: systemctl set-default graphical.target"
- echo "Reinicie o sistema: systemctl reboot"
-
-# FIM DE installing_nvidia_legacy_470()
-}
-
-# NVIDIA #390
-installing_nvidia_legacy_390(){
- echo "Informações: https://www.nvidia.com/en-us/drivers/unix/legacy-gpu/"
- echo "Instalando Driver NVIDIA para placas mais antigas"
- echo "Instalando linux-headers"
- apt install linux-headers-amd64
- 
- echo "Instalando as dependências para a placa de vídeo"
- apt install dirmngr ca-certificates software-properties-common apt-transport-https dkms curl
- 
- echo "Importando a chave GPG"
- curl -fSsL https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/3bf863cc.pub | sudo gpg --dearmor | sudo tee /usr/share/keyrings/nvidia-drivers.gpg > /dev/null 2>&1
- 
- echo "Adicionando o repositório Nvidia CUDA"
- echo 'deb [signed-by=/usr/share/keyrings/nvidia-drivers.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/ /' | sudo tee /etc/apt/sources.list.d/nvidia-drivers.list
- 
- echo "Atualizando a lista de repositórios do sistema"
- apt update 
- 
- echo "Instalando nvidia-detect"
- apt install nvidia-detect
- echo "Instalando nvidia-legacy-check"
- apt install nvidia-legacy-check
- echo "verifique sua placa com o comando nvidia-detect ou lspci -nn | egrep -i {3d|display|vga}"
- echo "Verificando a placa de video instalada pelo nvidia-detect"
- nvidia-detect
- echo "Verificando a placa de video instalada pelo comando no terminal lspci"
- lspci -nn | egrep -i {3d|display|vga}
- echo "Verificando a placa de video instalada pelo nvidia-legacy-check"
- nvidia-legacy-ckeck
- 
- echo "Adicionando firmware-misc-nonfree"
- apt install firmware-misc-nonfree
- 
- echo "Baixando o arquivo para o sistema"
- wget -c https://us.download.nvidia.com/XFree86/Linux-x86_64/390.157/NVIDIA-Linux-x86_64-390.157.run
- 
- echo "Geralmente, é necessário executar o arquivo (NVIDIA-Linux-x86_64-390.157.run) saindo do ambiente gráfico"
- 
- echo "Caso isso aconteça, faça no terminal : systemctl set-default multi-user.target"
- echo "Reinicie o pc, vá para o diretório e execute o arquivo: ./NVIDIA-Linux-x86_64-390.157.run"
- echo "Volte para a interface gráfica com o comando: systemctl set-default graphical.target"
- echo "Reinicie o sistema: systemctl reboot"
-
-# FIM DE installing_nvidia_legacy_390()
-}
-
-# NVIDIA #340
-
-installing_nvidia_legacy_340(){
- echo "Informações: https://www.nvidia.com/en-us/drivers/unix/legacy-gpu/"
- echo "Instalando Driver NVIDIA para placas mais antigas"
- echo "Instalando linux-headers"
- apt install linux-headers-amd64
- 
- echo "Instalando as dependências para a placa de vídeo"
- apt install dirmngr ca-certificates software-properties-common apt-transport-https dkms curl
- 
- echo "Importando a chave GPG"
- curl -fSsL https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/3bf863cc.pub | sudo gpg --dearmor | sudo tee /usr/share/keyrings/nvidia-drivers.gpg > /dev/null 2>&1
- 
- echo "Adicionando o repositório Nvidia CUDA"
- echo 'deb [signed-by=/usr/share/keyrings/nvidia-drivers.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/ /' | sudo tee /etc/apt/sources.list.d/nvidia-drivers.list
- 
- echo "Atualizando a lista de repositórios do sistema"
- apt update 
- 
- echo "Instalando nvidia-detect"
- apt install nvidia-detect
- echo "Instalando nvidia-legacy-check"
- apt install nvidia-legacy-check
- echo "verifique sua placa com o comando nvidia-detect ou lspci -nn | egrep -i {3d|display|vga}"
- echo "Verificando a placa de video instalada pelo nvidia-detect"
- nvidia-detect
- echo "Verificando a placa de video instalada pelo comando no terminal lspci"
- lspci -nn | egrep -i {3d|display|vga}
- echo "Verificando a placa de video instalada pelo nvidia-legacy-check"
- nvidia-legacy-ckeck
- 
- echo "Adicionando firmware-misc-nonfree"
- apt install firmware-misc-nonfree
- 
- echo "Baixando o arquivo para o sistema"
- wget -c https://us.download.nvidia.com/XFree86/Linux-x86_64/340.108/NVIDIA-Linux-x86_64-340.108.run
- 
- echo "Geralmente, é necessário executar o arquivo (NVIDIA-Linux-x86_64-340.108.run) saindo do ambiente gráfico"
- 
- echo "Caso isso aconteça, faça no terminal : systemctl set-default multi-user.target"
- echo "Reinicie o pc, vá para o diretório e execute o arquivo: ./NVIDIA-Linux-x86_64-340.108.run"
- echo "Volte para a interface gráfica com o comando: systemctl set-default graphical.target"
- echo "Reinicie o sistema: systemctl reboot" 
-
-# FIM DE installing_nvidia_legacy_340()
-}
-
-# NVIDIA #304
-
-installing_nvidia_legacy_304(){
- echo "Informações: https://www.nvidia.com/en-us/drivers/unix/legacy-gpu/"
- echo "Instalando Driver NVIDIA para placas mais antigas"
- echo "Instalando linux-headers"
- apt install linux-headers-amd64
- 
- echo "Instalando as dependências para a placa de vídeo"
- apt install dirmngr ca-certificates software-properties-common apt-transport-https dkms curl
- 
- echo "Importando a chave GPG"
- curl -fSsL https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/3bf863cc.pub | sudo gpg --dearmor | sudo tee /usr/share/keyrings/nvidia-drivers.gpg > /dev/null 2>&1
- 
- echo "Adicionando o repositório Nvidia CUDA"
- echo 'deb [signed-by=/usr/share/keyrings/nvidia-drivers.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/ /' | sudo tee /etc/apt/sources.list.d/nvidia-drivers.list
- 
- echo "Atualizando a lista de repositórios do sistema"
- apt update 
- 
- echo "Instalando nvidia-detect"
- apt install nvidia-detect
- echo "Instalando nvidia-legacy-check"
- apt install nvidia-legacy-check
- echo "verifique sua placa com o comando nvidia-detect ou lspci -nn | egrep -i {3d|display|vga}"
- echo "Verificando a placa de video instalada pelo nvidia-detect"
- nvidia-detect
- echo "Verificando a placa de video instalada pelo comando no terminal lspci"
- lspci -nn | egrep -i {3d|display|vga}
- echo "Verificando a placa de video instalada pelo nvidia-legacy-check"
- nvidia-legacy-ckeck
- 
- echo "Adicionando firmware-misc-nonfree"
- apt install firmware-misc-nonfree
- 
- echo "Baixando o arquivo para o sistema"
- wget -c https://us.download.nvidia.com/XFree86/Linux-x86_64/304.137/NVIDIA-Linux-x86_64-304.137.run
- 
- echo "Geralmente, é necessário executar o arquivo (NVIDIA-Linux-x86_64-304.137.run) saindo do ambiente gráfico"
- 
- echo "Caso isso aconteça, faça no terminal : systemctl set-default multi-user.target"
- echo "Reinicie o pc, vá para o diretório e execute o arquivo: ./NVIDIA-Linux-x86_64-304.137.run"
- echo "Volte para a interface gráfica com o comando: systemctl set-default graphical.target"
- echo "Reinicie o sistema: systemctl reboot"
-
-# FIM DE installing_nvidia_legacy_304()
-}
-
-# NVIDIA #173
-
-installing_nvidia_legacy_173(){
- echo "Informações: https://www.nvidia.com/en-us/drivers/unix/legacy-gpu/"
- echo "Instalando Driver NVIDIA para placas mais antigas"
- echo "Instalando linux-headers"
- apt install linux-headers-amd64
- 
- echo "Instalando as dependências para a placa de vídeo"
- apt install dirmngr ca-certificates software-properties-common apt-transport-https dkms curl
- 
- echo "Importando a chave GPG"
- curl -fSsL https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/3bf863cc.pub | sudo gpg --dearmor | sudo tee /usr/share/keyrings/nvidia-drivers.gpg > /dev/null 2>&1
- 
- echo "Adicionando o repositório Nvidia CUDA"
- echo 'deb [signed-by=/usr/share/keyrings/nvidia-drivers.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/ /' | sudo tee /etc/apt/sources.list.d/nvidia-drivers.list
- 
- echo "Atualizando a lista de repositórios do sistema"
- apt update 
- 
- echo "Instalando nvidia-detect"
- apt install nvidia-detect
- echo "Instalando nvidia-legacy-check"
- apt install nvidia-legacy-check
- echo "verifique sua placa com o comando nvidia-detect ou lspci -nn | egrep -i {3d|display|vga}"
- echo "Verificando a placa de video instalada pelo nvidia-detect"
- nvidia-detect
- echo "Verificando a placa de video instalada pelo comando no terminal lspci"
- lspci -nn | egrep -i {3d|display|vga}
- echo "Verificando a placa de video instalada pelo nvidia-legacy-check"
- nvidia-legacy-ckeck
- 
- echo "Adicionando firmware-misc-nonfree"
- apt install firmware-misc-nonfree
- 
- echo "Baixando o arquivo para o sistema"
- wget -c https://us.download.nvidia.com/XFree86/Linux-x86_64/173.14.39/NVIDIA-Linux-x86_64-173.14.39-pkg2.run
- 
- echo "Geralmente, é necessário executar o arquivo (NVIDIA-Linux-x86_64-173.14.39-pkg2.run) saindo do ambiente gráfico"
- 
- echo "Caso isso aconteça, faça no terminal : systemctl set-default multi-user.target"
- echo "Reinicie o pc, vá para o diretório e execute o arquivo: ./NVIDIA-Linux-x86_64-173.14.39-pkg2.run"
- echo "Volte para a interface gráfica com o comando: systemctl set-default graphical.target"
- echo "Reinicie o sistema: systemctl reboot"
-
-# FIM DE installing_nvidia_legacy_173()
-}
-
-# NVIDIA #96
-
-installing_nvidia_legacy_96(){
- echo "Informações: https://www.nvidia.com/en-us/drivers/unix/legacy-gpu/"
- echo "Instalando Driver NVIDIA para placas mais antigas"
- echo "Instalando linux-headers"
- apt install linux-headers-amd64
- 
- echo "Instalando as dependências para a placa de vídeo"
- apt install dirmngr ca-certificates software-properties-common apt-transport-https dkms curl
- 
- echo "Importando a chave GPG"
- curl -fSsL https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/3bf863cc.pub | sudo gpg --dearmor | sudo tee /usr/share/keyrings/nvidia-drivers.gpg > /dev/null 2>&1
- 
- echo "Adicionando o repositório Nvidia CUDA"
- echo 'deb [signed-by=/usr/share/keyrings/nvidia-drivers.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/ /' | sudo tee /etc/apt/sources.list.d/nvidia-drivers.list
- 
- echo "Atualizando a lista de repositórios do sistema"
- apt update 
- 
- echo "Instalando nvidia-detect"
- apt install nvidia-detect
- echo "Instalando nvidia-legacy-check"
- apt install nvidia-legacy-check
- echo "verifique sua placa com o comando nvidia-detect ou lspci -nn | egrep -i {3d|display|vga}"
- echo "Verificando a placa de video instalada pelo nvidia-detect"
- nvidia-detect
- echo "Verificando a placa de video instalada pelo comando no terminal lspci"
- lspci -nn | egrep -i {3d|display|vga}
- echo "Verificando a placa de video instalada pelo nvidia-legacy-check"
- nvidia-legacy-ckeck
- 
- echo "Adicionando firmware-misc-nonfree"
- apt install firmware-misc-nonfree
- 
- echo "Baixando o arquivo para o sistema"
- wget -c https://us.download.nvidia.com/XFree86/Linux-x86_64/96.43.23/NVIDIA-Linux-x86_64-96.43.23-pkg2.run
- 
- echo "Geralmente, é necessário executar o arquivo (NVIDIA-Linux-x86_64-96.43.23-pkg2.run) saindo do ambiente gráfico"
- 
- echo "Caso isso aconteça, faça no terminal : systemctl set-default multi-user.target"
- echo "Reinicie o pc, vá para o diretório e execute o arquivo: ./NVIDIA-Linux-x86_64-96.43.23-pkg2.run"
- echo "Volte para a interface gráfica com o comando: systemctl set-default graphical.target"
- echo "Reinicie o sistema: systemctl reboot"
-
-# FIM DE installing_nvidia_legacy_96()
-}
-
-# NVIDIA #71
-
-installing_nvidia_legacy_71(){
- echo "Informações: https://www.nvidia.com/en-us/drivers/unix/legacy-gpu/"
- echo "Instalando Driver NVIDIA para placas mais antigas"
- echo "Instalando linux-headers"
- apt install linux-headers-amd64
- 
- echo "Instalando as dependências para a placa de vídeo"
- apt install dirmngr ca-certificates software-properties-common apt-transport-https dkms curl
- 
- echo "Importando a chave GPG"
- curl -fSsL https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/3bf863cc.pub | sudo gpg --dearmor | sudo tee /usr/share/keyrings/nvidia-drivers.gpg > /dev/null 2>&1
- 
- echo "Adicionando o repositório Nvidia CUDA"
- echo 'deb [signed-by=/usr/share/keyrings/nvidia-drivers.gpg] https://developer.download.nvidia.com/compute/cuda/repos/debian12/x86_64/ /' | sudo tee /etc/apt/sources.list.d/nvidia-drivers.list
- 
- echo "Atualizando a lista de repositórios do sistema"
- apt update 
- 
- echo "Instalando nvidia-detect"
- apt install nvidia-detect
- echo "Instalando nvidia-legacy-check"
- apt install nvidia-legacy-check
- echo "verifique sua placa com o comando nvidia-detect ou lspci -nn | egrep -i {3d|display|vga}"
- echo "Verificando a placa de video instalada pelo nvidia-detect"
- nvidia-detect
- echo "Verificando a placa de video instalada pelo comando no terminal lspci"
- lspci -nn | egrep -i {3d|display|vga}
- echo "Verificando a placa de video instalada pelo nvidia-legacy-check"
- nvidia-legacy-ckeck
- 
- echo "Adicionando firmware-misc-nonfree"
- apt install firmware-misc-nonfree
- 
- echo "Baixando o arquivo para o sistema"
- wget -c https://us.download.nvidia.com/XFree86/Linux-x86_64/71.86.15/NVIDIA-Linux-x86_64-71.86.15-pkg2.run
- 
- echo "Geralmente, é necessário executar o arquivo (NVIDIA-Linux-x86_64-71.86.15-pkg2.run) saindo do ambiente gráfico"
- 
- echo "Caso isso aconteça, faça no terminal : systemctl set-default multi-user.target"
- echo "Reinicie o pc, vá para o diretório e execute o arquivo: ./NVIDIA-Linux-x86_64-71.86.15-pkg2.run"
- echo "Volte para a interface gráfica com o comando: systemctl set-default graphical.target"
- echo "Reinicie o sistema: systemctl reboot"
-
-# FIM DE installing_nvidia_legacy_71()
 }
 
 updating_system(){
  
  echo "Atualizando os pacotes Flatpak"
- flatpak update
+ flatpak update -y
  echo "Atualizando a lista de repositórios e atualizando o sistema"
- apt update && apt upgrade 
+ apt update && apt upgrade -y
+ echo "Removendo arquivos desnecessários do sistema"
+ apt autoremove -y
+ 
 
 # FIM DE updating_system()
 }
 
 rebooting_system(){
  echo "Reiniciando o sistema"
- reboot
+ systemctl reboot
 
 # FIM DE rebooting_system()
 }
+
+power_off_system(){
+ echo "Desligando o sistema"
+ systemctl poweroff
+
+# FIM DE power_off_system()
+}
+
+####################################################################################
+# MENU PRINCIPAL
 
 show_menu(){
  echo "Escolha a opção pela numeração abaixo: "
@@ -1699,30 +1835,32 @@ show_menu(){
  echo "7  - Corrigindo o Debian Reference para o original e traduzido para o português do Brasil"
  echo "8  - Instala Gnome-tweaks e Gnome-Extension_Manager"
  echo "9  - Menu para a instalação do Firmware da Intel ou AMD "
- echo "10  - Menu para a escolha do firewall"
- echo "11 - Menu de integração do Flatpak"
- echo "12 - Instala o YAD e o Tasksel"
- echo "13 - Menu para a escolha de outros Desktops"
- echo "14 - Menu para a escolha do web-browser"
- echo "15 - Instala Codecs Multimedia"
- echo "16 - Instala Extratores/Compactadores"
- echo "17 - Instala Fontes"
- echo "18 - Instala o particionador Gparted"
- echo "19 - Instala os facilitadores de instalação Gdebi e Synaptic"
- echo "20 - Menu para a escolha do players multimidia "
- echo "21 - Menu para a escolha dos editores de foto e imagens e criação de objetos"
- echo "22 - Menu para a escolha dos aplicativos para comunicação "
- echo "23 - Menu para a escolha de Linguagens e IDEs"
- echo "24 - Menu para a escolha das Máquinas Virtuais "
- echo "25 - Menu para a escolha dos emuladores (diversos) e STEAM"
- echo "26 - Menu para a escolha dos Crossovers (Wine)"
- echo "27 - Menu para a escolha dos serviços de armazenamento e ou edição em nuvem "
- echo "28 - Modifica o arquivo sysctl.conf adicionando swappiness"
- echo "29 - Modifica o arquivo limits.conf adicionando número máximo de arquivos abertos"
- echo "30 - Otimizando a vida útil da bateria do Laptop"
- echo "31 - Menu para drivers Nvidia"
+ echo "10 - Menu para a escolha do firewall"
+ echo "11 - Prepara o sistema para receber arquivos do tipo AppImage"
+ echo "12 - Menu de integração do Flatpak"
+ echo "13 - Instala o YAD e o Tasksel"
+ echo "14 - Menu para a escolha de outros Desktops"
+ echo "15 - Menu para a escolha do web-browser"
+ echo "16 - Instala Codecs Multimedia"
+ echo "17 - Instala Extratores/Compactadores"
+ echo "18 - Instala Fontes"
+ echo "19 - Instala o particionador Gparted"
+ echo "20 - Instala os facilitadores de instalação Gdebi e Synaptic"
+ echo "21 - Menu para a escolha do players multimidia "
+ echo "22 - Menu para a escolha dos editores de foto e imagens e criação de objetos"
+ echo "23 - Menu para a escolha dos aplicativos para comunicação "
+ echo "24 - Menu para a escolha de Linguagens e IDEs"
+ echo "25 - Menu para a escolha das Máquinas Virtuais "
+ echo "26 - Menu para a escolha dos emuladores (diversos) e STEAM"
+ echo "27 - Menu para a escolha dos Crossovers (Wine)"
+ echo "28 - Menu para a escolha dos serviços de armazenamento e ou edição em nuvem "
+ echo "29 - Modifica o arquivo sysctl.conf adicionando swappiness"
+ echo "30 - Modifica o arquivo limits.conf adicionando número máximo de arquivos abertos"
+ echo "31 - Otimizando a vida útil da bateria do Laptop"
+ echo "32 - Menu para drivers Nvidia"
  echo "a  - Atualiza o sistema"
  echo "r  - Reinicia o sistema"
+ echo "d  - Desliga o sistema"
  echo "x  - Fim do Programa"
  echo
  
@@ -1737,176 +1875,154 @@ main() {
   case $choice in
   1)
    show_packagesToInstallMessage
-   sub_manyPackages
-   
+   sub_manyPackages  
   ;;
   2)
-   sources_list_modified
-   check_if_last_command_was_done
-   
+   sub_sourcesList
+   echo "Digite o valor entre as opções listadas"
   ;;
   3)
    changing_locale
    check_if_last_command_was_done
-   
   ;;
   4)
    echo "Modifique o script para acrescentar o nome do usuário"
    adding_user_to_sudo
    check_if_last_command_was_done
-  
   ;;
-  
   5)
    installing_nala
    check_if_last_command_was_done
-   
   ;;
   6)
-   installing_distrobox
+   installing_extrepo
    check_if_last_command_was_done
-   
   ;;
-  
   7)
    installing_debian_reference
    check_if_last_command_was_done
-   
   ;;
-  
   8)
    installing_gnome_tweaks_and_extension_manager
    check_if_last_command_was_done
-   
   ;;
-    
   9)
    sub_cpu_firmware
    echo "Digite o valor entre as opções listadas"     
   ;;
-  
   10)
    sub_firewall
    echo "Digite o valor entre as opções listadas"
   ;;
-  
   11)
+   installing_appimages
+   check_if_last_command_was_done
+  ;;
+  12)
    sub_flatpak
    echo "Digite o valor entre as opções listadas"
   ;;
-  
-  12)
+  13)
    installing_yad_tasksel   
    check_if_last_command_was_done
-      
-   
   ;;
- 
- 13)
+  14)
    sub_desktops
-   
   ;;
-  
- 14)
-   sub_browsers
-      
+  15)
+   sub_browsers  
   ;;
- 
- 15)
+  16)
    installing_codecs
    check_if_last_command_was_done
-   
-   
-  ;;
- 
- 16)
+  ;; 
+  17)
    installing_extractors
    check_if_last_command_was_done
-   
   ;;
- 17)
+  18)
    installing_fonts
    check_if_last_command_was_done
-   
   ;;
- 18)
+  19)
    installing_gparted
    check_if_last_command_was_done
-   
   ;;
- 19)
+  20)
    installing_gdebi_synaptic
-   check_if_last_command_was_done
-   
+   check_if_last_command_was_done  
   ;;
- 20)
+  21)
    sub_players
    echo "Digite o valor entre as opções listadas"
   ;;
- 21)
+  22)
    sub_graphicals
    echo "Digite o valor entre as opções listadas"
   ;;
- 22)
+  23)
    sub_comunication
    echo "Digite o valor entre as opções listadas"
   ;;
- 23)
+  24)
    sub_developers
    echo "Digite o valor entre as opções listadas"
   ;;
- 24)
+  25)
    sub_vmachines
    echo "Digite o valor entre as opções listadas"
   ;;
- 25)
+  26)
    sub_games
    echo "Digite o valor entre as opções listadas"
   ;;
- 26)
+  27)
    sub_crossovers
    echo "Digite o valor entre as opções listadas"
   ;; 
- 27)
+  28)
    sub_cloud
    echo "Digite o valor entre as opções listadas"
   ;;
-  28)
+  29)
    modifying_sysctl_conf
    check_if_last_command_was_done
   ;;
-  29)
+  30)
    modifying_limits_conf
    check_if_last_command_was_done
   ;;
- 30)
+  31)
    improving_laptop_battery_life
    check_if_last_command_was_done
   ;;
- 31)
-   sub_nvidia
-   
+  32)
+   sub_nvidia 
   ;;
  a|A)
    updating_system
    check_if_last_command_was_done
-   
-  ;;
+ ;;
  r|R)
   rebooting_system
   
-  ;;
+ ;;
+ d|d)
+  power_off_system
+  
+ ;;
  x|X)
   exit 0
-  ;;
+ ;;
  *)
   echo "O valor escolhido deve estar entre os valores apresentados nas opções."
-  ;;
+ ;;
   esac
  done
 
 # FIM DE main()
 }
+####################################################################################
 
 show_subMenu_firewall(){
  echo "Escolha a opção pela numeração abaixo: "
@@ -1925,12 +2041,10 @@ sub_firewall(){
   1)
    installing_firewalld
    check_if_last_command_was_done
-   
   ;;
   2)
    installing_firewall_ufw
    check_if_last_command_was_done
-   
   ;;
   q|Q)
    break
@@ -1943,6 +2057,7 @@ sub_firewall(){
  
 # FIM DE sub_firewall()
 }
+####################################################################################
 
 show_subMenu_graphicals(){
  echo "Escolha a opção pela numeração abaixo: "
@@ -1968,47 +2083,38 @@ sub_graphicals(){
   1)
    installing_audacity
    check_if_last_command_was_done
-   
   ;;
   2)
    installing_blender
    check_if_last_command_was_done
-   
   ;;
   3)
    installing_gimp
    check_if_last_command_was_done
-   
   ;;
   4)
    installing_handbrake
    check_if_last_command_was_done
-   
   ;; 
   5)
    installing_inkscape
    check_if_last_command_was_done
-   
   ;; 
   6)
    installing_kdenlive
    check_if_last_command_was_done
-   
   ;;
   7)
    installing_krita
    check_if_last_command_was_done
-   
   ;;
   8)
    installing_obs_studio
    check_if_last_command_was_done
-   
   ;;
   9)
    installing_openshot
    check_if_last_command_was_done
-   
   ;;
   q|Q)
    break
@@ -2021,6 +2127,7 @@ sub_graphicals(){
  
 # FIM DE sub_graphicals()
 }
+####################################################################################
 
 show_subMenu_comunication(){
  echo "Escolha a opção pela numeração abaixo: "
@@ -2042,12 +2149,10 @@ sub_comunication(){
   1)
    installing_discord
    check_if_last_command_was_done
-   
   ;;
   2)
    installing_telegram
    check_if_last_command_was_done
-   
   ;;
   3)
    installing_thunderbird
@@ -2056,7 +2161,6 @@ sub_comunication(){
   4)
    installing_zoom
    check_if_last_command_was_done
-   
   ;;
   5)
    installing_teams
@@ -2073,6 +2177,7 @@ sub_comunication(){
  
 # FIM DE sub_comunication()
 }
+####################################################################################
 
 show_subMenu_browsers(){ # (Chrome, Opera, Vivaldi, Edge, Chromium)
  echo "Escolha a opção pela numeração abaixo: "
@@ -2084,6 +2189,8 @@ show_subMenu_browsers(){ # (Chrome, Opera, Vivaldi, Edge, Chromium)
  echo "6  - Instala o LibreWolf"
  echo "7  - Instala o Zen Browser"
  echo "8  - Instala o Mozilla Firefox"
+ echo "9  - Instala o Opera GX"
+ echo "10 - Instala o Brave"
  echo "q  - Volta para o menu principal" 
 
 # FIM DE show_subMenu_browsers()
@@ -2097,42 +2204,42 @@ sub_browsers(){
   1)
    installing_chrome_repo
    check_if_last_command_was_done
-   
   ;;
   2)
    installing_opera_repo
    check_if_last_command_was_done
-   
   ;;
   3)
    installing_vivaldi_repo
    check_if_last_command_was_done
-   
   ;;
   4)
    installing_edge_repo
    check_if_last_command_was_done
-   
   ;; 
   5)
    installing_chromium_repo
    check_if_last_command_was_done
-   
   ;; 
   6)
    installing_librewolf
    check_if_last_command_was_done
-   
   ;;
   7)
    installing_zen
    check_if_last_command_was_done
-   
   ;;
   8)
    installing_firefox
    check_if_last_command_was_done
-   
+  ;;
+  9)
+   installing_opera_gx_repo
+   check_if_last_command_was_done
+  ;;
+  10)
+   installing_brave
+   check_if_last_command_was_done
   ;;
   q|Q)
    break
@@ -2145,6 +2252,7 @@ sub_browsers(){
  
 # FIM DE sub_browsers()
 }
+####################################################################################
 
 # Players
 
@@ -2168,22 +2276,18 @@ sub_players(){
   1)
    installing_audacious
    check_if_last_command_was_done
-   
   ;;
   2)
    installing_vlc
    check_if_last_command_was_done
-   
   ;;
   3)
    installing_smplayer
    check_if_last_command_was_done
-   
   ;;
   4)
    installing_kodi
    check_if_last_command_was_done
-   
   ;; 
   5)
    installing_spotify
@@ -2200,6 +2304,7 @@ sub_players(){
  
 # FIM DE sub_players()
 }
+####################################################################################
 
 # DESKTOPS
 show_subMenu_desktops(){
@@ -2224,37 +2329,30 @@ sub_desktops(){
   1)
    installing_gnome
    check_if_last_command_was_done
-   
   ;;
   2)
    installing_xfce
    check_if_last_command_was_done
-   
   ;;
   3)
    installing_kde
    check_if_last_command_was_done
-   
   ;;
   4)
    installing_cinnamon
    check_if_last_command_was_done
-   
   ;; 
   5)
    installing_mate
    check_if_last_command_was_done
-   
   ;; 
   6)
    installing_lxde
    check_if_last_command_was_done
-   
   ;;
   7)
    installing_lxqt
    check_if_last_command_was_done
-   
   ;;
   q|Q)
    break
@@ -2267,7 +2365,7 @@ sub_desktops(){
  
 # FIM DE sub_desktops()
 }
-
+####################################################################################
 # JAVA && DEVELOPERS
 
 show_subMenu_developers(){
@@ -2283,15 +2381,17 @@ show_subMenu_developers(){
  echo "9  - Instala Postgresql"
  echo "10 - Instala o GIT, o Subversion e o Mercurial"
  echo "11 - Instala o Docker e Docker-Compose"
- echo "12 - Instalando o Distrobox"
- echo "13 - Instala o Visual Studio Code"
- echo "14 - Instala o Sublime Text"
- echo "15 - Instala o Atom"
- echo "16 - Instala o VIM"
- echo "17 - Instala o NEOVIM"
- echo "18 - Instala o DBeaver Community (Flatpak)"
- echo "19 - Menu para IDEs Java"
- echo "20 - Menu para IDEs Python"
+ echo "12 - Instala o Podman e o Buildah"
+ echo "13 - Instalando o Distrobox"
+ echo "14 - Instala o Visual Studio Code"
+ echo "15 - Instala o Sublime Text"
+ echo "16 - Instala o Atom"
+ echo "17 - Instala o VIM"
+ echo "18 - Instala o NEOVIM"
+ echo "19 - Instala o DBeaver Community (Flatpak)"
+ echo "20 - Menu para IDEs Java"
+ echo "21 - Menu para IDEs Python"
+ echo "22 - Menu para ferramentas com Inteligência Artificial"
  echo "q  - Volta para o menu principal" 
 
 # FIM DE show_subMenu_developers()
@@ -2321,80 +2421,75 @@ sub_developers(){
   5)
    installing_build_essential
    check_if_last_command_was_done
-   
   ;;
   6)
    installing_nodejs_npm
    check_if_last_command_was_done
-   
   ;;
   7)
    installing_mariadb
    check_if_last_command_was_done
-   
   ;;
   8)
    installing_mysql
    check_if_last_command_was_done
-   
   ;;
   9)
    installing_postgresql
    check_if_last_command_was_done
-   
   ;;
   10)
    installing_git_subversion_mercurial
    check_if_last_command_was_done
-   
   ;;
   11)
    installing_docker
    check_if_last_command_was_done
-   
   ;;
   12)
-   installing_distrobox
+   installing_podman
    check_if_last_command_was_done
-   
   ;;
   13)
-   installing_code
+   installing_distrobox
    check_if_last_command_was_done
-   
   ;;
   14)
-   installing_sublime
+   installing_code
    check_if_last_command_was_done
-   
   ;;
   15)
-   installing_atom
+   installing_sublime
    check_if_last_command_was_done
-   
   ;;
   16)
-   installing_vim
+   installing_atom
    check_if_last_command_was_done
-   
   ;;
   17)
-   installing_neo_vim
+   installing_vim
    check_if_last_command_was_done
-   
   ;;
   18)
-   installing_dbeaver
+   installing_neo_vim
    check_if_last_command_was_done
-   
   ;;
   19)
+   installing_dbeaver
+   check_if_last_command_was_done
+  ;;
+  20)
    echo "IDEs Java"
    sub_IDE_java
   ;;
-  20)
+  21)
    echo "IDEs Python"
    sub_IDE_python
+  ;;
+  22)
+   echo "Ferramentas com Inteligência Artifical"
+    sub_ai
+
   ;;
   q|Q)
    break
@@ -2407,6 +2502,7 @@ sub_developers(){
  
 # FIM DE sub_developers()
 }
+####################################################################################
 
 # VIRTUAL MACHINES
 show_subMenu_vmachines(){
@@ -2426,12 +2522,10 @@ sub_vmachines(){
   1)
    installing_virtualbox
    check_if_last_command_was_done
-   
   ;;
   2)
    installing_virtualmanager
    check_if_last_command_was_done
-   
   ;;
   q|Q)
    break
@@ -2444,6 +2538,8 @@ sub_vmachines(){
  
 # FIM DE sub_vmachines()
 }
+
+####################################################################################
 
 show_subMenu_games(){
  echo "Escolha a opção pela numeração abaixo: "
@@ -2471,57 +2567,46 @@ sub_games(){
   1)
    installing_steam
    check_if_last_command_was_done
-   
   ;;
   2)
    installing_dolphin_emulator
    check_if_last_command_was_done
-   
   ;;
   3)
    installing_citra
    check_if_last_command_was_done
-   
   ;;
   4)
    installing_flycast
    check_if_last_command_was_done
-   
   ;; 
   5)
    installing_pcsx2
    check_if_last_command_was_done
-   
   ;; 
   6)
    installing_rpcs3
    check_if_last_command_was_done
-   
   ;;
   7)
    installing_snes9x
    check_if_last_command_was_done
-   
   ;;
   8)
    installing_mgba
    check_if_last_command_was_done
-   
   ;;
   9)
    installing_xemu
    check_if_last_command_was_done
-   
   ;;
   10)
    installing_yuzu
    check_if_last_command_was_done
-   
   ;;
   11)
    installing_faugus
    check_if_last_command_was_done
-   
   ;;
   q|Q)
    break
@@ -2534,6 +2619,8 @@ sub_games(){
  
 # FIM DE sub_games()
 }
+
+####################################################################################
 # CROSSOVERS
 
 show_subMenu_crossovers(){
@@ -2554,12 +2641,10 @@ sub_crossovers(){
   1)
    installing_bottles
    check_if_last_command_was_done
-   
   ;;
   2)
    installing_playonlinux
    check_if_last_command_was_done
-   
   ;;
   3)
    installing_wine
@@ -2576,7 +2661,7 @@ sub_crossovers(){
 # FIM DE sub_crossovers()
 }
 
-
+####################################################################################
 # CLOUD STORAGE
 
 show_subMenu_cloud(){
@@ -2597,12 +2682,10 @@ sub_cloud(){
   1)
    installing_dropbox
    check_if_last_command_was_done
-   
   ;;
   2)
    installing_mega
    check_if_last_command_was_done
-   
   ;;
   3)
    installing_anydesk
@@ -2618,7 +2701,65 @@ sub_cloud(){
  
 # FIM DE sub_cloud()
 }
+####################################################################################
+show_subMenu_ai(){
+ echo "----------------------------------------------------"
+ echo "          Ferramentas de Inteligência Artificial     "
+ echo "----------------------------------------------------"
+ echo "1 - Ollama + Open WebUI (via Docker)"
+ echo "2 - Ollama + Open WebUI (via Podman)"
+ echo "3 - AnythingLLM (Conversar com Documentos/RAG)"
+ echo "4 - SearXNG (Busca Privada para LLMs)"
+ echo "5 - Faster-Whisper (Transcrição de Áudio Local)"
+ echo "6 - ComfyUI (Geração de Imagens - Stable Diffusion)"
+ echo "7 - AUTOMATIC1111 (Stable Diffusion WebUI)"
+ echo "q - Volta para o menu principal"
+}
 
+sub_ai(){
+ while true; do
+  show_subMenu_ai
+  read -p "Escolha uma opção: " ai_choice
+  case $ai_choice in
+  1)
+   installing_ollama_openwebui_docker
+   check_if_last_command_was_done
+  ;;
+  2)
+   installing_ollama_openwebui_podman
+   check_if_last_command_was_done
+  ;;
+  3)
+   installing_anythingllm
+   check_if_last_command_was_done
+  ;;
+  4)
+   installing_searxng
+   check_if_last_command_was_done
+  ;;
+  5)
+   installing_whisper_webui
+   check_if_last_command_was_done
+  ;;
+  6)
+   installing_comfyui
+   check_if_last_command_was_done
+  ;;
+  7)
+   installing_sd_webui
+   check_if_last_command_was_done
+  ;;
+  q|Q)
+   break
+  ;;
+  *)
+   echo "Opção inválida!"
+  ;;
+  esac
+ done
+}
+
+####################################################################################
 # IDEs JAVA
 
 show_subMenu_IDE_java(){
@@ -2640,22 +2781,18 @@ sub_IDE_java(){
   1)
    installing_netbeans 
    check_if_last_command_was_done
-   
   ;;
   2)
    installing_bluej
    check_if_last_command_was_done
-   
   ;;
   3)
    installing_eclipse
    check_if_last_command_was_done
-   
   ;;
   4)
    installing_intellij
    check_if_last_command_was_done
-   
   ;; 
   q|Q)
    break
@@ -2668,7 +2805,7 @@ sub_IDE_java(){
  
 # FIM DE sub_IDE_java()
 }
-
+####################################################################################
 # PYTHON
 
 show_subMenu_IDE_python(){
@@ -2690,22 +2827,18 @@ sub_IDE_python(){
   1)
    installing_pycharm 
    check_if_last_command_was_done
-   
   ;;
   2)
    installing_spyder
    check_if_last_command_was_done
-   
   ;;
   3)
    installing_conda
    check_if_last_command_was_done
-   
   ;;
   4)
    installing_jupiter
    check_if_last_command_was_done
-   
   ;; 
   q|Q)
    break
@@ -2718,7 +2851,7 @@ sub_IDE_python(){
  
 # FIM DE sub_IDE_python()
 }
-
+####################################################################################
 # FIRMWARE
 
 show_subMenu_firmware(){
@@ -2738,12 +2871,10 @@ sub_cpu_firmware(){
   1)
    installing_intel_firmware
    check_if_last_command_was_done
-   
   ;;
   2)
    installing_amd_firmware
    check_if_last_command_was_done
-   
   ;;
   q|Q)
    break
@@ -2756,18 +2887,18 @@ sub_cpu_firmware(){
  
 # FIM DE sub_cpu_firmware()
 }
-
+####################################################################################
 show_subMenu_nvidia(){
  echo "Escolha a opção pela numeração abaixo: "
  echo "1  - Verifica se há identificação do driver"
- echo "2  - Instala o driver para placas mais recentes"
- echo "3  - Instala o driver para placas antigas ( a partir de 470.x.x)"
- echo "4  - Instala o driver para placas antigas ( a partir de 390.x.x)"
- echo "5  - Instala o driver para placas antigas ( a partir de 340.x.x)"
- echo "6  - Instala o driver para placas antigas ( a partir de 304.x.x)"
- echo "7  - Instala o driver para placas antigas ( a partir de 173.14.x.x)"
- echo "8  - Instala o driver para placas antigas ( a partir de 96.43.x.x)"
- echo "9  - Instala o driver para placas antigas ( a partir de 71.86.x.x)"
+ echo "2  - Instala o repositório do driver mais recente para as diversas placas"
+ #echo "3  - Instala o driver para placas antigas ( a partir de 470.x.x)"
+ #echo "4  - Instala o driver para placas antigas ( a partir de 390.x.x)"
+ #echo "5  - Instala o driver para placas antigas ( a partir de 340.x.x)"
+ #echo "6  - Instala o driver para placas antigas ( a partir de 304.x.x)"
+ #echo "7  - Instala o driver para placas antigas ( a partir de 173.14.x.x)"
+ #echo "8  - Instala o driver para placas antigas ( a partir de 96.43.x.x)"
+ #echo "9  - Instala o driver para placas antigas ( a partir de 71.86.x.x)"
  echo "q  - Volta para o menu principal" 
 
 # FIM DE show_subMenu_nvidia()
@@ -2781,47 +2912,10 @@ sub_nvidia(){
   1)
    checking_video_driver
    check_if_last_command_was_done
-   
   ;;
   2)
    installing_nvidia
    check_if_last_command_was_done
-   
-  ;;
-  3)
-   installing_nvidia_legacy_470
-   check_if_last_command_was_done
-   
-  ;;
-  4)
-   installing_nvidia_legacy_390
-   check_if_last_command_was_done
-   
-  ;;
-  5)
-   installing_nvidia_legacy_340
-   check_if_last_command_was_done
-   
-  ;;
-  6)
-   installing_nvidia_legacy_304
-   check_if_last_command_was_done
-   
-  ;;
-  7)
-   installing_nvidia_legacy_173
-   check_if_last_command_was_done
-   
-  ;;
-  8)
-   installing_nvidia_legacy_96
-   check_if_last_command_was_done
-   
-  ;;
-  9)
-   installing_nvidia_legacy_71
-   check_if_last_command_was_done
-   
   ;;
   q|Q)
    break
@@ -2834,6 +2928,7 @@ sub_nvidia(){
 
 # FIM DE sub_nvidia()
 }
+####################################################################################
 show_subMenu_flatpak(){
  echo "Escolha a opção pela numeração abaixo: "
  echo "1  - Instala o flatpak integrando ao Gnome-Software"
@@ -2852,17 +2947,14 @@ sub_flatpak(){
   1)
    installing_flatpak_gnome
    check_if_last_command_was_done
-   
   ;;
   2)
    installing_flatpak_kde
    check_if_last_command_was_done
-   
   ;;
   3)
    installing_bazaar
    check_if_last_command_was_done
-   
   ;;
   q|Q)
    break
@@ -2875,14 +2967,51 @@ sub_flatpak(){
  
 # FIM DE sub_flatpak()
 }
-######
+
+####################################################################################
+show_subMenu_sourcesList(){
+ echo "Escolha a opção pela numeração abaixo: "
+ echo "1  - Modifica apenas o arquivo sources.list"
+ echo "2  - Moderniza e transforma o arquivo sources.list em debian.sources"
+ echo "q  - Volta para o menu principal" 
+
+# FIM DE show_subMenu_sourcesList()
+}
+
+sub_sourcesList(){
+ while true; do
+  show_subMenu_sourcesList
+  read -p "Escolha uma opção: " fire
+  case $fire in
+  1)
+   sources_list_modified
+   check_if_last_command_was_done
+  ;;
+  2)
+   sources_list_modern
+   check_if_last_command_was_done
+  ;;
+  q|Q)
+   break
+  ;;
+  *)
+   echo "O valor escolhido deve estar entre os valores apresentados nas opções."
+  ;;
+  esac
+ done
+ 
+# FIM DE sub_sourcesList()
+}
+####################################################################################
+
 show_subMenu_manyPackages(){
  echo "Escolha a opção desejada abaixo: "
  echo "(i ou I) - Instala vários pacotes selecionados de uma vez"
  echo "(q ou Q) - Volta para o menu principal" 
 
-# FIM DE show_subMenu_flatpak()
+# FIM DE show_subMenu_manyPackages()
 }
+
 
 sub_manyPackages(){
  while true; do
@@ -2902,9 +3031,10 @@ sub_manyPackages(){
   esac
  done
  
-# FIM DE sub_flatpak()
+# FIM DE sub_manyPackages()
 }
 
+####################################################################################
 show_packagesToInstallMessage(){
 echo "Estes pacotes/configuração serão instalados/feitos diretamente no seu sistema:"
 echo "                                                                              "
@@ -2941,7 +3071,6 @@ echo "Digite (i/I) para confirmar as instalações ou (q/Q) para sair"
 # FIM DE show_packagesToInstallMessage()
 }
 
-######
 # SELECTED FUNCTIONS
 execute_everything(){
  check_if_root_is_logged
@@ -2968,10 +3097,9 @@ execute_everything(){
 
 # FIM DE execute_everything()
 }
-
+####################################################################################
 main
 
-# Fonte de referência: https://www.blogopcaolinux.com.br/
-# Blog Opção Linux
-# Site dos demais aplicativos.
-
+# Fonte de Referência:
+# Site dos aplicativos.
+# Site diversos e https://www.blogopcaolinux.com.br/ (Blog Opção Linux)
