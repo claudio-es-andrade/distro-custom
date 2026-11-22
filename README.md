@@ -372,7 +372,7 @@ Downloads:
 
 ![](distroIcons/debian.png)
 
-- Debian 13.7 
+- Debian 13.8 
 
 ### https://www.debian.org/
 
